@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jane - A super concise theme for Hugo</title>
+    <link>https://blog.luvnaxx.com/</link>
+    <description>Recent content on Jane - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>luvnaxx.com</copyright>
+    <lastBuildDate>Wed, 11 Dec 2019 16:46:07 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog.luvnaxx.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://blog.luvnaxx.com/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      
+      <guid>https://blog.luvnaxx.com/about/</guid>
+      
+        <description>&lt;p&gt;Hugo is a static site engine written in Go.&lt;/p&gt;
+&lt;p&gt;It makes use of a variety of open source projects including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;&gt;Cobra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;&gt;Viper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/jWalterWeatherman&#34;&gt;J Walter Weatherman&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>你好</title>
+      <link>https://blog.luvnaxx.com/post/%E4%BD%A0%E5%A5%BD/</link>
+      <pubDate>Wed, 11 Dec 2019 16:46:07 +0800</pubDate>
+      
+      <guid>https://blog.luvnaxx.com/post/%E4%BD%A0%E5%A5%BD/</guid>
+      
+        <description>&lt;p&gt;测试Hugo搭建静态博客&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
