@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技 on Jane - A super concise theme for Hugo</title>
+    <link>https://blog.luvnaxx.com/categories/%E6%8A%80/</link>
+    <description>Recent content in 技 on Jane - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>luvnaxx.com</copyright>
+    <lastBuildDate>Mon, 16 Dec 2019 16:51:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.luvnaxx.com/categories/%E6%8A%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring Cloud之Spring Boot 2.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法</title>
+      <link>https://blog.luvnaxx.com/post/%E6%8A%80/hystrix-dashboard/</link>
+      <pubDate>Mon, 16 Dec 2019 16:51:28 +0800</pubDate>
+      
+      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/hystrix-dashboard/</guid>
+      <description>在启动类中添加 @Bean public ServletRegistrationBean getServlet() { HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet(); ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet); registrationBean.setLoadOnStartup(1); registrationBean.addUrlMappings(&amp;#34;/actuator/hystrix.stream&amp;#34;); registrationBean.setName(&amp;#34;HystrixMetricsStreamServlet&amp;#34;); return registrationBean; }</description>
+    </item>
+    
+    <item>
+      <title>解决Linux下环境变量失效问题</title>
+      <link>https://blog.luvnaxx.com/post/%E6%8A%80/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 25 Nov 2019 14:58:07 +0800</pubDate>
+      
+      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</guid>
+      <description>很多时候，我们对环境变量的配置不是很熟悉的时候，使用source ~/.bashrc后很容易出现各种xx: command not found问题，下面给出一种解决</description>
+    </item>
+    
+    <item>
+      <title>Maven打包包括本地jar包</title>
+      <link>https://blog.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</link>
+      <pubDate>Mon, 18 Nov 2019 17:16:10 +0800</pubDate>
+      
+      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</guid>
+      <description>在pom.xml中添加 &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;!--作用:项目打成jar的同时将本地jar包也引入进去--&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;includeSystemScope&amp;gt;true&amp;lt;/includeSystemScope&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Java异常语句打印</title>
+      <link>https://blog.luvnaxx.com/post/%E6%8A%80/java%E5%BC%82%E5%B8%B8%E8%AF%AD%E5%8F%A5%E6%89%93%E5%8D%B0/</link>
+      <pubDate>Thu, 19 Sep 2019 13:09:16 +0800</pubDate>
+      
+      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/java%E5%BC%82%E5%B8%B8%E8%AF%AD%E5%8F%A5%E6%89%93%E5%8D%B0/</guid>
+      <description>StringWriter sw = new StringWriter(); PrintWriter ps = new PrintWriter(sw, true); e.printStackTrace(ps); System.out.println(sw.getBuffer().toString());</description>
+    </item>
+    
+  </channel>
+</rss>
