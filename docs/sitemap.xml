@@ -10,27 +10,146 @@
   
   <url>
     <loc>https://blog.luvnaxx.com/categories/</loc>
-    <lastmod>2019-12-16T16:51:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.luvnaxx.com/tags/hystrix-dashboard/</loc>
-    <lastmod>2019-12-16T16:51:28+08:00</lastmod>
+    <lastmod>2019-12-22T17:35:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.luvnaxx.com/</loc>
-    <lastmod>2019-12-16T16:51:28+08:00</lastmod>
+    <lastmod>2019-12-22T17:35:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.luvnaxx.com/post/</loc>
+    <lastmod>2019-12-22T17:35:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/tags/spring-boot/</loc>
+    <lastmod>2019-12-22T17:35:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/multiple-data-source/</loc>
+    <lastmod>2019-12-22T17:35:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/tags/</loc>
+    <lastmod>2019-12-22T17:35:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/tags/%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%BA%90/</loc>
+    <lastmod>2019-12-22T17:35:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/categories/%E6%8A%80/</loc>
+    <lastmod>2019-12-22T17:35:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/tags/%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</loc>
+    <lastmod>2019-12-22T17:03:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/</loc>
+    <lastmod>2019-12-22T17:03:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/tags/swagger2/</loc>
+    <lastmod>2019-12-22T16:02:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</loc>
+    <lastmod>2019-12-22T16:02:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/tags/log4j2/</loc>
+    <lastmod>2019-12-22T15:59:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/log4j2/</loc>
+    <lastmod>2019-12-22T15:59:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/tags/druid/</loc>
+    <lastmod>2019-12-22T14:57:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/druid/</loc>
+    <lastmod>2019-12-22T14:57:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/tags/mybatis/</loc>
+    <lastmod>2019-12-22T13:59:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/mybatis/</loc>
+    <lastmod>2019-12-22T13:59:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/tags/jpa/</loc>
+    <lastmod>2019-12-22T13:47:08+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/jpa/</loc>
+    <lastmod>2019-12-22T13:47:08+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/tags/hystrix-dashboard/</loc>
     <lastmod>2019-12-16T16:51:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -44,22 +163,36 @@
   </url>
   
   <url>
-    <loc>https://blog.luvnaxx.com/post/%E6%8A%80/hystrix-dashboard/</loc>
+    <loc>https://blog.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</loc>
     <lastmod>2019-12-16T16:51:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.luvnaxx.com/tags/</loc>
-    <lastmod>2019-12-16T16:51:28+08:00</lastmod>
+    <loc>https://blog.luvnaxx.com/tags/blog/</loc>
+    <lastmod>2019-12-14T10:07:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.luvnaxx.com/categories/%E6%8A%80/</loc>
-    <lastmod>2019-12-16T16:51:28+08:00</lastmod>
+    <loc>https://blog.luvnaxx.com/tags/github-pages/</loc>
+    <lastmod>2019-12-14T10:07:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2019-12-14T10:07:45+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.luvnaxx.com/categories/%E4%BA%AB/</loc>
+    <lastmod>2019-12-14T10:07:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -135,7 +268,7 @@
   </url>
   
   <url>
-    <loc>https://blog.luvnaxx.com/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://blog.luvnaxx.com/categories/%E8%AE%B0/</loc>
     <lastmod>2019-09-03T14:21:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

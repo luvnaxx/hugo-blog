@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Mon, 16 Dec 2019 16:51:28 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 Dec 2019 17:35:36 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.luvnaxx.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,18 +15,27 @@
     <item>
       <title>技</title>
       <link>https://blog.luvnaxx.com/categories/%E6%8A%80/</link>
-      <pubDate>Mon, 16 Dec 2019 16:51:28 +0800</pubDate>
+      <pubDate>Sun, 22 Dec 2019 17:35:36 +0800</pubDate>
       
       <guid>https://blog.luvnaxx.com/categories/%E6%8A%80/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>笔记</title>
-      <link>https://blog.luvnaxx.com/categories/%E7%AC%94%E8%AE%B0/</link>
+      <title>享</title>
+      <link>https://blog.luvnaxx.com/categories/%E4%BA%AB/</link>
+      <pubDate>Sat, 14 Dec 2019 10:07:45 +0800</pubDate>
+      
+      <guid>https://blog.luvnaxx.com/categories/%E4%BA%AB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>记</title>
+      <link>https://blog.luvnaxx.com/categories/%E8%AE%B0/</link>
       <pubDate>Tue, 03 Sep 2019 14:21:38 +0800</pubDate>
       
-      <guid>https://blog.luvnaxx.com/categories/%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://blog.luvnaxx.com/categories/%E8%AE%B0/</guid>
       <description></description>
     </item>
     

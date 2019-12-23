@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>使用SpringDataJPA完成CRUD - Jane - A super concise theme for Hugo</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="luvnaxx" />
+  <meta name="description" content="数据库准备 新建数据库springboot，数据库表tb_user，添加id、username、password、age、address字段。" />
+
+  <meta name="keywords" content="knowledge, life" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.60.1" />
+
+
+<link rel="canonical" href="https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/jpa/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="使用SpringDataJPA完成CRUD" />
+<meta property="og:description" content="数据库准备 新建数据库springboot，数据库表tb_user，添加id、username、password、age、address字段。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/jpa/" />
+<meta property="article:published_time" content="2019-12-22T13:47:08+08:00" />
+<meta property="article:modified_time" content="2019-12-22T13:47:08+08:00" />
+<meta itemprop="name" content="使用SpringDataJPA完成CRUD">
+<meta itemprop="description" content="数据库准备 新建数据库springboot，数据库表tb_user，添加id、username、password、age、address字段。">
+<meta itemprop="datePublished" content="2019-12-22T13:47:08&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-22T13:47:08&#43;08:00" />
+<meta itemprop="wordCount" content="2451">
+
+
+
+<meta itemprop="keywords" content="Spring Boot,JPA," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用SpringDataJPA完成CRUD"/>
+<meta name="twitter:description" content="数据库准备 新建数据库springboot，数据库表tb_user，添加id、username、password、age、address字段。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+<script src="https://blog.luvnaxx.comjs/highlight.pack.js"></script>
+<link rel="stylesheet" href="https://blog.luvnaxx.comcss/monokai-sublime.css">
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Jane</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://blog.luvnaxx.com/">This is Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://blog.luvnaxx.com/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://blog.luvnaxx.com/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://blog.luvnaxx.com/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://blog.luvnaxx.com/about/">About</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://github.com/luvnaxx/hugo-blog" rel="noopener" target="_blank">
+              external-link
+              
+              <i class="iconfont">
+                <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M623.36 272.96 473.216 423.04C467.2 429.056 467.072 438.656 472.896 444.416c0 0-6.72-6.656 1.6 1.6C496.064 467.648 528.64 500.224 528.64 500.224 534.464 506.048 544 505.856 550.016 499.904l150.08-150.144 67.328 66.432c9.024 8.96 27.456 4.544 30.4-8.96 19.968-92.608 46.656-227.52 46.656-227.52 6.848-34.496-16.192-56.704-49.92-49.92 0 0-134.656 26.816-227.328 46.784C560.32 178.048 556.352 182.272 554.752 187.136c-3.2 6.208-3.008 14.208 3.776 20.992L623.36 272.96z"></path>
+  <path d="M841.152 457.152c-30.528 0-54.784 24.512-54.784 54.656l0 274.752L237.696 786.56 237.696 237.696l206.016 0c6.656 0 10.752 0 13.248 0C487.68 237.696 512 213.184 512 182.848 512 152.32 487.36 128 456.96 128L183.04 128C153.216 128 128 152.576 128 182.848c0 3.136 0.256 6.272 0.768 9.28C128.256 195.136 128 198.272 128 201.408l0 639.488c0 0.064 0 0.192 0 0.256 0 0.128 0 0.192 0 0.32 0 30.528 24.512 54.784 54.784 54.784l646.976 0c6.592 0 9.728 0 11.712 0 28.736 0 52.928-22.976 54.464-51.968C896 843.264 896 842.304 896 841.344l0-20.352L896 561.408 896 512.128C896 481.792 871.424 457.152 841.152 457.152z"></path>
+</svg>
+
+              </i>
+            </a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Jane
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://blog.luvnaxx.com/">This is Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://blog.luvnaxx.com/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://blog.luvnaxx.com/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://blog.luvnaxx.com/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://blog.luvnaxx.com/about/">About</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://github.com/luvnaxx/hugo-blog" rel="noopener" target="_blank">
+              external-link
+              
+              <i class="iconfont">
+                <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M623.36 272.96 473.216 423.04C467.2 429.056 467.072 438.656 472.896 444.416c0 0-6.72-6.656 1.6 1.6C496.064 467.648 528.64 500.224 528.64 500.224 534.464 506.048 544 505.856 550.016 499.904l150.08-150.144 67.328 66.432c9.024 8.96 27.456 4.544 30.4-8.96 19.968-92.608 46.656-227.52 46.656-227.52 6.848-34.496-16.192-56.704-49.92-49.92 0 0-134.656 26.816-227.328 46.784C560.32 178.048 556.352 182.272 554.752 187.136c-3.2 6.208-3.008 14.208 3.776 20.992L623.36 272.96z"></path>
+  <path d="M841.152 457.152c-30.528 0-54.784 24.512-54.784 54.656l0 274.752L237.696 786.56 237.696 237.696l206.016 0c6.656 0 10.752 0 13.248 0C487.68 237.696 512 213.184 512 182.848 512 152.32 487.36 128 456.96 128L183.04 128C153.216 128 128 152.576 128 182.848c0 3.136 0.256 6.272 0.768 9.28C128.256 195.136 128 198.272 128 201.408l0 639.488c0 0.064 0 0.192 0 0.256 0 0.128 0 0.192 0 0.32 0 30.528 24.512 54.784 54.784 54.784l646.976 0c6.592 0 9.728 0 11.712 0 28.736 0 52.928-22.976 54.464-51.968C896 843.264 896 842.304 896 841.344l0-20.352L896 561.408 896 512.128C896 481.792 871.424 457.152 841.152 457.152z"></path>
+</svg>
+
+              </i>
+            </a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">使用SpringDataJPA完成CRUD</h1>
+      
+      <div class="post-meta">
+        <time datetime="2019-12-22" class="post-time">
+          2019-12-22
+        </time>
+        <div class="post-category">
+            <a href="https://blog.luvnaxx.com/categories/%E6%8A%80/"> 技 </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading">数据库准备</a></li>
+    <li><a href="#spring-boot">新建Spring Boot项目</a></li>
+    <li><a href="#heading1">创建配置文件</a></li>
+    <li><a href="#heading2">代码编写</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#heading3">运行测试</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="heading">数据库准备</h2>
+<p>新建数据库springboot，数据库表tb_user，添加id、username、password、age、address字段。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#a6e22e">tb_user</span>
+(
+  id <span style="color:#66d9ef">int</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">AUTO_INCREMENT</span>,
+  username <span style="color:#66d9ef">varchar</span>(<span style="color:#ae81ff">20</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+  password <span style="color:#66d9ef">varchar</span>(<span style="color:#ae81ff">50</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+  age <span style="color:#66d9ef">int</span>,
+  address <span style="color:#66d9ef">varchar</span>(<span style="color:#ae81ff">100</span>)
+);
+<span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> tb_user COMMENT <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">用户信息表</span><span style="color:#e6db74">&#39;</span>;
+</code></pre></div><p><em>关于数据库的命名规范，虽说没有一个强制的规定说数据库要如何命名、数据表要如何命名、字段值要如何命名，但是似乎很多都是有一个潜规则。我又是一个有些强迫症的人，很多时候我为了一个命名，可以想个半天，有时甚至删项目重搞。可怕</em>
+<em>对于MySQL数据库的各种命名，在我翻过各种高山，拜访过各位民间大神之后，现在的习惯是数据库名和表名采用 &ldquo;_&ldquo;连接的形式，据说这是为了方面在Windows与类Unix机器上的兼容。而对于数据表中的字段，我现在使用Java变量名命名的规范，即驼峰原则，这样可能比较有利于与Java的配合。</em></p>
+<h2 id="spring-boot">新建Spring Boot项目</h2>
+<p>进入<a href="https://start.spring.io/">SPRING INITIALIZR</a> 或者使用JetBrains IDEA/Eclipse构建一个Spring Boot项目(这里使用2.0.3.RELEASE版本)。选择添加Web、JPA、MySQL依赖，或者稍后手动在pom.xml中添加。
+最终的pom.xml文件中应该包含有如下依赖：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies</span><span style="color:#f92672">&gt;</span>
+
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-data-jpa<span style="color:#f92672">&lt;/artifactId&gt;</span>
+
+    <span style="color:#f92672">&lt;/dependency&gt;</span>
+
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
+
+    <span style="color:#f92672">&lt;/dependency&gt;</span>
+
+
+
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
+
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+
+    <span style="color:#f92672">&lt;/dependency&gt;</span>
+
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
+
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
+
+      <span style="color:#f92672">&lt;optional</span><span style="color:#f92672">&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
+
+    <span style="color:#f92672">&lt;/dependency&gt;</span>
+
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
+
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
+
+    <span style="color:#f92672">&lt;/dependency&gt;</span>
+
+  <span style="color:#f92672">&lt;/dependencies&gt;</span>
+</code></pre></div><p><em>可以看到，这里多添加了一个lombok依赖。lombok是一个简化Java代码的工具，通过添加注解，在实体类中就可以不再手动编写getter/setter方法，虽说现在各种IDE已经可以自动帮助我们生成getter/setter方法，但是简化文件的内容还是很不错的。</em></p>
+<h2 id="heading1">创建配置文件</h2>
+<p>在resources文件夹下，新建application.yml配置文件。个人感觉YAML相较于properties，在一些方面更好用、更方便一些。
+打开配置文件，在里面配置数据库连接相关信息。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">spring:
+  datasource:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:<span style="color:#ae81ff">3306</span>/springboot?useSSL=<span style="color:#66d9ef">false</span>
+  username: root
+  password: mysql
+
+jpa:
+  database: mysql
+  show-sql: <span style="color:#66d9ef">true</span>
+</code></pre></div><p><em>此处使用的密码为明文密码，不是很安全，可以使用md5 + salt加密</em></p>
+<h2 id="heading2">代码编写</h2>
+<blockquote>
+<p>文件的创建应该是自下而上的，而代码的编写应该是自上而下的。这让文章写起来很不舒服。现在把文件的创建和代码的编写一次性粘贴出来，所以在编写完全部的代码之前，出现内容找不到报错的问题属于正常现象。以后文章也按照此原则进行。</p>
+</blockquote>
+<h4 id="controller">controller层</h4>
+<p>新建controller包，即使是一个简单的demo，规范还是要有的。
+在controller下新建 <em>UserRestController.java</em>，至于为什么要加一个Rest呢？可能是我为以后考虑吧。嘻嘻
+代码如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
+<span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/user&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserRestController</span> <span style="color:#f92672">{</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="entity">entity层</h4>
+<p>新建entity包，用来存放与数据库字段相对应的内容。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Data</span>
+<span style="color:#a6e22e">@Entity</span>
+<span style="color:#a6e22e">@Table</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;tb_user&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#66d9ef">implements</span> Serializable <span style="color:#f92672">{</span>
+
+  <span style="color:#a6e22e">@Id</span>
+  <span style="color:#a6e22e">@GeneratedValue</span><span style="color:#f92672">(</span>strategy <span style="color:#f92672">=</span> GenerationType<span style="color:#f92672">.</span><span style="color:#a6e22e">IDENTITY</span><span style="color:#f92672">)</span>
+  <span style="color:#a6e22e">@Column</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">)</span>
+  <span style="color:#66d9ef">private</span> Long id<span style="color:#f92672">;</span>
+
+  <span style="color:#a6e22e">@Column</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">)</span>
+  <span style="color:#66d9ef">private</span> String username<span style="color:#f92672">;</span>
+
+  <span style="color:#a6e22e">@Column</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">)</span>
+  <span style="color:#66d9ef">private</span> String password<span style="color:#f92672">;</span>
+
+  <span style="color:#a6e22e">@Column</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;age&#34;</span><span style="color:#f92672">)</span>
+  <span style="color:#66d9ef">private</span> Integer age<span style="color:#f92672">;</span>
+
+  <span style="color:#a6e22e">@Column</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;address&#34;</span><span style="color:#f92672">)</span>
+  <span style="color:#66d9ef">private</span> String address<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>可以看到此处使用了<code>@Data</code>注解，在类中就可以省略掉getter/setter，还是很方面的说。当然这只是lombok的皮毛，暂时够用即可。</p>
+<h4 id="service">service层</h4>
+<p>service层一般放置具体的业务逻辑，在此处新建 <em>UserService.java</em> 接口
+里面的抽象方法有</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserService</span> <span style="color:#f92672">{</span>
+
+  List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+  User <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>User entity<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * 通过id查询用户
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   * @param id 用户id（数据库自增）
+</span><span style="color:#75715e">   */</span>
+  Optional<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>在service包下新建impl包，用来实现接口的方法 <em>UserServiceImpl.java</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Service</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserServiceImpl</span> <span style="color:#66d9ef">implements</span> UserService <span style="color:#f92672">{</span>
+
+  <span style="color:#a6e22e">@Autowired</span>
+  <span style="color:#66d9ef">private</span> UserJPA userJPA<span style="color:#f92672">;</span>
+
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> userJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">findAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> User <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>User entity<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> userJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>entity<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    userJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> Optional<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> userJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="dao">dao层</h4>
+<p>dao层即程序与数据库的交互层，在这里编写各种查询语句来满足业务需求。新建 <em>UserJPA.java</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserJPA</span> <span style="color:#66d9ef">extends</span> JpaRepository<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">,</span> Long<span style="color:#f92672">&gt;</span><span style="color:#f92672">,</span>
+	JpaSpecificationExecutor<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span><span style="color:#f92672">,</span> Serializable <span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>代码已经写完了。这就是SpringDataJPA的神奇之处。</p>
+<blockquote>
+<p>我们UserJPA继承了JpaRepository接口（SpringDataJPA提供的简单数据操作接口）、JpaSpecificationExecutor（SpringDataJPA提供的复杂查询接口）、Serializable（序列化接口）。我们并不需要做其他的任何操作了，因为SpringBoot以及SpringDataJPA会为我们全部搞定，SpringDataJPA内部使用了类代理的方式让继承了它接口的子接口都以spring管理的Bean的形式存在，也就是说我们可以直接使用@Autowired注解在spring管理bean使用</p>
+</blockquote>
+<h4 id="controller1">controller层</h4>
+<p>再次回到 <em>UserRestController.java</em>，在里面编写具体的增删改查(CRUD)操作。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
+<span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/user&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserRestController</span> <span style="color:#f92672">{</span>
+
+  <span style="color:#a6e22e">@Autowired</span>
+  <span style="color:#66d9ef">private</span> UserServiceImpl userService<span style="color:#f92672">;</span>
+
+  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * 显示全部用户方法
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/list&#34;</span><span style="color:#f92672">)</span>
+  <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * 添加、更新用户方法
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/save&#34;</span><span style="color:#f92672">)</span>
+  <span style="color:#66d9ef">public</span> User <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>User entity<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>entity<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * 删除用户方法
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   * @param id 用户编号
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/delete&#34;</span><span style="color:#f92672">)</span>
+  <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    userService<span style="color:#f92672">.</span><span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+
+  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * 返回指定id用户
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   * @param id 用户id
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;{id}&#34;</span><span style="color:#f92672">)</span>
+  <span style="color:#66d9ef">public</span> Optional<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@PathVariable</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">)</span> Long id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><p>简单的数据库增删改查操作</p>
+<h2 id="heading3">运行测试</h2>
+<p>启动项目，程序默认端口号为8080，如若想修改，打开 <em>application.yml</em>，编写</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">server:
+  port: <span style="color:#ae81ff">7777</span>
+
+
+</code></pre></div><p>即修改程序端口号为7777.在浏览器地址栏输入<a href="http://localhost:7777/user/list">http://localhost:7777/user/list</a>
+可以看到
+<img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201808/4749c7d7fcfd43789004cda8fe4f1c52.png" alt="查看全部"></p>
+<p>由于现在数据库中还没有任何数据，所以内容为空。现在查看程序控制台，由于我们在配置文件中设置了打印SQL语句，所以控制台出现了一条Hibernate定义的查询语句。
+<img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201808/01738a950f5e4111b593d389bc58558c.png" alt="Hibernate生成的查询全部语句"></p>
+<p>现在新增一条数据</p>
+<blockquote>
+<p>http://localhost:7777/user/save?username=luvnaxx&amp;password=admin&amp;age=23&amp;address=nanjing
+可以看到插入成功，页面返回了本条数据的全部内容。
+<img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201808/a7dd8002d5f9453c8fde3805adfe559e.png" alt="插入数据"></p>
+</blockquote>
+<p>再次查询全部数据，会返回当前数据库中的全部数据。删除修改自行测试。</p>
+<hr>
+<ul>
+<li>2018-09-12 20:06:34 新增baseDAO</li>
+</ul>
+<blockquote>
+<p>在SpringDataJPA中，如果每个dao层接口都要实现JpaRepository,	JpaSpecificationExecuto以及Serializable，也算是一件比较麻烦的事情，如果定义一个父接口用来实现上述接口，实际的dao层接口只需集成此接口即可，对于dao层接口数量较多的工程，也是一个稍微节约点时间的好方法。
+在工程中新建base包，新建BaseDAO接口。</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@NoRepositoryBean</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">BaseDAO</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">extends</span> JpaRepository<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> Long<span style="color:#f92672">&gt;</span><span style="color:#f92672">,</span>
+        JpaSpecificationExecutor<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span><span style="color:#f92672">,</span> Serializable <span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
+
+
+</code></pre></div><p>添加@NoRepositoryBean注解，此接口就不会作为一个Repository创建代理实现类。
+以后的Repository直接集成此接口就可以了</p>
+
+    </div>
+
+    
+    
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://blog.luvnaxx.com/tags/spring-boot/">Spring Boot</a>
+          <a href="https://blog.luvnaxx.com/tags/jpa/">JPA</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/%E6%8A%80/spring-boot/mybatis/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">整合MyBatis</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/%E6%8A%80/spring-cloud/hystrix-dashboard/">
+            <span class="next-text nav-default">Spring Cloud之Spring Boot 2.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+
+ 
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    2019
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        luvnaxx.com
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw=" crossorigin="anonymous"></script>
+
+
+
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
