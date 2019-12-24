@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Swagger2 on Jane - A super concise theme for Hugo</title>
-    <link>https://blog.luvnaxx.com/tags/swagger2/</link>
+    <link>https://www.luvnaxx.com/tags/swagger2/</link>
     <description>Recent content in Swagger2 on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
     <lastBuildDate>Sun, 22 Dec 2019 16:02:23 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.luvnaxx.com/tags/swagger2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.luvnaxx.com/tags/swagger2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用Swagger2构建RESTful API</title>
-      <link>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</link>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</link>
       <pubDate>Sun, 22 Dec 2019 16:02:23 +0800</pubDate>
       
-      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</guid>
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</guid>
       <description>给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档</description>
     </item>
     

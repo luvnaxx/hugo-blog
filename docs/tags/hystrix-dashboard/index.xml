@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hystrix Dashboard on Jane - A super concise theme for Hugo</title>
-    <link>https://blog.luvnaxx.com/tags/hystrix-dashboard/</link>
+    <link>https://www.luvnaxx.com/tags/hystrix-dashboard/</link>
     <description>Recent content in Hystrix Dashboard on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
     <lastBuildDate>Mon, 16 Dec 2019 16:51:28 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.luvnaxx.com/tags/hystrix-dashboard/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.luvnaxx.com/tags/hystrix-dashboard/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Spring Cloud之Spring Boot 2.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法</title>
-      <link>https://blog.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</link>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</link>
       <pubDate>Mon, 16 Dec 2019 16:51:28 +0800</pubDate>
       
-      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</guid>
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</guid>
       <description>在启动类中添加 @Bean public ServletRegistrationBean getServlet() { HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet(); ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet); registrationBean.setLoadOnStartup(1); registrationBean.addUrlMappings(&amp;#34;/actuator/hystrix.stream&amp;#34;); registrationBean.setName(&amp;#34;HystrixMetricsStreamServlet&amp;#34;); return registrationBean; }</description>
     </item>
     

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blog on Jane - A super concise theme for Hugo</title>
-    <link>https://blog.luvnaxx.com/tags/blog/</link>
+    <link>https://www.luvnaxx.com/tags/blog/</link>
     <description>Recent content in blog on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
     <lastBuildDate>Sat, 14 Dec 2019 10:07:45 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.luvnaxx.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.luvnaxx.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>GitHub Pages搭建hugo静态博客</title>
-      <link>https://blog.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sat, 14 Dec 2019 10:07:45 +0800</pubDate>
       
-      <guid>https://blog.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
       <description>在Windows平台搭建hugo开发平台 安装hugo 安装Chocolatey 以管理员命令运行cmd命令行(powershell)，输入 @&amp;#34;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&amp;#34; -NoProfile -InputFormat</description>
     </item>
     

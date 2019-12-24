@@ -41,7 +41,7 @@
    # If you want to see the full configuration, please check `full-config.toml` .
    # And see https://gohugo.io/getting-started/configuration/ .
    
-   baseURL = "https://blog.luvnaxx.com"
+   baseURL = "https://www.luvnaxx.com"
    title = "Jane - A super concise theme for Hugo"
    publishDir = "docs"
    enableRobotsTXT = true
