@@ -62,7 +62,7 @@
 <meta property="og:description" content="luvnaxx&#39;s blog, build by Hugo, theme jane." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.luvnaxx.com/" />
-<meta property="og:updated_time" content="2019-12-22T17:35:36+08:00" />
+<meta property="og:updated_time" content="2019-12-25T14:50:08+08:00" />
 <meta itemprop="name" content="Jane - A super concise theme for Hugo">
 <meta itemprop="description" content="luvnaxx&#39;s blog, build by Hugo, theme jane."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Jane - A super concise theme for Hugo"/>
@@ -340,6 +340,40 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/%E6%8A%80/spring-cloud/zipkin-server/">Zipkin Server无法启动的问题</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2019-12-25" class="post-time">
+        2019-12-25
+      </time>
+      <div class="post-category">
+          <a href="https://www.luvnaxx.com/categories/%E6%8A%80/"> 技 </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      加入 Zipkin Server pom.xml &lt;!--https://mvnrepository.com/artifact/io.zipkin.java/zipkin-server --&gt; &lt;dependency&gt; &lt;groupId&gt;io.zipkin.java&lt;/groupId&gt; &lt;artifactId&gt;zipkin-server&lt;/artifactId&gt; &lt;version&gt;2.12.3&lt;/version&gt; &lt;/dependency&gt; &lt;!--https://mvnrepository.com/artifact/io.zipkin.java/zipkin-autoconfigure-ui --&gt; &lt;dependency&gt; &lt;groupId&gt;io.zipkin.java&lt;/groupId&gt; &lt;artifactId&gt;zipkin-autoconfigure-ui&lt;/artifactId&gt; &lt;version&gt;2.12.3&lt;/version&gt; &lt;/dependency&gt; 异常处理 在 Spring Boot 启动类加上 @EnableZipkinServer 注解，启动项目，控制台报错 SLF4J: Class path contains multiple SLF4J bindings. SLF4J: Found binding in [jar:file:/C:/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.11.2/log4j-slf4j-impl-2.11.2.jar!/org/slf4j/impl/StaticLoggerBinder.class] SLF4J: Found binding in [jar:file:/C:/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class] SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation. SLF4J: Actual
+    </div>
+    <div class="read-more">
+      <a href="/post/%E6%8A%80/spring-cloud/zipkin-server/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/%E6%8A%80/spring-boot/multiple-data-source/">Spring Boot 2.x 配置多数据源的三种方式</a>
     </h1>
     
@@ -466,40 +500,6 @@
     </div>
     <div class="read-more">
       <a href="/post/%E6%8A%80/spring-boot/log4j2/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/%E6%8A%80/spring-boot/druid/">使用Druid作为项目数据源</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-12-22" class="post-time">
-        2019-12-22
-      </time>
-      <div class="post-category">
-          <a href="https://www.luvnaxx.com/categories/%E6%8A%80/"> 技 </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Druid是一个JDBC组件库，包括数据库连接池、SQL Parser等组件。DruidDataSource是最好的数据库连接池。具体参见 alibaba/druid 添
-    </div>
-    <div class="read-more">
-      <a href="/post/%E6%8A%80/spring-boot/druid/" class="read-more-link">Read more</a>
     </div>
     
   </div>

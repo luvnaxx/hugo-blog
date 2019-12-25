@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Spring Cloud on Jane - A super concise theme for Hugo</title>
-    <link>https://www.luvnaxx.com/tags/spring-cloud/</link>
-    <description>Recent content in Spring Cloud on Jane - A super concise theme for Hugo</description>
+    <title>Zipkin Server on Jane - A super concise theme for Hugo</title>
+    <link>https://www.luvnaxx.com/tags/zipkin-server/</link>
+    <description>Recent content in Zipkin Server on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
     <lastBuildDate>Wed, 25 Dec 2019 14:50:08 +0800</lastBuildDate>
     
-	<atom:link href="https://www.luvnaxx.com/tags/spring-cloud/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.luvnaxx.com/tags/zipkin-server/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/zipkin-server/</guid>
       <description>加入 Zipkin Server pom.xml &amp;lt;!--https://mvnrepository.com/artifact/io.zipkin.java/zipkin-server --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.zipkin.java&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;zipkin-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.12.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!--https://mvnrepository.com/artifact/io.zipkin.java/zipkin-autoconfigure-ui --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.zipkin.java&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;zipkin-autoconfigure-ui&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.12.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 异常处理 在 Spring Boot 启动类加上 @EnableZipkinServer 注解，启动项目，控制台报错 SLF4J: Class path contains multiple SLF4J bindings. SLF4J: Found binding in [jar:file:/C:/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.11.2/log4j-slf4j-impl-2.11.2.jar!/org/slf4j/impl/StaticLoggerBinder.class] SLF4J: Found binding in [jar:file:/C:/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class] SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation. SLF4J: Actual</description>
-    </item>
-    
-    <item>
-      <title>Spring Cloud之Spring Boot 2.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</link>
-      <pubDate>Mon, 16 Dec 2019 16:51:28 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</guid>
-      <description>在启动类中添加 @Bean public ServletRegistrationBean getServlet() { HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet(); ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet); registrationBean.setLoadOnStartup(1); registrationBean.addUrlMappings(&amp;#34;/actuator/hystrix.stream&amp;#34;); registrationBean.setName(&amp;#34;HystrixMetricsStreamServlet&amp;#34;); return registrationBean; }</description>
     </item>
     
   </channel>
