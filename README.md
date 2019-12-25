@@ -19,7 +19,7 @@
    ```
    choco install hugo -confirm
    ```
-
+   
    成功后，执行hugo version。会显示hugo版本号
 
 
@@ -41,7 +41,7 @@
    # If you want to see the full configuration, please check `full-config.toml` .
    # And see https://gohugo.io/getting-started/configuration/ .
    
-   baseURL = "https://www.luvnaxx.com"
+   baseURL = "https://blog.luvnaxx.com"
    title = "Jane - A super concise theme for Hugo"
    publishDir = "docs"
    enableRobotsTXT = true
@@ -163,3 +163,15 @@ hugo -t jane
 ```
 
 将生成的**docs**文件夹上传，进入项目的设置中设置即可
+
+---
+
+## 遇到的问题
+
+#### 自定义域名失效
+
+> 在settings中设置域名并成功解析，能够通过域名访问。但是每次更新文章，重新push之后，自定义域名就失效了。
+
+**原因: **生成的**docs**文件夹中，没有了**CNAME**文件。
+
+**解决方案:** 将**CNAME**文件复制一份到**static**文件夹中。此时生成的**docs**文件夹中就会出现**CNAME**文件，再`push`即可
