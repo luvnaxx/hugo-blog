@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Wed, 25 Dec 2019 14:50:08 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2019 19:10:40 +0800</lastBuildDate>
     
         <atom:link href="https://www.luvnaxx.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,6 +22,88 @@
         <description>&lt;p&gt;冲冲冲!!!&lt;/p&gt;
 &lt;p&gt;懒狗没有原创&lt;/p&gt;
 </description>
+      
+    </item>
+    
+    <item>
+      <title>Nginx配置域名访问并安装SSL证书</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/nginx%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E5%B9%B6%E5%AE%89%E8%A3%85ssl%E8%AF%81%E4%B9%A6/</link>
+      <pubDate>Fri, 27 Dec 2019 19:10:40 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/nginx%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E5%B9%B6%E5%AE%89%E8%A3%85ssl%E8%AF%81%E4%B9%A6/</guid>
+      
+        <description>&lt;p&gt;从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并不能成功。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;以下为自己试验的成功的配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;server&lt;/span&gt; {
+		&lt;span style=&#34;color:#f92672&#34;&gt;listen&lt;/span&gt;	&lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;;
+        &lt;span style=&#34;color:#f92672&#34;&gt;listen&lt;/span&gt;	&lt;span style=&#34;color:#ae81ff&#34;&gt;443&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;ssl&lt;/span&gt;;
+        &lt;span style=&#34;color:#f92672&#34;&gt;server_name&lt;/span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;open.nacos.luvnaxx.com&lt;/span&gt;;
+        &lt;span style=&#34;color:#f92672&#34;&gt;index&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;index.html&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;index.htm&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;index.php&lt;/span&gt;;
+         
+        &lt;span style=&#34;color:#f92672&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;(&lt;/span&gt;$host &lt;span style=&#34;color:#e6db74&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;open.nacos.luvnaxx.com&amp;#39;)&lt;/span&gt; {
+        	&lt;span style=&#34;color:#f92672&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;403&lt;/span&gt;;
+        }
+        
+        &lt;span style=&#34;color:#f92672&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;(&lt;/span&gt;$scheme = &lt;span style=&#34;color:#e6db74&#34;&gt;http&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;)&lt;/span&gt; {
+			&lt;span style=&#34;color:#f92672&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;301&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;https://&lt;/span&gt;$host$request_uri;
+		}
+        
+ 		&lt;span style=&#34;color:#f92672&#34;&gt;ssl_certificate&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;cert/open&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;.nacos.luvnaxx.com.pem&lt;/span&gt;;
+        &lt;span style=&#34;color:#f92672&#34;&gt;ssl_certificate_key&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;cert/open&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;.nacos.luvnaxx.com.key&lt;/span&gt;;
+        &lt;span style=&#34;color:#f92672&#34;&gt;ssl_session_timeout&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5m&lt;/span&gt;;
+        &lt;span style=&#34;color:#f92672&#34;&gt;ssl_protocols&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;TLSv1&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;TLSv1.1&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;TLSv1.2&lt;/span&gt;;
+        &lt;span style=&#34;color:#f92672&#34;&gt;ssl_ciphers&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4&lt;/span&gt;;
+        &lt;span style=&#34;color:#f92672&#34;&gt;ssl_prefer_server_ciphers&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt;;
+        
+        &lt;span style=&#34;color:#f92672&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;/&lt;/span&gt; {
+        	&lt;span style=&#34;color:#f92672&#34;&gt;root&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;html&lt;/span&gt;;
+            &lt;span style=&#34;color:#f92672&#34;&gt;index&lt;/span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;/nacos&lt;/span&gt;;
+        }
+        
+        &lt;span style=&#34;color:#75715e&#34;&gt;# nacos转发
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;/nacos&lt;/span&gt; {
+        	&lt;span style=&#34;color:#f92672&#34;&gt;proxy_pass&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;http://127.0.0.1:8848/nacos&lt;/span&gt;;
+            &lt;span style=&#34;color:#f92672&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;Host&lt;/span&gt; $host;
+
+            &lt;span style=&#34;color:#f92672&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;X-Real-IP&lt;/span&gt; $remote_addr;
+            &lt;span style=&#34;color:#f92672&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;X-Forwarded-For&lt;/span&gt; $proxy_add_x_forwarded_for;
+            &lt;span style=&#34;color:#f92672&#34;&gt;proxy_connect_timeout&lt;/span&gt;       &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;;
+            &lt;span style=&#34;color:#f92672&#34;&gt;proxy_read_timeout&lt;/span&gt;          &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;;
+            &lt;span style=&#34;color:#f92672&#34;&gt;proxy_send_timeout&lt;/span&gt;          &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;;
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;此配置作用：使用ip直接访问，返回403。&lt;/p&gt;
+&lt;p&gt;使用http请求，强转为HTTPS&lt;/p&gt;
+&lt;p&gt;访问&lt;code&gt;open.nacos.luvnaxx.com&lt;/code&gt;，变为&lt;code&gt;open.nacos.luvnaxx.com/nacos&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;errsslprotocolerror&#34;&gt;ERR_SSL_PROTOCOL_ERROR出现的原因&lt;/h2&gt;
+&lt;p&gt;在Nginx1.15版本之前，我们配置HTTPS服务是如下这样配置的。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;server{&lt;/span&gt;
+	&lt;span style=&#34;color:#e6db74&#34;&gt;listen&lt;/span&gt;	&lt;span style=&#34;color:#ae81ff&#34;&gt;443&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;server_name&lt;/span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;网站域名&lt;/span&gt;;
+	
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;ssl&lt;/span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;# 重点
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;ssl_certificate&lt;/span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;SSL证书&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;ssl_certificate_key&lt;/span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;SSL证书私钥&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;ssl_ciphers&lt;/span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;加密算法&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;ssl_protocols&lt;/span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;加密协议&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;ssl_prefer_server_ciphers&lt;/span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt;;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;但是这样的配置如果放在Nginx1.15版本是错误的，启动Nginx的时候系统会报错，原因是&lt;strong&gt;SSL  ON&lt;/strong&gt;这样的配置不再支持，需要删除掉。但是当你删除掉那一句代码后，重新启动Nginx就会发现浏览器访问页面时就会出现”&lt;strong&gt;ERR_SSL_PROTOCOL_ERROR&lt;/strong&gt;的错误。&lt;/p&gt;
+&lt;p&gt;那么在Nginx1.15版本下，我们应该做如下配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;server{&lt;/span&gt;
+	&lt;span style=&#34;color:#e6db74&#34;&gt;listen&lt;/span&gt;	&lt;span style=&#34;color:#ae81ff&#34;&gt;443&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;ssl&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;# 重点
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;server_name&lt;/span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;网站域名&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;ssl_certificate&lt;/span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;SSL证书&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;ssl_certificate_key&lt;/span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;SSL证书私钥&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;ssl_ciphers&lt;/span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;加密算法&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;ssl_protocols&lt;/span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;加密协议&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;ssl_prefer_server_ciphers&lt;/span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt;;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
       
     </item>
     
@@ -1579,9 +1661,115 @@ jpa:
     </item>
     
     <item>
-      <title>GitHub Pages搭建hugo静态博客</title>
+      <title>解决Linux下环境变量失效问题</title>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 25 Nov 2019 14:58:07 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</guid>
+      
+        <description>&lt;p&gt;很多时候，我们对环境变量的配置不是很熟悉的时候，使用&lt;code&gt;source&lt;/code&gt;
+&lt;code&gt;~/.bashrc&lt;/code&gt;后很容易出现各种&lt;strong&gt;xx: command not found&lt;/strong&gt;问题，下面给出一种解决方法。&lt;/p&gt;
+&lt;p&gt;在终端输入&lt;code&gt;export PATH=/bin:/usr/bin&lt;/code&gt;，然后修改&lt;strong&gt;~/.bashrc&lt;/strong&gt;删除或者修改刚刚写的环境变量，然后再重新&lt;code&gt;source ~/.bashrc&lt;/code&gt;一下&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Maven打包包括本地jar包</title>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</link>
+      <pubDate>Mon, 18 Nov 2019 17:16:10 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</guid>
+      
+        <description>&lt;p&gt;在&lt;strong&gt;pom.xml&lt;/strong&gt;中添加&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;build&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;plugins&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;plugin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;spring-boot-maven-plugin&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;作用:项目打成jar的同时将本地jar包也引入进去&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;--&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;configuration&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;includeSystemScope&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;true&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/includeSystemScope&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/plugins&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Java异常语句打印</title>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/java%E5%BC%82%E5%B8%B8%E8%AF%AD%E5%8F%A5%E6%89%93%E5%8D%B0/</link>
+      <pubDate>Thu, 19 Sep 2019 13:09:16 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/java%E5%BC%82%E5%B8%B8%E8%AF%AD%E5%8F%A5%E6%89%93%E5%8D%B0/</guid>
+      
+        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;StringWriter sw &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; StringWriter&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+PrintWriter ps &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; PrintWriter&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sw&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+e&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printStackTrace&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ps&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sw&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getBuffer&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Windows下使用自带certutil工具校验文件</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Tue, 03 Sep 2019 14:21:38 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</guid>
+      
+        <description>&lt;h2 id=&#34;heading&#34;&gt;命令&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx MD5&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA1&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA256&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;heading1&#34;&gt;示例&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;certutil&lt;/strong&gt;
+&lt;strong&gt;-hashfile C:\Users\wyy\desktop\testTemplate.docx SHA256&lt;/strong&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>删除office多个授权</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</link>
+      <pubDate>Mon, 15 Jul 2019 14:10:40 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</guid>
+      
+        <description>&lt;p&gt;激活office后，打开office任然出现需要激活的提示信息，打开账户发现发现有2个产品信息，一个已经激活，一个还需要激活，这就需要删除多余的版本授权信息，保留已经激活的产品信息。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;heading&#34;&gt;方法/步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先确认office目录下存在&lt;strong&gt;ospp.vbs&lt;/strong&gt;文件，可以搜索确认文件路径。我的是在&lt;strong&gt;C:\Program Files\Microsoft Office\Office16&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用管理员方式打开cmd&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;strong&gt;ospp.vbs&lt;/strong&gt;所在目录&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;cd C:&lt;span style=&#34;color:#ae81ff&#34;&gt;\P&lt;/span&gt;rogram Files&lt;span style=&#34;color:#ae81ff&#34;&gt;\M&lt;/span&gt;icrosoft Office&lt;span style=&#34;color:#ae81ff&#34;&gt;\O&lt;/span&gt;ffice16
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后输入&lt;code&gt;cscript ospp.vbs /dstatus&lt;/code&gt;，回车，稍等片刻，打印出结果&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;寻找&lt;strong&gt;Last 5 characters of installed product key:xxxxx&lt;/strong&gt;字段，&lt;strong&gt;xxxxx&lt;/strong&gt;为密钥的最后5位。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;执行&lt;code&gt;cscript ospp.vbs /unpkey:XXXXX&lt;/code&gt;，删除无效KEY，仅保留需要的，如果没有也可全部删除，然后重新激活office&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Sat, 14 Dec 2019 10:07:45 +0800</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
       
@@ -1722,112 +1910,14 @@ jpa:
 &lt;h2 id=&#34;github&#34;&gt;发布到github&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo -t jane
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将生成的&lt;strong&gt;docs&lt;/strong&gt;文件夹上传，进入项目的设置中设置即可&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>解决Linux下环境变量失效问题</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Mon, 25 Nov 2019 14:58:07 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</guid>
-      
-        <description>&lt;p&gt;很多时候，我们对环境变量的配置不是很熟悉的时候，使用&lt;code&gt;source&lt;/code&gt;
-&lt;code&gt;~/.bashrc&lt;/code&gt;后很容易出现各种&lt;strong&gt;xx: command not found&lt;/strong&gt;问题，下面给出一种解决方法。&lt;/p&gt;
-&lt;p&gt;在终端输入&lt;code&gt;export PATH=/bin:/usr/bin&lt;/code&gt;，然后修改&lt;strong&gt;~/.bashrc&lt;/strong&gt;删除或者修改刚刚写的环境变量，然后再重新&lt;code&gt;source ~/.bashrc&lt;/code&gt;一下&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Maven打包包括本地jar包</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</link>
-      <pubDate>Mon, 18 Nov 2019 17:16:10 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</guid>
-      
-        <description>&lt;p&gt;在&lt;strong&gt;pom.xml&lt;/strong&gt;中添加&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;build&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;plugins&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;plugin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;spring-boot-maven-plugin&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;作用:项目打成jar的同时将本地jar包也引入进去&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;--&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;configuration&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;includeSystemScope&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;true&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/includeSystemScope&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/plugins&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java异常语句打印</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/java%E5%BC%82%E5%B8%B8%E8%AF%AD%E5%8F%A5%E6%89%93%E5%8D%B0/</link>
-      <pubDate>Thu, 19 Sep 2019 13:09:16 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/java%E5%BC%82%E5%B8%B8%E8%AF%AD%E5%8F%A5%E6%89%93%E5%8D%B0/</guid>
-      
-        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;StringWriter sw &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; StringWriter&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-PrintWriter ps &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; PrintWriter&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sw&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-e&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printStackTrace&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ps&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sw&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getBuffer&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Windows下使用自带certutil工具校验文件</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</link>
-      <pubDate>Tue, 03 Sep 2019 14:21:38 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</guid>
-      
-        <description>&lt;h2 id=&#34;heading&#34;&gt;命令&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx MD5&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA1&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA256&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;heading1&#34;&gt;示例&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;certutil&lt;/strong&gt;
-&lt;strong&gt;-hashfile C:\Users\wyy\desktop\testTemplate.docx SHA256&lt;/strong&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>删除office多个授权</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</link>
-      <pubDate>Mon, 15 Jul 2019 14:10:40 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</guid>
-      
-        <description>&lt;p&gt;激活office后，打开office任然出现需要激活的提示信息，打开账户发现发现有2个产品信息，一个已经激活，一个还需要激活，这就需要删除多余的版本授权信息，保留已经激活的产品信息。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;heading&#34;&gt;方法/步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;首先确认office目录下存在&lt;strong&gt;ospp.vbs&lt;/strong&gt;文件，可以搜索确认文件路径。我的是在&lt;strong&gt;C:\Program Files\Microsoft Office\Office16&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用管理员方式打开cmd&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进入&lt;strong&gt;ospp.vbs&lt;/strong&gt;所在目录&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;cd C:&lt;span style=&#34;color:#ae81ff&#34;&gt;\P&lt;/span&gt;rogram Files&lt;span style=&#34;color:#ae81ff&#34;&gt;\M&lt;/span&gt;icrosoft Office&lt;span style=&#34;color:#ae81ff&#34;&gt;\O&lt;/span&gt;ffice16
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;然后输入&lt;code&gt;cscript ospp.vbs /dstatus&lt;/code&gt;，回车，稍等片刻，打印出结果&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;寻找&lt;strong&gt;Last 5 characters of installed product key:xxxxx&lt;/strong&gt;字段，&lt;strong&gt;xxxxx&lt;/strong&gt;为密钥的最后5位。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;执行&lt;code&gt;cscript ospp.vbs /unpkey:XXXXX&lt;/code&gt;，删除无效KEY，仅保留需要的，如果没有也可全部删除，然后重新激活office&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&#34;heading2&#34;&gt;遇到的问题&lt;/h2&gt;
+&lt;h4 id=&#34;heading3&#34;&gt;自定义域名失效&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在settings中设置域名并成功解析，能够通过域名访问。但是每次更新文章，重新push之后，自定义域名就失效了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;原因: &lt;strong&gt;生成的&lt;/strong&gt;docs&lt;/strong&gt;文件夹中，没有了&lt;strong&gt;CNAME&lt;/strong&gt;文件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案:&lt;/strong&gt; 将&lt;strong&gt;CNAME&lt;/strong&gt;文件复制一份到&lt;strong&gt;static&lt;/strong&gt;文件夹中。此时生成的&lt;strong&gt;docs&lt;/strong&gt;文件夹中就会出现&lt;strong&gt;CNAME&lt;/strong&gt;文件，再&lt;code&gt;push&lt;/code&gt;即可&lt;/p&gt;
 </description>
       
     </item>

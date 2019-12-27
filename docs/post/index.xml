@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Wed, 25 Dec 2019 14:50:08 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2019 19:10:40 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nginx配置域名访问并安装SSL证书</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/nginx%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E5%B9%B6%E5%AE%89%E8%A3%85ssl%E8%AF%81%E4%B9%A6/</link>
+      <pubDate>Fri, 27 Dec 2019 19:10:40 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/nginx%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E5%B9%B6%E5%AE%89%E8%A3%85ssl%E8%AF%81%E4%B9%A6/</guid>
+      <description>从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并不能成功。 以下为自己试验的成功的配置 server { listen 80; listen 443 ssl; server_name open.nacos.luvnaxx.com;</description>
+    </item>
     
     <item>
       <title>Zipkin Server无法启动的问题</title>
@@ -94,15 +103,6 @@
     </item>
     
     <item>
-      <title>GitHub Pages搭建hugo静态博客</title>
-      <link>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Sat, 14 Dec 2019 10:07:45 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
-      <description>在Windows平台搭建hugo开发平台 安装hugo 安装Chocolatey 以管理员命令运行cmd命令行(powershell)，输入 @&amp;#34;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&amp;#34; -NoProfile -InputFormat</description>
-    </item>
-    
-    <item>
       <title>解决Linux下环境变量失效问题</title>
       <link>https://www.luvnaxx.com/post/%E6%8A%80/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</link>
       <pubDate>Mon, 25 Nov 2019 14:58:07 +0800</pubDate>
@@ -145,6 +145,23 @@
       
       <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</guid>
       <description>激活office后，打开office任然出现需要激活的提示信息，打开账户发现发现有2个产品信息，一个已经激活，一个还需要激活，这就需要删除多</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+      <description>在Windows平台搭建hugo开发平台 安装hugo   安装Chocolatey
+以管理员命令运行cmd命令行(powershell)，输入
+@&amp;#34;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&amp;#34; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &amp;#34;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))&amp;#34; &amp;amp;&amp;amp; SET &amp;#34;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&amp;#34; 完成之后，输入choco，会显示版本
+  安装完成choco之后，继续在命令行执行
+choco install hugo -confirm 成功后，执行hugo version。会显示hugo版本号
+  关联github与本地的hugo目录   在github创建一个空白仓库，clone到本地
+  进入clone下来的目录，git bash here打开窗口，执行
+hugo new site .   修改配置文件config.toml(使用Jane主题样例配置)
+# This is a simple configuration. # If you want to see the full configuration, please check `full-config.toml` . # And see https://gohugo.io/getting-started/configuration/ .</description>
     </item>
     
   </channel>
