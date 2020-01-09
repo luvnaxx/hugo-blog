@@ -10,14 +10,49 @@
   
   <url>
     <loc>https://www.luvnaxx.com/categories/</loc>
-    <lastmod>2019-12-27T19:10:40+08:00</lastmod>
+    <lastmod>2020-01-02T19:10:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/tags/office/</loc>
+    <lastmod>2020-01-02T19:10:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/post/</loc>
+    <lastmod>2020-01-02T19:10:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/tags/</loc>
+    <lastmod>2020-01-02T19:10:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.luvnaxx.com/</loc>
-    <lastmod>2019-12-27T19:10:40+08:00</lastmod>
+    <lastmod>2020-01-02T19:10:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</loc>
+    <lastmod>2020-01-02T19:10:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/categories/%E8%AE%B0/</loc>
+    <lastmod>2020-01-02T19:10:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,28 +72,7 @@
   </url>
   
   <url>
-    <loc>https://www.luvnaxx.com/post/</loc>
-    <lastmod>2019-12-27T19:10:40+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.luvnaxx.com/tags/ssl/</loc>
-    <lastmod>2019-12-27T19:10:40+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luvnaxx.com/tags/</loc>
-    <lastmod>2019-12-27T19:10:40+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luvnaxx.com/categories/%E8%AE%B0/</loc>
     <lastmod>2019-12-27T19:10:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -233,6 +247,34 @@
   </url>
   
   <url>
+    <loc>https://www.luvnaxx.com/tags/hugo/</loc>
+    <lastmod>2019-11-20T17:16:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/tags/windows/</loc>
+    <lastmod>2019-11-20T17:16:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/categories/%E4%BA%AB/</loc>
+    <lastmod>2019-11-20T17:16:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2019-11-20T17:16:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.luvnaxx.com/tags/maven/</loc>
     <lastmod>2019-11-18T17:16:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -261,13 +303,6 @@
   </url>
   
   <url>
-    <loc>https://www.luvnaxx.com/tags/windows/</loc>
-    <lastmod>2019-09-03T14:21:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</loc>
     <lastmod>2019-09-03T14:21:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -282,22 +317,10 @@
   </url>
   
   <url>
-    <loc>https://www.luvnaxx.com/tags/office/</loc>
-    <lastmod>2019-07-15T14:10:40+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</loc>
     <lastmod>2019-07-15T14:10:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

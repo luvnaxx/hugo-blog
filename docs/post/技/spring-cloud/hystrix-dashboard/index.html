@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Spring Cloud之Spring Boot 2.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法 - Jane - A super concise theme for Hugo</title>
+  <title>Spring Cloud之Spring Boot 2.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法 - 汝之所见 非吾所想</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="luvnaxx" />
-  <meta name="description" content="在启动类中添加 @Bean public ServletRegistrationBean getServlet() { HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet(); ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet); registrationBean.setLoadOnStartup(1); registrationBean.addUrlMappings(&amp;#34;/actuator/hystrix.stream&amp;#34;); registrationBean.setName(&amp;#34;HystrixMetricsStreamServlet&amp;#34;); return registrationBean; }" />
+  <meta name="description" content="解决方式 在启动类中添加
+" />
 
   <meta name="keywords" content="knowledge, life" />
 
@@ -60,22 +61,25 @@
 
 
 <meta property="og:title" content="Spring Cloud之Spring Boot 2.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法" />
-<meta property="og:description" content="在启动类中添加 @Bean public ServletRegistrationBean getServlet() { HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet(); ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet); registrationBean.setLoadOnStartup(1); registrationBean.addUrlMappings(&#34;/actuator/hystrix.stream&#34;); registrationBean.setName(&#34;HystrixMetricsStreamServlet&#34;); return registrationBean; }" />
+<meta property="og:description" content="解决方式
+在启动类中添加" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/" />
 <meta property="article:published_time" content="2019-12-16T16:51:28+08:00" />
 <meta property="article:modified_time" content="2019-12-16T16:51:28+08:00" />
 <meta itemprop="name" content="Spring Cloud之Spring Boot 2.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法">
-<meta itemprop="description" content="在启动类中添加 @Bean public ServletRegistrationBean getServlet() { HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet(); ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet); registrationBean.setLoadOnStartup(1); registrationBean.addUrlMappings(&#34;/actuator/hystrix.stream&#34;); registrationBean.setName(&#34;HystrixMetricsStreamServlet&#34;); return registrationBean; }">
+<meta itemprop="description" content="解决方式
+在启动类中添加">
 <meta itemprop="datePublished" content="2019-12-16T16:51:28&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-16T16:51:28&#43;08:00" />
-<meta itemprop="wordCount" content="28">
+<meta itemprop="wordCount" content="32">
 
 
 
 <meta itemprop="keywords" content="Spring Cloud,Hystrix Dashboard," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Spring Cloud之Spring Boot 2.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法"/>
-<meta name="twitter:description" content="在启动类中添加 @Bean public ServletRegistrationBean getServlet() { HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet(); ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet); registrationBean.setLoadOnStartup(1); registrationBean.addUrlMappings(&#34;/actuator/hystrix.stream&#34;); registrationBean.setName(&#34;HystrixMetricsStreamServlet&#34;); return registrationBean; }"/>
+<meta name="twitter:description" content="解决方式
+在启动类中添加"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -96,7 +100,7 @@
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Jane</a>
+    <a href="/" class="logo">烂笔头</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -236,7 +240,7 @@
     <div class="logo-wrapper">
   <a href="/" class="logo">
     
-      Jane
+      烂笔头
     
   </a>
 </div>
@@ -365,13 +369,18 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading">解决方式</a></li>
+  </ul>
+</nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      <p>在启动类中添加</p>
+      <h2 id="heading">解决方式</h2>
+<p>在启动类中添加</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#a6e22e">@Bean</span>
   <span style="color:#66d9ef">public</span> ServletRegistrationBean <span style="color:#a6e22e">getServlet</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     HystrixMetricsStreamServlet streamServlet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HystrixMetricsStreamServlet<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
@@ -475,7 +484,9 @@
 
   <span class="copyright-year">
     &copy;
-    2019
+    
+      2019 -
+    2020
     <span class="heart">
       
       <i class="iconfont">

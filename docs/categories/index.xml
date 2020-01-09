@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Jane - A super concise theme for Hugo</title>
+    <title>Categories on 汝之所见 非吾所想</title>
     <link>https://www.luvnaxx.com/categories/</link>
-    <description>Recent content in Categories on Jane - A super concise theme for Hugo</description>
+    <description>Recent content in Categories on 汝之所见 非吾所想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Fri, 27 Dec 2019 19:10:40 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jan 2020 19:10:40 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>记</title>
       <link>https://www.luvnaxx.com/categories/%E8%AE%B0/</link>
-      <pubDate>Fri, 27 Dec 2019 19:10:40 +0800</pubDate>
+      <pubDate>Thu, 02 Jan 2020 19:10:40 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/categories/%E8%AE%B0/</guid>
       <description></description>
@@ -27,6 +27,15 @@
       <pubDate>Wed, 25 Dec 2019 14:50:08 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/categories/%E6%8A%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>享</title>
+      <link>https://www.luvnaxx.com/categories/%E4%BA%AB/</link>
+      <pubDate>Wed, 20 Nov 2019 17:16:10 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/categories/%E4%BA%AB/</guid>
       <description></description>
     </item>
     

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jane - A super concise theme for Hugo</title>
+    <title>汝之所见 非吾所想</title>
     <link>https://www.luvnaxx.com/</link>
-    <description>Recent content on Jane - A super concise theme for Hugo</description>
+    <description>Recent content on 汝之所见 非吾所想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Fri, 27 Dec 2019 19:10:40 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jan 2020 19:10:40 +0800</lastBuildDate>
     
         <atom:link href="https://www.luvnaxx.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,6 +22,58 @@
         <description>&lt;p&gt;冲冲冲!!!&lt;/p&gt;
 &lt;p&gt;懒狗没有原创&lt;/p&gt;
 </description>
+      
+    </item>
+    
+    <item>
+      <title>自定义安装office</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</link>
+      <pubDate>Thu, 02 Jan 2020 19:10:40 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</guid>
+      
+        <description>&lt;p&gt;不安装office全家桶，自定义要安装的组件&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;heading&#34;&gt;方法/步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;从官网下载&lt;a href=&#34;https://www.microsoft.com/en-us/download/confirmation.aspx?id=49117&#34;&gt;Office部署工具&lt;/a&gt;，虽然此工具是Office365的，但是无需担心。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;安装/解压&lt;/strong&gt;该工具，会在我们指定的安装目录，生成以下的四个文件。这里我们只需要的&lt;strong&gt;setup.exe&lt;/strong&gt;和&lt;strong&gt;configuration-Office365-x64.xml&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;替换configuration-Office365-x64.xml文件中的内容&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Configuration&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Add&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SourcePath=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;F:\&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;OfficeClientEdition=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;64&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Product&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ProPlusRetail&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Language&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Access&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Groove&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;InfoPath&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Lync&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;OneNote&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Outlook&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Publisher&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SharePointDesigner&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Product&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Add&amp;gt;&lt;/span&gt;  
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Configuration&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;• OfficeClientEdition表示架构，安装32位则改为32。&lt;/p&gt;
+&lt;p&gt;• SourcePath表示Office2016 ISO镜像加载位置；需提前加载镜像才会显示其加载的位置。&lt;/p&gt;
+&lt;p&gt;• Language表示语言，zh-CN表示中文，英文则为en-us。&lt;/p&gt;
+&lt;p&gt;• ExcludeApp表示不被安装的组件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入第2步的安装目录，使用以下命令启动后Office的安装&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;setup.exe /configure configuration-Office365-x64.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以看到这次只安装Word,Excel,PowerPoint三个软件，等待安装完成即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
       
     </item>
     
@@ -897,8 +949,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
 &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
 &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;heading3&#34;&gt;效果&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201809/989d4356914c4f16902e87d60e9964a4.PNG&#34; alt=&#34;Thymeleaf&#34;&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201809/989d4356914c4f16902e87d60e9964a4.PNG&#34; alt=&#34;Thymeleaf&#34;&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -909,7 +960,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</guid>
       
-        <description>&lt;p&gt;给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档，不然会造成说明与实际不符的情况。所以我们需要一个能配合程序产生API文档的小伙伴。Swagger2就是一款RESTFul接口的文档在线自动生成+功能测试功能软件。&lt;/p&gt;
+        <description>&lt;p&gt;给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档，不然会造成说明与实际不符的情况。所以我们需要一个能配合程序产生API文档的小伙伴。Swagger2就是一款RESTful接口的文档在线自动生成+功能测试功能软件。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;heading&#34;&gt;添加依赖&lt;/h2&gt;
 &lt;p&gt;在&lt;code&gt;pom.xml&lt;/code&gt;中添加如下依赖&lt;/p&gt;
@@ -968,8 +1019,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
   &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过&lt;code&gt;@ApiOperation&lt;/code&gt;注解来给API增加说明、通过&lt;code&gt;@ApiImplicitParams&lt;/code&gt;、&lt;code&gt;@ApiImplicitParam&lt;/code&gt;注解来给参数增加说明。&lt;/p&gt;
 &lt;h2 id=&#34;heading3&#34;&gt;运行测试&lt;/h2&gt;
-&lt;p&gt;启动项目，访问 &lt;a href=&#34;http://localhost:7777/swagger-ui.html&#34;&gt;&lt;a href=&#34;http://localhost:7777/swagger-ui.html&#34;&gt;http://localhost:7777/swagger-ui.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;启动项目，访问 &lt;a href=&#34;http://localhost:7777/swagger-ui.html&#34;&gt;&lt;a href=&#34;http://localhost:7777/swagger-ui.html&#34;&gt;http://localhost:7777/swagger-ui.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -1197,8 +1247,7 @@ mybatis:
     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; filterRegistrationBean&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再次启动项目，访问 &lt;a href=&#34;localhost:7777/druid/login.html&#34;&gt;druid监控界面&lt;/a&gt;，输入在代码中设置的账号密码即可进入druid控制界面。&lt;/p&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再次启动项目，访问 &lt;a href=&#34;localhost:7777/druid/login.html&#34;&gt;druid监控界面&lt;/a&gt;，输入在代码中设置的账号密码即可进入druid控制界面。&lt;/p&gt;</description>
       
     </item>
     
@@ -1367,8 +1416,7 @@ mapper文件的通用模板是&lt;/p&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;namespace就是dao层的接口文件。使用相关插件可以很方便的编写SQL语句以及进行文件之间的跳转。&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
+&lt;/blockquote&gt;</description>
       
     </item>
     
@@ -1646,7 +1694,8 @@ jpa:
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</guid>
       
-        <description>&lt;p&gt;在启动类中添加&lt;/p&gt;
+        <description>&lt;h2 id=&#34;heading&#34;&gt;解决方式&lt;/h2&gt;
+&lt;p&gt;在启动类中添加&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Bean&lt;/span&gt;
   &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; ServletRegistrationBean &lt;span style=&#34;color:#a6e22e&#34;&gt;getServlet&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
     HystrixMetricsStreamServlet streamServlet &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; HystrixMetricsStreamServlet&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
@@ -1675,105 +1724,14 @@ jpa:
     </item>
     
     <item>
-      <title>Maven打包包括本地jar包</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</link>
-      <pubDate>Mon, 18 Nov 2019 17:16:10 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</guid>
-      
-        <description>&lt;p&gt;在&lt;strong&gt;pom.xml&lt;/strong&gt;中添加&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;build&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;plugins&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;plugin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;spring-boot-maven-plugin&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;作用:项目打成jar的同时将本地jar包也引入进去&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;--&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;configuration&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;includeSystemScope&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;true&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/includeSystemScope&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/plugins&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Java异常语句打印</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/java%E5%BC%82%E5%B8%B8%E8%AF%AD%E5%8F%A5%E6%89%93%E5%8D%B0/</link>
-      <pubDate>Thu, 19 Sep 2019 13:09:16 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/java%E5%BC%82%E5%B8%B8%E8%AF%AD%E5%8F%A5%E6%89%93%E5%8D%B0/</guid>
-      
-        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;StringWriter sw &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; StringWriter&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-PrintWriter ps &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; PrintWriter&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sw&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-e&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printStackTrace&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ps&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sw&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getBuffer&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Windows下使用自带certutil工具校验文件</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</link>
-      <pubDate>Tue, 03 Sep 2019 14:21:38 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</guid>
-      
-        <description>&lt;h2 id=&#34;heading&#34;&gt;命令&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx MD5&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA1&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA256&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;heading1&#34;&gt;示例&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;certutil&lt;/strong&gt;
-&lt;strong&gt;-hashfile C:\Users\wyy\desktop\testTemplate.docx SHA256&lt;/strong&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>删除office多个授权</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</link>
-      <pubDate>Mon, 15 Jul 2019 14:10:40 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</guid>
-      
-        <description>&lt;p&gt;激活office后，打开office任然出现需要激活的提示信息，打开账户发现发现有2个产品信息，一个已经激活，一个还需要激活，这就需要删除多余的版本授权信息，保留已经激活的产品信息。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;heading&#34;&gt;方法/步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;首先确认office目录下存在&lt;strong&gt;ospp.vbs&lt;/strong&gt;文件，可以搜索确认文件路径。我的是在&lt;strong&gt;C:\Program Files\Microsoft Office\Office16&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用管理员方式打开cmd&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进入&lt;strong&gt;ospp.vbs&lt;/strong&gt;所在目录&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;cd C:&lt;span style=&#34;color:#ae81ff&#34;&gt;\P&lt;/span&gt;rogram Files&lt;span style=&#34;color:#ae81ff&#34;&gt;\M&lt;/span&gt;icrosoft Office&lt;span style=&#34;color:#ae81ff&#34;&gt;\O&lt;/span&gt;ffice16
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;然后输入&lt;code&gt;cscript ospp.vbs /dstatus&lt;/code&gt;，回车，稍等片刻，打印出结果&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;寻找&lt;strong&gt;Last 5 characters of installed product key:xxxxx&lt;/strong&gt;字段，&lt;strong&gt;xxxxx&lt;/strong&gt;为密钥的最后5位。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;执行&lt;code&gt;cscript ospp.vbs /unpkey:XXXXX&lt;/code&gt;，删除无效KEY，仅保留需要的，如果没有也可全部删除，然后重新激活office&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title></title>
+      <title>在Windows平台搭建hugo开发平台</title>
       <link>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Nov 2019 17:16:10 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
       
-        <description>&lt;h1 id=&#34;windowshugo&#34;&gt;在Windows平台搭建hugo开发平台&lt;/h1&gt;
+        <description>&lt;p&gt;在Windows平台搭建hugo开发平台，写文章上传至GitHub pages&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;hugo&#34;&gt;安装hugo&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -1917,8 +1875,98 @@ System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#3
 &lt;p&gt;在settings中设置域名并成功解析，能够通过域名访问。但是每次更新文章，重新push之后，自定义域名就失效了。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;原因: &lt;strong&gt;生成的&lt;/strong&gt;docs&lt;/strong&gt;文件夹中，没有了&lt;strong&gt;CNAME&lt;/strong&gt;文件。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方案:&lt;/strong&gt; 将&lt;strong&gt;CNAME&lt;/strong&gt;文件复制一份到&lt;strong&gt;static&lt;/strong&gt;文件夹中。此时生成的&lt;strong&gt;docs&lt;/strong&gt;文件夹中就会出现&lt;strong&gt;CNAME&lt;/strong&gt;文件，再&lt;code&gt;push&lt;/code&gt;即可&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;strong&gt;解决方案:&lt;/strong&gt; 将&lt;strong&gt;CNAME&lt;/strong&gt;文件复制一份到&lt;strong&gt;static&lt;/strong&gt;文件夹中。此时生成的&lt;strong&gt;docs&lt;/strong&gt;文件夹中就会出现&lt;strong&gt;CNAME&lt;/strong&gt;文件，再&lt;code&gt;push&lt;/code&gt;即可&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Maven打包包括本地jar包</title>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</link>
+      <pubDate>Mon, 18 Nov 2019 17:16:10 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</guid>
+      
+        <description>&lt;p&gt;在&lt;strong&gt;pom.xml&lt;/strong&gt;中添加&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;build&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;plugins&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;plugin&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;spring-boot-maven-plugin&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;作用:项目打成jar的同时将本地jar包也引入进去&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;--&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;configuration&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;includeSystemScope&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;true&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/includeSystemScope&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/plugins&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Java异常语句打印</title>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/java%E5%BC%82%E5%B8%B8%E8%AF%AD%E5%8F%A5%E6%89%93%E5%8D%B0/</link>
+      <pubDate>Thu, 19 Sep 2019 13:09:16 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/java%E5%BC%82%E5%B8%B8%E8%AF%AD%E5%8F%A5%E6%89%93%E5%8D%B0/</guid>
+      
+        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;StringWriter sw &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; StringWriter&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+PrintWriter ps &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; PrintWriter&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sw&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+e&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printStackTrace&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ps&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sw&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getBuffer&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Windows下使用自带certutil工具校验文件</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Tue, 03 Sep 2019 14:21:38 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</guid>
+      
+        <description>&lt;h2 id=&#34;heading&#34;&gt;命令&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx MD5&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA1&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA256&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;heading1&#34;&gt;示例&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;certutil&lt;/strong&gt;
+&lt;strong&gt;-hashfile C:\Users\wyy\desktop\testTemplate.docx SHA256&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201909/d685b0d5-f457-4f54-bcc9-808e4d266d1e.png&#34; alt=&#34;使用自带certutil工具校验文件&#34;&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>删除office多个授权</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</link>
+      <pubDate>Mon, 15 Jul 2019 14:10:40 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</guid>
+      
+        <description>&lt;p&gt;激活office后，打开office任然出现需要激活的提示信息，打开账户发现发现有2个产品信息，一个已经激活，一个还需要激活，这就需要删除多余的版本授权信息，保留已经激活的产品信息。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;heading&#34;&gt;方法/步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先确认office目录下存在&lt;strong&gt;ospp.vbs&lt;/strong&gt;文件，可以搜索确认文件路径。我的是在&lt;strong&gt;C:\Program Files\Microsoft Office\Office16&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用管理员方式打开cmd&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;strong&gt;ospp.vbs&lt;/strong&gt;所在目录&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;cd C:&lt;span style=&#34;color:#ae81ff&#34;&gt;\P&lt;/span&gt;rogram Files&lt;span style=&#34;color:#ae81ff&#34;&gt;\M&lt;/span&gt;icrosoft Office&lt;span style=&#34;color:#ae81ff&#34;&gt;\O&lt;/span&gt;ffice16
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后输入&lt;code&gt;cscript ospp.vbs /dstatus&lt;/code&gt;，回车，稍等片刻，打印出结果&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;寻找&lt;strong&gt;Last 5 characters of installed product key:xxxxx&lt;/strong&gt;字段，&lt;strong&gt;xxxxx&lt;/strong&gt;为密钥的最后5位。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;执行&lt;code&gt;cscript ospp.vbs /unpkey:XXXXX&lt;/code&gt;，删除无效KEY，仅保留需要的，如果没有也可全部删除，然后重新激活office&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
       
     </item>
     

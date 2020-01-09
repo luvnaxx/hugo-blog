@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MyBatis on Jane - A super concise theme for Hugo</title>
+    <title>MyBatis on 汝之所见 非吾所想</title>
     <link>https://www.luvnaxx.com/tags/mybatis/</link>
-    <description>Recent content in MyBatis on Jane - A super concise theme for Hugo</description>
+    <description>Recent content in MyBatis on 汝之所见 非吾所想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
@@ -18,7 +18,7 @@
       <pubDate>Sun, 22 Dec 2019 13:59:23 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/mybatis/</guid>
-      <description>在上一篇SpringDataJPA的基础上进行扩展。 数据库准备 还是使用上篇文章中的springboot数据库，这次新建book数据表， CREATE TABLE book</description>
+      <description>&lt;p&gt;在上一篇SpringDataJPA的基础上进行扩展。&lt;/p&gt;</description>
     </item>
     
   </channel>

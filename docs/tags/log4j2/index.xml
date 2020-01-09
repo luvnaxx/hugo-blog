@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Log4j2 on Jane - A super concise theme for Hugo</title>
+    <title>Log4j2 on 汝之所见 非吾所想</title>
     <link>https://www.luvnaxx.com/tags/log4j2/</link>
-    <description>Recent content in Log4j2 on Jane - A super concise theme for Hugo</description>
+    <description>Recent content in Log4j2 on 汝之所见 非吾所想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
@@ -18,7 +18,7 @@
       <pubDate>Sun, 22 Dec 2019 15:59:54 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/log4j2/</guid>
-      <description>Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。 引入依赖 &amp;lt;!--移除原有的logBack --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;exclusions&amp;gt; &amp;lt;exclusion&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-logging&amp;lt;/artifactId&amp;gt; &amp;lt;/exclusion&amp;gt; &amp;lt;/exclusions&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt</description>
+      <description>&lt;p&gt;Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>技 on Jane - A super concise theme for Hugo</title>
+    <title>技 on 汝之所见 非吾所想</title>
     <link>https://www.luvnaxx.com/categories/%E6%8A%80/</link>
-    <description>Recent content in 技 on Jane - A super concise theme for Hugo</description>
+    <description>Recent content in 技 on 汝之所见 非吾所想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
@@ -18,7 +18,8 @@
       <pubDate>Wed, 25 Dec 2019 14:50:08 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/zipkin-server/</guid>
-      <description>加入 Zipkin Server pom.xml &amp;lt;!--https://mvnrepository.com/artifact/io.zipkin.java/zipkin-server --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.zipkin.java&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;zipkin-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.12.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!--https://mvnrepository.com/artifact/io.zipkin.java/zipkin-autoconfigure-ui --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.zipkin.java&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;zipkin-autoconfigure-ui&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.12.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 异常处理 在 Spring Boot 启动类加上 @EnableZipkinServer 注解，启动项目，控制台报错 SLF4J: Class path contains multiple SLF4J bindings. SLF4J: Found binding in [jar:file:/C:/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.11.2/log4j-slf4j-impl-2.11.2.jar!/org/slf4j/impl/StaticLoggerBinder.class] SLF4J: Found binding in [jar:file:/C:/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class] SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation. SLF4J: Actual</description>
+      <description>&lt;h2 id=&#34;-zipkin-server&#34;&gt;加入 Zipkin Server&lt;/h2&gt;
+&lt;p&gt;pom.xml&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,7 +28,7 @@
       <pubDate>Sun, 22 Dec 2019 17:35:36 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/multiple-data-source/</guid>
-      <description>很早就想记录一下Spring Boot配置多数据的方式。但是网上找到的大多还都是Spring Boot 1.x的内容，一些东西已经不适合现在的版本了。这</description>
+      <description>&lt;p&gt;很早就想记录一下Spring Boot配置多数据的方式。但是网上找到的大多还都是Spring Boot 1.x的内容，一些东西已经不适合现在的版本了。这几天又仔细找了一找，总算把Spring Boot 2配置多数据源的几种方式实验通过了。以两个数据源为例&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,7 +37,9 @@
       <pubDate>Sun, 22 Dec 2019 17:03:52 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/</guid>
-      <description>FreeMarker 代码 依赖pom.xml &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-freemarker&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; 配置application.yml spring: # FreeMarker 配置 freemarker: cache: false charset: utf-8 check-template-location: true content-type: text/html expose-request-attributes: true expose-session-attributes: true request-context-attribute: request 路由PageController.</description>
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;freemarker&#34;&gt;FreeMarker&lt;/h2&gt;
+&lt;h4 id=&#34;heading&#34;&gt;代码&lt;/h4&gt;</description>
     </item>
     
     <item>
@@ -45,7 +48,7 @@
       <pubDate>Sun, 22 Dec 2019 16:02:23 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</guid>
-      <description>给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档</description>
+      <description>&lt;p&gt;给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档，不然会造成说明与实际不符的情况。所以我们需要一个能配合程序产生API文档的小伙伴。Swagger2就是一款RESTful接口的文档在线自动生成+功能测试功能软件。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -54,7 +57,7 @@
       <pubDate>Sun, 22 Dec 2019 15:59:54 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/log4j2/</guid>
-      <description>Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。 引入依赖 &amp;lt;!--移除原有的logBack --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;exclusions&amp;gt; &amp;lt;exclusion&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-logging&amp;lt;/artifactId&amp;gt; &amp;lt;/exclusion&amp;gt; &amp;lt;/exclusions&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt</description>
+      <description>&lt;p&gt;Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -63,7 +66,7 @@
       <pubDate>Sun, 22 Dec 2019 14:57:18 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/druid/</guid>
-      <description>Druid是一个JDBC组件库，包括数据库连接池、SQL Parser等组件。DruidDataSource是最好的数据库连接池。具体参见 alibaba/druid 添</description>
+      <description>&lt;p&gt;Druid是一个JDBC组件库，包括数据库连接池、SQL Parser等组件。DruidDataSource是最好的数据库连接池。具体参见 &lt;a href=&#34;https://github.com/alibaba/druid/wiki/%E9%A6%96%E9%A1%B5&#34;&gt;alibaba/druid&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -72,7 +75,7 @@
       <pubDate>Sun, 22 Dec 2019 13:59:23 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/mybatis/</guid>
-      <description>在上一篇SpringDataJPA的基础上进行扩展。 数据库准备 还是使用上篇文章中的springboot数据库，这次新建book数据表， CREATE TABLE book</description>
+      <description>&lt;p&gt;在上一篇SpringDataJPA的基础上进行扩展。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -90,7 +93,8 @@
       <pubDate>Mon, 16 Dec 2019 16:51:28 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</guid>
-      <description>在启动类中添加 @Bean public ServletRegistrationBean getServlet() { HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet(); ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet); registrationBean.setLoadOnStartup(1); registrationBean.addUrlMappings(&amp;#34;/actuator/hystrix.stream&amp;#34;); registrationBean.setName(&amp;#34;HystrixMetricsStreamServlet&amp;#34;); return registrationBean; }</description>
+      <description>&lt;h2 id=&#34;heading&#34;&gt;解决方式&lt;/h2&gt;
+&lt;p&gt;在启动类中添加&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -108,7 +112,7 @@
       <pubDate>Mon, 18 Nov 2019 17:16:10 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</guid>
-      <description>在pom.xml中添加 &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;!--作用:项目打成jar的同时将本地jar包也引入进去--&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;includeSystemScope&amp;gt;true&amp;lt;/includeSystemScope&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt;</description>
+      <description>&lt;p&gt;在&lt;strong&gt;pom.xml&lt;/strong&gt;中添加&lt;/p&gt;</description>
     </item>
     
     <item>

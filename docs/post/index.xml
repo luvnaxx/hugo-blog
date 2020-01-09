@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Jane - A super concise theme for Hugo</title>
+    <title>Posts on 汝之所见 非吾所想</title>
     <link>https://www.luvnaxx.com/post/</link>
-    <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
+    <description>Recent content in Posts on 汝之所见 非吾所想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Fri, 27 Dec 2019 19:10:40 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jan 2020 19:10:40 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>自定义安装office</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</link>
+      <pubDate>Thu, 02 Jan 2020 19:10:40 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</guid>
+      <description>&lt;p&gt;不安装office全家桶，自定义要安装的组件&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Nginx配置域名访问并安装SSL证书</title>
@@ -18,7 +27,7 @@
       <pubDate>Fri, 27 Dec 2019 19:10:40 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E8%AE%B0/nginx%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E5%B9%B6%E5%AE%89%E8%A3%85ssl%E8%AF%81%E4%B9%A6/</guid>
-      <description>从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并不能成功。 以下为自己试验的成功的配置 server { listen 80; listen 443 ssl; server_name open.nacos.luvnaxx.com;</description>
+      <description>&lt;p&gt;从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并不能成功。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,7 +36,8 @@
       <pubDate>Wed, 25 Dec 2019 14:50:08 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/zipkin-server/</guid>
-      <description>加入 Zipkin Server pom.xml &amp;lt;!--https://mvnrepository.com/artifact/io.zipkin.java/zipkin-server --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.zipkin.java&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;zipkin-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.12.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!--https://mvnrepository.com/artifact/io.zipkin.java/zipkin-autoconfigure-ui --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;io.zipkin.java&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;zipkin-autoconfigure-ui&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.12.3&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 异常处理 在 Spring Boot 启动类加上 @EnableZipkinServer 注解，启动项目，控制台报错 SLF4J: Class path contains multiple SLF4J bindings. SLF4J: Found binding in [jar:file:/C:/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.11.2/log4j-slf4j-impl-2.11.2.jar!/org/slf4j/impl/StaticLoggerBinder.class] SLF4J: Found binding in [jar:file:/C:/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class] SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation. SLF4J: Actual</description>
+      <description>&lt;h2 id=&#34;-zipkin-server&#34;&gt;加入 Zipkin Server&lt;/h2&gt;
+&lt;p&gt;pom.xml&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,7 +46,7 @@
       <pubDate>Sun, 22 Dec 2019 17:35:36 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/multiple-data-source/</guid>
-      <description>很早就想记录一下Spring Boot配置多数据的方式。但是网上找到的大多还都是Spring Boot 1.x的内容，一些东西已经不适合现在的版本了。这</description>
+      <description>&lt;p&gt;很早就想记录一下Spring Boot配置多数据的方式。但是网上找到的大多还都是Spring Boot 1.x的内容，一些东西已经不适合现在的版本了。这几天又仔细找了一找，总算把Spring Boot 2配置多数据源的几种方式实验通过了。以两个数据源为例&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -45,7 +55,9 @@
       <pubDate>Sun, 22 Dec 2019 17:03:52 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/</guid>
-      <description>FreeMarker 代码 依赖pom.xml &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-freemarker&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; 配置application.yml spring: # FreeMarker 配置 freemarker: cache: false charset: utf-8 check-template-location: true content-type: text/html expose-request-attributes: true expose-session-attributes: true request-context-attribute: request 路由PageController.</description>
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;freemarker&#34;&gt;FreeMarker&lt;/h2&gt;
+&lt;h4 id=&#34;heading&#34;&gt;代码&lt;/h4&gt;</description>
     </item>
     
     <item>
@@ -54,7 +66,7 @@
       <pubDate>Sun, 22 Dec 2019 16:02:23 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</guid>
-      <description>给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档</description>
+      <description>&lt;p&gt;给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档，不然会造成说明与实际不符的情况。所以我们需要一个能配合程序产生API文档的小伙伴。Swagger2就是一款RESTful接口的文档在线自动生成+功能测试功能软件。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -63,7 +75,7 @@
       <pubDate>Sun, 22 Dec 2019 15:59:54 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/log4j2/</guid>
-      <description>Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。 引入依赖 &amp;lt;!--移除原有的logBack --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;exclusions&amp;gt; &amp;lt;exclusion&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-logging&amp;lt;/artifactId&amp;gt; &amp;lt;/exclusion&amp;gt; &amp;lt;/exclusions&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt</description>
+      <description>&lt;p&gt;Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -72,7 +84,7 @@
       <pubDate>Sun, 22 Dec 2019 14:57:18 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/druid/</guid>
-      <description>Druid是一个JDBC组件库，包括数据库连接池、SQL Parser等组件。DruidDataSource是最好的数据库连接池。具体参见 alibaba/druid 添</description>
+      <description>&lt;p&gt;Druid是一个JDBC组件库，包括数据库连接池、SQL Parser等组件。DruidDataSource是最好的数据库连接池。具体参见 &lt;a href=&#34;https://github.com/alibaba/druid/wiki/%E9%A6%96%E9%A1%B5&#34;&gt;alibaba/druid&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -81,7 +93,7 @@
       <pubDate>Sun, 22 Dec 2019 13:59:23 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/mybatis/</guid>
-      <description>在上一篇SpringDataJPA的基础上进行扩展。 数据库准备 还是使用上篇文章中的springboot数据库，这次新建book数据表， CREATE TABLE book</description>
+      <description>&lt;p&gt;在上一篇SpringDataJPA的基础上进行扩展。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -99,7 +111,8 @@
       <pubDate>Mon, 16 Dec 2019 16:51:28 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</guid>
-      <description>在启动类中添加 @Bean public ServletRegistrationBean getServlet() { HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet(); ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet); registrationBean.setLoadOnStartup(1); registrationBean.addUrlMappings(&amp;#34;/actuator/hystrix.stream&amp;#34;); registrationBean.setName(&amp;#34;HystrixMetricsStreamServlet&amp;#34;); return registrationBean; }</description>
+      <description>&lt;h2 id=&#34;heading&#34;&gt;解决方式&lt;/h2&gt;
+&lt;p&gt;在启动类中添加&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -112,12 +125,21 @@
     </item>
     
     <item>
+      <title>在Windows平台搭建hugo开发平台</title>
+      <link>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 20 Nov 2019 17:16:10 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;在Windows平台搭建hugo开发平台，写文章上传至GitHub pages&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Maven打包包括本地jar包</title>
       <link>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</link>
       <pubDate>Mon, 18 Nov 2019 17:16:10 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</guid>
-      <description>在pom.xml中添加 &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;!--作用:项目打成jar的同时将本地jar包也引入进去--&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;includeSystemScope&amp;gt;true&amp;lt;/includeSystemScope&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt;</description>
+      <description>&lt;p&gt;在&lt;strong&gt;pom.xml&lt;/strong&gt;中添加&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -135,7 +157,10 @@
       <pubDate>Tue, 03 Sep 2019 14:21:38 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</guid>
-      <description>命令 certutil -hashfile xxx MD5 certutil -hashfile xxx SHA1 certutil -hashfile xxx SHA256 示例 certutil -hashfile C:\Users\wyy\desktop\testTemplate.docx SHA256</description>
+      <description>&lt;h2 id=&#34;heading&#34;&gt;命令&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx MD5&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA1&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA256&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -144,24 +169,7 @@
       <pubDate>Mon, 15 Jul 2019 14:10:40 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</guid>
-      <description>激活office后，打开office任然出现需要激活的提示信息，打开账户发现发现有2个产品信息，一个已经激活，一个还需要激活，这就需要删除多</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
-      <description>在Windows平台搭建hugo开发平台 安装hugo   安装Chocolatey
-以管理员命令运行cmd命令行(powershell)，输入
-@&amp;#34;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&amp;#34; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &amp;#34;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))&amp;#34; &amp;amp;&amp;amp; SET &amp;#34;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&amp;#34; 完成之后，输入choco，会显示版本
-  安装完成choco之后，继续在命令行执行
-choco install hugo -confirm 成功后，执行hugo version。会显示hugo版本号
-  关联github与本地的hugo目录   在github创建一个空白仓库，clone到本地
-  进入clone下来的目录，git bash here打开窗口，执行
-hugo new site .   修改配置文件config.toml(使用Jane主题样例配置)
-# This is a simple configuration. # If you want to see the full configuration, please check `full-config.toml` . # And see https://gohugo.io/getting-started/configuration/ .</description>
+      <description>&lt;p&gt;激活office后，打开office任然出现需要激活的提示信息，打开账户发现发现有2个产品信息，一个已经激活，一个还需要激活，这就需要删除多余的版本授权信息，保留已经激活的产品信息。&lt;/p&gt;</description>
     </item>
     
   </channel>

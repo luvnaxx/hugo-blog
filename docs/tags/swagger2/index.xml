@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Swagger2 on Jane - A super concise theme for Hugo</title>
+    <title>Swagger2 on 汝之所见 非吾所想</title>
     <link>https://www.luvnaxx.com/tags/swagger2/</link>
-    <description>Recent content in Swagger2 on Jane - A super concise theme for Hugo</description>
+    <description>Recent content in Swagger2 on 汝之所见 非吾所想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
@@ -18,7 +18,7 @@
       <pubDate>Sun, 22 Dec 2019 16:02:23 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</guid>
-      <description>给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档</description>
+      <description>&lt;p&gt;给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档，不然会造成说明与实际不符的情况。所以我们需要一个能配合程序产生API文档的小伙伴。Swagger2就是一款RESTful接口的文档在线自动生成+功能测试功能软件。&lt;/p&gt;</description>
     </item>
     
   </channel>
