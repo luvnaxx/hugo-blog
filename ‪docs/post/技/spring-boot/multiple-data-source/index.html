@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/multiple-data-source/" />
@@ -368,7 +368,7 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#数据库概况">数据库概况</a></li>
+    <li><a href="#heading">数据库概况</a></li>
     <li><a href="#jdbctemplate">JdbcTemplate</a>
       <ul>
         <li></li>
@@ -393,14 +393,14 @@
     <div class="post-content">
       <p>很早就想记录一下Spring Boot配置多数据的方式。但是网上找到的大多还都是Spring Boot 1.x的内容，一些东西已经不适合现在的版本了。这几天又仔细找了一找，总算把Spring Boot 2配置多数据源的几种方式实验通过了。以两个数据源为例</p>
 <hr>
-<h2 id="数据库概况">数据库概况</h2>
+<h2 id="heading">数据库概况</h2>
 <p>共有两个数据库，这里以两个MySQL数据库为例。实际中可以任意组合。在我工作环境中，常用到的是位于不同机器上面的MySQL加上SQL Server的组合</p>
 <p>数据表基本情况如图
 <img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201812/ea22c60d150a433ab2a2ca1cb660925f.png" alt="多数据源数据库信息"></p>
 <h2 id="jdbctemplate">JdbcTemplate</h2>
 <p>结构如图
 <img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201812/9e71b329dc014b6da8d90c1d3931c1bf.png" alt="项目结构图"></p>
-<h4 id="创建项目引入依赖">创建项目，引入依赖</h4>
+<h4 id="heading1">创建项目，引入依赖</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies</span><span style="color:#f92672">&gt;</span>
 
     <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
@@ -436,7 +436,7 @@
       <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
   <span style="color:#f92672">&lt;/dependencies&gt;</span>
-</code></pre></div><h4 id="编写配置文件">编写配置文件</h4>
+</code></pre></div><h4 id="heading2">编写配置文件</h4>
 <p>配置文件<strong>application.yml</strong>填写两个数据源的基本信息</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">spring:
   datasource:
@@ -450,7 +450,7 @@
       driver-class-name: com.mysql.jdbc.Driver
       username: xxxxx
       password: xxxxx
-</code></pre></div><h4 id="编写代码">编写代码</h4>
+</code></pre></div><h4 id="heading3">编写代码</h4>
 <p>新建<code>config</code>包，新建<code>DataSourceConfig.java</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DataSourceConfig</span> <span style="color:#f92672">{</span>
@@ -484,7 +484,7 @@
         <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> JdbcTemplate<span style="color:#f92672">(</span>dataSource<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h4 id="测试">测试</h4>
+</code></pre></div><h4 id="heading4">测试</h4>
 <p>编写测试类</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RunWith</span><span style="color:#f92672">(</span>SpringRunner<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
 <span style="color:#a6e22e">@SpringBootTest</span>
@@ -512,7 +512,7 @@
 <h2 id="jpa">JPA</h2>
 <p>结构如图
 <img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201812/24f9f1c744f7481580512649caa19568.png" alt="项目结构图"></p>
-<h4 id="创建项目引入依赖-1">创建项目，引入依赖</h4>
+<h4 id="heading5">创建项目，引入依赖</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies</span><span style="color:#f92672">&gt;</span>
 
     <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
@@ -548,7 +548,7 @@
       <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
   <span style="color:#f92672">&lt;/dependencies&gt;</span>
-</code></pre></div><h4 id="编写配置文件-1">编写配置文件</h4>
+</code></pre></div><h4 id="heading6">编写配置文件</h4>
 <p>配置文件<strong>application.yml</strong>填写两个数据源的基本信息</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">spring:
   datasource:
@@ -571,7 +571,7 @@
       ddl-auto: update
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
-</code></pre></div><h4 id="编写代码-1">编写代码</h4>
+</code></pre></div><h4 id="heading7">编写代码</h4>
 <p>新建<code>config</code>包，新建<code>DataSourceConfig.java</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DataSourceConfig</span> <span style="color:#f92672">{</span>
@@ -727,7 +727,7 @@
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Repository</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">TestJPA</span> <span style="color:#66d9ef">extends</span> BaseDAO<span style="color:#f92672">&lt;</span>TestEntity<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h4 id="测试-1">测试</h4>
+</code></pre></div><h4 id="heading8">测试</h4>
 <p>编写测试类</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RunWith</span><span style="color:#f92672">(</span>SpringRunner<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
 <span style="color:#a6e22e">@SpringBootTest</span>
@@ -755,7 +755,7 @@
 <h2 id="mybatis">MyBatis</h2>
 <p>结构如图
 <img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201812/c0421bc760a44bac8e8f581d8fcfe7c2.png" alt="项目结构图"></p>
-<h4 id="创建项目引入依赖-2">创建项目，引入依赖</h4>
+<h4 id="heading9">创建项目，引入依赖</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies</span><span style="color:#f92672">&gt;</span>
 
     <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
@@ -792,7 +792,7 @@
       <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
   <span style="color:#f92672">&lt;/dependencies&gt;</span>
-</code></pre></div><h4 id="编写配置文件-2">编写配置文件</h4>
+</code></pre></div><h4 id="heading10">编写配置文件</h4>
 <p>配置文件<strong>application.yml</strong>填写两个数据源的基本信息</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">spring:
   datasource:
@@ -807,7 +807,7 @@
       username: xxxxx
       password: xxxxx
 
-</code></pre></div><h4 id="编写代码-2">编写代码</h4>
+</code></pre></div><h4 id="heading11">编写代码</h4>
 <p>新建<code>config</code>包，新建<code>PrimaryDataSourceConfig.java</code>和<code>SecondaryDataSourceConfig.java</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#a6e22e">@MapperScan</span><span style="color:#f92672">(</span>basePackages <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;com.luvnaxx.data.mybatis.mapper.primary&#34;</span><span style="color:#f92672">,</span>sqlSessionTemplateRef <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;primarySqlSessionTemplate&#34;</span><span style="color:#f92672">)</span>
@@ -954,7 +954,7 @@
     <span style="color:#66d9ef">private</span> String gender<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 
-</code></pre></div><h4 id="mybatis配置文件">MyBatis配置文件</h4>
+</code></pre></div><h4 id="mybatis1">MyBatis配置文件</h4>
 <p>在resources目录下创建Mapper.xml文件</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
 <span style="color:#75715e">&lt;!DOCTYPE mapper PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34; &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34; &gt;</span>
@@ -990,7 +990,7 @@
 
 <span style="color:#f92672">&lt;/mapper&gt;</span>
 
-</code></pre></div><h4 id="测试-2">测试</h4>
+</code></pre></div><h4 id="heading12">测试</h4>
 <p>编写测试类</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RunWith</span><span style="color:#f92672">(</span>SpringRunner<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
 <span style="color:#a6e22e">@SpringBootTest</span>
