@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.1" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <link rel="canonical" href="https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/log4j2/" />
@@ -368,8 +368,8 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">引入依赖</a></li>
-    <li><a href="#log4j2">配置Log4j2</a></li>
+    <li><a href="#引入依赖">引入依赖</a></li>
+    <li><a href="#配置log4j2">配置Log4j2</a></li>
   </ul>
 </nav>
   </div>
@@ -379,7 +379,7 @@
     <div class="post-content">
       <p>Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。</p>
 <hr>
-<h2 id="heading">引入依赖</h2>
+<h2 id="引入依赖">引入依赖</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 移除原有的logBack </span><span style="color:#75715e">--&gt;</span>
     <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
       <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
@@ -396,7 +396,7 @@
       <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
       <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-log4j2<span style="color:#f92672">&lt;/artifactId&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><h2 id="log4j2">配置Log4j2</h2>
+</code></pre></div><h2 id="配置log4j2">配置Log4j2</h2>
 <p>在<strong>resources</strong>下新建<code>log4j2.xml</code>，内容如下</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 <span style="color:#75715e">&lt;!--</span><span style="color:#75715e">日志级别以及优先级排序: OFF &gt; FATAL &gt; ERROR &gt; WARN &gt; INFO &gt; DEBUG &gt; TRACE &gt; ALL </span><span style="color:#75715e">--&gt;</span>

@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.1" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <link rel="canonical" href="https://www.luvnaxx.com/post/%E8%AE%B0/nginx%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E5%B9%B6%E5%AE%89%E8%A3%85ssl%E8%AF%81%E4%B9%A6/" />
@@ -368,7 +368,7 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#errsslprotocolerror">ERR_SSL_PROTOCOL_ERROR出现的原因</a></li>
+    <li><a href="#err_ssl_protocol_error出现的原因">ERR_SSL_PROTOCOL_ERROR出现的原因</a></li>
   </ul>
 </nav>
   </div>
@@ -422,7 +422,7 @@
 <p>使用http请求，强转为HTTPS</p>
 <p>访问<code>open.nacos.luvnaxx.com</code>，变为<code>open.nacos.luvnaxx.com/nacos</code>。</p>
 </blockquote>
-<h2 id="errsslprotocolerror">ERR_SSL_PROTOCOL_ERROR出现的原因</h2>
+<h2 id="err_ssl_protocol_error出现的原因">ERR_SSL_PROTOCOL_ERROR出现的原因</h2>
 <p>在Nginx1.15版本之前，我们配置HTTPS服务是如下这样配置的。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx"><span style="color:#66d9ef">server{</span>
 	<span style="color:#e6db74">listen</span>	<span style="color:#ae81ff">443</span>;

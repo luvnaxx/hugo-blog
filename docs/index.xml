@@ -34,7 +34,7 @@
       
         <description>&lt;p&gt;不安装office全家桶，自定义要安装的组件&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;heading&#34;&gt;方法/步骤&lt;/h2&gt;
+&lt;h2 id=&#34;方法步骤&#34;&gt;方法/步骤&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;从官网下载&lt;a href=&#34;https://www.microsoft.com/en-us/download/confirmation.aspx?id=49117&#34;&gt;Office部署工具&lt;/a&gt;，虽然此工具是Office365的，但是无需担心。&lt;/p&gt;
@@ -130,7 +130,7 @@
 &lt;p&gt;使用http请求，强转为HTTPS&lt;/p&gt;
 &lt;p&gt;访问&lt;code&gt;open.nacos.luvnaxx.com&lt;/code&gt;，变为&lt;code&gt;open.nacos.luvnaxx.com/nacos&lt;/code&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;errsslprotocolerror&#34;&gt;ERR_SSL_PROTOCOL_ERROR出现的原因&lt;/h2&gt;
+&lt;h2 id=&#34;err_ssl_protocol_error出现的原因&#34;&gt;ERR_SSL_PROTOCOL_ERROR出现的原因&lt;/h2&gt;
 &lt;p&gt;在Nginx1.15版本之前，我们配置HTTPS服务是如下这样配置的。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;server{&lt;/span&gt;
 	&lt;span style=&#34;color:#e6db74&#34;&gt;listen&lt;/span&gt;	&lt;span style=&#34;color:#ae81ff&#34;&gt;443&lt;/span&gt;;
@@ -166,7 +166,7 @@
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/zipkin-server/</guid>
       
-        <description>&lt;h2 id=&#34;-zipkin-server&#34;&gt;加入 Zipkin Server&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;加入-zipkin-server&#34;&gt;加入 Zipkin Server&lt;/h2&gt;
 &lt;p&gt;pom.xml&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; https://mvnrepository.com/artifact/io.zipkin.java/zipkin&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;server &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;--&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -181,8 +181,8 @@
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;zipkin-autoconfigure-ui&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;2.12.3&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;heading&#34;&gt;异常处理&lt;/h2&gt;
-&lt;h4 id=&#34;-spring-boot--enablezipkinserver-&#34;&gt;在 Spring Boot 启动类加上 &lt;code&gt;@EnableZipkinServer&lt;/code&gt; 注解，启动项目，控制台报错&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;异常处理&#34;&gt;异常处理&lt;/h2&gt;
+&lt;h4 id=&#34;在-spring-boot-启动类加上-enablezipkinserver-注解启动项目控制台报错&#34;&gt;在 Spring Boot 启动类加上 &lt;code&gt;@EnableZipkinServer&lt;/code&gt; 注解，启动项目，控制台报错&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/C:/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.11.2/log4j-slf4j-impl-2.11.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -203,7 +203,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
         &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/exclusion&amp;gt;&lt;/span&gt;
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/exclusions&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;9411web&#34;&gt;默认端口9411，当使用其他端口，启动web页面，出现&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;默认端口9411当使用其他端口启动web页面出现&#34;&gt;默认端口9411，当使用其他端口，启动web页面，出现&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;java.lang.IllegalArgumentException: Prometheus requires that all meters with the same name have the same set of tag keys. There is already an existing meter named &amp;lsquo;http_server_requests_seconds&amp;rsquo; containing tag keys [exception, method, outcome, status, uri]. The meter you are attempting to register has keys [method, status, uri].&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -226,14 +226,14 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       
         <description>&lt;p&gt;很早就想记录一下Spring Boot配置多数据的方式。但是网上找到的大多还都是Spring Boot 1.x的内容，一些东西已经不适合现在的版本了。这几天又仔细找了一找，总算把Spring Boot 2配置多数据源的几种方式实验通过了。以两个数据源为例&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;heading&#34;&gt;数据库概况&lt;/h2&gt;
+&lt;h2 id=&#34;数据库概况&#34;&gt;数据库概况&lt;/h2&gt;
 &lt;p&gt;共有两个数据库，这里以两个MySQL数据库为例。实际中可以任意组合。在我工作环境中，常用到的是位于不同机器上面的MySQL加上SQL Server的组合&lt;/p&gt;
 &lt;p&gt;数据表基本情况如图
 &lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201812/ea22c60d150a433ab2a2ca1cb660925f.png&#34; alt=&#34;多数据源数据库信息&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;jdbctemplate&#34;&gt;JdbcTemplate&lt;/h2&gt;
 &lt;p&gt;结构如图
 &lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201812/9e71b329dc014b6da8d90c1d3931c1bf.png&#34; alt=&#34;项目结构图&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;heading1&#34;&gt;创建项目，引入依赖&lt;/h4&gt;
+&lt;h4 id=&#34;创建项目引入依赖&#34;&gt;创建项目，引入依赖&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependencies&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
 
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -269,7 +269,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;scope&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;test&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;heading2&#34;&gt;编写配置文件&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;编写配置文件&#34;&gt;编写配置文件&lt;/h4&gt;
 &lt;p&gt;配置文件&lt;strong&gt;application.yml&lt;/strong&gt;填写两个数据源的基本信息&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;spring:
   datasource:
@@ -283,7 +283,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       driver-class-name: com.mysql.jdbc.Driver
       username: xxxxx
       password: xxxxx
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;heading3&#34;&gt;编写代码&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;编写代码&#34;&gt;编写代码&lt;/h4&gt;
 &lt;p&gt;新建&lt;code&gt;config&lt;/code&gt;包，新建&lt;code&gt;DataSourceConfig.java&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Configuration&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;DataSourceConfig&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
@@ -317,7 +317,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
         &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; JdbcTemplate&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;dataSource&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;heading4&#34;&gt;测试&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;测试&#34;&gt;测试&lt;/h4&gt;
 &lt;p&gt;编写测试类&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RunWith&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;SpringRunner&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;@SpringBootTest&lt;/span&gt;
@@ -345,7 +345,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
 &lt;h2 id=&#34;jpa&#34;&gt;JPA&lt;/h2&gt;
 &lt;p&gt;结构如图
 &lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201812/24f9f1c744f7481580512649caa19568.png&#34; alt=&#34;项目结构图&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;heading5&#34;&gt;创建项目，引入依赖&lt;/h4&gt;
+&lt;h4 id=&#34;创建项目引入依赖-1&#34;&gt;创建项目，引入依赖&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependencies&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
 
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -381,7 +381,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;scope&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;test&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;heading6&#34;&gt;编写配置文件&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;编写配置文件-1&#34;&gt;编写配置文件&lt;/h4&gt;
 &lt;p&gt;配置文件&lt;strong&gt;application.yml&lt;/strong&gt;填写两个数据源的基本信息&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;spring:
   datasource:
@@ -404,7 +404,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       ddl-auto: update
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;heading7&#34;&gt;编写代码&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;编写代码-1&#34;&gt;编写代码&lt;/h4&gt;
 &lt;p&gt;新建&lt;code&gt;config&lt;/code&gt;包，新建&lt;code&gt;DataSourceConfig.java&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Configuration&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;DataSourceConfig&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
@@ -560,7 +560,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Repository&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestJPA&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; BaseDAO&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;TestEntity&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;heading8&#34;&gt;测试&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;测试-1&#34;&gt;测试&lt;/h4&gt;
 &lt;p&gt;编写测试类&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RunWith&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;SpringRunner&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;@SpringBootTest&lt;/span&gt;
@@ -588,7 +588,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
 &lt;h2 id=&#34;mybatis&#34;&gt;MyBatis&lt;/h2&gt;
 &lt;p&gt;结构如图
 &lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201812/c0421bc760a44bac8e8f581d8fcfe7c2.png&#34; alt=&#34;项目结构图&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;heading9&#34;&gt;创建项目，引入依赖&lt;/h4&gt;
+&lt;h4 id=&#34;创建项目引入依赖-2&#34;&gt;创建项目，引入依赖&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependencies&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
 
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -625,7 +625,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;scope&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;test&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;heading10&#34;&gt;编写配置文件&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;编写配置文件-2&#34;&gt;编写配置文件&lt;/h4&gt;
 &lt;p&gt;配置文件&lt;strong&gt;application.yml&lt;/strong&gt;填写两个数据源的基本信息&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;spring:
   datasource:
@@ -640,7 +640,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       username: xxxxx
       password: xxxxx
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;heading11&#34;&gt;编写代码&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;编写代码-2&#34;&gt;编写代码&lt;/h4&gt;
 &lt;p&gt;新建&lt;code&gt;config&lt;/code&gt;包，新建&lt;code&gt;PrimaryDataSourceConfig.java&lt;/code&gt;和&lt;code&gt;SecondaryDataSourceConfig.java&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Configuration&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;@MapperScan&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;basePackages &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;com.luvnaxx.data.mybatis.mapper.primary&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;sqlSessionTemplateRef &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;primarySqlSessionTemplate&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
@@ -787,7 +787,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
     &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String gender&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;mybatis1&#34;&gt;MyBatis配置文件&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;mybatis配置文件&#34;&gt;MyBatis配置文件&lt;/h4&gt;
 &lt;p&gt;在resources目录下创建Mapper.xml文件&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE mapper PUBLIC &amp;#34;-//mybatis.org//DTD Mapper 3.0//EN&amp;#34; &amp;#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&amp;#34; &amp;gt;&lt;/span&gt;
@@ -823,7 +823,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
 
 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mapper&amp;gt;&lt;/span&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;heading12&#34;&gt;测试&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;测试-2&#34;&gt;测试&lt;/h4&gt;
 &lt;p&gt;编写测试类&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RunWith&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;SpringRunner&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;@SpringBootTest&lt;/span&gt;
@@ -858,13 +858,13 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       
         <description>&lt;hr&gt;
 &lt;h2 id=&#34;freemarker&#34;&gt;FreeMarker&lt;/h2&gt;
-&lt;h4 id=&#34;heading&#34;&gt;代码&lt;/h4&gt;
-&lt;h6 id=&#34;pomxml&#34;&gt;依赖&lt;code&gt;pom.xml&lt;/code&gt;&lt;/h6&gt;
+&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;
+&lt;h6 id=&#34;依赖pomxml&#34;&gt;依赖&lt;code&gt;pom.xml&lt;/code&gt;&lt;/h6&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;spring-boot-starter-freemarker&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;applicationyml&#34;&gt;配置&lt;code&gt;application.yml&lt;/code&gt;&lt;/h6&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;配置applicationyml&#34;&gt;配置&lt;code&gt;application.yml&lt;/code&gt;&lt;/h6&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;spring:
   &lt;span style=&#34;color:#75715e&#34;&gt;# FreeMarker 配置&lt;/span&gt;
   freemarker:
@@ -875,14 +875,14 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
     expose-request-attributes: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
     expose-session-attributes: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
     request-context-attribute: request
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;pagecontrollerjava&#34;&gt;路由&lt;code&gt;PageController.java&lt;/code&gt;&lt;/h6&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;路由pagecontrollerjava&#34;&gt;路由&lt;code&gt;PageController.java&lt;/code&gt;&lt;/h6&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@GetMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/book/all&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;findAllBooks&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Model model&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
     List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;BookEntity&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; bookEntities &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; bookService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
     model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;addAttribute&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bookList&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; bookEntities&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bookList&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;booklistftl&#34;&gt;页面&lt;code&gt;bookList.ftl&lt;/code&gt;&lt;/h6&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;页面booklistftl&#34;&gt;页面&lt;code&gt;bookList.ftl&lt;/code&gt;&lt;/h6&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 
 &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&amp;gt;
@@ -895,11 +895,11 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
 &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
 
 &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;heading1&#34;&gt;效果&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201809/9f15397d0f874d8382d6e692af64e7ee.PNG&#34; alt=&#34;FreeMarker&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;thymeleaf&#34;&gt;Thymeleaf&lt;/h2&gt;
-&lt;h4 id=&#34;heading2&#34;&gt;代码&lt;/h4&gt;
-&lt;h6 id=&#34;pomxml1&#34;&gt;依赖&lt;code&gt;pom.xml&lt;/code&gt;&lt;/h6&gt;
+&lt;h4 id=&#34;代码-1&#34;&gt;代码&lt;/h4&gt;
+&lt;h6 id=&#34;依赖pomxml-1&#34;&gt;依赖&lt;code&gt;pom.xml&lt;/code&gt;&lt;/h6&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;spring-boot-starter-thymeleaf&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
@@ -909,7 +909,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;nekohtml&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;1.9.22&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;applicationyml1&#34;&gt;配置&lt;code&gt;application.yml&lt;/code&gt;&lt;/h6&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;配置applicationyml-1&#34;&gt;配置&lt;code&gt;application.yml&lt;/code&gt;&lt;/h6&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;spring:
   &lt;span style=&#34;color:#75715e&#34;&gt;# Thymeleaf 配置&lt;/span&gt;
   thymeleaf:
@@ -919,14 +919,14 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       content-type: text/html
     &lt;span style=&#34;color:#75715e&#34;&gt;# 开发时关闭缓存，不然无法看到实时页面&lt;/span&gt;
     cache: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;pagecontrollerjava1&#34;&gt;路由&lt;code&gt;PageController.java&lt;/code&gt;&lt;/h6&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;路由pagecontrollerjava-1&#34;&gt;路由&lt;code&gt;PageController.java&lt;/code&gt;&lt;/h6&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@GetMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/thymeleaf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;thymeleaf&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Model model&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
     List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;BookEntity&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; bookEntities &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; bookService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
     model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;addAttribute&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bookList&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; bookEntities&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;thymeleaf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;thymeleafhtml&#34;&gt;页面&lt;code&gt;thymeleaf.html&lt;/code&gt;&lt;/h6&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;页面thymeleafhtml&#34;&gt;页面&lt;code&gt;thymeleaf.html&lt;/code&gt;&lt;/h6&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xmlns:th&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www.w3.org/1999/xhtml&amp;#34;&lt;/span&gt;&amp;gt;
 &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
@@ -948,7 +948,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
 &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;table&lt;/span&gt;&amp;gt;
 &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
 &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;heading3&#34;&gt;效果&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;效果-1&#34;&gt;效果&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201809/989d4356914c4f16902e87d60e9964a4.PNG&#34; alt=&#34;Thymeleaf&#34;&gt;&lt;/p&gt;</description>
       
     </item>
@@ -962,7 +962,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       
         <description>&lt;p&gt;给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档，不然会造成说明与实际不符的情况。所以我们需要一个能配合程序产生API文档的小伙伴。Swagger2就是一款RESTful接口的文档在线自动生成+功能测试功能软件。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;heading&#34;&gt;添加依赖&lt;/h2&gt;
+&lt;h2 id=&#34;添加依赖&#34;&gt;添加依赖&lt;/h2&gt;
 &lt;p&gt;在&lt;code&gt;pom.xml&lt;/code&gt;中添加如下依赖&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; https://mvnrepository.com/artifact/io.springfox/springfox&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;swagger2 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;--&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -976,8 +976,8 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;springfox-swagger-ui&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;2.8.0&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;heading1&#34;&gt;编写代码&lt;/h2&gt;
-&lt;h4 id=&#34;swagger2&#34;&gt;创建Swagger2配置类&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;编写代码&#34;&gt;编写代码&lt;/h2&gt;
+&lt;h4 id=&#34;创建swagger2配置类&#34;&gt;创建Swagger2配置类&lt;/h4&gt;
 &lt;p&gt;在&lt;code&gt;configuration&lt;/code&gt;包下新建&lt;code&gt;Swagger2Configuration.java&lt;/code&gt;。内容如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Configuration&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;@EnableSwagger2&lt;/span&gt;
@@ -1004,7 +1004,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
   &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过&lt;code&gt;@Configuration&lt;/code&gt;注解，让Spring来加载该类配置。再通过&lt;code&gt;@EnableSwagger2&lt;/code&gt;注解来启用Swagger2&lt;/p&gt;
-&lt;h4 id=&#34;heading2&#34;&gt;添加文档内容&lt;/h4&gt;
+&lt;h4 id=&#34;添加文档内容&#34;&gt;添加文档内容&lt;/h4&gt;
 &lt;p&gt;在我们需要的方法上添加注解内容来丰富文档的内容。仅仅以一个方法作为示例：在&lt;code&gt;UserRestController.java&lt;/code&gt;中添加如下内容&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;/**
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   * 返回指定id用户
@@ -1018,7 +1018,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; userService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;findById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过&lt;code&gt;@ApiOperation&lt;/code&gt;注解来给API增加说明、通过&lt;code&gt;@ApiImplicitParams&lt;/code&gt;、&lt;code&gt;@ApiImplicitParam&lt;/code&gt;注解来给参数增加说明。&lt;/p&gt;
-&lt;h2 id=&#34;heading3&#34;&gt;运行测试&lt;/h2&gt;
+&lt;h2 id=&#34;运行测试&#34;&gt;运行测试&lt;/h2&gt;
 &lt;p&gt;启动项目，访问 &lt;a href=&#34;http://localhost:7777/swagger-ui.html&#34;&gt;&lt;a href=&#34;http://localhost:7777/swagger-ui.html&#34;&gt;http://localhost:7777/swagger-ui.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
@@ -1032,7 +1032,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       
         <description>&lt;p&gt;Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;heading&#34;&gt;引入依赖&lt;/h2&gt;
+&lt;h2 id=&#34;引入依赖&#34;&gt;引入依赖&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; 移除原有的logBack &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;--&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
@@ -1049,7 +1049,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;spring-boot-starter-log4j2&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;log4j2&#34;&gt;配置Log4j2&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置log4j2&#34;&gt;配置Log4j2&lt;/h2&gt;
 &lt;p&gt;在&lt;strong&gt;resources&lt;/strong&gt;下新建&lt;code&gt;log4j2.xml&lt;/code&gt;，内容如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;日志级别以及优先级排序: OFF &amp;gt; FATAL &amp;gt; ERROR &amp;gt; WARN &amp;gt; INFO &amp;gt; DEBUG &amp;gt; TRACE &amp;gt; ALL &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;--&amp;gt;&lt;/span&gt;
@@ -1108,7 +1108,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       
         <description>&lt;p&gt;Druid是一个JDBC组件库，包括数据库连接池、SQL Parser等组件。DruidDataSource是最好的数据库连接池。具体参见 &lt;a href=&#34;https://github.com/alibaba/druid/wiki/%E9%A6%96%E9%A1%B5&#34;&gt;alibaba/druid&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;druid&#34;&gt;添加druid依赖&lt;/h2&gt;
+&lt;h2 id=&#34;添加druid依赖&#34;&gt;添加druid依赖&lt;/h2&gt;
 &lt;p&gt;在pom.xml文件&lt;code&gt;&amp;lt;dependencies&amp;gt;&amp;lt;/dependencies&amp;gt;&lt;/code&gt;中添加&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;com.alibaba&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
@@ -1161,7 +1161,7 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
       &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;1.1.10&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;druid1&#34;&gt;配置druid&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;配置druid&#34;&gt;配置druid&lt;/h2&gt;
 &lt;p&gt;此时修改application.yml，内容如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;server:
   port: &lt;span style=&#34;color:#ae81ff&#34;&gt;7777&lt;/span&gt;
@@ -1213,9 +1213,9 @@ spring:
 mybatis:
   typeAliasesPackage: com.luvnaxx.web.springboot.rookie.entity
   mapperLocations: classpath:mapper/&lt;span style=&#34;color:#75715e&#34;&gt;*.xml&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;heading&#34;&gt;运行项目&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;运行项目&#34;&gt;运行项目&lt;/h2&gt;
 &lt;p&gt;此时，Spring Boot已经将druid作为dataSource加载到了项目中。在浏览器进行数据库的CRUD是没有问题的。&lt;/p&gt;
-&lt;h2 id=&#34;druid2&#34;&gt;启动druid监控功能&lt;/h2&gt;
+&lt;h2 id=&#34;启动druid监控功能&#34;&gt;启动druid监控功能&lt;/h2&gt;
 &lt;p&gt;在controller同级目录添加configuration包，新增&lt;code&gt;DruidConfiguration.java&lt;/code&gt;，内容如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Configuration&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;DruidConfiguration&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
@@ -1260,7 +1260,7 @@ mybatis:
       
         <description>&lt;p&gt;在上一篇SpringDataJPA的基础上进行扩展。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;heading&#34;&gt;数据库准备&lt;/h2&gt;
+&lt;h2 id=&#34;数据库准备&#34;&gt;数据库准备&lt;/h2&gt;
 &lt;p&gt;还是使用上篇文章中的springboot数据库，这次新建book数据表，&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;book&lt;/span&gt;
 (
@@ -1269,7 +1269,7 @@ mybatis:
   author &lt;span style=&#34;color:#66d9ef&#34;&gt;varchar&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;),
   price  &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt;          &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;
 );
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;heading1&#34;&gt;修改配置文件&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;修改配置文件&#34;&gt;修改配置文件&lt;/h2&gt;
 &lt;p&gt;在pom.xml中添加MyBatis的依赖&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;spring&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;boot&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;starter &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;--&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -1295,8 +1295,8 @@ mapper文件的通用模板是&lt;/p&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mapper&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;namespace=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;xxx&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
 
 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mapper&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;heading2&#34;&gt;代码编写&lt;/h2&gt;
-&lt;h4 id=&#34;entity&#34;&gt;entity层&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;代码编写&#34;&gt;代码编写&lt;/h2&gt;
+&lt;h4 id=&#34;entity层&#34;&gt;entity层&lt;/h4&gt;
 &lt;p&gt;新建实体类Book.java，并没有什么特殊的注解&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; lombok.Data&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
 
@@ -1323,7 +1323,7 @@ mapper文件的通用模板是&lt;/p&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   */&lt;/span&gt;
   &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Double price&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;controller&#34;&gt;controller层&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;controller层&#34;&gt;controller层&lt;/h4&gt;
 &lt;p&gt;新建BookController.java&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RestController&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/book&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
@@ -1347,7 +1347,7 @@ mapper文件的通用模板是&lt;/p&gt;
     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; bookService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;findBooksByAuthor&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;author&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;service&#34;&gt;service层&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;service层&#34;&gt;service层&lt;/h4&gt;
 &lt;p&gt;新建BookService,java&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;BookService&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
 
@@ -1372,7 +1372,7 @@ mapper文件的通用模板是&lt;/p&gt;
     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; bookMapper&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;dao&#34;&gt;dao层&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;dao层&#34;&gt;dao层&lt;/h4&gt;
 &lt;p&gt;新建BookMapper.java&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;BookMapper&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
 
@@ -1392,7 +1392,7 @@ mapper文件的通用模板是&lt;/p&gt;
     |--BookMapper.java
 
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;mapper&#34;&gt;新建mapper文件&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;新建mapper文件&#34;&gt;新建mapper文件&lt;/h4&gt;
 &lt;p&gt;此时并没有相关SQL语句的代码实现，SQL语句可以使用注解形式编写在方法上面，也可以使用xml文件形式。&lt;br&gt;
 在resource/mapper文件夹下新建BookMapper.xml文件。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;&lt;/span&gt;
@@ -1427,7 +1427,7 @@ mapper文件的通用模板是&lt;/p&gt;
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/jpa/</guid>
       
-        <description>&lt;h2 id=&#34;heading&#34;&gt;数据库准备&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;数据库准备&#34;&gt;数据库准备&lt;/h2&gt;
 &lt;p&gt;新建数据库springboot，数据库表tb_user，添加id、username、password、age、address字段。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tb_user&lt;/span&gt;
 (
@@ -1440,7 +1440,7 @@ mapper文件的通用模板是&lt;/p&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; tb_user COMMENT &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;用户信息表&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;关于数据库的命名规范，虽说没有一个强制的规定说数据库要如何命名、数据表要如何命名、字段值要如何命名，但是似乎很多都是有一个潜规则。我又是一个有些强迫症的人，很多时候我为了一个命名，可以想个半天，有时甚至删项目重搞。可怕&lt;/em&gt;
 &lt;em&gt;对于MySQL数据库的各种命名，在我翻过各种高山，拜访过各位民间大神之后，现在的习惯是数据库名和表名采用 &amp;ldquo;_&amp;ldquo;连接的形式，据说这是为了方面在Windows与类Unix机器上的兼容。而对于数据表中的字段，我现在使用Java变量名命名的规范，即驼峰原则，这样可能比较有利于与Java的配合。&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;spring-boot&#34;&gt;新建Spring Boot项目&lt;/h2&gt;
+&lt;h2 id=&#34;新建spring-boot项目&#34;&gt;新建Spring Boot项目&lt;/h2&gt;
 &lt;p&gt;进入&lt;a href=&#34;https://start.spring.io/&#34;&gt;SPRING INITIALIZR&lt;/a&gt; 或者使用JetBrains IDEA/Eclipse构建一个Spring Boot项目(这里使用2.0.3.RELEASE版本)。选择添加Web、JPA、MySQL依赖，或者稍后手动在pom.xml中添加。
 最终的pom.xml文件中应该包含有如下依赖：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependencies&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -1495,7 +1495,7 @@ mapper文件的通用模板是&lt;/p&gt;
 
   &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;可以看到，这里多添加了一个lombok依赖。lombok是一个简化Java代码的工具，通过添加注解，在实体类中就可以不再手动编写getter/setter方法，虽说现在各种IDE已经可以自动帮助我们生成getter/setter方法，但是简化文件的内容还是很不错的。&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;heading1&#34;&gt;创建配置文件&lt;/h2&gt;
+&lt;h2 id=&#34;创建配置文件&#34;&gt;创建配置文件&lt;/h2&gt;
 &lt;p&gt;在resources文件夹下，新建application.yml配置文件。个人感觉YAML相较于properties，在一些方面更好用、更方便一些。
 打开配置文件，在里面配置数据库连接相关信息。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;spring:
@@ -1509,11 +1509,11 @@ jpa:
   database: mysql
   show-sql: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;此处使用的密码为明文密码，不是很安全，可以使用md5 + salt加密&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;heading2&#34;&gt;代码编写&lt;/h2&gt;
+&lt;h2 id=&#34;代码编写&#34;&gt;代码编写&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;文件的创建应该是自下而上的，而代码的编写应该是自上而下的。这让文章写起来很不舒服。现在把文件的创建和代码的编写一次性粘贴出来，所以在编写完全部的代码之前，出现内容找不到报错的问题属于正常现象。以后文章也按照此原则进行。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;controller&#34;&gt;controller层&lt;/h4&gt;
+&lt;h4 id=&#34;controller层&#34;&gt;controller层&lt;/h4&gt;
 &lt;p&gt;新建controller包，即使是一个简单的demo，规范还是要有的。
 在controller下新建 &lt;em&gt;UserRestController.java&lt;/em&gt;，至于为什么要加一个Rest呢？可能是我为以后考虑吧。嘻嘻
 代码如下&lt;/p&gt;
@@ -1522,7 +1522,7 @@ jpa:
 &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserRestController&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
 
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;entity&#34;&gt;entity层&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;entity层&#34;&gt;entity层&lt;/h4&gt;
 &lt;p&gt;新建entity包，用来存放与数据库字段相对应的内容。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Data&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;@Entity&lt;/span&gt;
@@ -1547,7 +1547,7 @@ jpa:
   &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String address&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以看到此处使用了&lt;code&gt;@Data&lt;/code&gt;注解，在类中就可以省略掉getter/setter，还是很方面的说。当然这只是lombok的皮毛，暂时够用即可。&lt;/p&gt;
-&lt;h4 id=&#34;service&#34;&gt;service层&lt;/h4&gt;
+&lt;h4 id=&#34;service层&#34;&gt;service层&lt;/h4&gt;
 &lt;p&gt;service层一般放置具体的业务逻辑，在此处新建 &lt;em&gt;UserService.java&lt;/em&gt; 接口
 里面的抽象方法有&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserService&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
@@ -1592,7 +1592,7 @@ jpa:
     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; userJPA&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;findById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
   &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;dao&#34;&gt;dao层&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;dao层&#34;&gt;dao层&lt;/h4&gt;
 &lt;p&gt;dao层即程序与数据库的交互层，在这里编写各种查询语句来满足业务需求。新建 &lt;em&gt;UserJPA.java&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserJPA&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; JpaRepository&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Long&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;
 	JpaSpecificationExecutor&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Serializable &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
@@ -1601,7 +1601,7 @@ jpa:
 &lt;blockquote&gt;
 &lt;p&gt;我们UserJPA继承了JpaRepository接口（SpringDataJPA提供的简单数据操作接口）、JpaSpecificationExecutor（SpringDataJPA提供的复杂查询接口）、Serializable（序列化接口）。我们并不需要做其他的任何操作了，因为SpringBoot以及SpringDataJPA会为我们全部搞定，SpringDataJPA内部使用了类代理的方式让继承了它接口的子接口都以spring管理的Bean的形式存在，也就是说我们可以直接使用@Autowired注解在spring管理bean使用&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;controller1&#34;&gt;controller层&lt;/h4&gt;
+&lt;h4 id=&#34;controller层-1&#34;&gt;controller层&lt;/h4&gt;
 &lt;p&gt;再次回到 &lt;em&gt;UserRestController.java&lt;/em&gt;，在里面编写具体的增删改查(CRUD)操作。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RestController&lt;/span&gt;
 &lt;span style=&#34;color:#a6e22e&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
@@ -1649,7 +1649,7 @@ jpa:
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;简单的数据库增删改查操作&lt;/p&gt;
-&lt;h2 id=&#34;heading3&#34;&gt;运行测试&lt;/h2&gt;
+&lt;h2 id=&#34;运行测试&#34;&gt;运行测试&lt;/h2&gt;
 &lt;p&gt;启动项目，程序默认端口号为8080，如若想修改，打开 &lt;em&gt;application.yml&lt;/em&gt;，编写&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;server:
   port: &lt;span style=&#34;color:#ae81ff&#34;&gt;7777&lt;/span&gt;
@@ -1694,7 +1694,7 @@ jpa:
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</guid>
       
-        <description>&lt;h2 id=&#34;heading&#34;&gt;解决方式&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;解决方式&#34;&gt;解决方式&lt;/h2&gt;
 &lt;p&gt;在启动类中添加&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Bean&lt;/span&gt;
   &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; ServletRegistrationBean &lt;span style=&#34;color:#a6e22e&#34;&gt;getServlet&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
@@ -1732,12 +1732,12 @@ jpa:
       
         <description>&lt;p&gt;在Windows平台搭建hugo开发平台，写文章上传至GitHub pages&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;hugo&#34;&gt;安装hugo&lt;/h2&gt;
+&lt;h2 id=&#34;安装hugo&#34;&gt;安装hugo&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;安装Chocolatey&lt;/p&gt;
 &lt;p&gt;以管理员命令运行cmd命令行(powershell)，输入&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;@&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &amp;amp;&amp;amp; SET &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;Set-ExecutionPolicy Bypass -Scope &lt;span style=&#34;color:#66d9ef&#34;&gt;Process&lt;/span&gt; -Force; iex ((New-Object System.Net.WebClient).DownloadString(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://chocolatey.org/install.ps1&amp;#39;&lt;/span&gt;)); choco feature enable -n allowGlobalConfirmation
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;完成之后，输入choco，会显示版本&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1746,7 +1746,7 @@ jpa:
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;成功后，执行hugo version。会显示hugo版本号&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;githubhugo&#34;&gt;关联github与本地的hugo目录&lt;/h2&gt;
+&lt;h2 id=&#34;关联github与本地的hugo目录&#34;&gt;关联github与本地的hugo目录&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;在github创建一个空白仓库，clone到本地&lt;/p&gt;
@@ -1861,16 +1861,16 @@ jpa:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;修改&lt;strong&gt;publishDIR&lt;/strong&gt;设置为&lt;strong&gt;docs&lt;/strong&gt;以便发布在&lt;em&gt;GitHub Pages&lt;/em&gt;中&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;heading&#34;&gt;安装主题&lt;/h2&gt;
+&lt;h2 id=&#34;安装主题&#34;&gt;安装主题&lt;/h2&gt;
 &lt;p&gt;进入&lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;主题网站&lt;/a&gt;选择，我选择的是&lt;a href=&#34;https://github.com/xianmin/hugo-theme-jane&#34;&gt;Jane&lt;/a&gt;，下载完成之后会在&lt;strong&gt;themeS&lt;/strong&gt;文件夹下有个对应的文件夹，上述配置文件的&lt;code&gt;theme = &amp;quot;jane&amp;quot;&lt;/code&gt;设置为和文件夹名称相同。&lt;/p&gt;
-&lt;h2 id=&#34;heading1&#34;&gt;编写文章并发布&lt;/h2&gt;
+&lt;h2 id=&#34;编写文章并发布&#34;&gt;编写文章并发布&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;git bash&lt;/code&gt;执行&lt;code&gt;hugo new 你好.md&lt;/code&gt;，会在&lt;strong&gt;content&lt;/strong&gt;下产生&lt;strong&gt;你好.md&lt;/strong&gt;文件。运行&lt;code&gt;hugo server&lt;/code&gt;，运行本地服务器预览。&lt;/p&gt;
-&lt;h2 id=&#34;github&#34;&gt;发布到github&lt;/h2&gt;
+&lt;h2 id=&#34;发布到github&#34;&gt;发布到github&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo -t jane
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将生成的&lt;strong&gt;docs&lt;/strong&gt;文件夹上传，进入项目的设置中设置即可&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;heading2&#34;&gt;遇到的问题&lt;/h2&gt;
-&lt;h4 id=&#34;heading3&#34;&gt;自定义域名失效&lt;/h4&gt;
+&lt;h2 id=&#34;遇到的问题&#34;&gt;遇到的问题&lt;/h2&gt;
+&lt;h4 id=&#34;自定义域名失效&#34;&gt;自定义域名失效&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;在settings中设置域名并成功解析，能够通过域名访问。但是每次更新文章，重新push之后，自定义域名就失效了。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1925,11 +1925,11 @@ System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#3
       
       <guid>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</guid>
       
-        <description>&lt;h2 id=&#34;heading&#34;&gt;命令&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;命令&#34;&gt;命令&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;certutil -hashfile xxx MD5&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA1&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA256&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;heading1&#34;&gt;示例&lt;/h2&gt;
+&lt;h2 id=&#34;示例&#34;&gt;示例&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;certutil&lt;/strong&gt;
 &lt;strong&gt;-hashfile C:\Users\wyy\desktop\testTemplate.docx SHA256&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201909/d685b0d5-f457-4f54-bcc9-808e4d266d1e.png&#34; alt=&#34;使用自带certutil工具校验文件&#34;&gt;&lt;/p&gt;</description>
@@ -1945,7 +1945,7 @@ System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#3
       
         <description>&lt;p&gt;激活office后，打开office任然出现需要激活的提示信息，打开账户发现发现有2个产品信息，一个已经激活，一个还需要激活，这就需要删除多余的版本授权信息，保留已经激活的产品信息。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;heading&#34;&gt;方法/步骤&lt;/h2&gt;
+&lt;h2 id=&#34;方法步骤&#34;&gt;方法/步骤&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;首先确认office目录下存在&lt;strong&gt;ospp.vbs&lt;/strong&gt;文件，可以搜索确认文件路径。我的是在&lt;strong&gt;C:\Program Files\Microsoft Office\Office16&lt;/strong&gt;&lt;/p&gt;

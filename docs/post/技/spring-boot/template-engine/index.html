@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.1" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <link rel="canonical" href="https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/" />
@@ -392,13 +392,13 @@ FreeMarker
     <div class="post-content">
       <hr>
 <h2 id="freemarker">FreeMarker</h2>
-<h4 id="heading">代码</h4>
-<h6 id="pomxml">依赖<code>pom.xml</code></h6>
+<h4 id="代码">代码</h4>
+<h6 id="依赖pomxml">依赖<code>pom.xml</code></h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
   <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
   <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-freemarker<span style="color:#f92672">&lt;/artifactId&gt;</span>
 <span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><h6 id="applicationyml">配置<code>application.yml</code></h6>
+</code></pre></div><h6 id="配置applicationyml">配置<code>application.yml</code></h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">spring:
   <span style="color:#75715e"># FreeMarker 配置</span>
   freemarker:
@@ -409,14 +409,14 @@ FreeMarker
     expose-request-attributes: <span style="color:#66d9ef">true</span>
     expose-session-attributes: <span style="color:#66d9ef">true</span>
     request-context-attribute: request
-</code></pre></div><h6 id="pagecontrollerjava">路由<code>PageController.java</code></h6>
+</code></pre></div><h6 id="路由pagecontrollerjava">路由<code>PageController.java</code></h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/book/all&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">findAllBooks</span><span style="color:#f92672">(</span>Model model<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     List<span style="color:#f92672">&lt;</span>BookEntity<span style="color:#f92672">&gt;</span> bookEntities <span style="color:#f92672">=</span> bookService<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     model<span style="color:#f92672">.</span><span style="color:#a6e22e">addAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bookList&#34;</span><span style="color:#f92672">,</span> bookEntities<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;bookList&#34;</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h6 id="booklistftl">页面<code>bookList.ftl</code></h6>
+</code></pre></div><h6 id="页面booklistftl">页面<code>bookList.ftl</code></h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 
 &lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
@@ -429,11 +429,11 @@ FreeMarker
 &lt;/<span style="color:#f92672">body</span>&gt;
 
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h4 id="heading1">效果</h4>
+</code></pre></div><h4 id="效果">效果</h4>
 <p><img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201809/9f15397d0f874d8382d6e692af64e7ee.PNG" alt="FreeMarker"></p>
 <h2 id="thymeleaf">Thymeleaf</h2>
-<h4 id="heading2">代码</h4>
-<h6 id="pomxml1">依赖<code>pom.xml</code></h6>
+<h4 id="代码-1">代码</h4>
+<h6 id="依赖pomxml-1">依赖<code>pom.xml</code></h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
   <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
   <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-thymeleaf<span style="color:#f92672">&lt;/artifactId&gt;</span>
@@ -443,7 +443,7 @@ FreeMarker
   <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>nekohtml<span style="color:#f92672">&lt;/artifactId&gt;</span>
   <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>1.9.22<span style="color:#f92672">&lt;/version&gt;</span>
 <span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><h6 id="applicationyml1">配置<code>application.yml</code></h6>
+</code></pre></div><h6 id="配置applicationyml-1">配置<code>application.yml</code></h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">spring:
   <span style="color:#75715e"># Thymeleaf 配置</span>
   thymeleaf:
@@ -453,14 +453,14 @@ FreeMarker
       content-type: text/html
     <span style="color:#75715e"># 开发时关闭缓存，不然无法看到实时页面</span>
     cache: <span style="color:#66d9ef">false</span>
-</code></pre></div><h6 id="pagecontrollerjava1">路由<code>PageController.java</code></h6>
+</code></pre></div><h6 id="路由pagecontrollerjava-1">路由<code>PageController.java</code></h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/thymeleaf&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">thymeleaf</span><span style="color:#f92672">(</span>Model model<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     List<span style="color:#f92672">&lt;</span>BookEntity<span style="color:#f92672">&gt;</span> bookEntities <span style="color:#f92672">=</span> bookService<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     model<span style="color:#f92672">.</span><span style="color:#a6e22e">addAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bookList&#34;</span><span style="color:#f92672">,</span> bookEntities<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;thymeleaf&#34;</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h6 id="thymeleafhtml">页面<code>thymeleaf.html</code></h6>
+</code></pre></div><h6 id="页面thymeleafhtml">页面<code>thymeleaf.html</code></h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span> <span style="color:#a6e22e">xmlns:th</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/xhtml&#34;</span>&gt;
 &lt;<span style="color:#f92672">head</span>&gt;
@@ -482,7 +482,7 @@ FreeMarker
 &lt;/<span style="color:#f92672">table</span>&gt;
 &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><h4 id="heading3">效果</h4>
+</code></pre></div><h4 id="效果-1">效果</h4>
 <p><img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201809/989d4356914c4f16902e87d60e9964a4.PNG" alt="Thymeleaf"></p>
     </div>
 
