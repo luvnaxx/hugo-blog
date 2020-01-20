@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maven on 汝之所见 非吾所想</title>
+    <link>https://www.luvnaxx.com/tags/maven/</link>
+    <description>Recent content in Maven on 汝之所见 非吾所想</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>luvnaxx.com</copyright>
+    <lastBuildDate>Mon, 18 Nov 2019 17:16:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.luvnaxx.com/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Maven打包包括本地jar包</title>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</link>
+      <pubDate>Mon, 18 Nov 2019 17:16:10 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/</guid>
+      <description>&lt;p&gt;在&lt;strong&gt;pom.xml&lt;/strong&gt;中添加&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
