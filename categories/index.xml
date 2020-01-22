@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Fri, 17 Jan 2020 11:14:14 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2020 18:16:35 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>想</title>
+      <link>https://www.luvnaxx.com/categories/%E6%83%B3/</link>
+      <pubDate>Wed, 22 Jan 2020 18:16:35 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/categories/%E6%83%B3/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>享</title>

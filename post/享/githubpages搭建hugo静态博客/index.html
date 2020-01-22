@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.1" />
+<meta name="generator" content="Hugo 0.62.2" />
 
 
 <link rel="canonical" href="https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" />
@@ -368,12 +368,12 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#hugo">安装hugo</a></li>
-    <li><a href="#githubhugo">关联github与本地的hugo目录</a></li>
-    <li><a href="#heading">安装主题</a></li>
-    <li><a href="#heading1">编写文章并发布</a></li>
-    <li><a href="#github">发布到github</a></li>
-    <li><a href="#heading2">遇到的问题</a>
+    <li><a href="#安装hugo">安装hugo</a></li>
+    <li><a href="#关联github与本地的hugo目录">关联github与本地的hugo目录</a></li>
+    <li><a href="#安装主题">安装主题</a></li>
+    <li><a href="#编写文章并发布">编写文章并发布</a></li>
+    <li><a href="#发布到github">发布到github</a></li>
+    <li><a href="#遇到的问题">遇到的问题</a>
       <ul>
         <li></li>
       </ul>
@@ -387,7 +387,7 @@
     <div class="post-content">
       <p>在Windows平台搭建hugo开发平台，写文章上传至GitHub pages</p>
 <hr>
-<h2 id="hugo">安装hugo</h2>
+<h2 id="安装hugo">安装hugo</h2>
 <ol>
 <li>
 <p>安装Chocolatey</p>
@@ -401,7 +401,7 @@
 </code></pre><p>成功后，执行hugo version。会显示hugo版本号</p>
 </li>
 </ol>
-<h2 id="githubhugo">关联github与本地的hugo目录</h2>
+<h2 id="关联github与本地的hugo目录">关联github与本地的hugo目录</h2>
 <ol>
 <li>
 <p>在github创建一个空白仓库，clone到本地</p>
@@ -516,16 +516,16 @@
 </code></pre></div><p>修改<strong>publishDIR</strong>设置为<strong>docs</strong>以便发布在<em>GitHub Pages</em>中</p>
 </li>
 </ol>
-<h2 id="heading">安装主题</h2>
+<h2 id="安装主题">安装主题</h2>
 <p>进入<a href="https://themes.gohugo.io/">主题网站</a>选择，我选择的是<a href="https://github.com/xianmin/hugo-theme-jane">Jane</a>，下载完成之后会在<strong>themeS</strong>文件夹下有个对应的文件夹，上述配置文件的<code>theme = &quot;jane&quot;</code>设置为和文件夹名称相同。</p>
-<h2 id="heading1">编写文章并发布</h2>
+<h2 id="编写文章并发布">编写文章并发布</h2>
 <p><code>git bash</code>执行<code>hugo new 你好.md</code>，会在<strong>content</strong>下产生<strong>你好.md</strong>文件。运行<code>hugo server</code>，运行本地服务器预览。</p>
-<h2 id="github">发布到github</h2>
+<h2 id="发布到github">发布到github</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">hugo -t jane
 </code></pre></div><p>将生成的<strong>docs</strong>文件夹上传，进入项目的设置中设置即可</p>
 <hr>
-<h2 id="heading2">遇到的问题</h2>
-<h4 id="heading3">自定义域名失效</h4>
+<h2 id="遇到的问题">遇到的问题</h2>
+<h4 id="自定义域名失效">自定义域名失效</h4>
 <blockquote>
 <p>在settings中设置域名并成功解析，能够通过域名访问。但是每次更新文章，重新push之后，自定义域名就失效了。</p>
 </blockquote>
