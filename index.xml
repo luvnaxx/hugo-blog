@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Wed, 22 Jan 2020 18:16:35 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2020 12:59:56 +0800</lastBuildDate>
     
         <atom:link href="https://www.luvnaxx.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,6 +26,19 @@
     </item>
     
     <item>
+      <title>Maven打包将依赖放到指定位置</title>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%B0%86%E4%BE%9D%E8%B5%96%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 26 Feb 2020 12:59:56 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%B0%86%E4%BE%9D%E8%B5%96%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE/</guid>
+      
+        <description>&lt;p&gt;使用命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;mvn dependency:copy-dependencies -DoutputDirectory&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;yourPath  -DincludeScope&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;runtime
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>新型冠状病毒</title>
       <link>https://www.luvnaxx.com/post/%E6%83%B3/%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/</link>
       <pubDate>Wed, 22 Jan 2020 18:16:35 +0800</pubDate>
@@ -35,6 +48,7 @@
         <description>&lt;blockquote&gt;
 &lt;p&gt;面对疫情，任何侥幸都可能夺人性命&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;假如，病情的起源地是郑州，无畏的键盘侠们，又会是怎样的一副嘴脸呢？&lt;/p&gt;
 </description>
       
     </item>
@@ -1964,40 +1978,6 @@ System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#3
 &lt;p&gt;&lt;strong&gt;certutil&lt;/strong&gt;
 &lt;strong&gt;-hashfile C:\Users\wyy\desktop\testTemplate.docx SHA256&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201909/d685b0d5-f457-4f54-bcc9-808e4d266d1e.png&#34; alt=&#34;使用自带certutil工具校验文件&#34;&gt;&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>删除office多个授权</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</link>
-      <pubDate>Mon, 15 Jul 2019 14:10:40 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/</guid>
-      
-        <description>&lt;p&gt;激活office后，打开office任然出现需要激活的提示信息，打开账户发现发现有2个产品信息，一个已经激活，一个还需要激活，这就需要删除多余的版本授权信息，保留已经激活的产品信息。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;方法步骤&#34;&gt;方法/步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;首先确认office目录下存在&lt;strong&gt;ospp.vbs&lt;/strong&gt;文件，可以搜索确认文件路径。我的是在&lt;strong&gt;C:\Program Files\Microsoft Office\Office16&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用管理员方式打开cmd&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进入&lt;strong&gt;ospp.vbs&lt;/strong&gt;所在目录&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;cd C:&lt;span style=&#34;color:#ae81ff&#34;&gt;\P&lt;/span&gt;rogram Files&lt;span style=&#34;color:#ae81ff&#34;&gt;\M&lt;/span&gt;icrosoft Office&lt;span style=&#34;color:#ae81ff&#34;&gt;\O&lt;/span&gt;ffice16
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;然后输入&lt;code&gt;cscript ospp.vbs /dstatus&lt;/code&gt;，回车，稍等片刻，打印出结果&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;寻找&lt;strong&gt;Last 5 characters of installed product key:xxxxx&lt;/strong&gt;字段，&lt;strong&gt;xxxxx&lt;/strong&gt;为密钥的最后5位。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;执行&lt;code&gt;cscript ospp.vbs /unpkey:XXXXX&lt;/code&gt;，删除无效KEY，仅保留需要的，如果没有也可全部删除，然后重新激活office&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</description>
       
     </item>
     
