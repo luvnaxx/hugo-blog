@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>读取配置文件 on 汝之所见 非吾所想</title>
+    <link>https://www.luvnaxx.com/tags/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</link>
+    <description>Recent content in 读取配置文件 on 汝之所见 非吾所想</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>luvnaxx.com</copyright>
+    <lastBuildDate>Mon, 13 Jan 2020 15:50:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.luvnaxx.com/tags/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>读取配置文件2</title>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-2/</link>
+      <pubDate>Mon, 13 Jan 2020 15:50:07 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-2/</guid>
+      <description>&lt;p&gt;接着上一篇。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>读取配置文件</title>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-1/</link>
+      <pubDate>Mon, 13 Jan 2020 15:22:07 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-1/</guid>
+      <description>&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;p&gt;配置文件默认读取的是&lt;strong&gt;application.properties&lt;/strong&gt;，如需读取其他的配置文件，需要使用&lt;code&gt;@PropertySource&lt;/code&gt;注解。假设有一个配置文件&lt;strong&gt;values.properties&lt;/strong&gt;在&lt;strong&gt;resources&lt;/strong&gt;目录下。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
