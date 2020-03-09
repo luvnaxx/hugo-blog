@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Wed, 26 Feb 2020 12:59:56 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 12:14:14 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>be a 韭菜</title>
+      <link>https://www.luvnaxx.com/post/%E4%BA%AB/be-a-%E9%9F%AD%E8%8F%9C/</link>
+      <pubDate>Mon, 09 Mar 2020 12:14:14 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/be-a-%E9%9F%AD%E8%8F%9C/</guid>
+      <description>&lt;p&gt;12道关于中国股市的简单数学题，看不懂就先别炒股了&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
     
     <item>
       <title>Maven打包将依赖放到指定位置</title>
@@ -188,16 +198,6 @@
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/jpa/</guid>
       <description>数据库准备 新建数据库springboot，数据库表tb_user，添加id、username、password、age、address字段。</description>
-    </item>
-    
-    <item>
-      <title>[Spring Cloud] Spring Boot 2.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</link>
-      <pubDate>Mon, 16 Dec 2019 16:51:28 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/</guid>
-      <description>&lt;h2 id=&#34;解决方式&#34;&gt;解决方式&lt;/h2&gt;
-&lt;p&gt;在启动类中添加&lt;/p&gt;</description>
     </item>
     
   </channel>

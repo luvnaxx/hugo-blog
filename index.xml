@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Wed, 26 Feb 2020 12:59:56 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 12:14:14 +0800</lastBuildDate>
     
         <atom:link href="https://www.luvnaxx.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,6 +22,72 @@
         <description>&lt;p&gt;冲冲冲!!!&lt;/p&gt;
 &lt;p&gt;懒狗没有原创&lt;/p&gt;
 </description>
+      
+    </item>
+    
+    <item>
+      <title>be a 韭菜</title>
+      <link>https://www.luvnaxx.com/post/%E4%BA%AB/be-a-%E9%9F%AD%E8%8F%9C/</link>
+      <pubDate>Mon, 09 Mar 2020 12:14:14 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/be-a-%E9%9F%AD%E8%8F%9C/</guid>
+      
+        <description>&lt;p&gt;12道关于中国股市的简单数学题，看不懂就先别炒股了&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;关于收益率&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;假如你有100万，收益100%后资产达到200万，如果接下来亏损50%，则资产回到100万，显然亏损50%比赚取100%要容易得多；&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;关于涨跌停&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;假如你有100万，第一天涨停板后资产达到110万，然后第二天跌停，则资产剩余99万；反之第一天跌停，第二天涨停，资产还是99万元；&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;关于波动性&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;假如你有100万，第一年赚40%，第二年亏20%，第三年赚40%，第四年亏20%，第五年赚40%，第六年亏20%，资产剩余140.5万元，六年年化收益率仅为5.83%，甚至低于五年期凭证式国债票面利率；&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;关于每天1%&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;假如你有100万，每天不需要涨停板，只需要挣1%就离场，那么以每年250个交易日计算，一年下来你的资产可以达到1203.2万，两年后你就可以坐拥1.45亿。&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;关于每年200%&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;假如你有100万，连续5年每年200%收益率，那么5年后你也可以拥有2.43亿元个人资产，显然这样高额收益是很难持续的；&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;关于10年10倍&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;假如你有100万，希望十年后达到1000万，二十年达到1亿元，三十年达到10亿元，那么你需要做到年化收益率25.89%。&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;关于补仓&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果你在某只股票10元的时候买入1万元，如今跌到5元再买1万元，持有成本可以降到6.67元，而不是你想象中的7.50元；&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;关于持有成本&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果你有100万元，投资某股票盈利10%，当你做卖出决定的时候可以试着留下10万元市值的股票，那么你的持有成本将降为零，接下来你就可以毫无压力的长期持有了。如果你极度看好公司的发展，也可以留下20万市值的股票，你会发现你的盈利从10%提升到了100%，不要得意因为此时股票如果下跌超过了50%，你还是有可能亏损；&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;关于资产组合&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;有无风险资产A（每年5%）和风险资产B（每年-20%至40%），如果你有100万，你可以投资80万无风险资产A和20万风险资产B，那么你全年最差的收益可能就是零，而最佳收益可能是12%，这就是应用于保本基金CPPI技术的雏形；&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;关于赌场赢利&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;分析了澳门赌客1000个数据，发现胜负的概率为53%与47%，其中赢钱离场的人平均赢利34%，而输钱离场的人平均亏损时72%，赌场并不需要做局赢利，保证公平依靠人性的弱点就可以持续赢利。股市亦如此。&lt;/p&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;关于投资成功的概率&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果你投资成功的概率是60%，那么意味着你连续投资100次，其中60次盈利，40次亏损。如果你把止盈和止损都设置为10%和-10%，那么意味着最终的收益率是350%（1.1^60*0.9^40=4.50）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;解读：是的，朋友们，已经亮瞎你的眼了吧，3.5倍的收益率！而接下来你需要思考的是你怎么能保证你的胜率是60%呐，不要想当然，这个成功率对于多数人来说也是几乎不可能达到的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;关于止盈止损&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;索罗斯说过他不在乎胜负的概率，而期望盈利的时候比亏损时候能多赚一些。假设我们每次止盈是10%，每次止损是-5%，那么连续投资100次，假设胜负概率是50%，那么意味着你最终的收益率是803.26%（1.1^50*0.95^50=9.0326）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;解读：是的，你没有看错，收益率是800%。前提是你可以坚决的止损和止盈，其次你能保证50%的概率能到达更多的止盈机会吗？&lt;/p&gt;
+&lt;/blockquote&gt;</description>
       
     </item>
     
@@ -2529,273 +2595,6 @@ mapper文件的通用模板是&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;namespace就是dao层的接口文件。使用相关插件可以很方便的编写SQL语句以及进行文件之间的跳转。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>[Spring Boot 2.x] 使用SpringDataJPA完成CRUD</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/jpa/</link>
-      <pubDate>Sun, 22 Dec 2019 13:47:08 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/jpa/</guid>
-      
-        <description>&lt;h2 id=&#34;数据库准备&#34;&gt;数据库准备&lt;/h2&gt;
-&lt;p&gt;新建数据库springboot，数据库表tb_user，添加id、username、password、age、address字段。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tb_user&lt;/span&gt;
-(
-  id &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIMARY&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;KEY&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;AUTO_INCREMENT&lt;/span&gt;,
-  username &lt;span style=&#34;color:#66d9ef&#34;&gt;varchar&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;,
-  password &lt;span style=&#34;color:#66d9ef&#34;&gt;varchar&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;,
-  age &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;,
-  address &lt;span style=&#34;color:#66d9ef&#34;&gt;varchar&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;)
-);
-&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; tb_user COMMENT &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;用户信息表&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;关于数据库的命名规范，虽说没有一个强制的规定说数据库要如何命名、数据表要如何命名、字段值要如何命名，但是似乎很多都是有一个潜规则。我又是一个有些强迫症的人，很多时候我为了一个命名，可以想个半天，有时甚至删项目重搞。可怕&lt;/em&gt;
-&lt;em&gt;对于MySQL数据库的各种命名，在我翻过各种高山，拜访过各位民间大神之后，现在的习惯是数据库名和表名采用 &amp;ldquo;_&amp;ldquo;连接的形式，据说这是为了方面在Windows与类Unix机器上的兼容。而对于数据表中的字段，我现在使用Java变量名命名的规范，即驼峰原则，这样可能比较有利于与Java的配合。&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;新建spring-boot项目&#34;&gt;新建Spring Boot项目&lt;/h2&gt;
-&lt;p&gt;进入&lt;a href=&#34;https://start.spring.io/&#34;&gt;SPRING INITIALIZR&lt;/a&gt; 或者使用JetBrains IDEA/Eclipse构建一个Spring Boot项目(这里使用2.0.3.RELEASE版本)。选择添加Web、JPA、MySQL依赖，或者稍后手动在pom.xml中添加。
-最终的pom.xml文件中应该包含有如下依赖：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependencies&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;spring-boot-starter-data-jpa&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;spring-boot-starter-web&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-
-
-
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;mysql&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;mysql-connector-java&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;scope&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;runtime&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;org.projectlombok&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;lombok&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;optional&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;true&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/optional&amp;gt;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;spring-boot-starter-test&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;scope&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;test&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;可以看到，这里多添加了一个lombok依赖。lombok是一个简化Java代码的工具，通过添加注解，在实体类中就可以不再手动编写getter/setter方法，虽说现在各种IDE已经可以自动帮助我们生成getter/setter方法，但是简化文件的内容还是很不错的。&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;创建配置文件&#34;&gt;创建配置文件&lt;/h2&gt;
-&lt;p&gt;在resources文件夹下，新建application.yml配置文件。个人感觉YAML相较于properties，在一些方面更好用、更方便一些。
-打开配置文件，在里面配置数据库连接相关信息。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;spring:
-  datasource:
-  driver-class-name: com.mysql.jdbc.Driver
-  url: jdbc:mysql://localhost:&lt;span style=&#34;color:#ae81ff&#34;&gt;3306&lt;/span&gt;/springboot?useSSL=&lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
-  username: root
-  password: mysql
-
-jpa:
-  database: mysql
-  show-sql: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;此处使用的密码为明文密码，不是很安全，可以使用md5 + salt加密&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;代码编写&#34;&gt;代码编写&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;文件的创建应该是自下而上的，而代码的编写应该是自上而下的。这让文章写起来很不舒服。现在把文件的创建和代码的编写一次性粘贴出来，所以在编写完全部的代码之前，出现内容找不到报错的问题属于正常现象。以后文章也按照此原则进行。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;controller层&#34;&gt;controller层&lt;/h4&gt;
-&lt;p&gt;新建controller包，即使是一个简单的demo，规范还是要有的。
-在controller下新建 &lt;em&gt;UserRestController.java&lt;/em&gt;，至于为什么要加一个Rest呢？可能是我为以后考虑吧。嘻嘻
-代码如下&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RestController&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserRestController&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;entity层&#34;&gt;entity层&lt;/h4&gt;
-&lt;p&gt;新建entity包，用来存放与数据库字段相对应的内容。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Data&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@Entity&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@Table&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tb_user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;User&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;implements&lt;/span&gt; Serializable &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Id&lt;/span&gt;
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@GeneratedValue&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;strategy &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; GenerationType&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;IDENTITY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Column&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Long id&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Column&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;username&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String username&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Column&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String password&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Column&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;age&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Integer age&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Column&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;address&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String address&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以看到此处使用了&lt;code&gt;@Data&lt;/code&gt;注解，在类中就可以省略掉getter/setter，还是很方面的说。当然这只是lombok的皮毛，暂时够用即可。&lt;/p&gt;
-&lt;h4 id=&#34;service层&#34;&gt;service层&lt;/h4&gt;
-&lt;p&gt;service层一般放置具体的业务逻辑，在此处新建 &lt;em&gt;UserService.java&lt;/em&gt; 接口
-里面的抽象方法有&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserService&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-
-  List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;getAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-
-  User &lt;span style=&#34;color:#a6e22e&#34;&gt;save&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;User entity&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;deleteById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Long id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-
-  &lt;span style=&#34;color:#75715e&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   * 通过id查询用户
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   *
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   * @param id 用户id（数据库自增）
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   */&lt;/span&gt;
-  Optional&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;findById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Long id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在service包下新建impl包，用来实现接口的方法 &lt;em&gt;UserServiceImpl.java&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Service&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserServiceImpl&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;implements&lt;/span&gt; UserService &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Autowired&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; UserJPA userJPA&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;getAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; userJPA&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;findAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; User &lt;span style=&#34;color:#a6e22e&#34;&gt;save&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;User entity&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; userJPA&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;save&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;entity&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;deleteById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Long id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    userJPA&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;deleteById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Optional&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;findById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Long id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; userJPA&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;findById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;dao层&#34;&gt;dao层&lt;/h4&gt;
-&lt;p&gt;dao层即程序与数据库的交互层，在这里编写各种查询语句来满足业务需求。新建 &lt;em&gt;UserJPA.java&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserJPA&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; JpaRepository&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Long&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;
-	JpaSpecificationExecutor&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Serializable &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;代码已经写完了。这就是SpringDataJPA的神奇之处。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我们UserJPA继承了JpaRepository接口（SpringDataJPA提供的简单数据操作接口）、JpaSpecificationExecutor（SpringDataJPA提供的复杂查询接口）、Serializable（序列化接口）。我们并不需要做其他的任何操作了，因为SpringBoot以及SpringDataJPA会为我们全部搞定，SpringDataJPA内部使用了类代理的方式让继承了它接口的子接口都以spring管理的Bean的形式存在，也就是说我们可以直接使用@Autowired注解在spring管理bean使用&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;controller层-1&#34;&gt;controller层&lt;/h4&gt;
-&lt;p&gt;再次回到 &lt;em&gt;UserRestController.java&lt;/em&gt;，在里面编写具体的增删改查(CRUD)操作。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RestController&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserRestController&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Autowired&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; UserServiceImpl userService&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-
-  &lt;span style=&#34;color:#75715e&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   * 显示全部用户方法
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   */&lt;/span&gt;
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@GetMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/list&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;findAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; userService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-
-  &lt;span style=&#34;color:#75715e&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   * 添加、更新用户方法
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   */&lt;/span&gt;
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@GetMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/save&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; User &lt;span style=&#34;color:#a6e22e&#34;&gt;save&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;User entity&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; userService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;save&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;entity&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-
-  &lt;span style=&#34;color:#75715e&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   * 删除用户方法
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   *
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   * @param id 用户编号
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   */&lt;/span&gt;
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@GetMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/delete&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;delete&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Long id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    userService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;deleteById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; userService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-
-  &lt;span style=&#34;color:#75715e&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   * 返回指定id用户
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   *
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   * @param id 用户id
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   */&lt;/span&gt;
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@GetMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{id}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Optional&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;findById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@PathVariable&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; Long id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; userService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;findById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;简单的数据库增删改查操作&lt;/p&gt;
-&lt;h2 id=&#34;运行测试&#34;&gt;运行测试&lt;/h2&gt;
-&lt;p&gt;启动项目，程序默认端口号为8080，如若想修改，打开 &lt;em&gt;application.yml&lt;/em&gt;，编写&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;server:
-  port: &lt;span style=&#34;color:#ae81ff&#34;&gt;7777&lt;/span&gt;
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即修改程序端口号为7777.在浏览器地址栏输入&lt;a href=&#34;http://localhost:7777/user/list&#34;&gt;http://localhost:7777/user/list&lt;/a&gt;
-可以看到
-&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201808/4749c7d7fcfd43789004cda8fe4f1c52.png&#34; alt=&#34;查看全部&#34;&gt;&lt;/p&gt;
-&lt;p&gt;由于现在数据库中还没有任何数据，所以内容为空。现在查看程序控制台，由于我们在配置文件中设置了打印SQL语句，所以控制台出现了一条Hibernate定义的查询语句。
-&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201808/01738a950f5e4111b593d389bc58558c.png&#34; alt=&#34;Hibernate生成的查询全部语句&#34;&gt;&lt;/p&gt;
-&lt;p&gt;现在新增一条数据&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;http://localhost:7777/user/save?username=luvnaxx&amp;amp;password=admin&amp;amp;age=23&amp;amp;address=nanjing
-可以看到插入成功，页面返回了本条数据的全部内容。
-&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201808/a7dd8002d5f9453c8fde3805adfe559e.png&#34; alt=&#34;插入数据&#34;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;再次查询全部数据，会返回当前数据库中的全部数据。删除修改自行测试。&lt;/p&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;2018-09-12 20:06:34 新增baseDAO&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在SpringDataJPA中，如果每个dao层接口都要实现JpaRepository,	JpaSpecificationExecuto以及Serializable，也算是一件比较麻烦的事情，如果定义一个父接口用来实现上述接口，实际的dao层接口只需集成此接口即可，对于dao层接口数量较多的工程，也是一个稍微节约点时间的好方法。
-在工程中新建base包，新建BaseDAO接口。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@NoRepositoryBean&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;BaseDAO&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;T&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; JpaRepository&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;T&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Long&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;
-        JpaSpecificationExecutor&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;T&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Serializable &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加@NoRepositoryBean注解，此接口就不会作为一个Repository创建代理实现类。
-以后的Repository直接集成此接口就可以了&lt;/p&gt;
-</description>
       
     </item>
     
