@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.67.0" />
 
 
 <link rel="canonical" href="https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/" />
@@ -354,6 +354,7 @@ FreeMarker
         </time>
         <div class="post-category">
             <a href="https://www.luvnaxx.com/categories/%E6%8A%80/"> 技 </a>
+            <a href="https://www.luvnaxx.com/categories/spring-boot/"> Spring Boot </a>
             
           </div>
         
@@ -394,26 +395,26 @@ FreeMarker
 <h2 id="freemarker">FreeMarker</h2>
 <h4 id="代码">代码</h4>
 <h6 id="依赖pomxml">依赖<code>pom.xml</code></h6>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-  <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-freemarker<span style="color:#f92672">&lt;/artifactId&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-freemarker<span style="color:#f92672">&lt;/artifactId&gt;</span>
 <span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><h6 id="配置applicationyml">配置<code>application.yml</code></h6>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">spring:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#66d9ef">spring</span>:
   <span style="color:#75715e"># FreeMarker 配置</span>
-  freemarker:
-    cache: <span style="color:#66d9ef">false</span>
-    charset: utf<span style="color:#ae81ff">-8</span>
-    check-template-location: <span style="color:#66d9ef">true</span>
-    content-type: text/html
-    expose-request-attributes: <span style="color:#66d9ef">true</span>
-    expose-session-attributes: <span style="color:#66d9ef">true</span>
-    request-context-attribute: request
+  <span style="color:#66d9ef">freemarker</span>:
+    <span style="color:#66d9ef">cache</span>: <span style="color:#66d9ef">false</span>
+    <span style="color:#66d9ef">charset</span>: utf<span style="color:#ae81ff">-8</span>
+    <span style="color:#66d9ef">check-template-location</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#66d9ef">content-type</span>: text/html
+    <span style="color:#66d9ef">expose-request-attributes</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#66d9ef">expose-session-attributes</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#66d9ef">request-context-attribute</span>: request
 </code></pre></div><h6 id="路由pagecontrollerjava">路由<code>PageController.java</code></h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/book/all&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">findAllBooks</span><span style="color:#f92672">(</span>Model model<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    List<span style="color:#f92672">&lt;</span>BookEntity<span style="color:#f92672">&gt;</span> bookEntities <span style="color:#f92672">=</span> bookService<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-    model<span style="color:#f92672">.</span><span style="color:#a6e22e">addAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bookList&#34;</span><span style="color:#f92672">,</span> bookEntities<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    List<span style="color:#f92672">&lt;</span>BookEntity<span style="color:#f92672">&gt;</span> bookEntities <span style="color:#f92672">=</span> bookService<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">();</span>
+    model<span style="color:#f92672">.</span><span style="color:#a6e22e">addAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bookList&#34;</span><span style="color:#f92672">,</span> bookEntities<span style="color:#f92672">);</span>
     <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;bookList&#34;</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h6 id="页面booklistftl">页面<code>bookList.ftl</code></h6>
@@ -434,30 +435,30 @@ FreeMarker
 <h2 id="thymeleaf">Thymeleaf</h2>
 <h4 id="代码-1">代码</h4>
 <h6 id="依赖pomxml-1">依赖<code>pom.xml</code></h6>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-  <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-thymeleaf<span style="color:#f92672">&lt;/artifactId&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-thymeleaf<span style="color:#f92672">&lt;/artifactId&gt;</span>
 <span style="color:#f92672">&lt;/dependency&gt;</span>
-<span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>net.sourceforge.nekohtml<span style="color:#f92672">&lt;/groupId&gt;</span>
-  <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>nekohtml<span style="color:#f92672">&lt;/artifactId&gt;</span>
-  <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>1.9.22<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>net.sourceforge.nekohtml<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>nekohtml<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>1.9.22<span style="color:#f92672">&lt;/version&gt;</span>
 <span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><h6 id="配置applicationyml-1">配置<code>application.yml</code></h6>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">spring:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#66d9ef">spring</span>:
   <span style="color:#75715e"># Thymeleaf 配置</span>
-  thymeleaf:
-    mode: LEGACYHTML5
-    encoding: utf<span style="color:#ae81ff">-8</span>
-    servlet:
-      content-type: text/html
+  <span style="color:#66d9ef">thymeleaf</span>:
+    <span style="color:#66d9ef">mode</span>: LEGACYHTML5
+    <span style="color:#66d9ef">encoding</span>: utf<span style="color:#ae81ff">-8</span>
+    <span style="color:#66d9ef">servlet</span>:
+      <span style="color:#66d9ef">content-type</span>: text/html
     <span style="color:#75715e"># 开发时关闭缓存，不然无法看到实时页面</span>
-    cache: <span style="color:#66d9ef">false</span>
+    <span style="color:#66d9ef">cache</span>: <span style="color:#66d9ef">false</span>
 </code></pre></div><h6 id="路由pagecontrollerjava-1">路由<code>PageController.java</code></h6>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/thymeleaf&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">thymeleaf</span><span style="color:#f92672">(</span>Model model<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    List<span style="color:#f92672">&lt;</span>BookEntity<span style="color:#f92672">&gt;</span> bookEntities <span style="color:#f92672">=</span> bookService<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-    model<span style="color:#f92672">.</span><span style="color:#a6e22e">addAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bookList&#34;</span><span style="color:#f92672">,</span> bookEntities<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    List<span style="color:#f92672">&lt;</span>BookEntity<span style="color:#f92672">&gt;</span> bookEntities <span style="color:#f92672">=</span> bookService<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">();</span>
+    model<span style="color:#f92672">.</span><span style="color:#a6e22e">addAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;bookList&#34;</span><span style="color:#f92672">,</span> bookEntities<span style="color:#f92672">);</span>
     <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;thymeleaf&#34;</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h6 id="页面thymeleafhtml">页面<code>thymeleaf.html</code></h6>

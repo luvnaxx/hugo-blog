@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.67.0" />
 
 
 <link rel="canonical" href="https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/hystrix-dashboard/" />
@@ -352,6 +352,7 @@
         </time>
         <div class="post-category">
             <a href="https://www.luvnaxx.com/categories/%E6%8A%80/"> 技 </a>
+            <a href="https://www.luvnaxx.com/categories/spring-cloud/"> Spring Cloud </a>
             
           </div>
         
@@ -382,12 +383,12 @@
       <h2 id="解决方式">解决方式</h2>
 <p>在启动类中添加</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#a6e22e">@Bean</span>
-  <span style="color:#66d9ef">public</span> ServletRegistrationBean <span style="color:#a6e22e">getServlet</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    HystrixMetricsStreamServlet streamServlet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HystrixMetricsStreamServlet<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-    ServletRegistrationBean registrationBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ServletRegistrationBean<span style="color:#f92672">(</span>streamServlet<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-    registrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">setLoadOnStartup</span><span style="color:#f92672">(</span>1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-    registrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addUrlMappings</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/actuator/hystrix.stream&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-    registrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;HystrixMetricsStreamServlet&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">public</span> ServletRegistrationBean <span style="color:#a6e22e">getServlet</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    HystrixMetricsStreamServlet streamServlet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HystrixMetricsStreamServlet<span style="color:#f92672">();</span>
+    ServletRegistrationBean registrationBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ServletRegistrationBean<span style="color:#f92672">(</span>streamServlet<span style="color:#f92672">);</span>
+    registrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">setLoadOnStartup</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+    registrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addUrlMappings</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/actuator/hystrix.stream&#34;</span><span style="color:#f92672">);</span>
+    registrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;HystrixMetricsStreamServlet&#34;</span><span style="color:#f92672">);</span>
     <span style="color:#66d9ef">return</span> registrationBean<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 </code></pre></div>
@@ -424,7 +425,7 @@
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         
-          <a class="next" href="/post/%E6%8A%80/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/">
+          <a class="next" href="/post/%E8%AE%B0/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/">
             <span class="next-text nav-default">解决Linux下环境变量失效问题</span>
             <span class="prev-text nav-mobile">Next</span>
             

@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="luvnaxx" />
-  <meta name="description" content="从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并不能成功。
+  <meta name="description" content="从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并成功。
 " />
 
   <meta name="keywords" content="knowledge, life" />
@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.67.0" />
 
 
 <link rel="canonical" href="https://www.luvnaxx.com/post/%E8%AE%B0/nginx%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E5%B9%B6%E5%AE%89%E8%A3%85ssl%E8%AF%81%E4%B9%A6/" />
@@ -61,22 +61,22 @@
 
 
 <meta property="og:title" content="Nginx配置域名访问并安装SSL证书" />
-<meta property="og:description" content="从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并不能成功。" />
+<meta property="og:description" content="从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并成功。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.luvnaxx.com/post/%E8%AE%B0/nginx%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E5%B9%B6%E5%AE%89%E8%A3%85ssl%E8%AF%81%E4%B9%A6/" />
 <meta property="article:published_time" content="2019-12-27T19:10:40+08:00" />
 <meta property="article:modified_time" content="2019-12-27T19:10:40+08:00" />
 <meta itemprop="name" content="Nginx配置域名访问并安装SSL证书">
-<meta itemprop="description" content="从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并不能成功。">
+<meta itemprop="description" content="从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并成功。">
 <meta itemprop="datePublished" content="2019-12-27T19:10:40&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-27T19:10:40&#43;08:00" />
-<meta itemprop="wordCount" content="548">
+<meta itemprop="wordCount" content="546">
 
 
 
 <meta itemprop="keywords" content="nginx,ssl," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Nginx配置域名访问并安装SSL证书"/>
-<meta name="twitter:description" content="从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并不能成功。"/>
+<meta name="twitter:description" content="从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并成功。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -376,7 +376,7 @@
 
     
     <div class="post-content">
-      <p>从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并不能成功。</p>
+      <p>从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并成功。</p>
 <hr>
 <p>以下为自己试验的成功的配置</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nginx" data-lang="nginx">    <span style="color:#66d9ef">server</span> {
@@ -393,8 +393,8 @@
 			<span style="color:#f92672">return</span> <span style="color:#ae81ff">301</span> <span style="color:#e6db74">https://</span>$host$request_uri;
 		}
         
- 		<span style="color:#f92672">ssl_certificate</span> <span style="color:#e6db74">cert/open</span><span style="color:#e6db74">.nacos.luvnaxx.com.pem</span>;
-        <span style="color:#f92672">ssl_certificate_key</span> <span style="color:#e6db74">cert/open</span><span style="color:#e6db74">.nacos.luvnaxx.com.key</span>;
+ 		<span style="color:#f92672">ssl_certificate</span> <span style="color:#e6db74">cert/open.nacos.luvnaxx.com.pem</span>;
+        <span style="color:#f92672">ssl_certificate_key</span> <span style="color:#e6db74">cert/open.nacos.luvnaxx.com.key</span>;
         <span style="color:#f92672">ssl_session_timeout</span> <span style="color:#ae81ff">5m</span>;
         <span style="color:#f92672">ssl_protocols</span> <span style="color:#e6db74">TLSv1</span> <span style="color:#e6db74">TLSv1.1</span> <span style="color:#e6db74">TLSv1.2</span>;
         <span style="color:#f92672">ssl_ciphers</span> <span style="color:#e6db74">ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4</span>;

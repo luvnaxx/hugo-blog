@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.67.0" />
 
 
 <link rel="canonical" href="https://www.luvnaxx.com/post/%E6%8A%80/json%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/" />
@@ -422,10 +422,10 @@
 	}]
 }
 </code></pre></div><h4 id="依赖">依赖</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>fastjson<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>1.2.58<span style="color:#f92672">&lt;/version&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#f92672">&lt;dependency&gt;</span>
+      <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId&gt;</span>fastjson<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version&gt;</span>1.2.58<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><h4 id="代码实现">代码实现</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> com.alibaba.fastjson.JSON<span style="color:#f92672">;</span>
@@ -442,27 +442,27 @@
 </span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Str2JSON</span> <span style="color:#f92672">{</span>
 
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
     <span style="color:#75715e">// 字符串类型的json数据
 </span><span style="color:#75715e"></span>    String jsonData <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;{\&#34;businessId\&#34;:\&#34;e341a297849144568219713246952896\&#34;,\&#34;customer\&#34;:[{\&#34;name\&#34;:\&#34;Jack\&#34;,\&#34;phone\&#34;:12345678901,\&#34;address\&#34;:{\&#34;country\&#34;:\&#34;CN\&#34;,\&#34;provence\&#34;:\&#34;Shanghai\&#34;,\&#34;county\&#34;:\&#34;Pudong\&#34;,\&#34;street\&#34;:\&#34;xxx\&#34;}}],\&#34;businessMark\&#34;:[{\&#34;businessId\&#34;:\&#34;913200006891849616\&#34;,\&#34;businessName\&#34;:\&#34;Toy\&#34;,\&#34;price\&#34;:1213.4}]}&#34;</span><span style="color:#f92672">;</span>
 
     JSONObject jsonObject<span style="color:#f92672">;</span>
     <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-      jsonObject <span style="color:#f92672">=</span> JSONObject<span style="color:#f92672">.</span><span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>jsonData<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      jsonObject <span style="color:#f92672">=</span> JSONObject<span style="color:#f92672">.</span><span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>jsonData<span style="color:#f92672">);</span>
 
-      JSONArray customer <span style="color:#f92672">=</span> jsonObject<span style="color:#f92672">.</span><span style="color:#a6e22e">getJSONArray</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;customer&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-      Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> fileInfoMap <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span><span style="color:#f92672">)</span> customer<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      JSONArray customer <span style="color:#f92672">=</span> jsonObject<span style="color:#f92672">.</span><span style="color:#a6e22e">getJSONArray</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;customer&#34;</span><span style="color:#f92672">);</span>
+      Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> fileInfoMap <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;)</span> customer<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
 
-      Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> address <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span><span style="color:#f92672">)</span> fileInfoMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;address&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-      address<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;street&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> address <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;)</span> fileInfoMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;address&#34;</span><span style="color:#f92672">);</span>
+      address<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;street&#34;</span><span style="color:#f92672">);</span>
 
       Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> map <span style="color:#f92672">=</span> jsonObject<span style="color:#f92672">;</span>
       <span style="color:#75715e">//map转字符串
-</span><span style="color:#75715e"></span>      String jsonString <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">toJSONString</span><span style="color:#f92672">(</span>map<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
-      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>jsonString<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>      String jsonString <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">toJSONString</span><span style="color:#f92672">(</span>map<span style="color:#f92672">);</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>jsonString<span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
     <span style="color:#f92672">}</span>
   <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>

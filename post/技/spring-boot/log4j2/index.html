@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.67.0" />
 
 
 <link rel="canonical" href="https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/log4j2/" />
@@ -70,7 +70,7 @@
 <meta itemprop="description" content="Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。">
 <meta itemprop="datePublished" content="2019-12-22T15:59:54&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-22T15:59:54&#43;08:00" />
-<meta itemprop="wordCount" content="331">
+<meta itemprop="wordCount" content="290">
 
 
 
@@ -349,6 +349,7 @@
         </time>
         <div class="post-category">
             <a href="https://www.luvnaxx.com/categories/%E6%8A%80/"> 技 </a>
+            <a href="https://www.luvnaxx.com/categories/spring-boot/"> Spring Boot </a>
             
           </div>
         
@@ -380,59 +381,59 @@
       <p>Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。</p>
 <hr>
 <h2 id="引入依赖">引入依赖</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 移除原有的logBack </span><span style="color:#75715e">--&gt;</span>
-    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;exclusions</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#f92672">&lt;exclusion</span><span style="color:#f92672">&gt;</span>
-          <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-          <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-logging<span style="color:#f92672">&lt;/artifactId&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#75715e">&lt;!-- 移除原有的logBack --&gt;</span>
+    <span style="color:#f92672">&lt;dependency&gt;</span>
+      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;exclusions&gt;</span>
+        <span style="color:#f92672">&lt;exclusion&gt;</span>
+          <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+          <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-logging<span style="color:#f92672">&lt;/artifactId&gt;</span>
         <span style="color:#f92672">&lt;/exclusion&gt;</span>
       <span style="color:#f92672">&lt;/exclusions&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 添加log4j2的依赖 </span><span style="color:#75715e">--&gt;</span>
-    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-log4j2<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#75715e">&lt;!-- 添加log4j2的依赖 --&gt;</span>
+    <span style="color:#f92672">&lt;dependency&gt;</span>
+      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-log4j2<span style="color:#f92672">&lt;/artifactId&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><h2 id="配置log4j2">配置Log4j2</h2>
 <p>在<strong>resources</strong>下新建<code>log4j2.xml</code>，内容如下</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
-<span style="color:#75715e">&lt;!--</span><span style="color:#75715e">日志级别以及优先级排序: OFF &gt; FATAL &gt; ERROR &gt; WARN &gt; INFO &gt; DEBUG &gt; TRACE &gt; ALL </span><span style="color:#75715e">--&gt;</span>
-<span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> status log4j2内部日志级别 </span><span style="color:#75715e">--&gt;</span>
+<span style="color:#75715e">&lt;!--日志级别以及优先级排序: OFF &gt; FATAL &gt; ERROR &gt; WARN &gt; INFO &gt; DEBUG &gt; TRACE &gt; ALL --&gt;</span>
+<span style="color:#75715e">&lt;!-- status log4j2内部日志级别 --&gt;</span>
 <span style="color:#f92672">&lt;configuration</span> <span style="color:#a6e22e">status=</span><span style="color:#e6db74">&#34;INFO&#34;</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 全局参数 </span><span style="color:#75715e">--&gt;</span>
-  <span style="color:#f92672">&lt;Properties</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#75715e">&lt;!-- 全局参数 --&gt;</span>
+  <span style="color:#f92672">&lt;Properties&gt;</span>
     <span style="color:#f92672">&lt;Property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;pattern&#34;</span><span style="color:#f92672">&gt;</span>%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p %c{1}:%L -%m%n<span style="color:#f92672">&lt;/Property&gt;</span>
     <span style="color:#f92672">&lt;Property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;displayName&#34;</span><span style="color:#f92672">&gt;</span>rookie<span style="color:#f92672">&lt;/Property&gt;</span>
   <span style="color:#f92672">&lt;/Properties&gt;</span>
-  <span style="color:#f92672">&lt;Appenders</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;Appenders&gt;</span>
     <span style="color:#f92672">&lt;Console</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;console&#34;</span> <span style="color:#a6e22e">target=</span><span style="color:#e6db74">&#34;SYSTEM_OUT&#34;</span> <span style="color:#a6e22e">follow=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;PatternLayout</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#f92672">&lt;pattern</span><span style="color:#f92672">&gt;</span>${pattern}<span style="color:#f92672">&lt;/pattern&gt;</span>
+      <span style="color:#f92672">&lt;PatternLayout&gt;</span>
+        <span style="color:#f92672">&lt;pattern&gt;</span>${pattern}<span style="color:#f92672">&lt;/pattern&gt;</span>
       <span style="color:#f92672">&lt;/PatternLayout&gt;</span>
     <span style="color:#f92672">&lt;/Console&gt;</span>
-    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 文件 每次运行程序会自动清空，由append属性决定 </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#75715e">&lt;!-- 文件 每次运行程序会自动清空，由append属性决定 --&gt;</span>
     <span style="color:#f92672">&lt;File</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;error&#34;</span> <span style="color:#a6e22e">fileName=</span><span style="color:#e6db74">&#34;${displayName}_error.log&#34;</span> <span style="color:#a6e22e">append=</span><span style="color:#e6db74">&#34;false&#34;</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 指定error 级别的日志 </span><span style="color:#75715e">--&gt;</span>
+      <span style="color:#75715e">&lt;!-- 指定error 级别的日志 --&gt;</span>
       <span style="color:#f92672">&lt;ThresholdFilter</span> <span style="color:#a6e22e">level=</span><span style="color:#e6db74">&#34;ERROR&#34;</span> <span style="color:#a6e22e">onMatch=</span><span style="color:#e6db74">&#34;ACCEPT&#34;</span>
                        <span style="color:#a6e22e">onMismatch=</span><span style="color:#e6db74">&#34;DENY&#34;</span><span style="color:#f92672">/&gt;</span>
-      <span style="color:#f92672">&lt;PatternLayout</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#f92672">&lt;pattern</span><span style="color:#f92672">&gt;</span>${pattern}<span style="color:#f92672">&lt;/pattern&gt;</span>
+      <span style="color:#f92672">&lt;PatternLayout&gt;</span>
+        <span style="color:#f92672">&lt;pattern&gt;</span>${pattern}<span style="color:#f92672">&lt;/pattern&gt;</span>
       <span style="color:#f92672">&lt;/PatternLayout&gt;</span>
     <span style="color:#f92672">&lt;/File&gt;</span>
-    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 滚动文件 </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#75715e">&lt;!-- 滚动文件 --&gt;</span>
     <span style="color:#f92672">&lt;RollingFile</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;rollingFile&#34;</span> <span style="color:#a6e22e">fileName=</span><span style="color:#e6db74">&#34;${displayName}.log&#34;</span>
                  <span style="color:#a6e22e">filePattern=</span><span style="color:#e6db74">&#34;${displayName}_%d{yyyy-MM-dd}.log&#34;</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;PatternLayout</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#f92672">&lt;pattern</span><span style="color:#f92672">&gt;</span>${pattern}<span style="color:#f92672">&lt;/pattern&gt;</span>
+      <span style="color:#f92672">&lt;PatternLayout&gt;</span>
+        <span style="color:#f92672">&lt;pattern&gt;</span>${pattern}<span style="color:#f92672">&lt;/pattern&gt;</span>
       <span style="color:#f92672">&lt;/PatternLayout&gt;</span>
-      <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 按大小划分 </span><span style="color:#75715e">--&gt;</span>
+      <span style="color:#75715e">&lt;!-- 按大小划分 --&gt;</span>
       <span style="color:#f92672">&lt;SizeBasedTriggeringPolicy</span> <span style="color:#a6e22e">size=</span><span style="color:#e6db74">&#34;50 MB&#34;</span><span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;/RollingFile&gt;</span>
   <span style="color:#f92672">&lt;/Appenders&gt;</span>
-  <span style="color:#f92672">&lt;Loggers</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;Loggers&gt;</span>
     <span style="color:#f92672">&lt;Logger</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;com.luvnaxx.web.springboot.rookie.controller&#34;</span> <span style="color:#a6e22e">level=</span><span style="color:#e6db74">&#34;WARN&#34;</span><span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;Logger</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;com.luvnaxx.web.springboot.rookie&#34;</span> <span style="color:#a6e22e">level=</span><span style="color:#e6db74">&#34;INFO&#34;</span><span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;Root</span> <span style="color:#a6e22e">level=</span><span style="color:#e6db74">&#34;INFO&#34;</span><span style="color:#f92672">&gt;</span>

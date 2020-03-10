@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Mon, 09 Mar 2020 12:14:14 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 21:37:48 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>微信公众号开发模式-day1</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day1/</link>
+      <pubDate>Tue, 10 Mar 2020 21:37:48 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day1/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;需求：开通一订阅号，通过点击下方菜单或者输入关键字，返回指定信息。&lt;/p&gt;
+&lt;p&gt;暂时设想的是快速查询&lt;strong&gt;黄金9999&lt;/strong&gt;实时价格&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以&lt;a href=&#34;https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html&#34;&gt;微信官方文档·公众号&lt;/a&gt;为开发文档&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>be a 韭菜</title>
@@ -24,10 +37,10 @@
     
     <item>
       <title>Maven打包将依赖放到指定位置</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%B0%86%E4%BE%9D%E8%B5%96%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE/</link>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/maven%E6%89%93%E5%8C%85%E5%B0%86%E4%BE%9D%E8%B5%96%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE/</link>
       <pubDate>Wed, 26 Feb 2020 12:59:56 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/maven%E6%89%93%E5%8C%85%E5%B0%86%E4%BE%9D%E8%B5%96%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE/</guid>
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/maven%E6%89%93%E5%8C%85%E5%B0%86%E4%BE%9D%E8%B5%96%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE/</guid>
       <description>使用命令 mvn dependency:copy-dependencies -DoutputDirectory=yourPath -DincludeScope=runtime</description>
     </item>
     
@@ -122,7 +135,7 @@
       <pubDate>Fri, 27 Dec 2019 19:10:40 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E8%AE%B0/nginx%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E5%B9%B6%E5%AE%89%E8%A3%85ssl%E8%AF%81%E4%B9%A6/</guid>
-      <description>&lt;p&gt;从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并不能成功。&lt;/p&gt;</description>
+      <description>&lt;p&gt;从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并成功。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -189,15 +202,6 @@
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/mybatis/</guid>
       <description>&lt;p&gt;在上一篇SpringDataJPA的基础上进行扩展。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>[Spring Boot 2.x] 使用SpringDataJPA完成CRUD</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/jpa/</link>
-      <pubDate>Sun, 22 Dec 2019 13:47:08 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/jpa/</guid>
-      <description>数据库准备 新建数据库springboot，数据库表tb_user，添加id、username、password、age、address字段。</description>
     </item>
     
   </channel>

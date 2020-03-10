@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.67.0" />
 
 
 <link rel="canonical" href="https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/zipkin-server/" />
@@ -72,7 +72,7 @@ pom.xml" />
 pom.xml">
 <meta itemprop="datePublished" content="2019-12-25T14:50:08&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-25T14:50:08&#43;08:00" />
-<meta itemprop="wordCount" content="187">
+<meta itemprop="wordCount" content="189">
 
 
 
@@ -352,6 +352,7 @@ pom.xml"/>
         </time>
         <div class="post-category">
             <a href="https://www.luvnaxx.com/categories/%E6%8A%80/"> 技 </a>
+            <a href="https://www.luvnaxx.com/categories/spring-cloud/"> Spring Cloud </a>
             
           </div>
         
@@ -386,18 +387,18 @@ pom.xml"/>
     <div class="post-content">
       <h2 id="加入-zipkin-server">加入 Zipkin Server</h2>
 <p>pom.xml</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> https://mvnrepository.com/artifact/io.zipkin.java/zipkin</span><span style="color:#75715e">-</span><span style="color:#75715e">server </span><span style="color:#75715e">--&gt;</span>
-    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>io.zipkin.java<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>zipkin-server<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>2.12.3<span style="color:#f92672">&lt;/version&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#75715e">&lt;!-- https://mvnrepository.com/artifact/io.zipkin.java/zipkin-server --&gt;</span>
+    <span style="color:#f92672">&lt;dependency&gt;</span>
+      <span style="color:#f92672">&lt;groupId&gt;</span>io.zipkin.java<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId&gt;</span>zipkin-server<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version&gt;</span>2.12.3<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> https://mvnrepository.com/artifact/io.zipkin.java/zipkin</span><span style="color:#75715e">-</span><span style="color:#75715e">autoconfigure</span><span style="color:#75715e">-</span><span style="color:#75715e">ui </span><span style="color:#75715e">--&gt;</span>
-    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>io.zipkin.java<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>zipkin-autoconfigure-ui<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>2.12.3<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#75715e">&lt;!-- https://mvnrepository.com/artifact/io.zipkin.java/zipkin-autoconfigure-ui --&gt;</span>
+    <span style="color:#f92672">&lt;dependency&gt;</span>
+      <span style="color:#f92672">&lt;groupId&gt;</span>io.zipkin.java<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId&gt;</span>zipkin-autoconfigure-ui<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version&gt;</span>2.12.3<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><h2 id="异常处理">异常处理</h2>
 <h4 id="在-spring-boot-启动类加上-enablezipkinserver-注解启动项目控制台报错">在 Spring Boot 启动类加上 <code>@EnableZipkinServer</code> 注解，启动项目，控制台报错</h4>
@@ -410,14 +411,14 @@ SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
 Exception in thread &ldquo;main&rdquo; java.lang.StackOverflowError</p>
 </blockquote>
 <p><strong>需要排除 zipkin-server 中依赖的 SLF4j</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>io.zipkin.java<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>zipkin-server<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>2.12.3<span style="color:#f92672">&lt;/version&gt;</span>
-      <span style="color:#f92672">&lt;exclusions</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#f92672">&lt;exclusion</span><span style="color:#f92672">&gt;</span>
-          <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-log4j2<span style="color:#f92672">&lt;/artifactId&gt;</span>
-          <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#f92672">&lt;dependency&gt;</span>
+      <span style="color:#f92672">&lt;groupId&gt;</span>io.zipkin.java<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId&gt;</span>zipkin-server<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version&gt;</span>2.12.3<span style="color:#f92672">&lt;/version&gt;</span>
+      <span style="color:#f92672">&lt;exclusions&gt;</span>
+        <span style="color:#f92672">&lt;exclusion&gt;</span>
+          <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-log4j2<span style="color:#f92672">&lt;/artifactId&gt;</span>
+          <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
         <span style="color:#f92672">&lt;/exclusion&gt;</span>
       <span style="color:#f92672">&lt;/exclusions&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
@@ -426,11 +427,11 @@ Exception in thread &ldquo;main&rdquo; java.lang.StackOverflowError</p>
 <p>java.lang.IllegalArgumentException: Prometheus requires that all meters with the same name have the same set of tag keys. There is already an existing meter named &lsquo;http_server_requests_seconds&rsquo; containing tag keys [exception, method, outcome, status, uri]. The meter you are attempting to register has keys [method, status, uri].</p>
 </blockquote>
 <p>在配置文件中添加</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">management:
-  metrics:
-    web:
-      server:
-        auto-time-requests: <span style="color:#66d9ef">false</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">management</span>:
+  <span style="color:#66d9ef">metrics</span>:
+    <span style="color:#66d9ef">web</span>:
+      <span style="color:#66d9ef">server</span>:
+        <span style="color:#66d9ef">auto-time-requests</span>: <span style="color:#66d9ef">false</span>
 </code></pre></div>
     </div>
 
