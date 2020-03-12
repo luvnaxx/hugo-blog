@@ -53,7 +53,7 @@
         <description>&lt;blockquote&gt;
 &lt;p&gt;每次调试都将项目打包上传至云服务器太麻烦。使用花生壳进行内网穿透，将本地ip放入白名单进行本地测试使用花生壳&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
 &lt;ol&gt;
 &lt;li&gt;下载安装花生壳&lt;/li&gt;
 &lt;li&gt;新建应用类型为&lt;strong&gt;HTTP&lt;/strong&gt;的应用，外网域名为给定的，内网主机按图填写，内网端口为程序运行端口&lt;/li&gt;
@@ -61,8 +61,7 @@
 &lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/202003/4ddef087085944bf8293a64f33fddcb3.png&#34; alt=&#34;本地配置&#34;&gt;&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;将本机ip加入&lt;strong&gt;IP白名单&lt;/strong&gt;，&lt;code&gt;服务器配置&lt;/code&gt;选项中，将服务器地址(URL)改为花生壳分配的&lt;strong&gt;外网域名+项目地址&lt;/strong&gt;，提交完成即可&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+&lt;/ol&gt;</description>
       
     </item>
     
