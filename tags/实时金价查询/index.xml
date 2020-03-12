@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>实时金价查询 on 汝之所见 非吾所想</title>
+    <link>https://www.luvnaxx.com/tags/%E5%AE%9E%E6%97%B6%E9%87%91%E4%BB%B7%E6%9F%A5%E8%AF%A2/</link>
+    <description>Recent content in 实时金价查询 on 汝之所见 非吾所想</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>luvnaxx.com</copyright>
+    <lastBuildDate>Thu, 12 Mar 2020 23:07:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.luvnaxx.com/tags/%E5%AE%9E%E6%97%B6%E9%87%91%E4%BB%B7%E6%9F%A5%E8%AF%A2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>微信公众号开发模式-day2</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/</link>
+      <pubDate>Thu, 12 Mar 2020 23:07:48 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;需求：开通一订阅号，通过点击下方菜单或者输入关键字，返回指定信息。&lt;/p&gt;
+&lt;p&gt;暂时设想的是快速查询&lt;strong&gt;黄金9999&lt;/strong&gt;实时价格&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以&lt;a href=&#34;https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html&#34;&gt;微信官方文档·公众号&lt;/a&gt;为开发文档&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目标：输入关键字“黄金”返回特定内容&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

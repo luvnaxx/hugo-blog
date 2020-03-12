@@ -7,10 +7,38 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Tue, 10 Mar 2020 21:37:48 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2020 23:07:48 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>微信公众号开发模式-day2</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/</link>
+      <pubDate>Thu, 12 Mar 2020 23:07:48 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;需求：开通一订阅号，通过点击下方菜单或者输入关键字，返回指定信息。&lt;/p&gt;
+&lt;p&gt;暂时设想的是快速查询&lt;strong&gt;黄金9999&lt;/strong&gt;实时价格&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以&lt;a href=&#34;https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html&#34;&gt;微信官方文档·公众号&lt;/a&gt;为开发文档&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目标：输入关键字“黄金”返回特定内容&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用花生壳进行公众号本地开发调试</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E8%BF%9B%E8%A1%8C%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Wed, 11 Mar 2020 20:52:36 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E8%BF%9B%E8%A1%8C%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;需求：开通一订阅号，通过点击下方菜单或者输入关键字，返回指定信息。&lt;/p&gt;
+&lt;p&gt;暂时设想的是快速查询&lt;strong&gt;黄金9999&lt;/strong&gt;实时价格&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以&lt;a href=&#34;https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html&#34;&gt;微信官方文档·公众号&lt;/a&gt;为开发文档&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目标：依据接口文档实现业务逻辑&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>微信公众号开发模式-day1</title>
@@ -22,7 +50,11 @@
 &lt;p&gt;需求：开通一订阅号，通过点击下方菜单或者输入关键字，返回指定信息。&lt;/p&gt;
 &lt;p&gt;暂时设想的是快速查询&lt;strong&gt;黄金9999&lt;/strong&gt;实时价格&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;以&lt;a href=&#34;https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html&#34;&gt;微信官方文档·公众号&lt;/a&gt;为开发文档&lt;/p&gt;</description>
+&lt;p&gt;以&lt;a href=&#34;https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html&#34;&gt;微信官方文档·公众号&lt;/a&gt;为开发文档&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考&lt;a href=&#34;https://www.cnblogs.com/gede/category/1467638.html&#34;&gt;歌德的博客&lt;/a&gt;完成Java后台代码实现&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;目标：填写服务器配置，验证服务器地址的有效性&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -184,24 +216,6 @@
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/log4j2/</guid>
       <description>&lt;p&gt;Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>[Spring Boot 2.x] 使用Druid作为项目数据源</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/druid/</link>
-      <pubDate>Sun, 22 Dec 2019 14:57:18 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/druid/</guid>
-      <description>&lt;p&gt;Druid是一个JDBC组件库，包括数据库连接池、SQL Parser等组件。DruidDataSource是最好的数据库连接池。具体参见 &lt;a href=&#34;https://github.com/alibaba/druid/wiki/%E9%A6%96%E9%A1%B5&#34;&gt;alibaba/druid&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>[Spring Boot 2.x] 整合MyBatis</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/mybatis/</link>
-      <pubDate>Sun, 22 Dec 2019 13:59:23 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/mybatis/</guid>
-      <description>&lt;p&gt;在上一篇SpringDataJPA的基础上进行扩展。&lt;/p&gt;</description>
     </item>
     
   </channel>
