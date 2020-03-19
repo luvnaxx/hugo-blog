@@ -10,21 +10,49 @@
   
   <url>
     <loc>https://www.luvnaxx.com/categories/</loc>
-    <lastmod>2020-03-12T23:07:48+08:00</lastmod>
+    <lastmod>2020-03-19T14:23:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.luvnaxx.com/post/</loc>
-    <lastmod>2020-03-12T23:07:48+08:00</lastmod>
+    <lastmod>2020-03-19T14:23:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.luvnaxx.com/tags/</loc>
-    <lastmod>2020-03-12T23:07:48+08:00</lastmod>
+    <lastmod>2020-03-19T14:23:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/tags/tomcat/</loc>
+    <lastmod>2020-03-19T14:23:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</loc>
+    <lastmod>2020-03-19T14:23:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/tags/%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</loc>
+    <lastmod>2020-03-19T14:23:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/categories/%E8%AE%B0/</loc>
+    <lastmod>2020-03-19T14:23:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45,13 +73,6 @@
   
   <url>
     <loc>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/</loc>
-    <lastmod>2020-03-12T23:07:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luvnaxx.com/categories/%E8%AE%B0/</loc>
     <lastmod>2020-03-12T23:07:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

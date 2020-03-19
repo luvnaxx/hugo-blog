@@ -26,6 +26,26 @@
     </item>
     
     <item>
+      <title>Windows端Tomcat部署Java-Web程序中文乱码解决</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Thu, 19 Mar 2020 14:23:40 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</guid>
+      
+        <description>&lt;p&gt;在Windows上Tomcat部署Java Web程序进行功能测试时，出现了部分中文乱码的问题&lt;/p&gt;
+&lt;p&gt;可能是机器默认编码为GBK，而程序设置为UTF-8所致&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;解决方案&#34;&gt;解决方案&lt;/h2&gt;
+&lt;p&gt;Step 1.&lt;/p&gt;
+&lt;p&gt;在系统环境变量中增加一个变量，变量名为: &lt;code&gt;JAVA_TOOL_OPTIONS&lt;/code&gt;， 变量值为: &lt;code&gt;-Dfile.encoding=UTF-8&lt;/code&gt;  不然jdk会取系统默认字符集gbk 导致一些地方出错&lt;/p&gt;
+&lt;p&gt;Step 2.&lt;/p&gt;
+&lt;p&gt;修改Tomcat的配置文件&lt;strong&gt;server.xml&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;将相关语句改为：
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>微信公众号开发模式-day2</title>
       <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/</link>
       <pubDate>Thu, 12 Mar 2020 23:07:48 +0800</pubDate>
@@ -2342,76 +2362,6 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
 &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;效果-1&#34;&gt;效果&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201809/989d4356914c4f16902e87d60e9964a4.PNG&#34; alt=&#34;Thymeleaf&#34;&gt;&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>[Spring Boot 2.x] 使用Swagger2构建RESTful API</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</link>
-      <pubDate>Sun, 22 Dec 2019 16:02:23 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</guid>
-      
-        <description>&lt;p&gt;给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档，不然会造成说明与实际不符的情况。所以我们需要一个能配合程序产生API文档的小伙伴。Swagger2就是一款RESTful接口的文档在线自动生成+功能测试功能软件。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;添加依赖&#34;&gt;添加依赖&lt;/h2&gt;
-&lt;p&gt;在&lt;code&gt;pom.xml&lt;/code&gt;中添加如下依赖&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 --&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.springfox&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;springfox-swagger2&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.8.0&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui --&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.springfox&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;springfox-swagger-ui&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.8.0&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;编写代码&#34;&gt;编写代码&lt;/h2&gt;
-&lt;h4 id=&#34;创建swagger2配置类&#34;&gt;创建Swagger2配置类&lt;/h4&gt;
-&lt;p&gt;在&lt;code&gt;configuration&lt;/code&gt;包下新建&lt;code&gt;Swagger2Configuration.java&lt;/code&gt;。内容如下&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Configuration&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;@EnableSwagger2&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Swagger2Configuration&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@Bean&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Docket &lt;span style=&#34;color:#a6e22e&#34;&gt;createRestApi&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Docket&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;DocumentationType&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SWAGGER_2&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;apiInfo&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;apiInfo&lt;span style=&#34;color:#f92672&#34;&gt;())&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;select&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;apis&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;RequestHandlerSelectors&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;basePackage&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;com.luvnaxx.web.springboot.rookie&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;))&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;paths&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;PathSelectors&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;any&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;())&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;build&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; ApiInfo &lt;span style=&#34;color:#a6e22e&#34;&gt;apiInfo&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    Contact contact &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Contact&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;luvnaxx&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://www.luvnaxx.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;luvnaxx@gmail.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ApiInfoBuilder&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Spring Boot中使用Swagger2构建RESTful APIs&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;学习Spring Boot的简单小项目&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;contact&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;contact&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;version&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1.0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;build&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过&lt;code&gt;@Configuration&lt;/code&gt;注解，让Spring来加载该类配置。再通过&lt;code&gt;@EnableSwagger2&lt;/code&gt;注解来启用Swagger2&lt;/p&gt;
-&lt;h4 id=&#34;添加文档内容&#34;&gt;添加文档内容&lt;/h4&gt;
-&lt;p&gt;在我们需要的方法上添加注解内容来丰富文档的内容。仅仅以一个方法作为示例：在&lt;code&gt;UserRestController.java&lt;/code&gt;中添加如下内容&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   * 返回指定id用户
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   *
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   * @param id 用户id
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   */&lt;/span&gt;
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@GetMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{id}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@ApiOperation&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;获取指定用户&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; notes &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;根据id返回指定用户&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#a6e22e&#34;&gt;@ApiImplicitParam&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;用户id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; required &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; dataType &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Long&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; paramType &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Optional&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;findById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@PathVariable&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; Long id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; userService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;findById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过&lt;code&gt;@ApiOperation&lt;/code&gt;注解来给API增加说明、通过&lt;code&gt;@ApiImplicitParams&lt;/code&gt;、&lt;code&gt;@ApiImplicitParam&lt;/code&gt;注解来给参数增加说明。&lt;/p&gt;
-&lt;h2 id=&#34;运行测试&#34;&gt;运行测试&lt;/h2&gt;
-&lt;p&gt;启动项目，访问 &lt;a href=&#34;http://localhost:7777/swagger-ui.html&#34;&gt;&lt;a href=&#34;http://localhost:7777/swagger-ui.html&#34;&gt;http://localhost:7777/swagger-ui.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     

@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Thu, 12 Mar 2020 23:07:48 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2020 14:23:40 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows端Tomcat部署Java-Web程序中文乱码解决</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Thu, 19 Mar 2020 14:23:40 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</guid>
+      <description>&lt;p&gt;在Windows上Tomcat部署Java Web程序进行功能测试时，出现了部分中文乱码的问题&lt;/p&gt;
+&lt;p&gt;可能是机器默认编码为GBK，而程序设置为UTF-8所致&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>微信公众号开发模式-day2</title>
@@ -204,15 +214,6 @@
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</guid>
       <description>&lt;p&gt;给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档，不然会造成说明与实际不符的情况。所以我们需要一个能配合程序产生API文档的小伙伴。Swagger2就是一款RESTful接口的文档在线自动生成+功能测试功能软件。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>[Spring Boot 2.x] 使用Log4j2作为日志组件</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/log4j2/</link>
-      <pubDate>Sun, 22 Dec 2019 15:59:54 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/log4j2/</guid>
-      <description>&lt;p&gt;Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。&lt;/p&gt;</description>
     </item>
     
   </channel>
