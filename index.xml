@@ -26,6 +26,53 @@
     </item>
     
     <item>
+      <title>Linux遭遇挖矿恶意程序kdevtmpfsi，解决方案</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</link>
+      <pubDate>Fri, 20 Mar 2020 12:40:49 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</guid>
+      
+        <description>&lt;p&gt;昨天晚上18:01，收到腾讯云邮件通知，我的服务器好像倍挖矿程序入侵了。先按照腾讯的建议在相应位置隔离了文件，然后登录上我的宝塔控制面板(不是广告，我只会用这么傻瓜式的管理工具)查看现在服务器的负载情况，不容乐观，好像依然是满负载。停止相关进程、删除掉&lt;strong&gt;kdevtmpfsi&lt;/strong&gt;文件，重启机器，好了。今天早上一看，它又出现了。网上查找解决方案&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/202003/b1deb6d16dc6469fa889f1096eb8b364.png&#34; alt=&#34;腾讯云邮件&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
+&lt;p&gt;首先看下被入侵之后的情况&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/202003/ea5d8844c0d0414eb64982fbaae750fa.png&#34; alt=&#34;TOP命令&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/202003/329ddea753da46dfa6cc44ac2bb2d1b3.png&#34; alt=&#34;服务器负载情况&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;停掉相关运行程序&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;ps -aux | grep kdevtmpfsi
+ps -aux | grep kinsing
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用&lt;code&gt;kill -9 [进程号]&lt;/code&gt;命令停掉上述两个进程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;删除Linux下的异常定时任务&lt;/p&gt;
+&lt;p&gt;一般出现kdevtmpfsi病毒都会伴有定时任务，所以才会反反复复出现处理不干净&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;crontab -l 查看定时任务 
+crontab -r 表示删除用户的定时任务，当执行此命令后，所有用户下面的定时任务会被删除
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;删除相关文件&lt;/p&gt;
+&lt;p&gt;查看相关文件有哪些&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;find / -name kdevtmpfsi
+find / -name kinsing
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;rm -rf kdevtmpfsi 
+rm -rf /var/tmp/kinsing
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;增强Redis服务安全加固&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最根本的原因是自己的redis 6379配置不当导致的，可参考阿里云的&lt;a href=&#34;https://help.aliyun.com/knowledge_detail/37447.html?spm=a2c4g.11186631.2.2.828c1848kuRv6p&#34;&gt;Redis服务安全加固&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;现在服务器已经稳定运行了一个小时，没有出现挖矿病毒卷土重来的事情&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Windows端Tomcat部署Java-Web程序中文乱码解决</title>
       <link>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</link>
       <pubDate>Thu, 19 Mar 2020 14:23:40 +0800</pubDate>
@@ -2258,110 +2305,6 @@ Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/
     &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>[Spring Boot 2.x] 集成FreeMaker、Thymeleaf模板引擎</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/</link>
-      <pubDate>Sun, 22 Dec 2019 17:03:52 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/</guid>
-      
-        <description>&lt;hr&gt;
-&lt;h2 id=&#34;freemarker&#34;&gt;FreeMarker&lt;/h2&gt;
-&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;
-&lt;h6 id=&#34;依赖pomxml&#34;&gt;依赖&lt;code&gt;pom.xml&lt;/code&gt;&lt;/h6&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-freemarker&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;配置applicationyml&#34;&gt;配置&lt;code&gt;application.yml&lt;/code&gt;&lt;/h6&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;spring&lt;/span&gt;:
-  &lt;span style=&#34;color:#75715e&#34;&gt;# FreeMarker 配置&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;freemarker&lt;/span&gt;:
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;cache&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;charset&lt;/span&gt;: utf&lt;span style=&#34;color:#ae81ff&#34;&gt;-8&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;check-template-location&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;content-type&lt;/span&gt;: text/html
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;expose-request-attributes&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;expose-session-attributes&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;request-context-attribute&lt;/span&gt;: request
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;路由pagecontrollerjava&#34;&gt;路由&lt;code&gt;PageController.java&lt;/code&gt;&lt;/h6&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@GetMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/book/all&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;findAllBooks&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Model model&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;BookEntity&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; bookEntities &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; bookService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-    model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;addAttribute&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bookList&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; bookEntities&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bookList&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;页面booklistftl&#34;&gt;页面&lt;code&gt;bookList.ftl&lt;/code&gt;&lt;/h6&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
-&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;lt;&lt;/span&gt;#list bookList as bookEntity&amp;gt;
-书名：${bookEntity.name} &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;br&lt;/span&gt;&amp;gt;
-作者：${bookEntity.author} &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;br&lt;/span&gt;&amp;gt;
-售价：${bookEntity.price} &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;br&lt;/span&gt;&amp;gt;
-&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;lt;&lt;/span&gt;/#list&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
-
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;效果&#34;&gt;效果&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201809/9f15397d0f874d8382d6e692af64e7ee.PNG&#34; alt=&#34;FreeMarker&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;thymeleaf&#34;&gt;Thymeleaf&lt;/h2&gt;
-&lt;h4 id=&#34;代码-1&#34;&gt;代码&lt;/h4&gt;
-&lt;h6 id=&#34;依赖pomxml-1&#34;&gt;依赖&lt;code&gt;pom.xml&lt;/code&gt;&lt;/h6&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-thymeleaf&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;net.sourceforge.nekohtml&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;nekohtml&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.9.22&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;配置applicationyml-1&#34;&gt;配置&lt;code&gt;application.yml&lt;/code&gt;&lt;/h6&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;spring&lt;/span&gt;:
-  &lt;span style=&#34;color:#75715e&#34;&gt;# Thymeleaf 配置&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;thymeleaf&lt;/span&gt;:
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;mode&lt;/span&gt;: LEGACYHTML5
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;encoding&lt;/span&gt;: utf&lt;span style=&#34;color:#ae81ff&#34;&gt;-8&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;servlet&lt;/span&gt;:
-      &lt;span style=&#34;color:#66d9ef&#34;&gt;content-type&lt;/span&gt;: text/html
-    &lt;span style=&#34;color:#75715e&#34;&gt;# 开发时关闭缓存，不然无法看到实时页面&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;cache&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;路由pagecontrollerjava-1&#34;&gt;路由&lt;code&gt;PageController.java&lt;/code&gt;&lt;/h6&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@GetMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/thymeleaf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;thymeleaf&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Model model&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;BookEntity&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; bookEntities &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; bookService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-    model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;addAttribute&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bookList&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; bookEntities&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;thymeleaf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;页面thymeleafhtml&#34;&gt;页面&lt;code&gt;thymeleaf.html&lt;/code&gt;&lt;/h6&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;xmlns:th&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www.w3.org/1999/xhtml&amp;#34;&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
-    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;UTF-8&amp;#34;&lt;/span&gt;&amp;gt;
-    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;thymeleaf测试&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;table&lt;/span&gt;&amp;gt;
-    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;tr&lt;/span&gt;&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;th&lt;/span&gt;&amp;gt;书名&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;th&lt;/span&gt;&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;th&lt;/span&gt;&amp;gt;作者&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;th&lt;/span&gt;&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;th&lt;/span&gt;&amp;gt;价格&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;th&lt;/span&gt;&amp;gt;
-    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;tr&lt;/span&gt;&amp;gt;
-    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;tr&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;th:each&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bookEntity : ${bookList}&amp;#34;&lt;/span&gt;&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;td&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;th:text&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;${bookEntity.name}&amp;#34;&lt;/span&gt;&amp;gt;1&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;td&lt;/span&gt;&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;td&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;th:text&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;${bookEntity.author}&amp;#34;&lt;/span&gt;&amp;gt;海&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;td&lt;/span&gt;&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;td&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;th:text&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;${bookEntity.price}&amp;#34;&lt;/span&gt;&amp;gt;18&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;td&lt;/span&gt;&amp;gt;
-    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;tr&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;table&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;效果-1&#34;&gt;效果&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201809/989d4356914c4f16902e87d60e9964a4.PNG&#34; alt=&#34;Thymeleaf&#34;&gt;&lt;/p&gt;</description>
       
     </item>
     

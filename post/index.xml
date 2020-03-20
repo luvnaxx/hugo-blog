@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Thu, 19 Mar 2020 14:23:40 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2020 12:40:49 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux遭遇挖矿恶意程序kdevtmpfsi，解决方案</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</link>
+      <pubDate>Fri, 20 Mar 2020 12:40:49 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</guid>
+      <description>&lt;p&gt;昨天晚上18:01，收到腾讯云邮件通知，我的服务器好像倍挖矿程序入侵了。先按照腾讯的建议在相应位置隔离了文件，然后登录上我的宝塔控制面板(不是广告，我只会用这么傻瓜式的管理工具)查看现在服务器的负载情况，不容乐观，好像依然是满负载。停止相关进程、删除掉&lt;strong&gt;kdevtmpfsi&lt;/strong&gt;文件，重启机器，好了。今天早上一看，它又出现了。网上查找解决方案&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/202003/b1deb6d16dc6469fa889f1096eb8b364.png&#34; alt=&#34;腾讯云邮件&#34;&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Windows端Tomcat部署Java-Web程序中文乱码解决</title>
@@ -205,15 +215,6 @@
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;freemarker&#34;&gt;FreeMarker&lt;/h2&gt;
 &lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;</description>
-    </item>
-    
-    <item>
-      <title>[Spring Boot 2.x] 使用Swagger2构建RESTful API</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</link>
-      <pubDate>Sun, 22 Dec 2019 16:02:23 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/swagger2/</guid>
-      <description>&lt;p&gt;给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档，不然会造成说明与实际不符的情况。所以我们需要一个能配合程序产生API文档的小伙伴。Swagger2就是一款RESTful接口的文档在线自动生成+功能测试功能软件。&lt;/p&gt;</description>
     </item>
     
   </channel>
