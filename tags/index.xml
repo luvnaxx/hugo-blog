@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Fri, 20 Mar 2020 12:40:49 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 12:49:14 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VPS</title>
+      <link>https://www.luvnaxx.com/tags/vps/</link>
+      <pubDate>Mon, 23 Mar 2020 12:49:14 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/tags/vps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>测速</title>
+      <link>https://www.luvnaxx.com/tags/%E6%B5%8B%E9%80%9F/</link>
+      <pubDate>Mon, 23 Mar 2020 12:49:14 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/tags/%E6%B5%8B%E9%80%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>脚本</title>
+      <link>https://www.luvnaxx.com/tags/%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Mon, 23 Mar 2020 12:49:14 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/tags/%E8%84%9A%E6%9C%AC/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Linux</title>
@@ -94,6 +121,15 @@
     </item>
     
     <item>
+      <title>Nginx</title>
+      <link>https://www.luvnaxx.com/tags/nginx/</link>
+      <pubDate>Tue, 10 Mar 2020 21:37:48 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>炒股</title>
       <link>https://www.luvnaxx.com/tags/%E7%82%92%E8%82%A1/</link>
       <pubDate>Mon, 09 Mar 2020 12:14:14 +0800</pubDate>
@@ -153,42 +189,6 @@
       <pubDate>Fri, 17 Jan 2020 11:14:14 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/tags/%E7%8E%A9%E6%A2%97/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>读取配置文件</title>
-      <link>https://www.luvnaxx.com/tags/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</link>
-      <pubDate>Mon, 13 Jan 2020 15:50:07 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/tags/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>并发编程</title>
-      <link>https://www.luvnaxx.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
-      <pubDate>Thu, 09 Jan 2020 18:22:07 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>工具类</title>
-      <link>https://www.luvnaxx.com/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
-      <pubDate>Sat, 04 Jan 2020 15:22:07 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>office</title>
-      <link>https://www.luvnaxx.com/tags/office/</link>
-      <pubDate>Thu, 02 Jan 2020 19:10:40 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/tags/office/</guid>
       <description></description>
     </item>
     

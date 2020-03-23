@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Fri, 20 Mar 2020 12:40:49 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 12:49:14 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>享</title>
+      <link>https://www.luvnaxx.com/categories/%E4%BA%AB/</link>
+      <pubDate>Mon, 23 Mar 2020 12:49:14 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/categories/%E4%BA%AB/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>记</title>
@@ -18,15 +27,6 @@
       <pubDate>Fri, 20 Mar 2020 12:40:49 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/categories/%E8%AE%B0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>享</title>
-      <link>https://www.luvnaxx.com/categories/%E4%BA%AB/</link>
-      <pubDate>Mon, 09 Mar 2020 12:14:14 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/categories/%E4%BA%AB/</guid>
       <description></description>
     </item>
     

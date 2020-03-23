@@ -10,7 +10,56 @@
   
   <url>
     <loc>https://www.luvnaxx.com/categories/</loc>
-    <lastmod>2020-03-20T12:40:49+08:00</lastmod>
+    <lastmod>2020-03-23T12:49:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/post/</loc>
+    <lastmod>2020-03-23T12:49:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/tags/</loc>
+    <lastmod>2020-03-23T12:49:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/tags/vps/</loc>
+    <lastmod>2020-03-23T12:49:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/post/%E4%BA%AB/vps%E6%B5%8B%E9%80%9F%E8%84%9A%E6%9C%AC/</loc>
+    <lastmod>2020-03-23T12:49:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/categories/%E4%BA%AB/</loc>
+    <lastmod>2020-03-23T12:49:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/tags/%E6%B5%8B%E9%80%9F/</loc>
+    <lastmod>2020-03-23T12:49:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.luvnaxx.com/tags/%E8%84%9A%E6%9C%AC/</loc>
+    <lastmod>2020-03-23T12:49:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24,20 +73,6 @@
   
   <url>
     <loc>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2020-03-20T12:40:49+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luvnaxx.com/post/</loc>
-    <lastmod>2020-03-20T12:40:49+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luvnaxx.com/tags/</loc>
     <lastmod>2020-03-20T12:40:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -128,6 +163,13 @@
   </url>
   
   <url>
+    <loc>https://www.luvnaxx.com/tags/nginx/</loc>
+    <lastmod>2020-03-10T21:37:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day1/</loc>
     <lastmod>2020-03-10T21:37:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -136,13 +178,6 @@
   
   <url>
     <loc>https://www.luvnaxx.com/post/%E4%BA%AB/be-a-%E9%9F%AD%E8%8F%9C/</loc>
-    <lastmod>2020-03-09T12:14:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luvnaxx.com/categories/%E4%BA%AB/</loc>
     <lastmod>2020-03-09T12:14:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -305,13 +340,6 @@
   <url>
     <loc>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</loc>
     <lastmod>2020-01-02T19:10:40+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.luvnaxx.com/tags/nginx/</loc>
-    <lastmod>2019-12-27T19:10:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

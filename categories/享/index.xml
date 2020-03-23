@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Mon, 09 Mar 2020 12:14:14 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 12:49:14 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/categories/%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VPS测速脚本</title>
+      <link>https://www.luvnaxx.com/post/%E4%BA%AB/vps%E6%B5%8B%E9%80%9F%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Mon, 23 Mar 2020 12:49:14 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/vps%E6%B5%8B%E9%80%9F%E8%84%9A%E6%9C%AC/</guid>
+      <description>&lt;p&gt;想知道自己购买的VPS速度有多快，一个测速脚本&lt;strong&gt;Superspeed&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>be a 韭菜</title>

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Fri, 20 Mar 2020 12:40:49 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 12:49:14 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VPS测速脚本</title>
+      <link>https://www.luvnaxx.com/post/%E4%BA%AB/vps%E6%B5%8B%E9%80%9F%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Mon, 23 Mar 2020 12:49:14 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/vps%E6%B5%8B%E9%80%9F%E8%84%9A%E6%9C%AC/</guid>
+      <description>&lt;p&gt;想知道自己购买的VPS速度有多快，一个测速脚本&lt;strong&gt;Superspeed&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Linux遭遇挖矿恶意程序kdevtmpfsi，解决方案</title>
@@ -204,17 +213,6 @@
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/multiple-data-source/</guid>
       <description>&lt;p&gt;很早就想记录一下Spring Boot配置多数据的方式。但是网上找到的大多还都是Spring Boot 1.x的内容，一些东西已经不适合现在的版本了。这几天又仔细找了一找，总算把Spring Boot 2配置多数据源的几种方式实验通过了。以两个数据源为例&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>[Spring Boot 2.x] 集成FreeMaker、Thymeleaf模板引擎</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/</link>
-      <pubDate>Sun, 22 Dec 2019 17:03:52 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/</guid>
-      <description>&lt;hr&gt;
-&lt;h2 id=&#34;freemarker&#34;&gt;FreeMarker&lt;/h2&gt;
-&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;</description>
     </item>
     
   </channel>
