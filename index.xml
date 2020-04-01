@@ -26,6 +26,64 @@
     </item>
     
     <item>
+      <title>ConditionOnProperty注解的使用</title>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/conditiononproperty%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 01 Apr 2020 20:43:57 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/conditiononproperty%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      
+        <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Spring Boot&lt;/strong&gt;通过**@ConditionalOnProperty**来控制**Configuration**是否生效&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;service&#34;&gt;Service&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;DemoService.java&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;DemoService&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+
+  String &lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String name&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;DemoServiceImpl1.java&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@Service
+@ConditionalOnProperty(name = &amp;quot;configuration.read&amp;quot;, havingValue = &amp;quot;one&amp;quot;)
+public class DemoServiceImpl1 implements DemoService {
+
+  @Override
+  public String getName(String name) {
+    return name + &amp;quot;实现1&amp;quot;;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;DemoServiceImpl2.java&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@Service
+@ConditionalOnProperty(name = &amp;quot;configuration.read&amp;quot;, havingValue = &amp;quot;two&amp;quot;)
+public class DemoServiceImpl2 implements DemoService {
+
+  @Override
+  public String getName(String name) {
+    return name + &amp;quot;实现2&amp;quot;;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;配置文件&#34;&gt;配置文件&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;application.properties&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-properties&#34; data-lang=&#34;properties&#34;&gt;configuration.read=one #two
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;controller&#34;&gt;Controller&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;HelloController.java&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RestController&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;HelloController&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Autowired&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; DemoService demoService&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@GetMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/test&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;demo&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RequestParam&lt;/span&gt; String name&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; demoService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;name&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过配置属性为one/two来使用不同的实现&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>VPS测速脚本</title>
       <link>https://www.luvnaxx.com/post/%E4%BA%AB/vps%E6%B5%8B%E9%80%9F%E8%84%9A%E6%9C%AC/</link>
       <pubDate>Mon, 23 Mar 2020 12:49:14 +0800</pubDate>
@@ -1635,64 +1693,6 @@ Asia
 	&lt;span style=&#34;color:#66d9ef&#34;&gt;ssl_protocols&lt;/span&gt;	&lt;span style=&#34;color:#e6db74&#34;&gt;加密协议&lt;/span&gt;;
 	&lt;span style=&#34;color:#66d9ef&#34;&gt;ssl_prefer_server_ciphers&lt;/span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt;;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>[Spring Cloud] Zipkin Server无法启动的问题</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/zipkin-server/</link>
-      <pubDate>Wed, 25 Dec 2019 14:50:08 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/zipkin-server/</guid>
-      
-        <description>&lt;h2 id=&#34;加入-zipkin-server&#34;&gt;加入 Zipkin Server&lt;/h2&gt;
-&lt;p&gt;pom.xml&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- https://mvnrepository.com/artifact/io.zipkin.java/zipkin-server --&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.zipkin.java&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;zipkin-server&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.12.3&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- https://mvnrepository.com/artifact/io.zipkin.java/zipkin-autoconfigure-ui --&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.zipkin.java&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;zipkin-autoconfigure-ui&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.12.3&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;异常处理&#34;&gt;异常处理&lt;/h2&gt;
-&lt;h4 id=&#34;在-spring-boot-启动类加上-enablezipkinserver-注解启动项目控制台报错&#34;&gt;在 Spring Boot 启动类加上 &lt;code&gt;@EnableZipkinServer&lt;/code&gt; 注解，启动项目，控制台报错&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;SLF4J: Class path contains multiple SLF4J bindings.
-SLF4J: Found binding in [jar:file:/C:/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.11.2/log4j-slf4j-impl-2.11.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
-SLF4J: Found binding in [jar:file:/C:/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
-SLF4J: See &lt;a href=&#34;http://www.slf4j.org/codes.html#multiple_bindings&#34;&gt;http://www.slf4j.org/codes.html#multiple_bindings&lt;/a&gt; for an explanation.
-SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
-Exception in thread &amp;ldquo;main&amp;rdquo; java.lang.StackOverflowError&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;需要排除 zipkin-server 中依赖的 SLF4j&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.zipkin.java&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;zipkin-server&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.12.3&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;exclusions&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;exclusion&amp;gt;&lt;/span&gt;
-          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-log4j2&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-          &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/exclusion&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/exclusions&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;默认端口9411当使用其他端口启动web页面出现&#34;&gt;默认端口9411，当使用其他端口，启动web页面，出现&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;java.lang.IllegalArgumentException: Prometheus requires that all meters with the same name have the same set of tag keys. There is already an existing meter named &amp;lsquo;http_server_requests_seconds&amp;rsquo; containing tag keys [exception, method, outcome, status, uri]. The meter you are attempting to register has keys [method, status, uri].&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;在配置文件中添加&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;management&lt;/span&gt;:
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;metrics&lt;/span&gt;:
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;web&lt;/span&gt;:
-      &lt;span style=&#34;color:#66d9ef&#34;&gt;server&lt;/span&gt;:
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;auto-time-requests&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
       
     </item>
