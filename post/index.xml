@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Wed, 01 Apr 2020 20:43:57 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 23:26:19 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Navicat Premium 15 永久激活版安装教程</title>
+      <link>https://www.luvnaxx.com/post/%E4%BA%AB/navicat-premium-15-%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E7%89%88%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 04 Apr 2020 23:26:19 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/navicat-premium-15-%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E7%89%88%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid>
+      <description>&lt;p&gt;Navicat Premium 发布了最新的15版本，好像有了新功能，试试看&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WARNING: 如何写才能安全脱身不被盯上呢😂&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;激活教程来自&lt;a href=&#34;https://www.cnblogs.com/poloyy/p/12231357.html&#34;&gt;cnblogs用户-小菠萝测试笔记&lt;/a&gt;，懒得截图了，所以图示也是←TA的&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>ConditionOnProperty注解的使用</title>
@@ -117,7 +130,7 @@
       <pubDate>Wed, 22 Jan 2020 18:16:35 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%83%B3/%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/</guid>
-      <description>面对疫情，任何侥幸都可能夺人性命 假如，病情的起源地是郑州，无畏的键盘侠们，又会是怎样的一副嘴脸呢？</description>
+      <description>面对疫情，任何侥幸都可能夺人性命 说点题外话。 假如，国内疫情的起源地是郑州，无畏的键盘侠们，又会是怎样的一副嘴脸呢？</description>
     </item>
     
     <item>
@@ -203,16 +216,6 @@
       
       <guid>https://www.luvnaxx.com/post/%E8%AE%B0/nginx%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E5%B9%B6%E5%AE%89%E8%A3%85ssl%E8%AF%81%E4%B9%A6/</guid>
       <description>&lt;p&gt;从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并成功。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>[Spring Cloud] Zipkin Server无法启动的问题</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/zipkin-server/</link>
-      <pubDate>Wed, 25 Dec 2019 14:50:08 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-cloud/zipkin-server/</guid>
-      <description>&lt;h2 id=&#34;加入-zipkin-server&#34;&gt;加入 Zipkin Server&lt;/h2&gt;
-&lt;p&gt;pom.xml&lt;/p&gt;</description>
     </item>
     
   </channel>
