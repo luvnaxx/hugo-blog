@@ -18,7 +18,9 @@
       <pubDate>Wed, 01 Apr 2020 20:43:57 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/conditiononproperty%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
-      <description>Spring Boot通过**@ConditionalOnProperty**来控制**Configuration**是否生效 Service DemoService.java public interface DemoService { String getName(String name); } DemoServiceImpl1.java @Service @ConditionalOnProperty(name</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Spring Boot&lt;/strong&gt;通过**@ConditionalOnProperty**来控制**Configuration**是否生效&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
   </channel>

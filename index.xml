@@ -26,6 +26,47 @@
     </item>
     
     <item>
+      <title>自定义安装office</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</link>
+      <pubDate>Thu, 23 Apr 2020 19:33:40 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</guid>
+      
+        <description>&lt;p&gt;MySQL查找所有数据库中没有主键的表&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt;
+	table_schema,
+	table_name,
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;count&lt;/span&gt;(
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;CASE&lt;/span&gt;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;WHEN&lt;/span&gt; column_key &lt;span style=&#34;color:#66d9ef&#34;&gt;IN&lt;/span&gt; (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PRI&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;THEN&lt;/span&gt;
+			&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;ELSE&lt;/span&gt;
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;
+		END
+	) count
+&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt;
+	information_schema. COLUMNS
+&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt;
+	table_schema &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;IN&lt;/span&gt; (
+		&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;,
+		&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;sys&amp;#39;&lt;/span&gt;,
+		&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;mysql&amp;#39;&lt;/span&gt;,
+		&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;performance_schema&amp;#39;&lt;/span&gt;,
+		&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;information_schema&amp;#39;&lt;/span&gt;,
+		&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;test_slave&amp;#39;&lt;/span&gt;
+	)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;AND&lt;/span&gt; table_name &lt;span style=&#34;color:#66d9ef&#34;&gt;NOT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;IN&lt;/span&gt; (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;testtable&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;test&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;GROUP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt;
+	table_schema,
+	table_name
+&lt;span style=&#34;color:#66d9ef&#34;&gt;HAVING&lt;/span&gt;
+	count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Navicat Premium 15 永久激活版安装教程</title>
       <link>https://www.luvnaxx.com/post/%E4%BA%AB/navicat-premium-15-%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E7%89%88%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sat, 04 Apr 2020 23:26:19 +0800</pubDate>
@@ -36,7 +77,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;WARNING: 如何写才能安全脱身不被盯上呢😂&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;激活教程来自&lt;a href=&#34;https://www.cnblogs.com/poloyy/p/12231357.html&#34;&gt;cnblogs用户-小菠萝测试笔记&lt;/a&gt;，懒得截图了，所以图示也是←TA的&lt;/p&gt;
+&lt;p&gt;激活教程来自&lt;a href=&#34;https://www.cnblogs.com/poloyy/p/12231357.html&#34;&gt;cnblogs用户-小菠萝测试笔记&lt;/a&gt;，懒得截图了，所以图示也是👈TA的&lt;/p&gt;
 &lt;h2 id=&#34;navicat-premium-15-安装&#34;&gt;Navicat Premium 15 安装&lt;/h2&gt;
 &lt;h4 id=&#34;1下载软件包和注册机&#34;&gt;1.下载软件包和注册机&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -150,8 +191,7 @@ public class DemoServiceImpl2 implements DemoService {
         &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; demoService&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;name&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过配置属性为one/two来使用不同的实现&lt;/p&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过配置属性为one/two来使用不同的实现&lt;/p&gt;</description>
       
     </item>
     
@@ -1632,59 +1672,6 @@ Asia
   &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>自定义安装office</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</link>
-      <pubDate>Thu, 02 Jan 2020 19:10:40 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</guid>
-      
-        <description>&lt;p&gt;不安装office全家桶，自定义要安装的组件&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;方法步骤&#34;&gt;方法/步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;从官网下载&lt;a href=&#34;https://www.microsoft.com/en-us/download/confirmation.aspx?id=49117&#34;&gt;Office部署工具&lt;/a&gt;，虽然此工具是Office365的，但是无需担心。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;安装/解压&lt;/strong&gt;该工具，会在我们指定的安装目录，生成以下的四个文件。这里我们只需要的&lt;strong&gt;setup.exe&lt;/strong&gt;和&lt;strong&gt;configuration-Office365-x64.xml&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;替换configuration-Office365-x64.xml文件中的内容&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Configuration&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Add&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SourcePath=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;F:\&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;OfficeClientEdition=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;64&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Product&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ProPlusRetail&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;Language&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-CN&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Access&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Groove&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;InfoPath&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Lync&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;OneNote&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Outlook&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Publisher&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ID=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SharePointDesigner&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Product&amp;gt;&lt;/span&gt;
-  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Add&amp;gt;&lt;/span&gt;  
-&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/Configuration&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;• OfficeClientEdition表示架构，安装32位则改为32。&lt;/p&gt;
-&lt;p&gt;• SourcePath表示Office2016 ISO镜像加载位置；需提前加载镜像才会显示其加载的位置。&lt;/p&gt;
-&lt;p&gt;• Language表示语言，zh-CN表示中文，英文则为en-us。&lt;/p&gt;
-&lt;p&gt;• ExcludeApp表示不被安装的组件。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进入第2步的安装目录，使用以下命令启动后Office的安装&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;setup.exe /configure configuration-Office365-x64.xml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;可以看到这次只安装Word,Excel,PowerPoint三个软件，等待安装完成即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/202001/83d302a23aac4a23aebab84bb807e0a7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</description>
       
     </item>
     

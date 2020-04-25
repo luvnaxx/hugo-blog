@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Sat, 04 Apr 2020 23:26:19 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2020 19:33:40 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>自定义安装office</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</link>
+      <pubDate>Thu, 23 Apr 2020 19:33:40 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</guid>
+      <description>&lt;p&gt;MySQL查找所有数据库中没有主键的表&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Navicat Premium 15 永久激活版安装教程</title>
@@ -22,7 +31,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;WARNING: 如何写才能安全脱身不被盯上呢😂&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;激活教程来自&lt;a href=&#34;https://www.cnblogs.com/poloyy/p/12231357.html&#34;&gt;cnblogs用户-小菠萝测试笔记&lt;/a&gt;，懒得截图了，所以图示也是←TA的&lt;/p&gt;</description>
+&lt;p&gt;激活教程来自&lt;a href=&#34;https://www.cnblogs.com/poloyy/p/12231357.html&#34;&gt;cnblogs用户-小菠萝测试笔记&lt;/a&gt;，懒得截图了，所以图示也是👈TA的&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,7 +40,9 @@
       <pubDate>Wed, 01 Apr 2020 20:43:57 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/conditiononproperty%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
-      <description>Spring Boot通过**@ConditionalOnProperty**来控制**Configuration**是否生效 Service DemoService.java public interface DemoService { String getName(String name); } DemoServiceImpl1.java @Service @ConditionalOnProperty(name</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Spring Boot&lt;/strong&gt;通过**@ConditionalOnProperty**来控制**Configuration**是否生效&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -207,15 +218,6 @@
       
       <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</guid>
       <description>&lt;p&gt;不安装office全家桶，自定义要安装的组件&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Nginx配置域名访问并安装SSL证书</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/nginx%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E5%B9%B6%E5%AE%89%E8%A3%85ssl%E8%AF%81%E4%B9%A6/</link>
-      <pubDate>Fri, 27 Dec 2019 19:10:40 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/nginx%E9%85%8D%E7%BD%AE%E5%9F%9F%E5%90%8D%E8%AE%BF%E9%97%AE%E5%B9%B6%E5%AE%89%E8%A3%85ssl%E8%AF%81%E4%B9%A6/</guid>
-      <description>&lt;p&gt;从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并成功。&lt;/p&gt;</description>
     </item>
     
   </channel>
