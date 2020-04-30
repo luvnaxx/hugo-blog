@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Thu, 23 Apr 2020 19:33:40 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2020 09:28:40 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>自定义安装office</title>
+      <title>Java生成16位随机字符串</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/java%E7%94%9F%E6%88%9016%E4%BD%8D%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Thu, 30 Apr 2020 09:28:40 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/java%E7%94%9F%E6%88%9016%E4%BD%8D%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>&lt;p&gt;Java生成16位随机字符串&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>查询没有主键的MySQL表</title>
       <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</link>
       <pubDate>Thu, 23 Apr 2020 19:33:40 +0800</pubDate>
       
@@ -209,15 +218,6 @@
       
       <guid>https://www.luvnaxx.com/post/%E6%8A%80/%E6%97%A5%E6%9C%9F%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
       <description>&lt;p&gt;一个低级工具类&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>自定义安装office</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</link>
-      <pubDate>Thu, 02 Jan 2020 19:10:40 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</guid>
-      <description>&lt;p&gt;不安装office全家桶，自定义要安装的组件&lt;/p&gt;</description>
     </item>
     
   </channel>

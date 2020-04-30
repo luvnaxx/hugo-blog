@@ -31,5 +31,14 @@
       <description>很多时候，我们对环境变量的配置不是很熟悉的时候，使用source ~/.bashrc后很容易出现各种xx: command not found问题，下面给出一种解决</description>
     </item>
     
+    <item>
+      <title>Linux安装Nginx</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/</guid>
+      <description>&lt;p&gt;在Linux上编译安装Nginx，教程来自&lt;a href=&#34;https://www.runoob.com/linux/nginx-install-setup.html&#34;&gt;菜鸟教程&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

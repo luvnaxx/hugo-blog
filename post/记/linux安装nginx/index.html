@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Archive - 汝之所见 非吾所想</title>
+  <title>Linux安装Nginx - 汝之所见 非吾所想</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="luvnaxx" />
-  <meta name="description" content="luvnaxx&#39;s blog, build by Hugo, theme jane." />
+  <meta name="description" content="在Linux上编译安装Nginx，教程来自菜鸟教程
+" />
+
   <meta name="keywords" content="knowledge, life" />
 
 
@@ -34,8 +36,8 @@
 <meta name="generator" content="Hugo 0.67.0" />
 
 
-<link rel="canonical" href="https://www.luvnaxx.com/post/" />
-<link href="/post/index.xml" rel="alternate" type="application/rss+xml" title="汝之所见 非吾所想" />
+<link rel="canonical" href="https://www.luvnaxx.com/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/" />
+
 
 
 
@@ -58,15 +60,21 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="luvnaxx&#39;s blog, build by Hugo, theme jane." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.luvnaxx.com/post/" />
-<meta property="og:updated_time" content="2020-04-30T09:28:40+08:00" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="luvnaxx&#39;s blog, build by Hugo, theme jane."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="luvnaxx&#39;s blog, build by Hugo, theme jane."/>
+<meta property="og:title" content="Linux安装Nginx" />
+<meta property="og:description" content="在Linux上编译安装Nginx，教程来自菜鸟教程" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.luvnaxx.com/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/" />
+
+<meta itemprop="name" content="Linux安装Nginx">
+<meta itemprop="description" content="在Linux上编译安装Nginx，教程来自菜鸟教程">
+
+<meta itemprop="wordCount" content="238">
+
+
+
+<meta itemprop="keywords" content="Nginx,Linux," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Linux安装Nginx"/>
+<meta name="twitter:description" content="在Linux上编译安装Nginx，教程来自菜鸟教程"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -247,7 +255,7 @@
 
       </li>
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -328,185 +336,158 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="archive" class="archive">
-    <div class="archive-title">
-      <span class="archive-post-counter">
-          38 posts In Total
-      </span>
-    </div>
+          <article class="post bg-white">
     
-      <div class="collection-title">
-        <h2 class="archive-year">2020</h2>
+    <header class="post-header">
+      <h1 class="post-title">Linux安装Nginx</h1>
+      
+      <div class="post-meta">
+        <time datetime="0001-01-01" class="post-time">
+          0001-01-01
+        </time>
+        <div class="post-category">
+            <a href="https://www.luvnaxx.com/categories/%E8%AE%B0/"> 记 </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
       </div>
+    </header>
 
-    <div class="archive-post">
-      <time datetime="2020-04-30" class="archive-post-time">
-        2020-04-30
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/java%E7%94%9F%E6%88%9016%E4%BD%8D%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="archive-post-link">
-          Java生成16位随机字符串
-        </a>
-      </span>
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一安装编译工具及库文件">一、安装编译工具及库文件</a></li>
+    <li><a href="#二安装-pcre">二、安装 PCRE</a></li>
+    <li><a href="#三安装-nginx">三、安装 Nginx</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>在Linux上编译安装Nginx，教程来自<a href="https://www.runoob.com/linux/nginx-install-setup.html">菜鸟教程</a></p>
+<hr>
+<h2 id="一安装编译工具及库文件">一、安装编译工具及库文件</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
+</code></pre></div><h2 id="二安装-pcre">二、安装 PCRE</h2>
+<blockquote>
+<p>PCRE 作用是让 Nginx 支持 Rewrite 功能。</p>
+</blockquote>
+<ol>
+<li>下载 PCRE 安装包，下载地址： <a href="http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz">http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz</a></li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># cd /usr/local/src/</span>
+<span style="color:#75715e"># wget http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz</span>
+</code></pre></div><ol start="2">
+<li>解压安装包</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># tar zxvf pcre-8.35.tar.gz</span>
+</code></pre></div><ol start="3">
+<li>进入安装包目录</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># cd pcre-8.35</span>
+</code></pre></div><ol start="4">
+<li>编译安装</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># ./configure</span>
+<span style="color:#75715e"># make &amp;&amp; make install</span>
+</code></pre></div><ol start="5">
+<li>查看pcre版本</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># pcre-config --version</span>
+</code></pre></div><h2 id="三安装-nginx">三、安装 Nginx</h2>
+<ol>
+<li>下载 Nginx，下载地址：http://nginx.org/download/nginx-1.6.2.tar.gz</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># cd /usr/local/src/</span>
+<span style="color:#75715e"># wget http://nginx.org/download/nginx-1.6.2.tar.gz</span>
+</code></pre></div><ol start="2">
+<li>解压安装包</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># tar zxvf nginx-1.6.2.tar.gz</span>
+</code></pre></div><ol start="3">
+<li>进入安装包目录</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># cd nginx-1.6.2</span>
+</code></pre></div><ol start="4">
+<li>编译安装</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># ./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/usr/local/src/pcre-8.35</span>
+<span style="color:#75715e"># make</span>
+<span style="color:#75715e"># make install</span>
+</code></pre></div><ol start="5">
+<li>查看nginx版本</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># /usr/local/nginx/sbin/nginx -v</span>
+</code></pre></div>
     </div>
+
+    
     
 
-    <div class="archive-post">
-      <time datetime="2020-04-23" class="archive-post-time">
-        2020-04-23
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/" class="archive-post-link">
-          查询没有主键的MySQL表
-        </a>
-      </span>
-    </div>
+
+    
     
 
-    <div class="archive-post">
-      <time datetime="2020-04-04" class="archive-post-time">
-        2020-04-04
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E4%BA%AB/navicat-premium-15-%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E7%89%88%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" class="archive-post-link">
-          Navicat Premium 15 永久激活版安装教程
-        </a>
-      </span>
-    </div>
-    
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://www.luvnaxx.com/tags/nginx/">Nginx</a>
+          <a href="https://www.luvnaxx.com/tags/linux/">Linux</a>
+          
+        </div>
 
-    <div class="archive-post">
-      <time datetime="2020-04-01" class="archive-post-time">
-        2020-04-01
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E6%8A%80/spring-boot/conditiononproperty%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-post-link">
-          ConditionOnProperty注解的使用
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-03-23" class="archive-post-time">
-        2020-03-23
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E4%BA%AB/vps%E6%B5%8B%E9%80%9F%E8%84%9A%E6%9C%AC/" class="archive-post-link">
-          VPS测速脚本
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-03-20" class="archive-post-time">
-        2020-03-20
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/" class="archive-post-link">
-          Linux遭遇挖矿恶意程序kdevtmpfsi，解决方案
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-03-19" class="archive-post-time">
-        2020-03-19
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/" class="archive-post-link">
-          Windows端Tomcat部署Java-Web程序中文乱码解决
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-03-12" class="archive-post-time">
-        2020-03-12
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/" class="archive-post-link">
-          微信公众号开发模式-day2
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-03-11" class="archive-post-time">
-        2020-03-11
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E8%BF%9B%E8%A1%8C%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/" class="archive-post-link">
-          使用花生壳进行公众号本地开发调试
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2020-03-10" class="archive-post-time">
-        2020-03-10
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day1/" class="archive-post-link">
-          微信公众号开发模式-day1
-        </a>
-      </span>
-    </div></section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
       
-      <li  class="active" >
-        <a href="/post/">1</a>
-      </li>
-      
-      <li >
-        <a href="/post/page/2/">2</a>
-      </li>
-      
-      <li >
-        <a href="/post/page/3/">3</a>
-      </li>
-      
-      <li >
-        <a href="/post/page/4/">4</a>
-      </li>
-      
-    </ul>
-  </nav>
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">删除office多个授权</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
 
   
   
 
+  
+  
 
+  
 
+  
+  
 
+  
+
+  
+
+  
+
+    
+
+  
 
         </div>
       </div>
@@ -580,6 +561,13 @@
 
 
 
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 

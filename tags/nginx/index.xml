@@ -38,5 +38,14 @@
       <description>&lt;p&gt;从阿里云申请了一个一年有效期的单域名证书，按照其提供的安装示例，部署在Nginx上面并成功。&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Linux安装Nginx</title>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/</guid>
+      <description>&lt;p&gt;在Linux上编译安装Nginx，教程来自&lt;a href=&#34;https://www.runoob.com/linux/nginx-install-setup.html&#34;&gt;菜鸟教程&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
