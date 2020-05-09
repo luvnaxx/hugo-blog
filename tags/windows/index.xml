@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows on 汝之所见 非吾所想</title>
-    <link>https://blog.luvnaxx.com/tags/windows/</link>
+    <link>https://www.luvnaxx.com/tags/windows/</link>
     <description>Recent content in Windows on 汝之所见 非吾所想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
     <lastBuildDate>Wed, 20 Nov 2019 17:16:10 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.luvnaxx.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.luvnaxx.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在Windows平台搭建hugo开发平台</title>
-      <link>https://blog.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Wed, 20 Nov 2019 17:16:10 +0800</pubDate>
       
-      <guid>https://blog.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
       <description>&lt;p&gt;在Windows平台搭建hugo开发平台，写文章上传至GitHub pages&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Windows下使用自带certutil工具校验文件</title>
-      <link>https://blog.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</link>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</link>
       <pubDate>Tue, 03 Sep 2019 14:21:38 +0800</pubDate>
       
-      <guid>https://blog.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</guid>
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</guid>
       <description>&lt;h2 id=&#34;命令&#34;&gt;命令&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;certutil -hashfile xxx MD5&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA1&lt;/strong&gt;&lt;/p&gt;

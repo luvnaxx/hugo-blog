@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>模板引擎 on 汝之所见 非吾所想</title>
-    <link>https://blog.luvnaxx.com/tags/%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
+    <link>https://www.luvnaxx.com/tags/%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/</link>
     <description>Recent content in 模板引擎 on 汝之所见 非吾所想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
     <lastBuildDate>Sun, 22 Dec 2019 17:03:52 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.luvnaxx.com/tags/%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.luvnaxx.com/tags/%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Spring Boot 2.x] 集成FreeMaker、Thymeleaf模板引擎</title>
-      <link>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/</link>
+      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/</link>
       <pubDate>Sun, 22 Dec 2019 17:03:52 +0800</pubDate>
       
-      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/</guid>
+      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/template-engine/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;freemarker&#34;&gt;FreeMarker&lt;/h2&gt;
 &lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;</description>

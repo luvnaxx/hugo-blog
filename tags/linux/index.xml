@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on 汝之所见 非吾所想</title>
-    <link>https://blog.luvnaxx.com/tags/linux/</link>
+    <link>https://www.luvnaxx.com/tags/linux/</link>
     <description>Recent content in Linux on 汝之所见 非吾所想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
     <lastBuildDate>Fri, 20 Mar 2020 12:40:49 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.luvnaxx.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.luvnaxx.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Linux遭遇挖矿恶意程序kdevtmpfsi，解决方案</title>
-      <link>https://blog.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</link>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</link>
       <pubDate>Fri, 20 Mar 2020 12:40:49 +0800</pubDate>
       
-      <guid>https://blog.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</guid>
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</guid>
       <description>&lt;p&gt;昨天晚上18:01，收到腾讯云邮件通知，我的服务器好像倍挖矿程序入侵了。先按照腾讯的建议在相应位置隔离了文件，然后登录上我的宝塔控制面板(不是广告，我只会用这么傻瓜式的管理工具)查看现在服务器的负载情况，不容乐观，好像依然是满负载。停止相关进程、删除掉&lt;strong&gt;kdevtmpfsi&lt;/strong&gt;文件，重启机器，好了。今天早上一看，它又出现了。网上查找解决方案&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/202003/b1deb6d16dc6469fa889f1096eb8b364.png&#34; alt=&#34;腾讯云邮件&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>解决Linux下环境变量失效问题</title>
-      <link>https://blog.luvnaxx.com/post/%E8%AE%B0/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</link>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</link>
       <pubDate>Mon, 25 Nov 2019 14:58:07 +0800</pubDate>
       
-      <guid>https://blog.luvnaxx.com/post/%E8%AE%B0/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</guid>
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</guid>
       <description>很多时候，我们对环境变量的配置不是很熟悉的时候，使用source ~/.bashrc后很容易出现各种xx: command not found问题，下面给出一种解决</description>
     </item>
     
     <item>
       <title>Linux安装Nginx</title>
-      <link>https://blog.luvnaxx.com/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/</link>
+      <link>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.luvnaxx.com/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/</guid>
+      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/</guid>
       <description>&lt;p&gt;在Linux上编译安装Nginx，教程来自&lt;a href=&#34;https://www.runoob.com/linux/nginx-install-setup.html&#34;&gt;菜鸟教程&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
