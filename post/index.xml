@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 汝之所见 非吾所想</title>
-    <link>https://www.luvnaxx.com/post/</link>
+    <link>https://blog.luvnaxx.com/post/</link>
     <description>Recent content in Posts on 汝之所见 非吾所想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
     <lastBuildDate>Thu, 30 Apr 2020 09:28:40 +0800</lastBuildDate>
     
-	<atom:link href="https://www.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.luvnaxx.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Java生成16位随机字符串</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/java%E7%94%9F%E6%88%9016%E4%BD%8D%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <link>https://blog.luvnaxx.com/post/%E8%AE%B0/java%E7%94%9F%E6%88%9016%E4%BD%8D%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
       <pubDate>Thu, 30 Apr 2020 09:28:40 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/java%E7%94%9F%E6%88%9016%E4%BD%8D%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E8%AE%B0/java%E7%94%9F%E6%88%9016%E4%BD%8D%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
       <description>&lt;p&gt;Java生成16位随机字符串&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>查询没有主键的MySQL表</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</link>
+      <link>https://blog.luvnaxx.com/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</link>
       <pubDate>Thu, 23 Apr 2020 19:33:40 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</guid>
       <description>&lt;p&gt;MySQL查找所有数据库中没有主键的表&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Navicat Premium 15 永久激活版安装教程</title>
-      <link>https://www.luvnaxx.com/post/%E4%BA%AB/navicat-premium-15-%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E7%89%88%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
+      <link>https://blog.luvnaxx.com/post/%E4%BA%AB/navicat-premium-15-%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E7%89%88%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sat, 04 Apr 2020 23:26:19 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/navicat-premium-15-%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E7%89%88%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E4%BA%AB/navicat-premium-15-%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB%E7%89%88%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid>
       <description>&lt;p&gt;Navicat Premium 发布了最新的15版本，好像有了新功能，试试看&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;WARNING: 如何写才能安全脱身不被盯上呢😂&lt;/p&gt;
@@ -45,10 +45,10 @@
     
     <item>
       <title>ConditionOnProperty注解的使用</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/conditiononproperty%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <link>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/conditiononproperty%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Wed, 01 Apr 2020 20:43:57 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/spring-boot/conditiononproperty%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/spring-boot/conditiononproperty%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Spring Boot&lt;/strong&gt;通过**@ConditionalOnProperty**来控制**Configuration**是否生效&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -56,39 +56,39 @@
     
     <item>
       <title>VPS测速脚本</title>
-      <link>https://www.luvnaxx.com/post/%E4%BA%AB/vps%E6%B5%8B%E9%80%9F%E8%84%9A%E6%9C%AC/</link>
+      <link>https://blog.luvnaxx.com/post/%E4%BA%AB/vps%E6%B5%8B%E9%80%9F%E8%84%9A%E6%9C%AC/</link>
       <pubDate>Mon, 23 Mar 2020 12:49:14 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/vps%E6%B5%8B%E9%80%9F%E8%84%9A%E6%9C%AC/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E4%BA%AB/vps%E6%B5%8B%E9%80%9F%E8%84%9A%E6%9C%AC/</guid>
       <description>&lt;p&gt;想知道自己购买的VPS速度有多快，一个测速脚本&lt;strong&gt;Superspeed&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Linux遭遇挖矿恶意程序kdevtmpfsi，解决方案</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</link>
+      <link>https://blog.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</link>
       <pubDate>Fri, 20 Mar 2020 12:40:49 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</guid>
       <description>&lt;p&gt;昨天晚上18:01，收到腾讯云邮件通知，我的服务器好像倍挖矿程序入侵了。先按照腾讯的建议在相应位置隔离了文件，然后登录上我的宝塔控制面板(不是广告，我只会用这么傻瓜式的管理工具)查看现在服务器的负载情况，不容乐观，好像依然是满负载。停止相关进程、删除掉&lt;strong&gt;kdevtmpfsi&lt;/strong&gt;文件，重启机器，好了。今天早上一看，它又出现了。网上查找解决方案&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/202003/b1deb6d16dc6469fa889f1096eb8b364.png&#34; alt=&#34;腾讯云邮件&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Windows端Tomcat部署Java-Web程序中文乱码解决</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</link>
+      <link>https://blog.luvnaxx.com/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</link>
       <pubDate>Thu, 19 Mar 2020 14:23:40 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</guid>
       <description>&lt;p&gt;在Windows上Tomcat部署Java Web程序进行功能测试时，出现了部分中文乱码的问题&lt;/p&gt;
 &lt;p&gt;可能是机器默认编码为GBK，而程序设置为UTF-8所致&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>微信公众号开发模式-day2</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/</link>
+      <link>https://blog.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/</link>
       <pubDate>Thu, 12 Mar 2020 23:07:48 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;需求：开通一订阅号，通过点击下方菜单或者输入关键字，返回指定信息。&lt;/p&gt;
 &lt;p&gt;暂时设想的是快速查询&lt;strong&gt;黄金9999&lt;/strong&gt;实时价格&lt;/p&gt;
@@ -99,10 +99,10 @@
     
     <item>
       <title>使用花生壳进行公众号本地开发调试</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E8%BF%9B%E8%A1%8C%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</link>
+      <link>https://blog.luvnaxx.com/post/%E8%AE%B0/%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E8%BF%9B%E8%A1%8C%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</link>
       <pubDate>Wed, 11 Mar 2020 20:52:36 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E8%BF%9B%E8%A1%8C%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E8%AE%B0/%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E8%BF%9B%E8%A1%8C%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;每次调试都将项目打包上传至云服务器太麻烦。使用花生壳进行内网穿透，将本地ip放入白名单进行本地测试使用花生壳&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -110,10 +110,10 @@
     
     <item>
       <title>微信公众号开发模式-day1</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day1/</link>
+      <link>https://blog.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day1/</link>
       <pubDate>Tue, 10 Mar 2020 21:37:48 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day1/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day1/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;需求：开通一订阅号，通过点击下方菜单或者输入关键字，返回指定信息。&lt;/p&gt;
 &lt;p&gt;暂时设想的是快速查询&lt;strong&gt;黄金9999&lt;/strong&gt;实时价格&lt;/p&gt;
@@ -127,47 +127,47 @@
     
     <item>
       <title>be a 韭菜</title>
-      <link>https://www.luvnaxx.com/post/%E4%BA%AB/be-a-%E9%9F%AD%E8%8F%9C/</link>
+      <link>https://blog.luvnaxx.com/post/%E4%BA%AB/be-a-%E9%9F%AD%E8%8F%9C/</link>
       <pubDate>Mon, 09 Mar 2020 12:14:14 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/be-a-%E9%9F%AD%E8%8F%9C/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E4%BA%AB/be-a-%E9%9F%AD%E8%8F%9C/</guid>
       <description>&lt;p&gt;12道关于中国股市的简单数学题，看不懂就先别炒股了&lt;/p&gt;
 &lt;hr&gt;</description>
     </item>
     
     <item>
       <title>Maven打包将依赖放到指定位置</title>
-      <link>https://www.luvnaxx.com/post/%E8%AE%B0/maven%E6%89%93%E5%8C%85%E5%B0%86%E4%BE%9D%E8%B5%96%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE/</link>
+      <link>https://blog.luvnaxx.com/post/%E8%AE%B0/maven%E6%89%93%E5%8C%85%E5%B0%86%E4%BE%9D%E8%B5%96%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE/</link>
       <pubDate>Wed, 26 Feb 2020 12:59:56 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E8%AE%B0/maven%E6%89%93%E5%8C%85%E5%B0%86%E4%BE%9D%E8%B5%96%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E8%AE%B0/maven%E6%89%93%E5%8C%85%E5%B0%86%E4%BE%9D%E8%B5%96%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE/</guid>
       <description>使用命令 mvn dependency:copy-dependencies -DoutputDirectory=yourPath -DincludeScope=runtime</description>
     </item>
     
     <item>
       <title>新型冠状病毒</title>
-      <link>https://www.luvnaxx.com/post/%E6%83%B3/%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/</link>
+      <link>https://blog.luvnaxx.com/post/%E6%83%B3/%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/</link>
       <pubDate>Wed, 22 Jan 2020 18:16:35 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E6%83%B3/%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E6%83%B3/%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/</guid>
       <description>面对疫情，任何侥幸都可能夺人性命 说点题外话。 假如，国内疫情的起源地是郑州，无畏的键盘侠们，又会是怎样的一副嘴脸呢？</description>
     </item>
     
     <item>
       <title>json字符串操作</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/json%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/</link>
+      <link>https://blog.luvnaxx.com/post/%E6%8A%80/json%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Sun, 19 Jan 2020 15:22:07 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/json%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/json%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/</guid>
       <description>&lt;p&gt;不借助实体类，对json类型的字符串修改其内容&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>抽象带师 - 亚文化转换器</title>
-      <link>https://www.luvnaxx.com/post/%E4%BA%AB/%E6%8A%BD%E8%B1%A1%E6%8D%A2%E8%BD%AC%E6%8D%A2%E5%99%A8/</link>
+      <link>https://blog.luvnaxx.com/post/%E4%BA%AB/%E6%8A%BD%E8%B1%A1%E6%8D%A2%E8%BD%AC%E6%8D%A2%E5%99%A8/</link>
       <pubDate>Fri, 17 Jan 2020 11:14:14 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E4%BA%AB/%E6%8A%BD%E8%B1%A1%E6%8D%A2%E8%BD%AC%E6%8D%A2%E5%99%A8/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E4%BA%AB/%E6%8A%BD%E8%B1%A1%E6%8D%A2%E8%BD%AC%E6%8D%A2%E5%99%A8/</guid>
       <description>&lt;p&gt;一个可以把正常的话转换成抽象话的网站。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;WARNING: 分清场合,适度玩梗,要有基本社会道德,请勿滥用此梗或幸灾乐祸!&lt;/p&gt;
@@ -176,47 +176,47 @@
     
     <item>
       <title>读取配置文件2</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-2/</link>
+      <link>https://blog.luvnaxx.com/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-2/</link>
       <pubDate>Mon, 13 Jan 2020 15:50:07 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-2/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-2/</guid>
       <description>&lt;p&gt;接着上一篇。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>读取配置文件</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-1/</link>
+      <link>https://blog.luvnaxx.com/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-1/</link>
       <pubDate>Mon, 13 Jan 2020 15:22:07 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-1/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-1/</guid>
       <description>&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
 &lt;p&gt;配置文件默认读取的是&lt;strong&gt;application.properties&lt;/strong&gt;，如需读取其他的配置文件，需要使用&lt;code&gt;@PropertySource&lt;/code&gt;注解。假设有一个配置文件&lt;strong&gt;values.properties&lt;/strong&gt;在&lt;strong&gt;resources&lt;/strong&gt;目录下。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>并发编程</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
+      <link>https://blog.luvnaxx.com/post/%E6%8A%80/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Thu, 09 Jan 2020 18:22:07 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</guid>
       <description>&lt;p&gt;待完善&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>日期工具类-2</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/%E6%97%A5%E6%9C%9F%E5%B7%A5%E5%85%B7%E7%B1%BB2/</link>
+      <link>https://blog.luvnaxx.com/post/%E6%8A%80/%E6%97%A5%E6%9C%9F%E5%B7%A5%E5%85%B7%E7%B1%BB2/</link>
       <pubDate>Sat, 04 Jan 2020 15:22:07 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/%E6%97%A5%E6%9C%9F%E5%B7%A5%E5%85%B7%E7%B1%BB2/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/%E6%97%A5%E6%9C%9F%E5%B7%A5%E5%85%B7%E7%B1%BB2/</guid>
       <description>&lt;p&gt;使用JAVA8新增LocalDate类代替SimpleDateFormat&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>日期工具类</title>
-      <link>https://www.luvnaxx.com/post/%E6%8A%80/%E6%97%A5%E6%9C%9F%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
+      <link>https://blog.luvnaxx.com/post/%E6%8A%80/%E6%97%A5%E6%9C%9F%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
       <pubDate>Fri, 03 Jan 2020 14:58:07 +0800</pubDate>
       
-      <guid>https://www.luvnaxx.com/post/%E6%8A%80/%E6%97%A5%E6%9C%9F%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
+      <guid>https://blog.luvnaxx.com/post/%E6%8A%80/%E6%97%A5%E6%9C%9F%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
       <description>&lt;p&gt;一个低级工具类&lt;/p&gt;</description>
     </item>
     
