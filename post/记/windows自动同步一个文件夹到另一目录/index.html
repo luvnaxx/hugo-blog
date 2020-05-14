@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Archive - 汝之所见 非吾所想</title>
+  <title>Windows自动同步一个文件夹到另一目录 - 汝之所见 非吾所想</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,10 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="luvnaxx" />
-  <meta name="description" content="luvnaxx&#39;s blog, build by Hugo, theme jane." />
+  <meta name="description" content="&amp;lt;纪念2008年汶川地震12周年&amp;gt;
+Windows系统下实现两个文件夹自动同步问题（mklink命令的使用）
+" />
+
   <meta name="keywords" content="knowledge, life" />
 
 
@@ -34,8 +37,8 @@
 <meta name="generator" content="Hugo 0.67.0" />
 
 
-<link rel="canonical" href="https://www.luvnaxx.com/post/" />
-<link href="/post/index.xml" rel="alternate" type="application/rss+xml" title="汝之所见 非吾所想" />
+<link rel="canonical" href="https://www.luvnaxx.com/post/%E8%AE%B0/windows%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%88%B0%E5%8F%A6%E4%B8%80%E7%9B%AE%E5%BD%95/" />
+
 
 
 
@@ -58,15 +61,26 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="luvnaxx&#39;s blog, build by Hugo, theme jane." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.luvnaxx.com/post/" />
-<meta property="og:updated_time" content="2020-05-12T16:39:34+08:00" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="luvnaxx&#39;s blog, build by Hugo, theme jane."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="luvnaxx&#39;s blog, build by Hugo, theme jane."/>
+<meta property="og:title" content="Windows自动同步一个文件夹到另一目录" />
+<meta property="og:description" content="&lt;纪念2008年汶川地震12周年&gt;
+Windows系统下实现两个文件夹自动同步问题（mklink命令的使用）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.luvnaxx.com/post/%E8%AE%B0/windows%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%88%B0%E5%8F%A6%E4%B8%80%E7%9B%AE%E5%BD%95/" />
+<meta property="article:published_time" content="2020-05-12T10:47:40+08:00" />
+<meta property="article:modified_time" content="2020-05-12T10:47:40+08:00" />
+<meta itemprop="name" content="Windows自动同步一个文件夹到另一目录">
+<meta itemprop="description" content="&lt;纪念2008年汶川地震12周年&gt;
+Windows系统下实现两个文件夹自动同步问题（mklink命令的使用）">
+<meta itemprop="datePublished" content="2020-05-12T10:47:40&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-12T10:47:40&#43;08:00" />
+<meta itemprop="wordCount" content="313">
+
+
+
+<meta itemprop="keywords" content="同步," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Windows自动同步一个文件夹到另一目录"/>
+<meta name="twitter:description" content="&lt;纪念2008年汶川地震12周年&gt;
+Windows系统下实现两个文件夹自动同步问题（mklink命令的使用）"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -247,7 +261,7 @@
 
       </li>
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -328,171 +342,123 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Windows自动同步一个文件夹到另一目录</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-05-12" class="post-time">
+          2020-05-12
+        </time>
+        <div class="post-category">
+            <a href="https://www.luvnaxx.com/categories/%E8%AE%B0/"> 记 </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>&lt;纪念2008年汶川地震12周年&gt;</p>
+<p>Windows系统下实现两个文件夹自动同步问题（mklink命令的使用）</p>
+<blockquote>
+<p>将<strong>C:\Users\wyy\笔记</strong>同步到<strong>C:\Users\wyy\OneDrive\个人\笔记</strong></p>
+</blockquote>
+<p>步骤:</p>
+<ol>
+<li>以管理员身份打开cmd</li>
+<li>输入mklink /d C:\Users\wyy\OneDrive\个人\笔记 C:\Users\wyy\笔记，回车</li>
+<li>当出现&quot;为 C:\Users\wyy\笔记 &laquo;===&raquo; C:\Users\wyy\OneDrive\个人\笔记 创建的符号链接&rdquo;,即为成功</li>
+</ol>
+<blockquote>
+<p>注意:目标文件夹应创建到<strong>C:\Users\wyy\OneDrive\个人</strong>，<strong>笔记</strong>文件夹会自动创建。否则会出现<strong>当文件已存在时，无法创建该文件</strong></p>
+</blockquote>
+    </div>
+
+    
+    
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://www.luvnaxx.com/tags/%E5%90%8C%E6%AD%A5/">同步</a>
           
-<section id="archive" class="archive">
-    
-      <div class="collection-title">
-        <h2 class="archive-year">2019</h2>
-      </div>
+        </div>
 
-    <div class="archive-post">
-      <time datetime="2019-12-22" class="archive-post-time">
-        2019-12-22
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E6%8A%80/spring-boot/jpa/" class="archive-post-link">
-          [Spring Boot 2.x] 使用SpringDataJPA完成CRUD
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2019-12-16" class="archive-post-time">
-        2019-12-16
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E6%8A%80/spring-cloud/hystrix-dashboard/" class="archive-post-link">
-          [Spring Cloud] Spring Boot 2.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2019-11-25" class="archive-post-time">
-        2019-11-25
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/" class="archive-post-link">
-          解决Linux下环境变量失效问题
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2019-11-20" class="archive-post-time">
-        2019-11-20
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" class="archive-post-link">
-          在Windows平台搭建hugo开发平台
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2019-11-18" class="archive-post-time">
-        2019-11-18
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/" class="archive-post-link">
-          Maven打包包括本地jar包
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2019-09-19" class="archive-post-time">
-        2019-09-19
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/java%E5%BC%82%E5%B8%B8%E8%AF%AD%E5%8F%A5%E6%89%93%E5%8D%B0/" class="archive-post-link">
-          Java异常语句打印
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2019-09-03" class="archive-post-time">
-        2019-09-03
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/" class="archive-post-link">
-          Windows下使用自带certutil工具校验文件
-        </a>
-      </span>
-    </div>
-    
-
-    <div class="archive-post">
-      <time datetime="2019-07-15" class="archive-post-time">
-        2019-07-15
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/%E5%88%A0%E9%99%A4office%E5%A4%9A%E4%B8%AA%E6%8E%88%E6%9D%83/" class="archive-post-link">
-          删除office多个授权
-        </a>
-      </span>
-    </div>
-    
-      <div class="collection-title">
-        <h2 class="archive-year">0001</h2>
-      </div>
-
-    <div class="archive-post">
-      <time datetime="0001-01-01" class="archive-post-time">
-        0001-01-01
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/" class="archive-post-link">
-          Linux安装Nginx
-        </a>
-      </span>
-    </div></section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
       
-      <li >
-        <a href="/post/">1</a>
-      </li>
-      
-      <li >
-        <a href="/post/page/2/">2</a>
-      </li>
-      
-      <li >
-        <a href="/post/page/3/">3</a>
-      </li>
-      
-      <li  class="active" >
-        <a href="/post/page/4/">4</a>
-      </li>
-      
-    </ul>
-  </nav>
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/%E6%8A%80/%E5%B7%A5%E5%85%B7%E7%B1%BB/base64%E4%B8%8E%E6%96%87%E4%BB%B6%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">Base64与文件的相关操作</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/%E8%AE%B0/java%E7%94%9F%E6%88%9016%E4%BD%8D%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+            <span class="next-text nav-default">Java生成16位随机字符串</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
 
   
   
 
+  
+  
 
+  
 
+  
+  
 
+  
+
+  
+
+  
+
+    
+
+  
 
         </div>
       </div>
@@ -566,6 +532,13 @@
 
 
 
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 

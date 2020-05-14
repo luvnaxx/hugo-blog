@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>luvnaxx.com</copyright>
-    <lastBuildDate>Thu, 30 Apr 2020 09:28:40 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2020 16:39:34 +0800</lastBuildDate>
     
 	<atom:link href="https://www.luvnaxx.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Base64</title>
+      <link>https://www.luvnaxx.com/tags/base64/</link>
+      <pubDate>Tue, 12 May 2020 16:39:34 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/tags/base64/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工具类</title>
+      <link>https://www.luvnaxx.com/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
+      <pubDate>Tue, 12 May 2020 16:39:34 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>同步</title>
+      <link>https://www.luvnaxx.com/tags/%E5%90%8C%E6%AD%A5/</link>
+      <pubDate>Tue, 12 May 2020 10:47:40 +0800</pubDate>
+      
+      <guid>https://www.luvnaxx.com/tags/%E5%90%8C%E6%AD%A5/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>随机字符串生成</title>
@@ -162,33 +189,6 @@
       <pubDate>Wed, 11 Mar 2020 20:52:36 +0800</pubDate>
       
       <guid>https://www.luvnaxx.com/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nginx</title>
-      <link>https://www.luvnaxx.com/tags/nginx/</link>
-      <pubDate>Tue, 10 Mar 2020 21:37:48 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/tags/nginx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>炒股</title>
-      <link>https://www.luvnaxx.com/tags/%E7%82%92%E8%82%A1/</link>
-      <pubDate>Mon, 09 Mar 2020 12:14:14 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/tags/%E7%82%92%E8%82%A1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>韭菜</title>
-      <link>https://www.luvnaxx.com/tags/%E9%9F%AD%E8%8F%9C/</link>
-      <pubDate>Mon, 09 Mar 2020 12:14:14 +0800</pubDate>
-      
-      <guid>https://www.luvnaxx.com/tags/%E9%9F%AD%E8%8F%9C/</guid>
       <description></description>
     </item>
     
