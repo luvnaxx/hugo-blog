@@ -7,6 +7,7 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+	<link rel="shortcut icon" href="https://i.pximg.net/img-master/img/2018/08/06/19/14/23/70053558_p0_master1200.jpg" type="p_w_picpath/x-icon"/>
 </head>
 <body>
   <div id="app"></div>
@@ -16,13 +17,38 @@
       repo: ''
     }
   </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 
 	<script>
 		window.$docsify = {
 			loadSidebar: true
 		}
 	</script>
+	
+	<script type="text/javascript">
+    $(document).ready(function () {
+      $.goup({
+        trigger: 100,
+        bottomOffset: 32,
+        locationOffset: 32,
+        title: 'TOP',
+        titleAsText: true
+      });
+    });
+  </script>
+
+	<script src="//unpkg.com/docsify"></script>
+	<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+	
+	<script src="//unpkg.com/prismjs/components/prism-python.js"></script>
+	<script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+	<script src="//unpkg.com/prismjs/components/prism-php.js"></script>
+	<script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+	
+	<script src="https://wugenqiang.github.io/CS-Notes/plugin/jquery.js"></script>
+  <script src="https://wugenqiang.github.io/CS-Notes/plugin/jquery.goup.js"></script>
+
+
 </body>
 </html>
