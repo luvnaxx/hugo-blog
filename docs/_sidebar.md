@@ -15,6 +15,7 @@
     * [微信公众号开发模式-day2](java/wechat-day2.md)
     * [Java生成16位随机字符串](java/random-generate.md)
     * [Base64与文件的相关操作](java/base64-and-file.md)
+    * [JDK8:函数式编程](java/lambda.md)
     * [Spring Boot](java/spring-boot/README.md)
         * [2.1.x: 使用SpringDataJPA完成CRUD](java/spring-boot/jpa.md)
         * [2.1.x: 整合MyBatis](java/spring-boot/mybatis.md)
