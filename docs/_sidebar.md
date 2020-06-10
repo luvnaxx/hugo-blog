@@ -23,7 +23,7 @@
         * [2.1.x: 使用Log4j2作为日志组件](java/spring-boot/log4j2.md)
         * [2.1.x: 使用Swagger2构建RESTful API](java/spring-boot/swagger2.md)
         * [2.1.x: 集成FreeMaker、Thymeleaf模板引擎](java/spring-boot/template-engine.md)
-        * [Spring Boot 2.1.x 配置多数据源的三种方式](java/spring-boot/multiple-data-source.md)
+        * [2.1.x: 配置多数据源的三种方式](java/spring-boot/multiple-data-source.md)
         * [ConditionOnProperty注解的使用](java/spring-boot/ConditionOnProperty.md)
     * [Spring Cloud](java/spring-cloud/README.md)
         * [Spring Boot 2.1.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法](java/spring-cloud/hystrix-dashboard.md)
@@ -34,7 +34,15 @@
         * [队列](data-structures-and-algorithms/data-structures/队列.md)
         * [链表](data-structures-and-algorithms/data-structures/链表.md)
         * [栈](data-structures-and-algorithms/data-structures/栈.md)
-    * 算法
+    * [算法](data-structures-and-algorithms/algorithms/README.md)
+        * [排序算法](data-structures-and-algorithms/algorithms/sort/README.md)
+            * [冒泡排序](data-structures-and-algorithms/algorithms/sort/bubbleSort.md)
+            * [选择排序](data-structures-and-algorithms/algorithms/sort/selectSort.md)
+            * [插入排序](data-structures-and-algorithms/algorithms/sort/insertSort.md)
+            * [希尔排序](data-structures-and-algorithms/algorithms/sort/shellSort.md)
+            * [快速排序](data-structures-and-algorithms/algorithms/sort/quickSort.md)
+            * [归并排序](data-structures-and-algorithms/algorithms/sort/mergeSort.md)
+            * [基数排序](data-structures-and-algorithms/algorithms/sort/radixSort.md)
 
 -----
 * [记](note/README.md)
