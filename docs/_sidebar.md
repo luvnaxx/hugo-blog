@@ -57,6 +57,8 @@
     * [Linux遭遇挖矿恶意程序kdevtmpfsi，解决方案](note/linux-kdevtmpfsi.md)
     * [查询没有主键的MySQL表](note/find-no-primary-key-mysql.md)
     * [Windows自动同步一个文件夹到另一目录](note/fold-synchronization-on-windows.md)
+    * [CentOS7安装docker](note/install-docker.md)
+    * [docker下安装软件](note/docker-install-software.md)
 
 -----
 * [享](share/README.md)
