@@ -57,8 +57,10 @@
     * [Linux遭遇挖矿恶意程序kdevtmpfsi，解决方案](note/linux-kdevtmpfsi.md)
     * [查询没有主键的MySQL表](note/find-no-primary-key-mysql.md)
     * [Windows自动同步一个文件夹到另一目录](note/fold-synchronization-on-windows.md)
-    * [CentOS7安装docker](note/install-docker.md)
-    * [docker下安装软件](note/docker-install-software.md)
+    * [Docker命令](note/Docker.md)
+    * [docker下安装软件](note/docker-softwares.md)
+    * [MySQL8基本操作](note/mysql8.md)
+    * [Docker安装Nacos1.3.0,并配置MySQL8做数据持久化](note/docker-nacos.md)
 
 -----
 * [享](share/README.md)

@@ -1,10 +1,23 @@
-来自[菜鸟教程](https://www.runoob.com/docker/docker-run-command.html)
+---
+title: "Docker命令"
+date: 2020-06-12T10:55:40+08:00
+draft: false
+tags: 
+ - "docker"
+categories: 
+ - "记"
+toc: true
+reward: false
+mathjax: true
+---
 
-**docker run ：**创建一个新的容器并运行一个命令
+## **docker run ：**创建一个新的容器并运行一个命令
+
+来自[菜鸟教程](https://www.runoob.com/docker/docker-run-command.html)
 
 <!--more-->
 
-## 语法
+#### 语法
 
 ```shell
 docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
@@ -33,7 +46,7 @@ OPTIONS说明：
 
 
 
-## 实例
+#### 实例
 
 使用docker镜像nginx:latest以后台模式启动一个容器,并将容器命名为mynginx。
 
@@ -64,5 +77,13 @@ $ docker run -p 127.0.0.1:80:8080/tcp ubuntu bash
 ```shell
 runoob@runoob:~$ docker run -it nginx:latest /bin/bash
 root@b8573233d675:/# 
+```
+
+## 其他命令
+
+1. 显示所有容器IP地址：
+
+```shell
+docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
 ```
 
