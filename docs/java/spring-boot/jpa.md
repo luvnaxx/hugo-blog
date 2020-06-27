@@ -1,3 +1,5 @@
+# 使用Druid作为项目数据源
+
 ## 数据库准备
 
 新建数据库springboot，数据库表tb_user，添加id、username、password、age、address字段。

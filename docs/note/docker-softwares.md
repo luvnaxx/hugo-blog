@@ -1,15 +1,4 @@
----
-title: "Docker中安装各种软件"
-date: 2020-06-12T09:10:40+08:00
-draft: false
-tags: 
- - "docker"
-categories: 
- - "记"
-toc: true
-reward: false
-mathjax: true
----
+# Docker下安装软件
 
 在CentOS下安装各种软件镜像。假设已经安装完毕docker环境。
 

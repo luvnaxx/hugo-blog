@@ -1,15 +1,4 @@
----
-title: "MySQL8基本操作"
-date: 2020-06-12T11:16:30+08:00
-draft: false
-tags: 
- - "mysql"
-categories: 
- - "记"
-toc: true
-reward: false
-mathjax: true
----
+# MySQL8基本操作
 
 创建新用户并授权
 

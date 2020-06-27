@@ -1,3 +1,5 @@
+# 使用Log4j2作为日志组件
+
 Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。
 
 <!--more-->

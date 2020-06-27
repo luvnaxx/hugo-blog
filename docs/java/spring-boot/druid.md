@@ -1,3 +1,5 @@
+# 使用Druid作为项目数据源
+
 Druid是一个JDBC组件库，包括数据库连接池、SQL Parser等组件。DruidDataSource是最好的数据库连接池。具体参见 [alibaba/druid](https://github.com/alibaba/druid/wiki/%E9%A6%96%E9%A1%B5)
 
 <!--more-->

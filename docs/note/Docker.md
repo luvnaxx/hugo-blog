@@ -1,15 +1,4 @@
----
-title: "Docker命令"
-date: 2020-06-12T10:55:40+08:00
-draft: false
-tags: 
- - "docker"
-categories: 
- - "记"
-toc: true
-reward: false
-mathjax: true
----
+# Docker命令
 
 ## **docker run ：**创建一个新的容器并运行一个命令
 
