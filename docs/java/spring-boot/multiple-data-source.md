@@ -749,9 +749,9 @@ public class MybatisApplicationTests {
 }
 ```
 
-[1]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201812/ea22c60d150a433ab2a2ca1cb660925f.png
-[2]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201812/9e71b329dc014b6da8d90c1d3931c1bf.png
-[3]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201812/24f9f1c744f7481580512649caa19568.png
-[4]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/201812/c0421bc760a44bac8e8f581d8fcfe7c2.png
+[1]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2018/12/ea22c60d150a433ab2a2ca1cb660925f.png
+[2]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2018/12/9e71b329dc014b6da8d90c1d3931c1bf.png
+[3]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2018/12/24f9f1c744f7481580512649caa19568.png
+[4]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2018/12/c0421bc760a44bac8e8f581d8fcfe7c2.png
 
   

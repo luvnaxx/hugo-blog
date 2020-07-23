@@ -10,7 +10,7 @@
 
 **目标：填写服务器配置，验证服务器地址的有效性**
 
-<!--more-->
+<!--more-->、
 
 ![目标][1]
 
@@ -173,6 +173,6 @@
 
 
 
-[1]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/202003/31fb49be45e34aad869315270b8f371d.png
-[2]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/202003/f3a4a0133e5e47ed8cb15fa05ddeec39.jfif
+[1]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/03/31fb49be45e34aad869315270b8f371d.png
+[2]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/03/f3a4a0133e5e47ed8cb15fa05ddeec39.jfif
 

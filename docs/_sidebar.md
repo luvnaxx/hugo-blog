@@ -60,3 +60,4 @@
     * [Docker下安装软件](note/docker-softwares.md)
     * [MySQL8基本操作](note/mysql8.md)
     * [Docker安装Nacos1.3.0,并配置MySQL8做数据持久化](note/docker-nacos.md)
+    * [腾讯云对象存储POST Object](note/cos-post-object.md)

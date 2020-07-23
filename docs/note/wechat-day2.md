@@ -10,11 +10,11 @@
 
 <!--more-->
 
-废话不会说，直接关注吧 ![滑稽][2]
+废话不会说，直接关注吧 ![滑稽][2](反正大概也不会更新)
 
 ![公众号二维码][1]
 
 
 
-[1]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/202003/8ab528664c444fde965f9024e6de1b81.png
-[2]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/202003/28b1514bac014711b3745dde2ce9ae53.jpg
+[1]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/03/8ab528664c444fde965f9024e6de1b81.png
+[2]: https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/03/28b1514bac014711b3745dde2ce9ae53.jpg
