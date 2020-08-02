@@ -316,8 +316,11 @@ docker下安装Nacos-server，并配置MySQL做数据持久化
 5. Docker中添加mysql的jar包
 
    ```shell
+   宿主机: 
    docker exec -it nacos bash
+   docker: 
    mkdir -p /home/nacos/plugins/mysql
+   宿主机: 
    docker cp mysql-connector-java-8.0.20.jar nacos:/home/nacos/plugins/mysql/mysql-connector-java-8.0.20.jar
    ```
 
