@@ -38,10 +38,11 @@
             * [归并排序](data-structures-and-algorithms/algorithms/sort/mergeSort.md)
             * [基数排序](data-structures-and-algorithms/algorithms/sort/radixSort.md)
     * [LeetCode](data-structures-and-algorithms/leetcode/README.md)
-        * [两数之和](data-structures-and-algorithms/leetcode/two-sum.md)
-        * [两数相加](data-structures-and-algorithms/leetcode/add-two-numbers.md)
-        * [无重复字符的最长子串](data-structures-and-algorithms/leetcode/longest-substring-without-repeating-characters.md)
+        * [1.两数之和](data-structures-and-algorithms/leetcode/two-sum.md)
+        * [2.两数相加](data-structures-and-algorithms/leetcode/add-two-numbers.md)
+        * [3.无重复字符的最长子串](data-structures-and-algorithms/leetcode/longest-substring-without-repeating-characters.md)
         * [滑动窗口法](data-structures-and-algorithms/leetcode/滑动窗口法.md)
+        * [4.寻找两个正序数组的中位数](data-structures-and-algorithms/leetcode/median-of-two-sorted-arrays.md)
 
 -----
 * [记](note/README.md)
@@ -66,3 +67,5 @@
     * [MySQL8基本操作](note/mysql8.md)
     * [Docker安装Nacos1.3.0,并配置MySQL8做数据持久化](note/docker-nacos.md)
     * [腾讯云对象存储POST Object](note/cos-post-object.md)
+    * [安装zookeeper](note/zookeeper.md)
+    * [安装kafka](note/kafka.md)
