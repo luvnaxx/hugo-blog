@@ -19,6 +19,7 @@
         * [2.1.x: 集成FreeMaker、Thymeleaf模板引擎](java/spring-boot/template-engine.md)
         * [2.1.x: 配置多数据源的三种方式](java/spring-boot/multiple-data-source.md)
         * [ConditionOnProperty注解的使用](java/spring-boot/ConditionOnProperty.md)
+        * [统一异常处理](java/spring-boot/unified-exception-handling.md)
     * [Spring Cloud](java/spring-cloud/README.md)
         * [Spring Boot 2.1.x版本Hystrix Dashboard出现 Unable to connect to Command Metric Stream的解决办法](java/spring-cloud/hystrix-dashboard.md)
         * [Spring Boot 2.1.x版本Zipkin Server无法启动的问题](java/spring-cloud/zipkin-server.md)
