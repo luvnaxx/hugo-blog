@@ -76,3 +76,12 @@ root@b8573233d675:/#
 docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
 ```
 
+2. 使某个容器开机自启
+
+```shell
+docker update 9be --restart=always
+```
+
+> 9be为容器id的开始几个字符  
+>
+> 使用docker ps -a查询
