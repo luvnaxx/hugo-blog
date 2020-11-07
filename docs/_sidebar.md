@@ -58,6 +58,7 @@
     * [微信公众号开发-day1](note/wechat-day1.md)
     * [使用花生壳进行公众号本地开发调试](note/wechat-local.md)
     * [微信公众号开发模式-day2](note/wechat-day2.md)
+    * [微信公众号开发模式-dayN](note/wechat-dayN.md)
     * [自定义安装office](note/diy-install-office.md)
     * [Windows端Tomcat部署Java-Web程序中文乱码解决](note/tomcat-on-windows.md)
     * [Linux遭遇挖矿恶意程序kdevtmpfsi，解决方案](note/linux-kdevtmpfsi.md)
