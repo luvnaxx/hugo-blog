@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>free on iNote</title>
+    <link>/tags/free/</link>
+    <description>Recent content in free on iNote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>blog.luvnaxx.com</copyright>
+    <lastBuildDate>Wed, 15 Jul 2020 19:22:10 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/free/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>steam一键领取免费游戏（喜加N）</title>
+      <link>/post/%E4%BA%AB/steam%E4%B8%80%E9%94%AE%E9%A2%86%E5%8F%96%E5%85%8D%E8%B4%B9%E6%B8%B8%E6%88%8F/</link>
+      <pubDate>Wed, 15 Jul 2020 19:22:10 +0800</pubDate>
+      
+      <guid>/post/%E4%BA%AB/steam%E4%B8%80%E9%94%AE%E9%A2%86%E5%8F%96%E5%85%8D%E8%B4%B9%E6%B8%B8%E6%88%8F/</guid>
+      <description>1.首先先登录网页steam账号 2.然后打开https://store.steampowered.com/account/licenses/</description>
+    </item>
+    
+  </channel>
+</rss>

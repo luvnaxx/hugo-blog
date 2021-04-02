@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lambda on iNote</title>
+    <link>/tags/lambda/</link>
+    <description>Recent content in lambda on iNote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>blog.luvnaxx.com</copyright>
+    <lastBuildDate>Thu, 28 May 2020 15:44:07 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JDK8:函数式编程</title>
+      <link>/post/%E6%8A%80/lambda/</link>
+      <pubDate>Thu, 28 May 2020 15:44:07 +0800</pubDate>
+      
+      <guid>/post/%E6%8A%80/lambda/</guid>
+      <description>&lt;h2 id=&#34;stream&#34;&gt;stream&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用LongStream输出斐波那契数列&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on iNote</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on iNote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>blog.luvnaxx.com</copyright>
+    <lastBuildDate>Sat, 07 Nov 2020 13:07:48 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>实时金价查询</title>
+      <link>/tags/%E5%AE%9E%E6%97%B6%E9%87%91%E4%BB%B7%E6%9F%A5%E8%AF%A2/</link>
+      <pubDate>Sat, 07 Nov 2020 13:07:48 +0800</pubDate>
+      
+      <guid>/tags/%E5%AE%9E%E6%97%B6%E9%87%91%E4%BB%B7%E6%9F%A5%E8%AF%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>微信公众号开发</title>
+      <link>/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Sat, 07 Nov 2020 13:07:48 +0800</pubDate>
+      
+      <guid>/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring Boot</title>
+      <link>/tags/spring-boot/</link>
+      <pubDate>Tue, 15 Sep 2020 10:36:33 +0800</pubDate>
+      
+      <guid>/tags/spring-boot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>异常处理</title>
+      <link>/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</link>
+      <pubDate>Tue, 15 Sep 2020 10:36:33 +0800</pubDate>
+      
+      <guid>/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>删库跑路</title>
+      <link>/tags/%E5%88%A0%E5%BA%93%E8%B7%91%E8%B7%AF/</link>
+      <pubDate>Mon, 24 Aug 2020 12:20:14 +0800</pubDate>
+      
+      <guid>/tags/%E5%88%A0%E5%BA%93%E8%B7%91%E8%B7%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kafka</title>
+      <link>/tags/kafka/</link>
+      <pubDate>Fri, 07 Aug 2020 14:40:16 +0800</pubDate>
+      
+      <guid>/tags/kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zookeeper</title>
+      <link>/tags/zookeeper/</link>
+      <pubDate>Fri, 07 Aug 2020 14:30:16 +0800</pubDate>
+      
+      <guid>/tags/zookeeper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LeetCode</title>
+      <link>/tags/leetcode/</link>
+      <pubDate>Wed, 29 Jul 2020 11:02:09 +0800</pubDate>
+      
+      <guid>/tags/leetcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数据结构和算法</title>
+      <link>/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Wed, 29 Jul 2020 11:02:09 +0800</pubDate>
+      
+      <guid>/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>COS</title>
+      <link>/tags/cos/</link>
+      <pubDate>Thu, 23 Jul 2020 11:05:02 +0800</pubDate>
+      
+      <guid>/tags/cos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>对象存储</title>
+      <link>/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</link>
+      <pubDate>Thu, 23 Jul 2020 11:05:02 +0800</pubDate>
+      
+      <guid>/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>free</title>
+      <link>/tags/free/</link>
+      <pubDate>Wed, 15 Jul 2020 19:22:10 +0800</pubDate>
+      
+      <guid>/tags/free/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>steam</title>
+      <link>/tags/steam/</link>
+      <pubDate>Wed, 15 Jul 2020 19:22:10 +0800</pubDate>
+      
+      <guid>/tags/steam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>/tags/windows/</link>
+      <pubDate>Sat, 20 Jun 2020 16:38:14 +0800</pubDate>
+      
+      <guid>/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows错误</title>
+      <link>/tags/windows%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Sat, 20 Jun 2020 16:38:14 +0800</pubDate>
+      
+      <guid>/tags/windows%E9%94%99%E8%AF%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Wed, 17 Jun 2020 16:34:34 +0800</pubDate>
+      
+      <guid>/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nacos</title>
+      <link>/tags/nacos/</link>
+      <pubDate>Wed, 17 Jun 2020 16:34:34 +0800</pubDate>
+      
+      <guid>/tags/nacos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>/tags/mysql/</link>
+      <pubDate>Fri, 12 Jun 2020 11:16:30 +0800</pubDate>
+      
+      <guid>/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>排序算法</title>
+      <link>/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jun 2020 12:44:07 +0800</pubDate>
+      
+      <guid>/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lambda</title>
+      <link>/tags/lambda/</link>
+      <pubDate>Thu, 28 May 2020 15:44:07 +0800</pubDate>
+      
+      <guid>/tags/lambda/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

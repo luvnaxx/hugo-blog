@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>腾讯云对象存储POST Object - iNote</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="luvnaxx" />
+  <meta name="description" content=" 功能描述 POST Object 接口请求可以将本地不超过5GB的对象（Object）以网页表单（HTML Form）的形式上传至指定存储桶中。该 API 的请求者需要对存储桶有写入权限。
+" />
+
+  <meta name="keywords" content="knowledge, life" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.0" />
+
+
+<link rel="canonical" href="/post/%E8%AE%B0/cos-post-object/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/sass/jane.min.af20b78e95c84de86b00a0242a4a77bd2601700e1b250edf27537d957ac0041d.css" integrity="sha256-ryC3jpXITehrAKAkKkp3vSYBcA4bJQ7fJ1N9lXrABB0=" media="screen" crossorigin="anonymous">
+
+
+
+
+<link rel="stylesheet" href="/css/copy-to-clipboard.css">
+
+
+<meta property="og:title" content="腾讯云对象存储POST Object" />
+<meta property="og:description" content="
+功能描述
+POST Object 接口请求可以将本地不超过5GB的对象（Object）以网页表单（HTML Form）的形式上传至指定存储桶中。该 API 的请求者需要对存储桶有写入权限。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/%E8%AE%B0/cos-post-object/" />
+<meta property="article:published_time" content="2020-07-23T11:05:02+08:00" />
+<meta property="article:modified_time" content="2020-07-23T11:05:02+08:00" />
+<meta itemprop="name" content="腾讯云对象存储POST Object">
+<meta itemprop="description" content="
+功能描述
+POST Object 接口请求可以将本地不超过5GB的对象（Object）以网页表单（HTML Form）的形式上传至指定存储桶中。该 API 的请求者需要对存储桶有写入权限。
+">
+<meta itemprop="datePublished" content="2020-07-23T11:05:02&#43;08:00" />
+<meta itemprop="dateModified" content="2020-07-23T11:05:02&#43;08:00" />
+<meta itemprop="wordCount" content="1111">
+
+
+
+<meta itemprop="keywords" content="对象存储,COS," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="腾讯云对象存储POST Object"/>
+<meta name="twitter:description" content="
+功能描述
+POST Object 接口请求可以将本地不超过5GB的对象（Object）以网页表单（HTML Form）的形式上传至指定存储桶中。该 API 的请求者需要对存储桶有写入权限。
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+<script src="js/highlight.pack.js"></script>
+<link rel="stylesheet" href="css/monokai-sublime.css">
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">烂笔头</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/">This is Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/about/">About</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://github.com/luvnaxx/website-index" rel="noopener" target="_blank">
+              external-link
+              
+              <i class="iconfont">
+                <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M623.36 272.96 473.216 423.04C467.2 429.056 467.072 438.656 472.896 444.416c0 0-6.72-6.656 1.6 1.6C496.064 467.648 528.64 500.224 528.64 500.224 534.464 506.048 544 505.856 550.016 499.904l150.08-150.144 67.328 66.432c9.024 8.96 27.456 4.544 30.4-8.96 19.968-92.608 46.656-227.52 46.656-227.52 6.848-34.496-16.192-56.704-49.92-49.92 0 0-134.656 26.816-227.328 46.784C560.32 178.048 556.352 182.272 554.752 187.136c-3.2 6.208-3.008 14.208 3.776 20.992L623.36 272.96z"></path>
+  <path d="M841.152 457.152c-30.528 0-54.784 24.512-54.784 54.656l0 274.752L237.696 786.56 237.696 237.696l206.016 0c6.656 0 10.752 0 13.248 0C487.68 237.696 512 213.184 512 182.848 512 152.32 487.36 128 456.96 128L183.04 128C153.216 128 128 152.576 128 182.848c0 3.136 0.256 6.272 0.768 9.28C128.256 195.136 128 198.272 128 201.408l0 639.488c0 0.064 0 0.192 0 0.256 0 0.128 0 0.192 0 0.32 0 30.528 24.512 54.784 54.784 54.784l646.976 0c6.592 0 9.728 0 11.712 0 28.736 0 52.928-22.976 54.464-51.968C896 843.264 896 842.304 896 841.344l0-20.352L896 561.408 896 512.128C896 481.792 871.424 457.152 841.152 457.152z"></path>
+</svg>
+
+              </i>
+            </a>
+          
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      烂笔头
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/">This is Home</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/about/">About</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://github.com/luvnaxx/website-index" rel="noopener" target="_blank">
+              external-link
+              
+              <i class="iconfont">
+                <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M623.36 272.96 473.216 423.04C467.2 429.056 467.072 438.656 472.896 444.416c0 0-6.72-6.656 1.6 1.6C496.064 467.648 528.64 500.224 528.64 500.224 534.464 506.048 544 505.856 550.016 499.904l150.08-150.144 67.328 66.432c9.024 8.96 27.456 4.544 30.4-8.96 19.968-92.608 46.656-227.52 46.656-227.52 6.848-34.496-16.192-56.704-49.92-49.92 0 0-134.656 26.816-227.328 46.784C560.32 178.048 556.352 182.272 554.752 187.136c-3.2 6.208-3.008 14.208 3.776 20.992L623.36 272.96z"></path>
+  <path d="M841.152 457.152c-30.528 0-54.784 24.512-54.784 54.656l0 274.752L237.696 786.56 237.696 237.696l206.016 0c6.656 0 10.752 0 13.248 0C487.68 237.696 512 213.184 512 182.848 512 152.32 487.36 128 456.96 128L183.04 128C153.216 128 128 152.576 128 182.848c0 3.136 0.256 6.272 0.768 9.28C128.256 195.136 128 198.272 128 201.408l0 639.488c0 0.064 0 0.192 0 0.256 0 0.128 0 0.192 0 0.32 0 30.528 24.512 54.784 54.784 54.784l646.976 0c6.592 0 9.728 0 11.712 0 28.736 0 52.928-22.976 54.464-51.968C896 843.264 896 842.304 896 841.344l0-20.352L896 561.408 896 512.128C896 481.792 871.424 457.152 841.152 457.152z"></path>
+</svg>
+
+              </i>
+            </a>
+          
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">腾讯云对象存储POST Object</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-07-23" class="post-time">
+          2020-07-23
+        </time>
+        <div class="post-category">
+            <a href="/categories/%E8%AE%B0/"> 记 </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#功能描述">功能描述</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <blockquote>
+<h2 id="功能描述">功能描述</h2>
+<p>POST Object 接口请求可以将本地不超过5GB的对象（Object）以网页表单（HTML Form）的形式上传至指定存储桶中。该 API 的请求者需要对存储桶有写入权限。</p>
+</blockquote>
+<blockquote>
+<p>后端使用Java生成前端表单所需数据，前端文件直传。参考<a href="https://cloud.tencent.com/document/product/436/14690">POST Object</a></p>
+</blockquote>
+<h4 id="签名保护">签名保护</h4>
+<p>POST Object 接口要求在请求中携带签名相关字段，COS 服务器端收到消息后，进行身份验证，验证成功则可接受并执行请求，否则将会返回错误信息并丢弃此请求。</p>
+<hr>
+<p>签名流程</p>
+<h4 id="1-准备工作">1. 准备工作</h4>
+<p>获取SecretId 和 SecretKey</p>
+<h4 id="2-生成-keytime">2. 生成 KeyTime</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">generateKeyTime</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">long</span> startTimestamp <span style="color:#f92672">=</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">currentTimeMillis</span><span style="color:#f92672">()</span> <span style="color:#f92672">/</span> 1000<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">long</span> endTimestamp <span style="color:#f92672">=</span> startTimestamp <span style="color:#f92672">+</span> 900<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> startTimestamp <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;;&#34;</span> <span style="color:#f92672">+</span> endTimestamp<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><p>有效时间为900秒</p>
+<h4 id="3-构造策略policy">3. 构造“策略”（Policy）</h4>
+<p>策略为一个 JSON 文本，一个典型的策略如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;expiration&#34;</span>: <span style="color:#e6db74">&#34;2019-08-30T09:38:12.414Z&#34;</span>,
+    <span style="color:#f92672">&#34;conditions&#34;</span>: [
+        { <span style="color:#f92672">&#34;acl&#34;</span>: <span style="color:#e6db74">&#34;default&#34;</span> },
+        { <span style="color:#f92672">&#34;bucket&#34;</span>: <span style="color:#e6db74">&#34;examplebucket-1250000000&#34;</span> },
+        [ <span style="color:#e6db74">&#34;starts-with&#34;</span>, <span style="color:#e6db74">&#34;$key&#34;</span>, <span style="color:#e6db74">&#34;folder/subfolder/&#34;</span> ],
+        [ <span style="color:#e6db74">&#34;starts-with&#34;</span>, <span style="color:#e6db74">&#34;$Content-Type&#34;</span>, <span style="color:#e6db74">&#34;image/&#34;</span> ],
+        [ <span style="color:#e6db74">&#34;starts-with&#34;</span>, <span style="color:#e6db74">&#34;$success_action_redirect&#34;</span>, <span style="color:#e6db74">&#34;https://my.website/&#34;</span> ],
+        [ <span style="color:#e6db74">&#34;eq&#34;</span>, <span style="color:#e6db74">&#34;$x-cos-server-side-encryption&#34;</span>, <span style="color:#e6db74">&#34;AES256&#34;</span> ],
+        { <span style="color:#f92672">&#34;q-sign-algorithm&#34;</span>: <span style="color:#e6db74">&#34;sha1&#34;</span> },
+        { <span style="color:#f92672">&#34;q-ak&#34;</span>: <span style="color:#e6db74">&#34;AKIDQjz3ltompVjBni5LitkWHFlFpwkn9U5q&#34;</span> },
+        { <span style="color:#f92672">&#34;q-sign-time&#34;</span>: <span style="color:#e6db74">&#34;1567150692;1567157892&#34;</span> }
+    ]
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">generatePolicy</span><span style="color:#f92672">(</span>String secretId<span style="color:#f92672">,</span> String keyTime<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    LocalDateTime dateTime <span style="color:#f92672">=</span> LocalDateTime<span style="color:#f92672">.</span><span style="color:#a6e22e">now</span><span style="color:#f92672">();</span>
+    LocalDateTime localDateTime <span style="color:#f92672">=</span> dateTime<span style="color:#f92672">.</span><span style="color:#a6e22e">plusMinutes</span><span style="color:#f92672">(</span>15<span style="color:#f92672">);</span>
+    DateTimeFormatter formatter <span style="color:#f92672">=</span> DateTimeFormatter<span style="color:#f92672">.</span><span style="color:#a6e22e">ofPattern</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;&#34;</span><span style="color:#f92672">);</span>
+    String expiration <span style="color:#f92672">=</span> localDateTime<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span>formatter<span style="color:#f92672">);</span>
+
+    String template <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;{\&#34;expiration\&#34;:\&#34;%s\&#34;,\&#34;conditions\&#34;:[{\&#34;q-sign-algorithm\&#34;:\&#34;sha1\&#34;},{\&#34;q-ak\&#34;:\&#34;%s\&#34;},{\&#34;q-sign-time\&#34;:\&#34;%s\&#34;},{\&#34;acl\&#34;:\&#34;default\&#34;},{\&#34;x-cos-storage-class\&#34;:\&#34;STANDARD\&#34;}]}&#34;</span><span style="color:#f92672">;</span>
+    String format <span style="color:#f92672">=</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span>template<span style="color:#f92672">,</span> expiration<span style="color:#f92672">,</span> secretId<span style="color:#f92672">,</span> keyTime<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> format<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><h4 id="4-生成-signkey">4. 生成 SignKey</h4>
+<p>使用 HMAC-SHA1 以 SecretKey 为密钥，以 KeyTime 为消息，计算消息摘要（哈希值，16进制小写形式），即为 SignKey</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * 使用指定HMAC算法加密
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   * @param message   待加密数据,KeyTime 
+</span><span style="color:#75715e">   * @param key       密钥,SecretKey 
+</span><span style="color:#75715e">   * @param algorithm 算法,HMACSHA1
+</span><span style="color:#75715e">   * @return 加密结果的十六进制形式
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#a6e22e">@SneakyThrows</span>
+  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">encryption</span><span style="color:#f92672">(</span>String message<span style="color:#f92672">,</span> String key<span style="color:#f92672">,</span> String algorithm<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> key<span style="color:#f92672">.</span><span style="color:#a6e22e">getBytes</span><span style="color:#f92672">(</span>StandardCharsets<span style="color:#f92672">.</span><span style="color:#a6e22e">UTF_8</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">//根据给定的字节数组构造一个密钥,第二参数指定一个密钥算法的名称
+</span><span style="color:#75715e"></span>    SecretKey secretKey <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SecretKeySpec<span style="color:#f92672">(</span>data<span style="color:#f92672">,</span> algorithm<span style="color:#f92672">);</span>
+    <span style="color:#75715e">//生成一个指定 Mac 算法 的 Mac 对象
+</span><span style="color:#75715e"></span>    Mac mac <span style="color:#f92672">=</span> Mac<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span>algorithm<span style="color:#f92672">);</span>
+    <span style="color:#75715e">//用给定密钥初始化 Mac 对象
+</span><span style="color:#75715e"></span>    mac<span style="color:#f92672">.</span><span style="color:#a6e22e">init</span><span style="color:#f92672">(</span>secretKey<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> text <span style="color:#f92672">=</span> message<span style="color:#f92672">.</span><span style="color:#a6e22e">getBytes</span><span style="color:#f92672">(</span>StandardCharsets<span style="color:#f92672">.</span><span style="color:#a6e22e">UTF_8</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> bytes <span style="color:#f92672">=</span> mac<span style="color:#f92672">.</span><span style="color:#a6e22e">doFinal</span><span style="color:#f92672">(</span>text<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> HexUtil<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeHexStr</span><span style="color:#f92672">(</span>bytes<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><h4 id="5-生成-stringtosign">5. 生成 StringToSign</h4>
+<p>使用 SHA1 对上文中构造的策略（Policy）文本计算消息摘要（哈希值，16进制小写形式），即为 StringToSign</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * 使用hash算法
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   * @param str       加密字符串,Policy
+</span><span style="color:#75715e">   * @param algorithm hash算法,SHA1 
+</span><span style="color:#75715e">   * @return 解密结果
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#a6e22e">@SneakyThrows</span>
+  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">hashEncryption</span><span style="color:#f92672">(</span>String str<span style="color:#f92672">,</span> String algorithm<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 创建一个MessageDigest实例:
+</span><span style="color:#75715e"></span>    MessageDigest md <span style="color:#f92672">=</span> MessageDigest<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span>algorithm<span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 反复调用update输入数据:
+</span><span style="color:#75715e"></span>    md<span style="color:#f92672">.</span><span style="color:#a6e22e">update</span><span style="color:#f92672">(</span>str<span style="color:#f92672">.</span><span style="color:#a6e22e">getBytes</span><span style="color:#f92672">(</span>StandardCharsets<span style="color:#f92672">.</span><span style="color:#a6e22e">UTF_8</span><span style="color:#f92672">));</span>
+    <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> result <span style="color:#f92672">=</span> md<span style="color:#f92672">.</span><span style="color:#a6e22e">digest</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">return</span> HexUtil<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeHexStr</span><span style="color:#f92672">(</span>result<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><h4 id="6-生成-signature">6. 生成 Signature</h4>
+<p>使用 HMAC-SHA1 以 SignKey 为密钥（字符串形式，非原始二进制），以 StringToSign 为消息（字符串形式，非原始二进制），计算消息摘要（哈希值，16进制小写形式），即为 Signature</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * 使用指定HMAC算法加密
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   * @param message   待加密数据,StringToSign  
+</span><span style="color:#75715e">   * @param key       密钥,SignKey  
+</span><span style="color:#75715e">   * @param algorithm 算法,HMACSHA1
+</span><span style="color:#75715e">   * @return 加密结果的十六进制形式
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#a6e22e">@SneakyThrows</span>
+  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">encryption</span><span style="color:#f92672">(</span>String message<span style="color:#f92672">,</span> String key<span style="color:#f92672">,</span> String algorithm<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> key<span style="color:#f92672">.</span><span style="color:#a6e22e">getBytes</span><span style="color:#f92672">(</span>StandardCharsets<span style="color:#f92672">.</span><span style="color:#a6e22e">UTF_8</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">//根据给定的字节数组构造一个密钥,第二参数指定一个密钥算法的名称
+</span><span style="color:#75715e"></span>    SecretKey secretKey <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SecretKeySpec<span style="color:#f92672">(</span>data<span style="color:#f92672">,</span> algorithm<span style="color:#f92672">);</span>
+    <span style="color:#75715e">//生成一个指定 Mac 算法 的 Mac 对象
+</span><span style="color:#75715e"></span>    Mac mac <span style="color:#f92672">=</span> Mac<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span>algorithm<span style="color:#f92672">);</span>
+    <span style="color:#75715e">//用给定密钥初始化 Mac 对象
+</span><span style="color:#75715e"></span>    mac<span style="color:#f92672">.</span><span style="color:#a6e22e">init</span><span style="color:#f92672">(</span>secretKey<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> text <span style="color:#f92672">=</span> message<span style="color:#f92672">.</span><span style="color:#a6e22e">getBytes</span><span style="color:#f92672">(</span>StandardCharsets<span style="color:#f92672">.</span><span style="color:#a6e22e">UTF_8</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> bytes <span style="color:#f92672">=</span> mac<span style="color:#f92672">.</span><span style="color:#a6e22e">doFinal</span><span style="color:#f92672">(</span>text<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> HexUtil<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeHexStr</span><span style="color:#f92672">(</span>bytes<span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><h4 id="7-将签名附加到表单">7. 将签名附加到表单</h4>
+<p>将上述策略和签名相关信息，以下表中描述的方式附加到表单中：</p>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">描述</th>
+<th align="left">类型</th>
+<th align="left">是否必选</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">policy</td>
+<td align="left">经过 Base64 编码的“策略”（Policy）内容</td>
+<td align="left">string</td>
+<td align="left">是</td>
+</tr>
+<tr>
+<td align="left">q-sign-algorithm</td>
+<td align="left">签名哈希算法，固定为 sha1</td>
+<td align="left">string</td>
+<td align="left">是</td>
+</tr>
+<tr>
+<td align="left">q-ak</td>
+<td align="left">上文所述的 SecretId</td>
+<td align="left">string</td>
+<td align="left">是</td>
+</tr>
+<tr>
+<td align="left">q-key-time</td>
+<td align="left">上文所生成的 KeyTime</td>
+<td align="left">string</td>
+<td align="left">是</td>
+</tr>
+<tr>
+<td align="left">q-signature</td>
+<td align="left">上文所生成的 Signature</td>
+<td align="left">string</td>
+<td align="left">是</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>签名表单字段需要在 file 表单字段之前。</p>
+</blockquote>
+<p><img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/07/6991176cd45c4ca1bf232294480cc6c1.png" alt="上传表单"></p>
+<p><img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/07/14c6e076e555443fab2ce8ab2b6a7213.png" alt="上传结果"></p>
+<p>我的完整上传示例</p>
+    </div>
+
+    
+    
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/">对象存储</a>
+          <a href="/tags/cos/">COS</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/%E6%8A%80/datastructure_and_algorithm/leetcode/two-sum/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">两数之和</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/%E4%BA%AB/steam%E4%B8%80%E9%94%AE%E9%A2%86%E5%8F%96%E5%85%8D%E8%B4%B9%E6%B8%B8%E6%88%8F/">
+            <span class="next-text nav-default">steam一键领取免费游戏（喜加N）</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+
+ 
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2019 -
+    2020
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        blog.luvnaxx.com
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw=" crossorigin="anonymous"></script>
+
+
+
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/copy-to-clipboard.js"></script>
+
+
+</body>
+</html>

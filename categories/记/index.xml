@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>记 on iNote</title>
+    <link>/categories/%E8%AE%B0/</link>
+    <description>Recent content in 记 on iNote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>blog.luvnaxx.com</copyright>
+    <lastBuildDate>Sat, 07 Nov 2020 13:07:48 +0800</lastBuildDate>
+    
+	<atom:link href="/categories/%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>微信公众号开发模式-dayN</title>
+      <link>/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-dayn/</link>
+      <pubDate>Sat, 07 Nov 2020 13:07:48 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-dayn/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;需求：开通一订阅号，通过点击下方菜单或者输入关键字，返回指定信息。&lt;/p&gt;
+&lt;p&gt;暂时设想的是快速查询&lt;strong&gt;黄金9999&lt;/strong&gt;实时价格&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2020年11月5日，观察后台日志，再次发现如下错误日志。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/11/d397caf5ff144337820b5d4f56362f96.png&#34; alt=&#34;问题&#34;&gt;&lt;/p&gt;
+&lt;p&gt;搜索查下大概是tomcat版本过高的问题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装Kafka</title>
+      <link>/post/%E8%AE%B0/kafka/</link>
+      <pubDate>Fri, 07 Aug 2020 14:40:16 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/kafka/</guid>
+      <description>安装单机模式 下载kafka 解压 进入config目录，编辑server.properties 修改内容 # Licensed to the Apache Software Foundation (ASF) under one or more # contributor license agreements. See the NOTICE file distributed</description>
+    </item>
+    
+    <item>
+      <title>安装ZooKeeper</title>
+      <link>/post/%E8%AE%B0/zookeeper/</link>
+      <pubDate>Fri, 07 Aug 2020 14:30:16 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/zookeeper/</guid>
+      <description>安装单机模式 下载zookeeper 解压 进入conf目录，复制zoo_sample.cfg一份到zoo.cfg 修改内容 # The number of milliseconds of each tick tickTime=2000 # The number</description>
+    </item>
+    
+    <item>
+      <title>腾讯云对象存储POST Object</title>
+      <link>/post/%E8%AE%B0/cos-post-object/</link>
+      <pubDate>Thu, 23 Jul 2020 11:05:02 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/cos-post-object/</guid>
+      <description>&lt;blockquote&gt;
+&lt;h2 id=&#34;功能描述&#34;&gt;功能描述&lt;/h2&gt;
+&lt;p&gt;POST Object 接口请求可以将本地不超过5GB的对象（Object）以网页表单（HTML Form）的形式上传至指定存储桶中。该 API 的请求者需要对存储桶有写入权限。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Docker安装Nacos1.3.0,并配置MySQL8做数据持久化</title>
+      <link>/post/%E8%AE%B0/docker-nacos/</link>
+      <pubDate>Wed, 17 Jun 2020 16:34:34 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/docker-nacos/</guid>
+      <description>docker下安装Nacos-server，并配置MySQL做数据持久化 nacos-server:1.3.0 MySQL8.0.20 网上随便一搜，相关版本的有好多。但大部分都是抄袭的，根本对不上 拉</description>
+    </item>
+    
+    <item>
+      <title>MySQL8基本操作</title>
+      <link>/post/%E8%AE%B0/mysql8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Fri, 12 Jun 2020 11:16:30 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/mysql8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
+      <description>&lt;p&gt;创建新用户并授权&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MySQL 8.0.20&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Docker命令</title>
+      <link>/post/%E8%AE%B0/docker/</link>
+      <pubDate>Fri, 12 Jun 2020 10:55:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/docker/</guid>
+      <description>&lt;h2 id=&#34;docker-run-创建一个新的容器并运行一个命令&#34;&gt;**docker run ：**创建一个新的容器并运行一个命令&lt;/h2&gt;
+&lt;p&gt;来自&lt;a href=&#34;https://www.runoob.com/docker/docker-run-command.html&#34;&gt;菜鸟教程&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Docker中安装各种软件</title>
+      <link>/post/%E8%AE%B0/docker-softwares/</link>
+      <pubDate>Fri, 12 Jun 2020 09:10:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/docker-softwares/</guid>
+      <description>&lt;p&gt;在CentOS下安装各种软件镜像。假设已经安装完毕docker环境。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;安装方式:查看Docker&lt;a href=&#34;https://docs.docker.com/engine/install/centos/&#34;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;设置阿里云镜像加速&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;&amp;lt;-&amp;#39;EOF&amp;#39;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://xxxxx.mirror.aliyuncs.com&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;EOF&lt;/span&gt;
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;CentOS8安装Docker：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载docker-ce的repo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;curl https://download.docker.com/linux/centos/docker-ce.repo -o /etc/yum.repos.d/docker-ce.repo
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装依赖（这是相比centos7的关键步骤）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;yum install https://download.docker.com/linux/fedora/30/x86_64/stable/Packages/containerd.io-1.2.6-3.3.fc30.x86_64.rpm
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;安装docker-ce&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;yum install docker-ce -y
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;启动docker&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;systemctl start docker
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Base64与文件的相关操作</title>
+      <link>/post/%E8%AE%B0/base64%E4%B8%8E%E6%96%87%E4%BB%B6%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Tue, 12 May 2020 19:10:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/base64%E4%B8%8E%E6%96%87%E4%BB%B6%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/</guid>
+      <description>Base64与文件的相关操作 使用java.util.Base64.Decoder和java.util.Base64.Encoder，替换su</description>
+    </item>
+    
+    <item>
+      <title>Windows自动同步一个文件夹到另一目录</title>
+      <link>/post/%E8%AE%B0/windows%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%88%B0%E5%8F%A6%E4%B8%80%E7%9B%AE%E5%BD%95/</link>
+      <pubDate>Tue, 12 May 2020 13:13:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/windows%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%88%B0%E5%8F%A6%E4%B8%80%E7%9B%AE%E5%BD%95/</guid>
+      <description>&amp;lt;纪念2008年汶川地震12周年&amp;gt; Windows系统下实现两个文件夹自动同步问题（mklink命令的使用） 将C:\Users\w</description>
+    </item>
+    
+    <item>
+      <title>Java生成16位随机字符串</title>
+      <link>/post/%E8%AE%B0/java%E7%94%9F%E6%88%9016%E4%BD%8D%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Thu, 30 Apr 2020 09:28:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/java%E7%94%9F%E6%88%9016%E4%BD%8D%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>&lt;p&gt;Java生成16位随机字符串&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux安装Nginx</title>
+      <link>/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/</link>
+      <pubDate>Mon, 27 Apr 2020 14:53:33 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/linux%E5%AE%89%E8%A3%85nginx/</guid>
+      <description>&lt;p&gt;在Linux上编译安装Nginx，教程来自&lt;a href=&#34;https://www.runoob.com/linux/nginx-install-setup.html&#34;&gt;菜鸟教程&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>查询没有主键的MySQL表</title>
+      <link>/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</link>
+      <pubDate>Thu, 23 Apr 2020 19:33:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</guid>
+      <description>&lt;p&gt;MySQL查找所有数据库中没有主键的表&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux遭遇挖矿恶意程序kdevtmpfsi，解决方案</title>
+      <link>/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</link>
+      <pubDate>Fri, 20 Mar 2020 12:40:49 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/linux%E9%81%AD%E9%81%87%E6%8C%96%E7%9F%BF%E6%81%B6%E6%84%8F%E7%A8%8B%E5%BA%8F/</guid>
+      <description>&lt;p&gt;昨天晚上18:01，收到腾讯云邮件通知，我的服务器好像倍挖矿程序入侵了。先按照腾讯的建议在相应位置隔离了文件，然后登录上我的宝塔控制面板(不是广告，我只会用这么傻瓜式的管理工具)查看现在服务器的负载情况，不容乐观，好像依然是满负载。停止相关进程、删除掉&lt;strong&gt;kdevtmpfsi&lt;/strong&gt;文件，重启机器，好了。今天早上一看，它又出现了。网上查找解决方案&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/03/b1deb6d16dc6469fa889f1096eb8b364.png&#34; alt=&#34;腾讯云邮件&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows端Tomcat部署Java-Web程序中文乱码解决</title>
+      <link>/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Thu, 19 Mar 2020 14:23:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/windows%E7%AB%AFjava-web%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</guid>
+      <description>&lt;p&gt;在Windows上Tomcat部署Java Web程序进行功能测试时，出现了部分中文乱码的问题&lt;/p&gt;
+&lt;p&gt;可能是机器默认编码为GBK，而程序设置为UTF-8所致&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>微信公众号开发模式-day2</title>
+      <link>/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/</link>
+      <pubDate>Thu, 12 Mar 2020 23:07:48 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day2/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;需求：开通一订阅号，通过点击下方菜单或者输入关键字，返回指定信息。&lt;/p&gt;
+&lt;p&gt;暂时设想的是快速查询&lt;strong&gt;黄金9999&lt;/strong&gt;实时价格&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以&lt;a href=&#34;https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html&#34;&gt;微信官方文档·公众号&lt;/a&gt;为开发文档&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目标：输入关键字“黄金”返回特定内容&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用花生壳进行公众号本地开发调试</title>
+      <link>/post/%E8%AE%B0/%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E8%BF%9B%E8%A1%8C%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Wed, 11 Mar 2020 20:52:36 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E8%BF%9B%E8%A1%8C%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;每次调试都将项目打包上传至云服务器太麻烦。使用花生壳进行内网穿透，将本地ip放入白名单进行本地测试使用花生壳&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>微信公众号开发模式-day1</title>
+      <link>/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day1/</link>
+      <pubDate>Tue, 10 Mar 2020 21:37:48 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-day1/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;需求：开通一订阅号，通过点击下方菜单或者输入关键字，返回指定信息。&lt;/p&gt;
+&lt;p&gt;暂时设想的是快速查询&lt;strong&gt;黄金9999&lt;/strong&gt;实时价格&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以&lt;a href=&#34;https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html&#34;&gt;微信官方文档·公众号&lt;/a&gt;为开发文档&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考&lt;a href=&#34;https://www.cnblogs.com/gede/category/1467638.html&#34;&gt;歌德的博客&lt;/a&gt;完成Java后台代码实现&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;目标：填写服务器配置，验证服务器地址的有效性&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Maven打包将依赖放到指定位置</title>
+      <link>/post/%E8%AE%B0/maven%E6%89%93%E5%8C%85%E5%B0%86%E4%BE%9D%E8%B5%96%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 26 Feb 2020 12:59:56 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/maven%E6%89%93%E5%8C%85%E5%B0%86%E4%BE%9D%E8%B5%96%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE/</guid>
+      <description>使用命令 mvn dependency:copy-dependencies -DoutputDirectory=yourPath -DincludeScope=runtime</description>
+    </item>
+    
+    <item>
+      <title>自定义安装office</title>
+      <link>/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</link>
+      <pubDate>Thu, 02 Jan 2020 19:10:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85office/</guid>
+      <description>&lt;p&gt;不安装office全家桶，自定义要安装的组件&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

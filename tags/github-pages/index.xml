@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github pages on iNote</title>
+    <link>/tags/github-pages/</link>
+    <description>Recent content in github pages on iNote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>blog.luvnaxx.com</copyright>
+    <lastBuildDate>Fri, 22 Nov 2019 18:46:10 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在Windows平台搭建gitbook开发平台</title>
+      <link>/post/%E4%BA%AB/%E5%9C%A8windows%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BAgitbook%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0/</link>
+      <pubDate>Fri, 22 Nov 2019 18:46:10 +0800</pubDate>
+      
+      <guid>/post/%E4%BA%AB/%E5%9C%A8windows%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BAgitbook%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0/</guid>
+      <description>安装Gitbook 一：本地安装Gitbook 在本地安装Nodejs，完成之后在命令行输入npm install gitbook-cli -g。 在GitHub中创建新的仓库，设置为</description>
+    </item>
+    
+    <item>
+      <title>在Windows平台搭建hugo开发平台</title>
+      <link>/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 20 Nov 2019 17:16:10 +0800</pubDate>
+      
+      <guid>/post/%E4%BA%AB/githubpages%E6%90%AD%E5%BB%BAhugo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;在Windows平台搭建hugo开发平台，写文章上传至GitHub pages&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

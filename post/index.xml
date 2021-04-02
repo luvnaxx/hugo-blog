@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on iNote</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on iNote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>blog.luvnaxx.com</copyright>
+    <lastBuildDate>Sat, 07 Nov 2020 13:07:48 +0800</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>微信公众号开发模式-dayN</title>
+      <link>/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-dayn/</link>
+      <pubDate>Sat, 07 Nov 2020 13:07:48 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-dayn/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;需求：开通一订阅号，通过点击下方菜单或者输入关键字，返回指定信息。&lt;/p&gt;
+&lt;p&gt;暂时设想的是快速查询&lt;strong&gt;黄金9999&lt;/strong&gt;实时价格&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2020年11月5日，观察后台日志，再次发现如下错误日志。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/11/d397caf5ff144337820b5d4f56362f96.png&#34; alt=&#34;问题&#34;&gt;&lt;/p&gt;
+&lt;p&gt;搜索查下大概是tomcat版本过高的问题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>统一异常处理</title>
+      <link>/post/%E6%8A%80/spring-boot/unified-exception-handling/</link>
+      <pubDate>Tue, 15 Sep 2020 10:36:33 +0800</pubDate>
+      
+      <guid>/post/%E6%8A%80/spring-boot/unified-exception-handling/</guid>
+      <description>减少代码中各种异常判断 Controller入参参数校验 入参使用@NotNull、@NotBlank、@NotEmpty等校验注解。也可自定义</description>
+    </item>
+    
+    <item>
+      <title>宝塔面板Linux 7.4.2</title>
+      <link>/post/%E4%BA%AB/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF7.4.2/</link>
+      <pubDate>Mon, 24 Aug 2020 12:20:14 +0800</pubDate>
+      
+      <guid>/post/%E4%BA%AB/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF7.4.2/</guid>
+      <description>日，数据库被删了</description>
+    </item>
+    
+    <item>
+      <title>安装Kafka</title>
+      <link>/post/%E8%AE%B0/kafka/</link>
+      <pubDate>Fri, 07 Aug 2020 14:40:16 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/kafka/</guid>
+      <description>安装单机模式 下载kafka 解压 进入config目录，编辑server.properties 修改内容 # Licensed to the Apache Software Foundation (ASF) under one or more # contributor license agreements. See the NOTICE file distributed</description>
+    </item>
+    
+    <item>
+      <title>安装ZooKeeper</title>
+      <link>/post/%E8%AE%B0/zookeeper/</link>
+      <pubDate>Fri, 07 Aug 2020 14:30:16 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/zookeeper/</guid>
+      <description>安装单机模式 下载zookeeper 解压 进入conf目录，复制zoo_sample.cfg一份到zoo.cfg 修改内容 # The number of milliseconds of each tick tickTime=2000 # The number</description>
+    </item>
+    
+    <item>
+      <title>无重复字符的最长子串</title>
+      <link>/post/%E6%8A%80/datastructure_and_algorithm/leetcode/longest-substring-without-repeating-characters/</link>
+      <pubDate>Wed, 29 Jul 2020 11:02:09 +0800</pubDate>
+      
+      <guid>/post/%E6%8A%80/datastructure_and_algorithm/leetcode/longest-substring-without-repeating-characters/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。&lt;/p&gt;
+&lt;p&gt;示例 1:&lt;/p&gt;
+&lt;p&gt;输入: &amp;ldquo;abcabcbb&amp;rdquo;
+输出: 3 
+解释: 因为无重复字符的最长子串是 &amp;ldquo;abc&amp;rdquo;，所以其长度为 3。
+示例 2:&lt;/p&gt;
+&lt;p&gt;输入: &amp;ldquo;bbbbb&amp;rdquo;
+输出: 1
+解释: 因为无重复字符的最长子串是 &amp;ldquo;b&amp;rdquo;，所以其长度为 1。
+示例 3:&lt;/p&gt;
+&lt;p&gt;输入: &amp;ldquo;pwwkew&amp;rdquo;
+输出: 3
+解释: 因为无重复字符的最长子串是 &amp;ldquo;wke&amp;rdquo;，所以其长度为 3。
+请注意，你的答案必须是 子串 的长度，&amp;ldquo;pwke&amp;rdquo; 是一个子序列，不是子串。&lt;/p&gt;
+&lt;p&gt;来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>滑动窗口法</title>
+      <link>/post/%E6%8A%80/datastructure_and_algorithm/leetcode/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%B3%95/</link>
+      <pubDate>Tue, 28 Jul 2020 16:12:07 +0800</pubDate>
+      
+      <guid>/post/%E6%8A%80/datastructure_and_algorithm/leetcode/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%B3%95/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;原链接&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/61564531&#34;&gt;Leetcode刷题总结之滑动窗口法（尺取法）&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不是为了抄袭，怕原链接失效，复制一份&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>两数相加</title>
+      <link>/post/%E6%8A%80/datastructure_and_algorithm/leetcode/add-two-numbers/</link>
+      <pubDate>Tue, 28 Jul 2020 12:44:07 +0800</pubDate>
+      
+      <guid>/post/%E6%8A%80/datastructure_and_algorithm/leetcode/add-two-numbers/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。&lt;/p&gt;
+&lt;p&gt;如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。&lt;/p&gt;
+&lt;p&gt;您可以假设除了数字 0 之外，这两个数都不会以 0 开头。&lt;/p&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;p&gt;输入：(2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4)
+输出：7 -&amp;gt; 0 -&amp;gt; 8
+原因：342 + 465 = 807&lt;/p&gt;
+&lt;p&gt;来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/add-two-numbers
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>两数之和</title>
+      <link>/post/%E6%8A%80/datastructure_and_algorithm/leetcode/two-sum/</link>
+      <pubDate>Tue, 28 Jul 2020 12:12:07 +0800</pubDate>
+      
+      <guid>/post/%E6%8A%80/datastructure_and_algorithm/leetcode/two-sum/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。&lt;/p&gt;
+&lt;p&gt;你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。&lt;/p&gt;
+&lt;p&gt;示例:&lt;/p&gt;
+&lt;p&gt;给定 nums = [2, 7, 11, 15], target = 9&lt;/p&gt;
+&lt;p&gt;因为 nums[0] + nums&lt;a href=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/07/5f441ab547c84b0086144b20849523df.png&#34;&gt;1&lt;/a&gt; = 2 + 7 = 9
+所以返回 [0, 1]&lt;/p&gt;
+&lt;p&gt;来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/two-sum
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>腾讯云对象存储POST Object</title>
+      <link>/post/%E8%AE%B0/cos-post-object/</link>
+      <pubDate>Thu, 23 Jul 2020 11:05:02 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/cos-post-object/</guid>
+      <description>&lt;blockquote&gt;
+&lt;h2 id=&#34;功能描述&#34;&gt;功能描述&lt;/h2&gt;
+&lt;p&gt;POST Object 接口请求可以将本地不超过5GB的对象（Object）以网页表单（HTML Form）的形式上传至指定存储桶中。该 API 的请求者需要对存储桶有写入权限。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>steam一键领取免费游戏（喜加N）</title>
+      <link>/post/%E4%BA%AB/steam%E4%B8%80%E9%94%AE%E9%A2%86%E5%8F%96%E5%85%8D%E8%B4%B9%E6%B8%B8%E6%88%8F/</link>
+      <pubDate>Wed, 15 Jul 2020 19:22:10 +0800</pubDate>
+      
+      <guid>/post/%E4%BA%AB/steam%E4%B8%80%E9%94%AE%E9%A2%86%E5%8F%96%E5%85%8D%E8%B4%B9%E6%B8%B8%E6%88%8F/</guid>
+      <description>1.首先先登录网页steam账号 2.然后打开https://store.steampowered.com/account/licenses/</description>
+    </item>
+    
+    <item>
+      <title>你的“开始”菜单出现了问题，我们将尝试在下一次登录时修复它</title>
+      <link>/post/%E4%BA%AB/%E4%BD%A0%E7%9A%84%E5%BC%80%E5%A7%8B%E8%8F%9C%E5%8D%95%E5%87%BA%E7%8E%B0%E4%BA%86%E9%97%AE%E9%A2%98%E6%88%91%E4%BB%AC%E5%B0%86%E5%B0%9D%E8%AF%95%E5%9C%A8%E4%B8%8B%E4%B8%80%E6%AC%A1%E7%99%BB%E5%BD%95%E6%97%B6%E4%BF%AE%E5%A4%8D%E5%AE%83/</link>
+      <pubDate>Sat, 20 Jun 2020 16:38:14 +0800</pubDate>
+      
+      <guid>/post/%E4%BA%AB/%E4%BD%A0%E7%9A%84%E5%BC%80%E5%A7%8B%E8%8F%9C%E5%8D%95%E5%87%BA%E7%8E%B0%E4%BA%86%E9%97%AE%E9%A2%98%E6%88%91%E4%BB%AC%E5%B0%86%E5%B0%9D%E8%AF%95%E5%9C%A8%E4%B8%8B%E4%B8%80%E6%AC%A1%E7%99%BB%E5%BD%95%E6%97%B6%E4%BF%AE%E5%A4%8D%E5%AE%83/</guid>
+      <description>&lt;p&gt;电脑突然出现了问题，显示&lt;strong&gt;你的“开始”菜单出现了问题，我们将尝试在下一次登录时修复它&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;可我并没有不正常关机，User Manager也正常&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过在知乎上查到解决方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/06/e87879ebfc66470c8df193e026249d59.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Docker安装Nacos1.3.0,并配置MySQL8做数据持久化</title>
+      <link>/post/%E8%AE%B0/docker-nacos/</link>
+      <pubDate>Wed, 17 Jun 2020 16:34:34 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/docker-nacos/</guid>
+      <description>docker下安装Nacos-server，并配置MySQL做数据持久化 nacos-server:1.3.0 MySQL8.0.20 网上随便一搜，相关版本的有好多。但大部分都是抄袭的，根本对不上 拉</description>
+    </item>
+    
+    <item>
+      <title>MySQL8基本操作</title>
+      <link>/post/%E8%AE%B0/mysql8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Fri, 12 Jun 2020 11:16:30 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/mysql8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
+      <description>&lt;p&gt;创建新用户并授权&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MySQL 8.0.20&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Docker命令</title>
+      <link>/post/%E8%AE%B0/docker/</link>
+      <pubDate>Fri, 12 Jun 2020 10:55:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/docker/</guid>
+      <description>&lt;h2 id=&#34;docker-run-创建一个新的容器并运行一个命令&#34;&gt;**docker run ：**创建一个新的容器并运行一个命令&lt;/h2&gt;
+&lt;p&gt;来自&lt;a href=&#34;https://www.runoob.com/docker/docker-run-command.html&#34;&gt;菜鸟教程&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Docker中安装各种软件</title>
+      <link>/post/%E8%AE%B0/docker-softwares/</link>
+      <pubDate>Fri, 12 Jun 2020 09:10:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/docker-softwares/</guid>
+      <description>&lt;p&gt;在CentOS下安装各种软件镜像。假设已经安装完毕docker环境。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;安装方式:查看Docker&lt;a href=&#34;https://docs.docker.com/engine/install/centos/&#34;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;设置阿里云镜像加速&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;lt;&amp;lt;-&amp;#39;EOF&amp;#39;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://xxxxx.mirror.aliyuncs.com&amp;#34;]
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;EOF&lt;/span&gt;
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;CentOS8安装Docker：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载docker-ce的repo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;curl https://download.docker.com/linux/centos/docker-ce.repo -o /etc/yum.repos.d/docker-ce.repo
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装依赖（这是相比centos7的关键步骤）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;yum install https://download.docker.com/linux/fedora/30/x86_64/stable/Packages/containerd.io-1.2.6-3.3.fc30.x86_64.rpm
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;安装docker-ce&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;yum install docker-ce -y
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;启动docker&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;systemctl start docker
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>排序算法</title>
+      <link>/post/%E6%8A%80/datastructure_and_algorithm/sort/</link>
+      <pubDate>Mon, 01 Jun 2020 12:44:07 +0800</pubDate>
+      
+      <guid>/post/%E6%8A%80/datastructure_and_algorithm/sort/</guid>
+      <description>&lt;h1 id=&#34;冒泡排序选择排序插入排序希尔排序快速排序归并排序基数排序&#34;&gt;冒泡排序/选择排序/插入排序/希尔排序/快速排序/归并排序/基数排序&lt;/h1&gt;</description>
+    </item>
+    
+    <item>
+      <title>JDK8:函数式编程</title>
+      <link>/post/%E6%8A%80/lambda/</link>
+      <pubDate>Thu, 28 May 2020 15:44:07 +0800</pubDate>
+      
+      <guid>/post/%E6%8A%80/lambda/</guid>
+      <description>&lt;h2 id=&#34;stream&#34;&gt;stream&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用LongStream输出斐波那契数列&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Base64与文件的相关操作</title>
+      <link>/post/%E8%AE%B0/base64%E4%B8%8E%E6%96%87%E4%BB%B6%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Tue, 12 May 2020 19:10:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/base64%E4%B8%8E%E6%96%87%E4%BB%B6%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/</guid>
+      <description>Base64与文件的相关操作 使用java.util.Base64.Decoder和java.util.Base64.Encoder，替换su</description>
+    </item>
+    
+    <item>
+      <title>Windows自动同步一个文件夹到另一目录</title>
+      <link>/post/%E8%AE%B0/windows%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%88%B0%E5%8F%A6%E4%B8%80%E7%9B%AE%E5%BD%95/</link>
+      <pubDate>Tue, 12 May 2020 13:13:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/windows%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%88%B0%E5%8F%A6%E4%B8%80%E7%9B%AE%E5%BD%95/</guid>
+      <description>&amp;lt;纪念2008年汶川地震12周年&amp;gt; Windows系统下实现两个文件夹自动同步问题（mklink命令的使用） 将C:\Users\w</description>
+    </item>
+    
+  </channel>
+</rss>

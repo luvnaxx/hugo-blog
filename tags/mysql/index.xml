@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysql on iNote</title>
+    <link>/tags/mysql/</link>
+    <description>Recent content in mysql on iNote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>blog.luvnaxx.com</copyright>
+    <lastBuildDate>Fri, 12 Jun 2020 11:16:30 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MySQL8基本操作</title>
+      <link>/post/%E8%AE%B0/mysql8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Fri, 12 Jun 2020 11:16:30 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/mysql8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
+      <description>&lt;p&gt;创建新用户并授权&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MySQL 8.0.20&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>查询没有主键的MySQL表</title>
+      <link>/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</link>
+      <pubDate>Thu, 23 Apr 2020 19:33:40 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/</guid>
+      <description>&lt;p&gt;MySQL查找所有数据库中没有主键的表&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

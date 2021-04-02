@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zookeeper on iNote</title>
+    <link>/tags/zookeeper/</link>
+    <description>Recent content in zookeeper on iNote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>blog.luvnaxx.com</copyright>
+    <lastBuildDate>Fri, 07 Aug 2020 14:30:16 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/zookeeper/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>安装ZooKeeper</title>
+      <link>/post/%E8%AE%B0/zookeeper/</link>
+      <pubDate>Fri, 07 Aug 2020 14:30:16 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/zookeeper/</guid>
+      <description>安装单机模式 下载zookeeper 解压 进入conf目录，复制zoo_sample.cfg一份到zoo.cfg 修改内容 # The number of milliseconds of each tick tickTime=2000 # The number</description>
+    </item>
+    
+  </channel>
+</rss>

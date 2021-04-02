@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>环境变量 on iNote</title>
+    <link>/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
+    <description>Recent content in 环境变量 on iNote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>blog.luvnaxx.com</copyright>
+    <lastBuildDate>Mon, 25 Nov 2019 14:58:07 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>解决Linux下环境变量失效问题</title>
+      <link>/post/%E8%AE%B0/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 25 Nov 2019 14:58:07 +0800</pubDate>
+      
+      <guid>/post/%E8%AE%B0/%E8%A7%A3%E5%86%B3linux%E4%B8%8B%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</guid>
+      <description>很多时候，我们对环境变量的配置不是很熟悉的时候，使用source ~/.bashrc后很容易出现各种xx: command not found问题，下面给出一种解决</description>
+    </item>
+    
+  </channel>
+</rss>
