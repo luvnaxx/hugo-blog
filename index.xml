@@ -32,8 +32,7 @@
       
       <guid>/post/%E6%8A%80/spring-boot/spring-aop-%E6%8B%A6%E6%88%AA%E6%8C%87%E5%AE%9A%E6%B3%A8%E8%A7%A3%E6%A0%87%E8%AF%86%E7%9A%84%E7%B1%BB%E6%88%96%E6%96%B9%E6%B3%95/</guid>
       
-        <description>&lt;p&gt;减少代码中各种异常判断&lt;/p&gt;
-&lt;p&gt;拦截指定的方法进行日志记录&lt;/p&gt;
+        <description>&lt;p&gt;拦截指定的方法进行日志记录&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2021/04/b18a35c2085b4800ad1de9a6eccfb6be.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2021/04/760eab94717e46d69f43e515132238b6.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;

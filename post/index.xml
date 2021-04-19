@@ -18,7 +18,7 @@
       <pubDate>Sun, 18 Apr 2021 14:36:33 +0800</pubDate>
       
       <guid>/post/%E6%8A%80/spring-boot/spring-aop-%E6%8B%A6%E6%88%AA%E6%8C%87%E5%AE%9A%E6%B3%A8%E8%A7%A3%E6%A0%87%E8%AF%86%E7%9A%84%E7%B1%BB%E6%88%96%E6%96%B9%E6%B3%95/</guid>
-      <description>减少代码中各种异常判断 拦截指定的方法进行日志记录</description>
+      <description>拦截指定的方法进行日志记录</description>
     </item>
     
     <item>

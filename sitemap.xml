@@ -44,14 +44,14 @@
   </url>
   
   <url>
-    <loc>/tags/spring-boot/</loc>
+    <loc>/categories/spring-boot/</loc>
     <lastmod>2021-04-18T14:36:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>/categories/spring-boot/</loc>
+    <loc>/tags/spring-boot/</loc>
     <lastmod>2021-04-18T14:36:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
