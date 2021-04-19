@@ -38,7 +38,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E6%8A%80/datastructure_and_algorithm/leetcode/longest-substring-without-repeating-characters/" />
@@ -460,16 +460,16 @@
 链接：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
-<h4 id="第一版本">第一版本</h4>
+<h4 id="heading">第一版本</h4>
 <p>既然判断最长子串，那就从最长开始，判断每个子串中是否有重复字符，有的话查找下一个同长度子字符串。全都没有，找短一位的子字符串。
 依次循环。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
 
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lengthOfLongestSubstring</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">int</span> length <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span>
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> length<span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">;</span> i<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">+</span> i <span style="color:#f92672">&lt;=</span> length<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>noRepeat<span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>j<span style="color:#f92672">,</span> j <span style="color:#f92672">+</span> i<span style="color:#f92672">)))</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> length <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> length<span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">;</span> i<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">+</span> i <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> length<span style="color:#f92672">;</span> j<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span>noRepeat<span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>j<span style="color:#f92672">,</span> j <span style="color:#f92672">+</span> i<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
           <span style="color:#66d9ef">return</span> i<span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
       <span style="color:#f92672">}</span>
@@ -484,12 +484,12 @@
 </span><span style="color:#75715e">   * @return 是否包含重复字符，true:不重复;false:重复
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">noRepeat</span><span style="color:#f92672">(</span>String str<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> chars <span style="color:#f92672">=</span> str<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">();</span>
-    Set<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;</span> characterSet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;();</span>
+    <span style="color:#66d9ef">char</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> chars <span style="color:#f92672">=</span> str<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    Set<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;</span> characterSet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> aChar <span style="color:#f92672">:</span> chars<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      characterSet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>aChar<span style="color:#f92672">);</span>
+      characterSet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>aChar<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">return</span> characterSet<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> str<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">return</span> characterSet<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> str<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">// public static void main(String[] args) {
@@ -505,94 +505,94 @@
 <p>思想出了大问题，判断字符串中是否有重复字符，不必等待全部字符放入Set，在中间就可以判断
 优化</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">noRepeat</span><span style="color:#f92672">(</span>String str<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> chars <span style="color:#f92672">=</span> str<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">();</span>
-    Set<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;</span> characterSet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;();</span>
+    <span style="color:#66d9ef">char</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> chars <span style="color:#f92672">=</span> str<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    Set<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;</span> characterSet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> aChar <span style="color:#f92672">:</span> chars<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>characterSet<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>aChar<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>characterSet<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>aChar<span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      characterSet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>aChar<span style="color:#f92672">);</span>
+      characterSet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>aChar<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
-</code></pre></div><h4 id="第二版本">第二版本</h4>
+</code></pre></div><h4 id="heading1">第二版本</h4>
 <p>之前一直想的是从最大子字符串依次判断，有重复的就进行下一个同长度子字符串或者再小一位的子字符串。困在里面了</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
 
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lengthOfLongestSubstring</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>s <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">&lt;</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>s <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">&lt;</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> chars <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">char</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> chars <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">int</span> size <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> chars<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-      Set<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;</span> set <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;();</span>
-      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> chars<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>set<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>chars<span style="color:#f92672">[</span>j<span style="color:#f92672">]))</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> chars<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      Set<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;</span> set <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> chars<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> j<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>set<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>chars<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
           <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
-        set<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>chars<span style="color:#f92672">[</span>j<span style="color:#f92672">]);</span>
-        size <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>set<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(),</span> size<span style="color:#f92672">);</span>
+        set<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>chars<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        size <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>set<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">,</span> size<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> size<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Solution solution <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Solution<span style="color:#f92672">();</span>
-    <span style="color:#66d9ef">int</span> length <span style="color:#f92672">=</span> solution<span style="color:#f92672">.</span><span style="color:#a6e22e">lengthOfLongestSubstring</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;pwwkew&#34;</span><span style="color:#f92672">);</span>
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>length<span style="color:#f92672">);</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Solution solution <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Solution<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> length <span style="color:#f92672">=</span> solution<span style="color:#f92672">.</span><span style="color:#a6e22e">lengthOfLongestSubstring</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;pwwkew&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>length<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
   <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p><img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/07/68f6bdb618f4498984f0f8dfcfe4c8b7.png" alt=""></p>
 <p>还需优化</p>
-<h4 id="第三版本">第三版本</h4>
+<h4 id="heading2">第三版本</h4>
 <p>更好的方法是滑动窗口法。今天第一次听说接触。查找网上的例子，请看<a href="/post/%E6%8A%80/datastructure_and_algorithm/leetcode/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%B3%95">滑动窗口法</a></p>
 <p>代码实现</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
 
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lengthOfLongestSubstring</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-    <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> chars <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">char</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> chars <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">int</span> size <span style="color:#f92672">=</span> chars<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">int</span> L <span style="color:#f92672">=</span> 0<span style="color:#f92672">,</span> R <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
     <span style="color:#66d9ef">int</span> maxLength <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-    Set<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;</span> set <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;&gt;();</span>
+    Set<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;</span> set <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
     <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>R <span style="color:#f92672">&lt;</span> size<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        R <span style="color:#f92672">+=</span> 1<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>R <span style="color:#f92672">==</span> size<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        R <span style="color:#f92672">+</span><span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>R <span style="color:#f92672">=</span><span style="color:#f92672">=</span> size<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
           <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>set<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>chars<span style="color:#f92672">[</span>R<span style="color:#f92672">]))</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>set<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>chars<span style="color:#f92672">[</span>R<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
           <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
-        maxLength <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>maxLength<span style="color:#f92672">,</span> R <span style="color:#f92672">-</span> L <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
-        set<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>chars<span style="color:#f92672">[</span>R<span style="color:#f92672">]);</span>
+        maxLength <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>maxLength<span style="color:#f92672">,</span> R <span style="color:#f92672">-</span> L <span style="color:#f92672">+</span> 1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        set<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>chars<span style="color:#f92672">[</span>R<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>R <span style="color:#f92672">==</span> size<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>R <span style="color:#f92672">=</span><span style="color:#f92672">=</span> size<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
       <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>L <span style="color:#f92672">&lt;</span> R<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>chars<span style="color:#f92672">[</span>L<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> chars<span style="color:#f92672">[</span>R<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-          L <span style="color:#f92672">+=</span> 1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>chars<span style="color:#f92672">[</span>L<span style="color:#f92672">]</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> chars<span style="color:#f92672">[</span>R<span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+          L <span style="color:#f92672">+</span><span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
           <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
-        set<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>chars<span style="color:#f92672">[</span>L<span style="color:#f92672">]);</span>
-        L <span style="color:#f92672">+=</span> 1<span style="color:#f92672">;</span>
+        set<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>chars<span style="color:#f92672">[</span>L<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        L <span style="color:#f92672">+</span><span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> maxLength<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
-  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Solution solution <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Solution<span style="color:#f92672">();</span>
-    <span style="color:#66d9ef">int</span> length <span style="color:#f92672">=</span> solution<span style="color:#f92672">.</span><span style="color:#a6e22e">lengthOfLongestSubstring</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;pwwkew&#34;</span><span style="color:#f92672">);</span>
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>length<span style="color:#f92672">);</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Solution solution <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Solution<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> length <span style="color:#f92672">=</span> solution<span style="color:#f92672">.</span><span style="color:#a6e22e">lengthOfLongestSubstring</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;pwwkew&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>length<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
   <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
@@ -692,7 +692,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

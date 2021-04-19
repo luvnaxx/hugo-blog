@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-1/" />
@@ -373,8 +373,8 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#说明">说明</a></li>
-    <li><a href="#正文">正文</a>
+    <li><a href="#heading">说明</a></li>
+    <li><a href="#heading1">正文</a>
       <ul>
         <li></li>
       </ul>
@@ -386,16 +386,16 @@
 
     
     <div class="post-content">
-      <h2 id="说明">说明</h2>
+      <h2 id="heading">说明</h2>
 <p>配置文件默认读取的是<strong>application.properties</strong>，如需读取其他的配置文件，需要使用<code>@PropertySource</code>注解。假设有一个配置文件<strong>values.properties</strong>在<strong>resources</strong>目录下。</p>
 <p>内容如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">China.location=Asia
 </code></pre></div><p>在需要调用值的类上添加<code>@PropertySource(&quot;classpath:values.properties&quot;)</code></p>
-<h2 id="正文">正文</h2>
+<h2 id="heading1">正文</h2>
 <p>新建<code>TestController.java</code>作为测试。</p>
 <ul>
 <li>
-<h4 id="使用value注解">使用<code>@Value()</code>注解</h4>
+<h4 id="value">使用<code>@Value()</code>注解</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
 <span style="color:#a6e22e">@PropertySource</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;classpath:values.properties&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestController</span> <span style="color:#f92672">{</span>
@@ -404,14 +404,14 @@
     <span style="color:#66d9ef">private</span> String location<span style="color:#f92672">;</span>
    
     <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">test</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">test</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">return</span> location<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>启动项目，访问<a href="http://localhost:8080/">http://localhost:8080/</a>，出现“China”，说明读取数据成功。</p>
 </li>
 <li>
-<h4 id="使用environment">使用<code>Environment</code></h4>
+<h4 id="environment">使用<code>Environment</code></h4>
 <p>同一个类中，将代码修改如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
 <span style="color:#a6e22e">@PropertySource</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;classpath:values.properties&#34;</span><span style="color:#f92672">)</span>
@@ -428,9 +428,9 @@
     <span style="color:#f92672">}</span>
    
     <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">test</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>location<span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>environment<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;China.location&#34;</span><span style="color:#f92672">));</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">test</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>location<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>environment<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;China.location&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;success&#34;</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
@@ -440,14 +440,14 @@ Asia
 </code></pre><p>说明读取数据成功。</p>
 </li>
 <li>
-<h4 id="使用configurationproperties注解">使用<code>@ConfigurationProperties</code>注解</h4>
+<h4 id="configurationproperties">使用<code>@ConfigurationProperties</code>注解</h4>
 <p>如果有较多同类型内容，使用<strong>properties</strong>作为配置文件，看起来是不够清晰的，在<strong>resources</strong>目录下新建<strong>values.yml</strong>，内容如下：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">person</span>: 
-  <span style="color:#66d9ef">name</span>: 张三
-  <span style="color:#66d9ef">age</span>: <span style="color:#ae81ff">24</span>
-  <span style="color:#66d9ef">gender</span>: male
-  <span style="color:#66d9ef">nationality</span>: China
-  <span style="color:#66d9ef">hobby</span>: love
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">person: 
+  name: 张三
+  age: <span style="color:#ae81ff">24</span>
+  gender: male
+  nationality: China
+  hobby: love
 </code></pre></div><p>变量较多时，使用上述所述的两种方法工作量会变得比较大，这时候我们通常使用基于类型安全的配置方式，将<strong>properties</strong>属性和一个<strong>Bean</strong>关联在一起，即使用注解<code>@ConfigurationProperties</code>读取配置文件数据。</p>
 <p>创建<code>Person.java</code>，内容如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Component</span>
@@ -460,7 +460,7 @@ Asia
     <span style="color:#66d9ef">private</span> String nationality<span style="color:#f92672">;</span>
     <span style="color:#66d9ef">private</span> String hobby<span style="color:#f92672">;</span>
    
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">return</span> name<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
    
@@ -468,7 +468,7 @@ Asia
         <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
    
-    <span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">getAge</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">getAge</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">return</span> age<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
    
@@ -476,7 +476,7 @@ Asia
         <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> age<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
    
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getGender</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getGender</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">return</span> gender<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
    
@@ -484,7 +484,7 @@ Asia
         <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">gender</span> <span style="color:#f92672">=</span> gender<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
    
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getNationality</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getNationality</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">return</span> nationality<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
    
@@ -492,7 +492,7 @@ Asia
         <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">nationality</span> <span style="color:#f92672">=</span> nationality<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
    
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getHobby</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getHobby</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">return</span> hobby<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
    
@@ -501,7 +501,7 @@ Asia
     <span style="color:#f92672">}</span>
    
     <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Person{&#34;</span> <span style="color:#f92672">+</span>
                 <span style="color:#e6db74">&#34;name=&#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
                 <span style="color:#e6db74">&#34;, age=&#34;</span> <span style="color:#f92672">+</span> age <span style="color:#f92672">+</span>
@@ -513,10 +513,10 @@ Asia
 <span style="color:#f92672">}</span>
 </code></pre></div><p>这里也是可以使用<strong>Lombok</strong>插件的。</p>
 <p>若要使用<code>@ConfigurationProperties</code>，需要添加依赖。修改<strong>pom.xml</strong>，增加</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-configuration-processor<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;optional&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-configuration-processor<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;optional</span><span style="color:#f92672">&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><p>继续修改<code>TestController.java</code>，注入<strong>Person</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
@@ -537,10 +537,10 @@ Asia
     <span style="color:#f92672">}</span>
    
     <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">test</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>location<span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>environment<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;China.location&#34;</span><span style="color:#f92672">));</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>person<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">test</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>location<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>environment<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;China.location&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>person<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;success&#34;</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
@@ -640,7 +640,7 @@ Asia
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E6%8A%80/spring-boot/conditiononproperty%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8/" />
@@ -397,7 +397,7 @@ Spring Boot通过**@ConditionalOnProperty**来控制**Configuration**是否生�
 <p><strong>DemoService.java</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">DemoService</span> <span style="color:#f92672">{</span>
 
-  String <span style="color:#a6e22e">getName</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">);</span>
+  String <span style="color:#a6e22e">getName</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p><strong>DemoServiceImpl1.java</strong></p>
 <pre><code>@Service
@@ -419,7 +419,7 @@ public class DemoServiceImpl2 implements DemoService {
     return name + &quot;实现2&quot;;
   }
 }
-</code></pre><h4 id="配置文件">配置文件</h4>
+</code></pre><h4 id="heading">配置文件</h4>
 <p><strong>application.properties</strong></p>
 <pre><code class="language-properties" data-lang="properties">configuration.read=one #two
 </code></pre><h4 id="controller">Controller</h4>
@@ -432,7 +432,7 @@ public class DemoServiceImpl2 implements DemoService {
 
     <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/test&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">demo</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@RequestParam</span> String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> demoService<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> demoService<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">(</span>name<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>通过配置属性为one/two来使用不同的实现</p>
@@ -531,7 +531,7 @@ public class DemoServiceImpl2 implements DemoService {
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

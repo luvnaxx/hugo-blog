@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>blog.luvnaxx.com</copyright>
-    <lastBuildDate>Tue, 15 Sep 2020 10:36:33 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 18 Apr 2021 14:36:33 +0800</lastBuildDate>
     
 	<atom:link href="/categories/%E6%8A%80/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring AOP 拦截指定注解标识的类或方法</title>
+      <link>/post/%E6%8A%80/spring-boot/spring-aop-%E6%8B%A6%E6%88%AA%E6%8C%87%E5%AE%9A%E6%B3%A8%E8%A7%A3%E6%A0%87%E8%AF%86%E7%9A%84%E7%B1%BB%E6%88%96%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 18 Apr 2021 14:36:33 +0800</pubDate>
+      
+      <guid>/post/%E6%8A%80/spring-boot/spring-aop-%E6%8B%A6%E6%88%AA%E6%8C%87%E5%AE%9A%E6%B3%A8%E8%A7%A3%E6%A0%87%E8%AF%86%E7%9A%84%E7%B1%BB%E6%88%96%E6%96%B9%E6%B3%95/</guid>
+      <description>减少代码中各种异常判断 拦截指定的方法进行日志记录</description>
+    </item>
     
     <item>
       <title>统一异常处理</title>
@@ -106,7 +115,7 @@
       <pubDate>Mon, 01 Jun 2020 12:44:07 +0800</pubDate>
       
       <guid>/post/%E6%8A%80/datastructure_and_algorithm/sort/</guid>
-      <description>&lt;h1 id=&#34;冒泡排序选择排序插入排序希尔排序快速排序归并排序基数排序&#34;&gt;冒泡排序/选择排序/插入排序/希尔排序/快速排序/归并排序/基数排序&lt;/h1&gt;</description>
+      <description>&lt;h1 id=&#34;heading&#34;&gt;冒泡排序/选择排序/插入排序/希尔排序/快速排序/归并排序/基数排序&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -156,7 +165,7 @@
       <pubDate>Mon, 13 Jan 2020 15:22:07 +0800</pubDate>
       
       <guid>/post/%E6%8A%80/%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-1/</guid>
-      <description>&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;heading&#34;&gt;说明&lt;/h2&gt;
 &lt;p&gt;配置文件默认读取的是&lt;strong&gt;application.properties&lt;/strong&gt;，如需读取其他的配置文件，需要使用&lt;code&gt;@PropertySource&lt;/code&gt;注解。假设有一个配置文件&lt;strong&gt;values.properties&lt;/strong&gt;在&lt;strong&gt;resources&lt;/strong&gt;目录下。&lt;/p&gt;</description>
     </item>
     
@@ -193,7 +202,7 @@
       <pubDate>Wed, 25 Dec 2019 14:50:08 +0800</pubDate>
       
       <guid>/post/%E6%8A%80/spring-cloud/zipkin-server/</guid>
-      <description>&lt;h2 id=&#34;加入-zipkin-server&#34;&gt;加入 Zipkin Server&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;-zipkin-server&#34;&gt;加入 Zipkin Server&lt;/h2&gt;
 &lt;p&gt;pom.xml&lt;/p&gt;</description>
     </item>
     
@@ -214,7 +223,7 @@
       <guid>/post/%E6%8A%80/spring-boot/template-engine/</guid>
       <description>&lt;hr&gt;
 &lt;h2 id=&#34;freemarker&#34;&gt;FreeMarker&lt;/h2&gt;
-&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;</description>
+&lt;h4 id=&#34;heading&#34;&gt;代码&lt;/h4&gt;</description>
     </item>
     
     <item>
@@ -233,15 +242,6 @@
       
       <guid>/post/%E6%8A%80/spring-boot/log4j2/</guid>
       <description>&lt;p&gt;Spring Boot默认使用LogBack作为日志工具，修改为Log4j2。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>[Spring Boot 2.x] 使用Druid作为项目数据源</title>
-      <link>/post/%E6%8A%80/spring-boot/druid/</link>
-      <pubDate>Sun, 22 Dec 2019 14:57:18 +0800</pubDate>
-      
-      <guid>/post/%E6%8A%80/spring-boot/druid/</guid>
-      <description>&lt;p&gt;Druid是一个JDBC组件库，包括数据库连接池、SQL Parser等组件。DruidDataSource是最好的数据库连接池。具体参见 &lt;a href=&#34;https://github.com/alibaba/druid/wiki/%E9%A6%96%E9%A1%B5&#34;&gt;alibaba/druid&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

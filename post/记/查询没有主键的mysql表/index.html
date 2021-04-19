@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E8%AE%B0/%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E4%B8%BB%E9%94%AE%E7%9A%84mysql%E8%A1%A8/" />
@@ -381,7 +381,7 @@
 	table_name,
 	<span style="color:#a6e22e">count</span>(
 		<span style="color:#66d9ef">CASE</span>
-		<span style="color:#66d9ef">WHEN</span> column_key <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;PRI&#39;</span>) <span style="color:#66d9ef">THEN</span>
+		<span style="color:#66d9ef">WHEN</span> column_key <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">PRI</span><span style="color:#e6db74">&#39;</span>) <span style="color:#66d9ef">THEN</span>
 			<span style="color:#ae81ff">1</span>
 		<span style="color:#66d9ef">ELSE</span>
 			<span style="color:#66d9ef">NULL</span>
@@ -391,14 +391,14 @@
 	information_schema. COLUMNS
 <span style="color:#66d9ef">WHERE</span>
 	table_schema <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">IN</span> (
-		<span style="color:#e6db74">&#39;test&#39;</span>,
-		<span style="color:#e6db74">&#39;sys&#39;</span>,
-		<span style="color:#e6db74">&#39;mysql&#39;</span>,
-		<span style="color:#e6db74">&#39;performance_schema&#39;</span>,
-		<span style="color:#e6db74">&#39;information_schema&#39;</span>,
-		<span style="color:#e6db74">&#39;test_slave&#39;</span>
+		<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">test</span><span style="color:#e6db74">&#39;</span>,
+		<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">sys</span><span style="color:#e6db74">&#39;</span>,
+		<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">mysql</span><span style="color:#e6db74">&#39;</span>,
+		<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">performance_schema</span><span style="color:#e6db74">&#39;</span>,
+		<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">information_schema</span><span style="color:#e6db74">&#39;</span>,
+		<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">test_slave</span><span style="color:#e6db74">&#39;</span>
 	)
-<span style="color:#66d9ef">AND</span> table_name <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;testtable&#39;</span>, <span style="color:#e6db74">&#39;test&#39;</span>)
+<span style="color:#66d9ef">AND</span> table_name <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">testtable</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">test</span><span style="color:#e6db74">&#39;</span>)
 <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
 	table_schema,
 	table_name
@@ -499,7 +499,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

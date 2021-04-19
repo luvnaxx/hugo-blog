@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mysql on iNote</title>
+    <title>MySQL on iNote</title>
     <link>/tags/mysql/</link>
-    <description>Recent content in mysql on iNote</description>
+    <description>Recent content in MySQL on iNote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>blog.luvnaxx.com</copyright>

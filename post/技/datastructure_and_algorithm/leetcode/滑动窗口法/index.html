@@ -35,7 +35,7 @@ Leetcode刷题总结之滑动窗口法（尺取法）
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E6%8A%80/datastructure_and_algorithm/leetcode/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%B3%95/" />
@@ -384,7 +384,7 @@ Leetcode刷题总结之滑动窗口法（尺取法）
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#滑动窗口法的大体框架">滑动窗口法的大体框架</a></li>
+    <li><a href="#heading">滑动窗口法的大体框架</a></li>
   </ul>
 </nav>
   </div>
@@ -397,28 +397,28 @@ Leetcode刷题总结之滑动窗口法（尺取法）
 <p><a href="https://zhuanlan.zhihu.com/p/61564531">Leetcode刷题总结之滑动窗口法（尺取法）</a></p>
 </blockquote>
 <p>不是为了抄袭，怕原链接失效，复制一份</p>
-<h2 id="滑动窗口法的大体框架">滑动窗口法的大体框架</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">初始化窗口端点</span>L<span style="color:#960050;background-color:#1e0010">，</span>R<span style="color:#960050;background-color:#1e0010">，一般</span>L为0<span style="color:#960050;background-color:#1e0010">，</span>R为1
-    <span style="color:#960050;background-color:#1e0010">初始化最优值</span>
+<h2 id="heading">滑动窗口法的大体框架</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">初</span><span style="color:#960050;background-color:#1e0010">始</span><span style="color:#960050;background-color:#1e0010">化</span><span style="color:#960050;background-color:#1e0010">窗</span><span style="color:#960050;background-color:#1e0010">口</span><span style="color:#960050;background-color:#1e0010">端</span><span style="color:#960050;background-color:#1e0010">点</span>L<span style="color:#960050;background-color:#1e0010">，</span>R<span style="color:#960050;background-color:#1e0010">，</span><span style="color:#960050;background-color:#1e0010">一</span><span style="color:#960050;background-color:#1e0010">般</span>L为0<span style="color:#960050;background-color:#1e0010">，</span>R为1
+    <span style="color:#960050;background-color:#1e0010">初</span><span style="color:#960050;background-color:#1e0010">始</span><span style="color:#960050;background-color:#1e0010">化</span><span style="color:#960050;background-color:#1e0010">最</span><span style="color:#960050;background-color:#1e0010">优</span><span style="color:#960050;background-color:#1e0010">值</span>
     <span style="color:#66d9ef">while</span> R <span style="color:#f92672">&lt;</span> len(Array):
         <span style="color:#66d9ef">while</span> R <span style="color:#f92672">&lt;</span> len(Array):
-            R <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>              <span style="color:#75715e">#移动右端点</span>
+            R <span style="color:#f92672">+</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>              <span style="color:#75715e">#移动右端点</span>
             <span style="color:#66d9ef">if</span> R <span style="color:#f92672">&lt;</span> len(Array):
-                <span style="color:#960050;background-color:#1e0010">更新状态</span>        
-            <span style="color:#66d9ef">if</span> <span style="color:#960050;background-color:#1e0010">状态满足条件</span>:
-                <span style="color:#960050;background-color:#1e0010">可选的更新最优值的位置</span>
+                <span style="color:#960050;background-color:#1e0010">更</span><span style="color:#960050;background-color:#1e0010">新</span><span style="color:#960050;background-color:#1e0010">状</span><span style="color:#960050;background-color:#1e0010">态</span>        
+            <span style="color:#66d9ef">if</span> <span style="color:#960050;background-color:#1e0010">状</span><span style="color:#960050;background-color:#1e0010">态</span><span style="color:#960050;background-color:#1e0010">满</span><span style="color:#960050;background-color:#1e0010">足</span><span style="color:#960050;background-color:#1e0010">条</span><span style="color:#960050;background-color:#1e0010">件</span>:
+                <span style="color:#960050;background-color:#1e0010">可</span><span style="color:#960050;background-color:#1e0010">选</span><span style="color:#960050;background-color:#1e0010">的</span><span style="color:#960050;background-color:#1e0010">更</span><span style="color:#960050;background-color:#1e0010">新</span><span style="color:#960050;background-color:#1e0010">最</span><span style="color:#960050;background-color:#1e0010">优</span><span style="color:#960050;background-color:#1e0010">值</span><span style="color:#960050;background-color:#1e0010">的</span><span style="color:#960050;background-color:#1e0010">位</span><span style="color:#960050;background-color:#1e0010">置</span>
                 <span style="color:#66d9ef">break</span>           <span style="color:#75715e">#一旦满足条件即跳出</span>
         <span style="color:#66d9ef">if</span> R <span style="color:#f92672">==</span> len(Array):     <span style="color:#75715e"># 若循环是由于移动到数组末尾结束，则停止整个程序。因为之后已经不再有可能的解</span>
             <span style="color:#66d9ef">break</span>
         <span style="color:#66d9ef">while</span> L <span style="color:#f92672">&lt;</span> R:
-            <span style="color:#960050;background-color:#1e0010">更新状态</span>    <span style="color:#75715e"># 移动左端点，需要更新状态</span>
-            L <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#960050;background-color:#1e0010">状态满足条件：</span>
-                <span style="color:#960050;background-color:#1e0010">可选的更新最优值的位置</span>
+            <span style="color:#960050;background-color:#1e0010">更</span><span style="color:#960050;background-color:#1e0010">新</span><span style="color:#960050;background-color:#1e0010">状</span><span style="color:#960050;background-color:#1e0010">态</span>    <span style="color:#75715e"># 移动左端点，需要更新状态</span>
+            L <span style="color:#f92672">+</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#960050;background-color:#1e0010">状</span><span style="color:#960050;background-color:#1e0010">态</span><span style="color:#960050;background-color:#1e0010">满</span><span style="color:#960050;background-color:#1e0010">足</span><span style="color:#960050;background-color:#1e0010">条</span><span style="color:#960050;background-color:#1e0010">件</span><span style="color:#960050;background-color:#1e0010">：</span>
+                <span style="color:#960050;background-color:#1e0010">可</span><span style="color:#960050;background-color:#1e0010">选</span><span style="color:#960050;background-color:#1e0010">的</span><span style="color:#960050;background-color:#1e0010">更</span><span style="color:#960050;background-color:#1e0010">新</span><span style="color:#960050;background-color:#1e0010">最</span><span style="color:#960050;background-color:#1e0010">优</span><span style="color:#960050;background-color:#1e0010">值</span><span style="color:#960050;background-color:#1e0010">的</span><span style="color:#960050;background-color:#1e0010">位</span><span style="color:#960050;background-color:#1e0010">置</span>
             <span style="color:#66d9ef">else</span><span style="color:#960050;background-color:#1e0010">：</span>  <span style="color:#75715e"># 一旦窗口所在区间不再满足条件即跳出，去移动右端点</span>
                 <span style="color:#66d9ef">break</span>
-        <span style="color:#960050;background-color:#1e0010">可选的对于</span>L<span style="color:#960050;background-color:#1e0010">，</span>R端点的后续处理
-    <span style="color:#66d9ef">return</span> <span style="color:#960050;background-color:#1e0010">最优值</span>
+        <span style="color:#960050;background-color:#1e0010">可</span><span style="color:#960050;background-color:#1e0010">选</span><span style="color:#960050;background-color:#1e0010">的</span><span style="color:#960050;background-color:#1e0010">对</span><span style="color:#960050;background-color:#1e0010">于</span>L<span style="color:#960050;background-color:#1e0010">，</span>R端点的后续处理
+    <span style="color:#66d9ef">return</span> <span style="color:#960050;background-color:#1e0010">最</span><span style="color:#960050;background-color:#1e0010">优</span><span style="color:#960050;background-color:#1e0010">值</span>
 </code></pre></div>
     </div>
 
@@ -515,7 +515,7 @@ Leetcode刷题总结之滑动窗口法（尺取法）
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

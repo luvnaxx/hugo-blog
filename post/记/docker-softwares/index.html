@@ -36,7 +36,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E8%AE%B0/docker-softwares/" />
@@ -139,7 +139,7 @@ systemctl start docker
 ">
 <meta itemprop="datePublished" content="2020-06-12T09:10:40&#43;08:00" />
 <meta itemprop="dateModified" content="2020-06-12T09:10:40&#43;08:00" />
-<meta itemprop="wordCount" content="871">
+<meta itemprop="wordCount" content="875">
 
 
 
@@ -546,18 +546,20 @@ docker pull mysql       <span style="color:#75715e"># 拉取最新版mysql镜像
 </ul>
 <h4 id="redis">Redis</h4>
 <p>拉取<a href="https://hub.docker.com/_/redis">官方镜像</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull redis:5.0.9
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull redis:6.0.9
 </code></pre></div><p>创建配置文件<code>vim /data/docker/redis/conf/redis.conf</code></p>
 <pre><code class="language-conf" data-lang="conf"># Redis configuration file example.
 requirepass GetOutBadGuys
 maxclients 10000
 
 bind 0.0.0.0
-</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -d --name redis -p 6379:6379 <span style="color:#ae81ff">\
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -d --name redis <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-p 6379:6379 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>--restart<span style="color:#f92672">=</span>always <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>-v /data/docker/redis/conf/redis.conf:/etc/redis/redis.conf <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>-v /data/docker/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>-v /data/docker/redis/data:/data <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>redis:5.0.9 redis-server /etc/redis/redis.conf
+</span><span style="color:#ae81ff"></span>redis:6.0.9 redis-server /usr/local/etc/redis/redis.conf <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--appendonly yes
 </code></pre></div><h4 id="elasticsearch">ElasticSearch</h4>
 <p>拉取<a href="https://hub.docker.com/_/elasticsearch">官方镜像</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull elasticsearch:7.9.3
@@ -609,7 +611,7 @@ Likely root cause: java.nio.file.AccessDeniedException: /usr/share/elasticsearch
 <p>进入<code>/data/docker/</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chmod -R <span style="color:#ae81ff">777</span> elasticsearch/
 </code></pre></div><p>重启</p>
-<h6 id="安装ik中文分词器">安装ik中文分词器</h6>
+<h6 id="ik">安装ik中文分词器</h6>
 <p>将插件解压到plugins目录下，重启</p>
 <p>自定义扩展词</p>
 <p>修改ik分词器配置<code>config/IKAnalyzer.cfg.xml</code></p>
@@ -627,7 +629,7 @@ Likely root cause: java.nio.file.AccessDeniedException: /usr/share/elasticsearch
 	&lt;!-- &lt;entry key=&quot;remote_ext_stopwords&quot;&gt;words_location&lt;/entry&gt; --&gt;
 &lt;/properties&gt;
 </code></pre><p>重启ES</p>
-<h4 id="安装kibana">安装Kibana</h4>
+<h4 id="kibana">安装Kibana</h4>
 <p>拉取<a href="https://hub.docker.com/_/kibana">官方镜像</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull kibana:7.9.3
 </code></pre></div><p>创建目录</p>
@@ -738,7 +740,7 @@ monitoring.ui.container.elasticsearch.enabled: true
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E8%AE%B0/docker/" />
@@ -373,12 +373,12 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#docker-run-创建一个新的容器并运行一个命令">**docker run ：**创建一个新的容器并运行一个命令</a>
+    <li><a href="#docker-run-">**docker run ：**创建一个新的容器并运行一个命令</a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#其他命令">其他命令</a></li>
+    <li><a href="#heading2">其他命令</a></li>
   </ul>
 </nav>
   </div>
@@ -386,9 +386,9 @@
 
     
     <div class="post-content">
-      <h2 id="docker-run-创建一个新的容器并运行一个命令">**docker run ：**创建一个新的容器并运行一个命令</h2>
+      <h2 id="docker-run-">**docker run ：**创建一个新的容器并运行一个命令</h2>
 <p>来自<a href="https://www.runoob.com/docker/docker-run-command.html">菜鸟教程</a></p>
-<h4 id="语法">语法</h4>
+<h4 id="heading">语法</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> IMAGE <span style="color:#f92672">[</span>COMMAND<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>ARG...<span style="color:#f92672">]</span>
 </code></pre></div><p>OPTIONS说明：</p>
 <ul>
@@ -411,7 +411,7 @@
 <li><strong>&ndash;expose=[]:</strong> 开放一个端口或一组端口；</li>
 <li><strong>&ndash;volume , -v:</strong> 绑定一个卷</li>
 </ul>
-<h4 id="实例">实例</h4>
+<h4 id="heading1">实例</h4>
 <p>使用docker镜像nginx:latest以后台模式启动一个容器,并将容器命名为mynginx。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run --name mynginx -d nginx:latest
 </code></pre></div><p>使用镜像nginx:latest以后台模式启动一个容器,并将容器的80端口映射到主机随机端口。</p>
@@ -423,7 +423,7 @@
 </code></pre></div><p>使用镜像nginx:latest以交互模式启动一个容器,在容器内执行/bin/bash命令。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">runoob@runoob:~$ docker run -it nginx:latest /bin/bash
 root@b8573233d675:/# 
-</code></pre></div><h2 id="其他命令">其他命令</h2>
+</code></pre></div><h2 id="heading2">其他命令</h2>
 <ol>
 <li>显示所有容器IP地址：</li>
 </ol>
@@ -523,7 +523,7 @@ root@b8573233d675:/#
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

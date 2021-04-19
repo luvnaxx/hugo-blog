@@ -19,7 +19,7 @@
       
       <guid>/post/%E8%AE%B0/cos-post-object/</guid>
       <description>&lt;blockquote&gt;
-&lt;h2 id=&#34;功能描述&#34;&gt;功能描述&lt;/h2&gt;
+&lt;h2 id=&#34;heading&#34;&gt;功能描述&lt;/h2&gt;
 &lt;p&gt;POST Object 接口请求可以将本地不超过5GB的对象（Object）以网页表单（HTML Form）的形式上传至指定存储桶中。该 API 的请求者需要对存储桶有写入权限。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>

@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E6%8A%80/spring-boot/multiple-data-source/" />
@@ -72,7 +72,7 @@
 <meta itemprop="description" content="很早就想记录一下Spring Boot配置多数据的方式。但是网上找到的大多还都是Spring Boot 1.x的内容，一些东西已经不适合现在的版本了。这几天又仔细找了一找，总算把Spring Boot 2配置多数据源的几种方式实验通过了。以两个数据源为例">
 <meta itemprop="datePublished" content="2019-12-22T17:35:36&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-22T17:35:36&#43;08:00" />
-<meta itemprop="wordCount" content="1845">
+<meta itemprop="wordCount" content="1869">
 
 
 
@@ -371,7 +371,7 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#数据库概况">数据库概况</a></li>
+    <li><a href="#heading">数据库概况</a></li>
     <li><a href="#jdbctemplate">JdbcTemplate</a>
       <ul>
         <li></li>
@@ -396,64 +396,64 @@
     <div class="post-content">
       <p>很早就想记录一下Spring Boot配置多数据的方式。但是网上找到的大多还都是Spring Boot 1.x的内容，一些东西已经不适合现在的版本了。这几天又仔细找了一找，总算把Spring Boot 2配置多数据源的几种方式实验通过了。以两个数据源为例</p>
 <hr>
-<h2 id="数据库概况">数据库概况</h2>
+<h2 id="heading">数据库概况</h2>
 <p>共有两个数据库，这里以两个MySQL数据库为例。实际中可以任意组合。在我工作环境中，常用到的是位于不同机器上面的MySQL加上SQL Server的组合</p>
 <p>数据表基本情况如图
 <img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2018/12/ea22c60d150a433ab2a2ca1cb660925f.png" alt="多数据源数据库信息"></p>
 <h2 id="jdbctemplate">JdbcTemplate</h2>
 <p>结构如图
 <img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2018/12/9e71b329dc014b6da8d90c1d3931c1bf.png" alt="项目结构图"></p>
-<h4 id="创建项目引入依赖">创建项目，引入依赖</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies&gt;</span>
+<h4 id="heading1">创建项目，引入依赖</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies</span><span style="color:#f92672">&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version&gt;</span>1.3.2<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>1.3.2<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
       
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-jdbc<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-jdbc<span style="color:#f92672">&lt;/artifactId&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-devtools<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;optional&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-devtools<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;optional</span><span style="color:#f92672">&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
   <span style="color:#f92672">&lt;/dependencies&gt;</span>
-</code></pre></div><h4 id="编写配置文件">编写配置文件</h4>
+</code></pre></div><h4 id="heading2">编写配置文件</h4>
 <p>配置文件<strong>application.yml</strong>填写两个数据源的基本信息</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#66d9ef">spring</span>:
-  <span style="color:#66d9ef">datasource</span>:
-    <span style="color:#66d9ef">primary</span>:
-      <span style="color:#66d9ef">jdbc-url</span>: jdbc:mysql://<span style="color:#ae81ff">212.64.52.104</span>:<span style="color:#ae81ff">3306</span>/spring?userSSL=<span style="color:#66d9ef">false</span>
-      <span style="color:#66d9ef">driver-class-name</span>: com.mysql.jdbc.Driver
-      <span style="color:#66d9ef">username</span>: xxxx
-      <span style="color:#66d9ef">password</span>: xxxx
-    <span style="color:#66d9ef">secondary</span>:
-      <span style="color:#66d9ef">jdbc-url</span>: jdbc:mysql://<span style="color:#ae81ff">212.64.52.104</span>:<span style="color:#ae81ff">3306</span>/copy?userSSL=<span style="color:#66d9ef">false</span>
-      <span style="color:#66d9ef">driver-class-name</span>: com.mysql.jdbc.Driver
-      <span style="color:#66d9ef">username</span>: xxxxx
-      <span style="color:#66d9ef">password</span>: xxxxx
-</code></pre></div><h4 id="编写代码">编写代码</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">spring:
+  datasource:
+    primary:
+      jdbc-url: jdbc:mysql://<span style="color:#ae81ff">212.64</span><span style="color:#ae81ff">.52</span><span style="color:#ae81ff">.104</span>:<span style="color:#ae81ff">3306</span>/spring?userSSL=<span style="color:#66d9ef">false</span>
+      driver-class-name: com.mysql.jdbc.Driver
+      username: xxxx
+      password: xxxx
+    secondary:
+      jdbc-url: jdbc:mysql://<span style="color:#ae81ff">212.64</span><span style="color:#ae81ff">.52</span><span style="color:#ae81ff">.104</span>:<span style="color:#ae81ff">3306</span>/copy?userSSL=<span style="color:#66d9ef">false</span>
+      driver-class-name: com.mysql.jdbc.Driver
+      username: xxxxx
+      password: xxxxx
+</code></pre></div><h4 id="heading3">编写代码</h4>
 <p>新建<code>config</code>包，新建<code>DataSourceConfig.java</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DataSourceConfig</span> <span style="color:#f92672">{</span>
@@ -462,32 +462,32 @@
     <span style="color:#a6e22e">@Primary</span>
     <span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;primary&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#a6e22e">@ConfigurationProperties</span><span style="color:#f92672">(</span>prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;spring.datasource.primary&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">dataSource</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> DataSourceBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">dataSource</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> DataSourceBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;secondary&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;secondary&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#a6e22e">@ConfigurationProperties</span><span style="color:#f92672">(</span>prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;spring.datasource.secondary&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">dataSourceSlave</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> DataSourceBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">dataSourceSlave</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> DataSourceBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#75715e">// 支持JdbcTemplate实现多数据源
 </span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;primaryJdbcTemplate&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#66d9ef">public</span> JdbcTemplate <span style="color:#a6e22e">primaryJdbcTemplate</span><span style="color:#f92672">(</span>
             <span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;primary&#34;</span><span style="color:#f92672">)</span> DataSource dataSource<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> JdbcTemplate<span style="color:#f92672">(</span>dataSource<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> JdbcTemplate<span style="color:#f92672">(</span>dataSource<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
 
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;secondaryJdbcTemplate&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#66d9ef">public</span> JdbcTemplate <span style="color:#a6e22e">secondaryJdbcTemplate</span><span style="color:#f92672">(</span>
             <span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;secondary&#34;</span><span style="color:#f92672">)</span> DataSource dataSource<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> JdbcTemplate<span style="color:#f92672">(</span>dataSource<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> JdbcTemplate<span style="color:#f92672">(</span>dataSource<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h4 id="测试">测试</h4>
+</code></pre></div><h4 id="heading4">测试</h4>
 <p>编写测试类</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RunWith</span><span style="color:#f92672">(</span>SpringRunner<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
 <span style="color:#a6e22e">@SpringBootTest</span>
@@ -502,12 +502,12 @@
     <span style="color:#66d9ef">private</span> JdbcTemplate secondaryJdbcTemplate<span style="color:#f92672">;</span>
 
     <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">contextLoads</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        List<span style="color:#f92672">&lt;</span>Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;&gt;</span> list <span style="color:#f92672">=</span> primaryJdbcTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">queryForList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;select * from technologies;&#34;</span><span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">contextLoads</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> primaryJdbcTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">queryForList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;select * from technologies;&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-        List<span style="color:#f92672">&lt;</span>Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;&gt;</span> list2 <span style="color:#f92672">=</span> secondaryJdbcTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">queryForList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;select * from test;&#34;</span><span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list2<span style="color:#f92672">);</span>
+        List<span style="color:#f92672">&lt;</span>Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span><span style="color:#f92672">&gt;</span> list2 <span style="color:#f92672">=</span> secondaryJdbcTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">queryForList</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;select * from test;&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list2<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
 <span style="color:#f92672">}</span>
@@ -515,66 +515,66 @@
 <h2 id="jpa">JPA</h2>
 <p>结构如图
 <img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2018/12/24f9f1c744f7481580512649caa19568.png" alt="项目结构图"></p>
-<h4 id="创建项目引入依赖-1">创建项目，引入依赖</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies&gt;</span>
+<h4 id="heading5">创建项目，引入依赖</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies</span><span style="color:#f92672">&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version&gt;</span>1.3.2<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>1.3.2<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
       
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-data-jpa<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-data-jpa<span style="color:#f92672">&lt;/artifactId&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-devtools<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;optional&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-devtools<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;optional</span><span style="color:#f92672">&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
   <span style="color:#f92672">&lt;/dependencies&gt;</span>
-</code></pre></div><h4 id="编写配置文件-1">编写配置文件</h4>
+</code></pre></div><h4 id="heading6">编写配置文件</h4>
 <p>配置文件<strong>application.yml</strong>填写两个数据源的基本信息</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#66d9ef">spring</span>:
-  <span style="color:#66d9ef">datasource</span>:
-    <span style="color:#66d9ef">primary</span>:
-      <span style="color:#66d9ef">jdbc-url</span>: jdbc:mysql://<span style="color:#ae81ff">212.64.52.104</span>:<span style="color:#ae81ff">3306</span>/spring?userSSL=<span style="color:#66d9ef">false</span>
-      <span style="color:#66d9ef">driver-class-name</span>: com.mysql.jdbc.Driver
-      <span style="color:#66d9ef">username</span>: xxxx
-      <span style="color:#66d9ef">password</span>: xxxx
-    <span style="color:#66d9ef">secondary</span>:
-      <span style="color:#66d9ef">jdbc-url</span>: jdbc:mysql://<span style="color:#ae81ff">212.64.52.104</span>:<span style="color:#ae81ff">3306</span>/copy?userSSL=<span style="color:#66d9ef">false</span>
-      <span style="color:#66d9ef">driver-class-name</span>: com.mysql.jdbc.Driver
-      <span style="color:#66d9ef">username</span>: xxxxx
-      <span style="color:#66d9ef">password</span>: xxxxx
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">spring:
+  datasource:
+    primary:
+      jdbc-url: jdbc:mysql://<span style="color:#ae81ff">212.64</span><span style="color:#ae81ff">.52</span><span style="color:#ae81ff">.104</span>:<span style="color:#ae81ff">3306</span>/spring?userSSL=<span style="color:#66d9ef">false</span>
+      driver-class-name: com.mysql.jdbc.Driver
+      username: xxxx
+      password: xxxx
+    secondary:
+      jdbc-url: jdbc:mysql://<span style="color:#ae81ff">212.64</span><span style="color:#ae81ff">.52</span><span style="color:#ae81ff">.104</span>:<span style="color:#ae81ff">3306</span>/copy?userSSL=<span style="color:#66d9ef">false</span>
+      driver-class-name: com.mysql.jdbc.Driver
+      username: xxxxx
+      password: xxxxx
       
-  <span style="color:#66d9ef">jpa</span>:
-    <span style="color:#66d9ef">database</span>: mysql
-    <span style="color:#66d9ef">generate-ddl</span>: <span style="color:#66d9ef">true</span>
-    <span style="color:#66d9ef">show-sql</span>: <span style="color:#66d9ef">true</span>
-    <span style="color:#66d9ef">hibernate</span>:
-      <span style="color:#66d9ef">ddl-auto</span>: update
-      <span style="color:#66d9ef">naming</span>:
-        <span style="color:#66d9ef">physical-strategy</span>: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
-</code></pre></div><h4 id="编写代码-1">编写代码</h4>
+  jpa:
+    database: mysql
+    generate-ddl: <span style="color:#66d9ef">true</span>
+    show-sql: <span style="color:#66d9ef">true</span>
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+</code></pre></div><h4 id="heading7">编写代码</h4>
 <p>新建<code>config</code>包，新建<code>DataSourceConfig.java</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DataSourceConfig</span> <span style="color:#f92672">{</span>
@@ -583,15 +583,15 @@
     <span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;primaryDataSource&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#a6e22e">@Primary</span>
     <span style="color:#a6e22e">@ConfigurationProperties</span><span style="color:#f92672">(</span>prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;spring.datasource.primary&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">primaryDataSource</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> DataSourceBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">primaryDataSource</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> DataSourceBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;secondaryDataSource&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;secondaryDataSource&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#a6e22e">@ConfigurationProperties</span><span style="color:#f92672">(</span>prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;spring.datasource.secondary&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">secondaryDataSource</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> DataSourceBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">secondaryDataSource</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> DataSourceBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>新建<code>PrimaryConfig.java</code></p>
@@ -600,7 +600,7 @@
 <span style="color:#a6e22e">@EnableJpaRepositories</span><span style="color:#f92672">(</span>
         entityManagerFactoryRef <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;entityManagerFactoryPrimary&#34;</span><span style="color:#f92672">,</span>
         transactionManagerRef <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;transactionManagerPrimary&#34;</span><span style="color:#f92672">,</span>
-        basePackages <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;com.luvnaxx.data.jpa.repository.primary&#34;</span><span style="color:#f92672">})</span>
+        basePackages <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;com.luvnaxx.data.jpa.repository.primary&#34;</span><span style="color:#f92672">}</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PrimaryConfig</span> <span style="color:#f92672">{</span>
 
     <span style="color:#a6e22e">@Resource</span>
@@ -612,11 +612,11 @@
     <span style="color:#a6e22e">@Primary</span>
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;entityManagerPrimary&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#66d9ef">public</span> EntityManager <span style="color:#a6e22e">entityManager</span><span style="color:#f92672">(</span>EntityManagerFactoryBuilder builder<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> entityManagerFactoryPrimary<span style="color:#f92672">(</span>builder<span style="color:#f92672">).</span><span style="color:#a6e22e">getObject</span><span style="color:#f92672">().</span><span style="color:#a6e22e">createEntityManager</span><span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">return</span> entityManagerFactoryPrimary<span style="color:#f92672">(</span>builder<span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getObject</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">createEntityManager</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
-    <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getVendorProperties</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> jpaProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">getHibernateProperties</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> HibernateSettings<span style="color:#f92672">());</span>
+    <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getVendorProperties</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> jpaProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">getHibernateProperties</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> HibernateSettings<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#75715e">/**
@@ -629,14 +629,14 @@
                 <span style="color:#f92672">.</span><span style="color:#a6e22e">dataSource</span><span style="color:#f92672">(</span>primaryDataSource<span style="color:#f92672">)</span>
                 <span style="color:#f92672">.</span><span style="color:#a6e22e">packages</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.luvnaxx.data.jpa.entity.primary&#34;</span><span style="color:#f92672">)</span>
                 <span style="color:#f92672">.</span><span style="color:#a6e22e">persistenceUnit</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;primaryPersistenceUnit&#34;</span><span style="color:#f92672">)</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">properties</span><span style="color:#f92672">(</span>getVendorProperties<span style="color:#f92672">())</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">properties</span><span style="color:#f92672">(</span>getVendorProperties<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#a6e22e">@Primary</span>
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;transactionManagerPrimary&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#66d9ef">public</span> PlatformTransactionManager <span style="color:#a6e22e">transactionManagerPrimary</span><span style="color:#f92672">(</span>EntityManagerFactoryBuilder builder<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> JpaTransactionManager<span style="color:#f92672">(</span>entityManagerFactoryPrimary<span style="color:#f92672">(</span>builder<span style="color:#f92672">).</span><span style="color:#a6e22e">getObject</span><span style="color:#f92672">());</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> JpaTransactionManager<span style="color:#f92672">(</span>entityManagerFactoryPrimary<span style="color:#f92672">(</span>builder<span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getObject</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
 <span style="color:#f92672">}</span>
@@ -646,7 +646,7 @@
 <span style="color:#a6e22e">@EnableJpaRepositories</span><span style="color:#f92672">(</span>
         entityManagerFactoryRef <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;entityManagerFactorySecondary&#34;</span><span style="color:#f92672">,</span>
         transactionManagerRef <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;transactionManagerSecondary&#34;</span><span style="color:#f92672">,</span>
-        basePackages <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;com.luvnaxx.data.jpa.repository.secondary&#34;</span><span style="color:#f92672">})</span>
+        basePackages <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;com.luvnaxx.data.jpa.repository.secondary&#34;</span><span style="color:#f92672">}</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SecondaryConfig</span> <span style="color:#f92672">{</span>
 
     <span style="color:#a6e22e">@Resource</span>
@@ -657,11 +657,11 @@
 
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;entityManagerSecondary&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#66d9ef">public</span> EntityManager <span style="color:#a6e22e">entityManager</span><span style="color:#f92672">(</span>EntityManagerFactoryBuilder builder<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> entityManagerFactorySecondary<span style="color:#f92672">(</span>builder<span style="color:#f92672">).</span><span style="color:#a6e22e">getObject</span><span style="color:#f92672">().</span><span style="color:#a6e22e">createEntityManager</span><span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">return</span> entityManagerFactorySecondary<span style="color:#f92672">(</span>builder<span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getObject</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">createEntityManager</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
-    <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getVendorProperties</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> jpaProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">getHibernateProperties</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> HibernateSettings<span style="color:#f92672">());</span>
+    <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getVendorProperties</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> jpaProperties<span style="color:#f92672">.</span><span style="color:#a6e22e">getHibernateProperties</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> HibernateSettings<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#75715e">/**
@@ -673,13 +673,13 @@
                 <span style="color:#f92672">.</span><span style="color:#a6e22e">dataSource</span><span style="color:#f92672">(</span>secondaryDataSource<span style="color:#f92672">)</span>
                 <span style="color:#f92672">.</span><span style="color:#a6e22e">packages</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.luvnaxx.data.jpa.entity.secondary&#34;</span><span style="color:#f92672">)</span>
                 <span style="color:#f92672">.</span><span style="color:#a6e22e">persistenceUnit</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;secondaryPersistenceUnit&#34;</span><span style="color:#f92672">)</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">properties</span><span style="color:#f92672">(</span>getVendorProperties<span style="color:#f92672">())</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">properties</span><span style="color:#f92672">(</span>getVendorProperties<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;transactionManagerSecondary&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#66d9ef">public</span> PlatformTransactionManager <span style="color:#a6e22e">transactionManagerSecondary</span><span style="color:#f92672">(</span>EntityManagerFactoryBuilder builder<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> JpaTransactionManager<span style="color:#f92672">(</span>entityManagerFactorySecondary<span style="color:#f92672">(</span>builder<span style="color:#f92672">).</span><span style="color:#a6e22e">getObject</span><span style="color:#f92672">());</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> JpaTransactionManager<span style="color:#f92672">(</span>entityManagerFactorySecondary<span style="color:#f92672">(</span>builder<span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getObject</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
 <span style="color:#f92672">}</span>
@@ -719,8 +719,8 @@
 <span style="color:#f92672">}</span>
 </code></pre></div><p>新建<code>base</code>包以及<code>BaseDAO.java</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@NoRepositoryBean</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">BaseDAO</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">extends</span> JpaRepository<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> Long<span style="color:#f92672">&gt;,</span>
-        JpaSpecificationExecutor<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;,</span> Serializable <span style="color:#f92672">{</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">BaseDAO</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">extends</span> JpaRepository<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> Long<span style="color:#f92672">&gt;</span><span style="color:#f92672">,</span>
+        JpaSpecificationExecutor<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span><span style="color:#f92672">,</span> Serializable <span style="color:#f92672">{</span>
 
 <span style="color:#f92672">}</span>
 </code></pre></div><p>新建<code>repository</code>包，只做简单测试</p>
@@ -730,7 +730,7 @@
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Repository</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">TestJPA</span> <span style="color:#66d9ef">extends</span> BaseDAO<span style="color:#f92672">&lt;</span>TestEntity<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h4 id="测试-1">测试</h4>
+</code></pre></div><h4 id="heading8">测试</h4>
 <p>编写测试类</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RunWith</span><span style="color:#f92672">(</span>SpringRunner<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
 <span style="color:#a6e22e">@SpringBootTest</span>
@@ -743,13 +743,13 @@
     <span style="color:#66d9ef">private</span> TestJPA testJPA<span style="color:#f92672">;</span>
 
     <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">contextLoads</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">contextLoads</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-        List<span style="color:#f92672">&lt;</span>TechnologiesEntity<span style="color:#f92672">&gt;</span> technologies <span style="color:#f92672">=</span> technologiesJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">findAll</span><span style="color:#f92672">();</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>technologies<span style="color:#f92672">);</span>
+        List<span style="color:#f92672">&lt;</span>TechnologiesEntity<span style="color:#f92672">&gt;</span> technologies <span style="color:#f92672">=</span> technologiesJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">findAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>technologies<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-        List<span style="color:#f92672">&lt;</span>TestEntity<span style="color:#f92672">&gt;</span> tests <span style="color:#f92672">=</span> testJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">findAll</span><span style="color:#f92672">();</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>tests<span style="color:#f92672">);</span>
+        List<span style="color:#f92672">&lt;</span>TestEntity<span style="color:#f92672">&gt;</span> tests <span style="color:#f92672">=</span> testJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">findAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>tests<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
     <span style="color:#f92672">}</span>
 
@@ -758,59 +758,59 @@
 <h2 id="mybatis">MyBatis</h2>
 <p>结构如图
 <img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2018/12/c0421bc760a44bac8e8f581d8fcfe7c2.png" alt="项目结构图"></p>
-<h4 id="创建项目引入依赖-2">创建项目，引入依赖</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies&gt;</span>
+<h4 id="heading9">创建项目，引入依赖</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies</span><span style="color:#f92672">&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version&gt;</span>1.3.2<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>1.3.2<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
       
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version&gt;</span>2.0.0<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>2.0.0<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-devtools<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;optional&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-devtools<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;optional</span><span style="color:#f92672">&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
   <span style="color:#f92672">&lt;/dependencies&gt;</span>
-</code></pre></div><h4 id="编写配置文件-2">编写配置文件</h4>
+</code></pre></div><h4 id="heading10">编写配置文件</h4>
 <p>配置文件<strong>application.yml</strong>填写两个数据源的基本信息</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#66d9ef">spring</span>:
-  <span style="color:#66d9ef">datasource</span>:
-    <span style="color:#66d9ef">primary</span>:
-      <span style="color:#66d9ef">jdbc-url</span>: jdbc:mysql://<span style="color:#ae81ff">212.64.52.104</span>:<span style="color:#ae81ff">3306</span>/spring?userSSL=<span style="color:#66d9ef">false</span>
-      <span style="color:#66d9ef">driver-class-name</span>: com.mysql.jdbc.Driver
-      <span style="color:#66d9ef">username</span>: xxxx
-      <span style="color:#66d9ef">password</span>: xxxx
-    <span style="color:#66d9ef">secondary</span>:
-      <span style="color:#66d9ef">jdbc-url</span>: jdbc:mysql://<span style="color:#ae81ff">212.64.52.104</span>:<span style="color:#ae81ff">3306</span>/copy?userSSL=<span style="color:#66d9ef">false</span>
-      <span style="color:#66d9ef">driver-class-name</span>: com.mysql.jdbc.Driver
-      <span style="color:#66d9ef">username</span>: xxxxx
-      <span style="color:#66d9ef">password</span>: xxxxx
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">spring:
+  datasource:
+    primary:
+      jdbc-url: jdbc:mysql://<span style="color:#ae81ff">212.64</span><span style="color:#ae81ff">.52</span><span style="color:#ae81ff">.104</span>:<span style="color:#ae81ff">3306</span>/spring?userSSL=<span style="color:#66d9ef">false</span>
+      driver-class-name: com.mysql.jdbc.Driver
+      username: xxxx
+      password: xxxx
+    secondary:
+      jdbc-url: jdbc:mysql://<span style="color:#ae81ff">212.64</span><span style="color:#ae81ff">.52</span><span style="color:#ae81ff">.104</span>:<span style="color:#ae81ff">3306</span>/copy?userSSL=<span style="color:#66d9ef">false</span>
+      driver-class-name: com.mysql.jdbc.Driver
+      username: xxxxx
+      password: xxxxx
 
-</code></pre></div><h4 id="编写代码-2">编写代码</h4>
+</code></pre></div><h4 id="heading11">编写代码</h4>
 <p>新建<code>config</code>包，新建<code>PrimaryDataSourceConfig.java</code>和<code>SecondaryDataSourceConfig.java</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#a6e22e">@MapperScan</span><span style="color:#f92672">(</span>basePackages <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;com.luvnaxx.data.mybatis.mapper.primary&#34;</span><span style="color:#f92672">,</span>sqlSessionTemplateRef <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;primarySqlSessionTemplate&#34;</span><span style="color:#f92672">)</span>
@@ -822,8 +822,8 @@
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;primaryDataSource&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#a6e22e">@ConfigurationProperties</span><span style="color:#f92672">(</span>prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;spring.datasource.primary&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#a6e22e">@Primary</span>
-    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">primaryDataSource</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> DataSourceBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">primaryDataSource</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> DataSourceBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#75715e">/**
@@ -835,10 +835,10 @@
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;primarySqlSessionFactory&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#a6e22e">@Primary</span>
     <span style="color:#66d9ef">public</span> SqlSessionFactory <span style="color:#a6e22e">primarySqlSessionFactory</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;primaryDataSource&#34;</span><span style="color:#f92672">)</span> DataSource dataSource<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
-        SqlSessionFactoryBean bean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SqlSessionFactoryBean<span style="color:#f92672">();</span>
-        bean<span style="color:#f92672">.</span><span style="color:#a6e22e">setDataSource</span><span style="color:#f92672">(</span>dataSource<span style="color:#f92672">);</span>
-        bean<span style="color:#f92672">.</span><span style="color:#a6e22e">setMapperLocations</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> PathMatchingResourcePatternResolver<span style="color:#f92672">().</span><span style="color:#a6e22e">getResources</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;classpath:mapper/primary/*.xml&#34;</span><span style="color:#f92672">));</span>
-        <span style="color:#66d9ef">return</span> bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getObject</span><span style="color:#f92672">();</span>
+        SqlSessionFactoryBean bean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SqlSessionFactoryBean<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        bean<span style="color:#f92672">.</span><span style="color:#a6e22e">setDataSource</span><span style="color:#f92672">(</span>dataSource<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        bean<span style="color:#f92672">.</span><span style="color:#a6e22e">setMapperLocations</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> PathMatchingResourcePatternResolver<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getResources</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;classpath:mapper/primary/*.xml&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getObject</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#75715e">/**
@@ -849,7 +849,7 @@
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;primaryTransactionManager&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#a6e22e">@Primary</span>
     <span style="color:#66d9ef">public</span> DataSourceTransactionManager <span style="color:#a6e22e">primaryDataSourceTransactionManager</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;primaryDataSource&#34;</span><span style="color:#f92672">)</span> DataSource dataSource<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> DataSourceTransactionManager<span style="color:#f92672">(</span>dataSource<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> DataSourceTransactionManager<span style="color:#f92672">(</span>dataSource<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#75715e">/**
@@ -860,7 +860,7 @@
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;primarySqlSessionTemplate&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#a6e22e">@Primary</span>
     <span style="color:#66d9ef">public</span> SqlSessionTemplate <span style="color:#a6e22e">primarySqlSessionTemplate</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;primarySqlSessionFactory&#34;</span><span style="color:#f92672">)</span> SqlSessionFactory sqlSessionFactory<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> SqlSessionTemplate<span style="color:#f92672">(</span>sqlSessionFactory<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> SqlSessionTemplate<span style="color:#f92672">(</span>sqlSessionFactory<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
 <span style="color:#f92672">}</span>
@@ -876,8 +876,8 @@
 </span><span style="color:#75715e">     */</span>
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;secondaryDataSource&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#a6e22e">@ConfigurationProperties</span><span style="color:#f92672">(</span>prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;spring.datasource.secondary&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">secondaryDataSource</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> DataSourceBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">secondaryDataSource</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> DataSourceBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">create</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#75715e">/**
@@ -890,11 +890,11 @@
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;secondarySqlSessionFactory&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#66d9ef">public</span> SqlSessionFactory <span style="color:#a6e22e">secondarySqlSessionFactory</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;secondaryDataSource&#34;</span><span style="color:#f92672">)</span> DataSource dataSource<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> 
             Exception <span style="color:#f92672">{</span>
-        SqlSessionFactoryBean bean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SqlSessionFactoryBean<span style="color:#f92672">();</span>
-        bean<span style="color:#f92672">.</span><span style="color:#a6e22e">setDataSource</span><span style="color:#f92672">(</span>dataSource<span style="color:#f92672">);</span>
-        bean<span style="color:#f92672">.</span><span style="color:#a6e22e">setMapperLocations</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> PathMatchingResourcePatternResolver<span style="color:#f92672">().</span><span style="color:#a6e22e">getResources</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;classpath:mapper/secondary/*&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;.xml&#34;</span><span style="color:#f92672">));</span>
-        <span style="color:#66d9ef">return</span> bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getObject</span><span style="color:#f92672">();</span>
+        SqlSessionFactoryBean bean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SqlSessionFactoryBean<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        bean<span style="color:#f92672">.</span><span style="color:#a6e22e">setDataSource</span><span style="color:#f92672">(</span>dataSource<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        bean<span style="color:#f92672">.</span><span style="color:#a6e22e">setMapperLocations</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> PathMatchingResourcePatternResolver<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getResources</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;classpath:mapper/secondary/*&#34;</span> <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;.xml&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> bean<span style="color:#f92672">.</span><span style="color:#a6e22e">getObject</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#75715e">/**
@@ -906,7 +906,7 @@
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;secondaryTransactionManager&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#66d9ef">public</span> DataSourceTransactionManager <span style="color:#a6e22e">secondaryDataSourceTransactionManager</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;secondaryDataSource&#34;</span><span style="color:#f92672">)</span> DataSource
                                                                                        dataSource<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> DataSourceTransactionManager<span style="color:#f92672">(</span>dataSource<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> DataSourceTransactionManager<span style="color:#f92672">(</span>dataSource<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#75715e">/**
@@ -918,7 +918,7 @@
     <span style="color:#a6e22e">@Bean</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;secondarySqlSessionTemplate&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#66d9ef">public</span> SqlSessionTemplate <span style="color:#a6e22e">secondarySqlSessionTemplate</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Qualifier</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;secondarySqlSessionFactory&#34;</span><span style="color:#f92672">)</span> SqlSessionFactory 
                                                                    sqlSessionFactory<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> SqlSessionTemplate<span style="color:#f92672">(</span>sqlSessionFactory<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> SqlSessionTemplate<span style="color:#f92672">(</span>sqlSessionFactory<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
 <span style="color:#f92672">}</span>
@@ -927,13 +927,13 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Mapper</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">TechnologiesMapper</span> <span style="color:#f92672">{</span>
 
-    List<span style="color:#f92672">&lt;</span>TechnologiesEntity<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAll</span><span style="color:#f92672">();</span>
+    List<span style="color:#f92672">&lt;</span>TechnologiesEntity<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Mapper</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">TestMapper</span> <span style="color:#f92672">{</span>
 
-    List<span style="color:#f92672">&lt;</span>TestEntity<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAll</span><span style="color:#f92672">();</span>
+    List<span style="color:#f92672">&lt;</span>TestEntity<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 
 </code></pre></div><p>创建<code>model</code>包</p>
@@ -957,19 +957,19 @@
     <span style="color:#66d9ef">private</span> String gender<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 
-</code></pre></div><h4 id="mybatis配置文件">MyBatis配置文件</h4>
+</code></pre></div><h4 id="mybatis1">MyBatis配置文件</h4>
 <p>在resources目录下创建Mapper.xml文件</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
 <span style="color:#75715e">&lt;!DOCTYPE mapper PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34; &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34; &gt;</span>
 <span style="color:#f92672">&lt;mapper</span> <span style="color:#a6e22e">namespace=</span><span style="color:#e6db74">&#34;com.luvnaxx.data.mybatis.mapper.primary.TechnologiesMapper&#34;</span> <span style="color:#f92672">&gt;</span>
-  <span style="color:#75715e">&lt;!-- 结果映射 --&gt;</span>
+  <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 结果映射 </span><span style="color:#75715e">--&gt;</span>
   <span style="color:#f92672">&lt;resultMap</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;BaseMap&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;com.luvnaxx.data.mybatis.model.TechnologiesEntity&#34;</span><span style="color:#f92672">&gt;</span>
     <span style="color:#f92672">&lt;id</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#a6e22e">jdbcType=</span><span style="color:#e6db74">&#34;INTEGER&#34;</span> <span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">jdbcType=</span><span style="color:#e6db74">&#34;VARCHAR&#34;</span> <span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;type&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;type&#34;</span> <span style="color:#a6e22e">jdbcType=</span><span style="color:#e6db74">&#34;VARCHAR&#34;</span> <span style="color:#f92672">/&gt;</span>
   <span style="color:#f92672">&lt;/resultMap&gt;</span>
 
-  <span style="color:#75715e">&lt;!-- 查询所有数据 --&gt;</span>
+  <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 查询所有数据 </span><span style="color:#75715e">--&gt;</span>
   <span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;getAll&#34;</span> <span style="color:#a6e22e">resultMap=</span><span style="color:#e6db74">&#34;BaseMap&#34;</span><span style="color:#f92672">&gt;</span>
     SELECT * FROM technologies;
   <span style="color:#f92672">&lt;/select&gt;</span>
@@ -979,21 +979,21 @@
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
 <span style="color:#75715e">&lt;!DOCTYPE mapper PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34; &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34; &gt;</span>
 <span style="color:#f92672">&lt;mapper</span> <span style="color:#a6e22e">namespace=</span><span style="color:#e6db74">&#34;com.luvnaxx.data.mybatis.mapper.secondary.TestMapper&#34;</span> <span style="color:#f92672">&gt;</span>
-  <span style="color:#75715e">&lt;!-- 结果映射 --&gt;</span>
+  <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 结果映射 </span><span style="color:#75715e">--&gt;</span>
   <span style="color:#f92672">&lt;resultMap</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;BaseMap&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;com.luvnaxx.data.mybatis.model.TestEntity&#34;</span><span style="color:#f92672">&gt;</span>
     <span style="color:#f92672">&lt;id</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#a6e22e">jdbcType=</span><span style="color:#e6db74">&#34;INTEGER&#34;</span> <span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">jdbcType=</span><span style="color:#e6db74">&#34;VARCHAR&#34;</span> <span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;gender&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;gender&#34;</span> <span style="color:#a6e22e">jdbcType=</span><span style="color:#e6db74">&#34;VARCHAR&#34;</span> <span style="color:#f92672">/&gt;</span>
   <span style="color:#f92672">&lt;/resultMap&gt;</span>
 
-  <span style="color:#75715e">&lt;!-- 查询所有数据 --&gt;</span>
+  <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> 查询所有数据 </span><span style="color:#75715e">--&gt;</span>
   <span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;getAll&#34;</span> <span style="color:#a6e22e">resultMap=</span><span style="color:#e6db74">&#34;BaseMap&#34;</span><span style="color:#f92672">&gt;</span>
     SELECT * FROM test;
   <span style="color:#f92672">&lt;/select&gt;</span>
 
 <span style="color:#f92672">&lt;/mapper&gt;</span>
 
-</code></pre></div><h4 id="测试-2">测试</h4>
+</code></pre></div><h4 id="heading12">测试</h4>
 <p>编写测试类</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RunWith</span><span style="color:#f92672">(</span>SpringRunner<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
 <span style="color:#a6e22e">@SpringBootTest</span>
@@ -1006,12 +1006,12 @@
     <span style="color:#66d9ef">private</span> TestMapper testMapper<span style="color:#f92672">;</span>
 
     <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">contextLoads</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        List<span style="color:#f92672">&lt;</span>TechnologiesEntity<span style="color:#f92672">&gt;</span> technologiesEntityList <span style="color:#f92672">=</span> technologiesMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">();</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>technologiesEntityList<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">contextLoads</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        List<span style="color:#f92672">&lt;</span>TechnologiesEntity<span style="color:#f92672">&gt;</span> technologiesEntityList <span style="color:#f92672">=</span> technologiesMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>technologiesEntityList<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-        List<span style="color:#f92672">&lt;</span>TestEntity<span style="color:#f92672">&gt;</span> testEntityList <span style="color:#f92672">=</span> testMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">();</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testEntityList<span style="color:#f92672">);</span>
+        List<span style="color:#f92672">&lt;</span>TestEntity<span style="color:#f92672">&gt;</span> testEntityList <span style="color:#f92672">=</span> testMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testEntityList<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
@@ -1111,7 +1111,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

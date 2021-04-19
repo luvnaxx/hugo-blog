@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E6%8A%80/lambda/" />
@@ -400,11 +400,11 @@
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
         <span style="color:#75715e">// 使用LongStream输出斐波那契数列
-</span><span style="color:#75715e"></span>        LongStream longStream <span style="color:#f92672">=</span> LongStream<span style="color:#f92672">.</span><span style="color:#a6e22e">generate</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FibonacciSupplier<span style="color:#f92672">());</span>
-        longStream<span style="color:#f92672">.</span><span style="color:#a6e22e">limit</span><span style="color:#f92672">(</span>5<span style="color:#f92672">).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>        LongStream longStream <span style="color:#f92672">=</span> LongStream<span style="color:#f92672">.</span><span style="color:#a6e22e">generate</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> FibonacciSupplier<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        longStream<span style="color:#f92672">.</span><span style="color:#a6e22e">limit</span><span style="color:#f92672">(</span>5<span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span>println<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 
@@ -415,7 +415,7 @@
     <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
     <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">long</span> <span style="color:#a6e22e">getAsLong</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">long</span> <span style="color:#a6e22e">getAsLong</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b<span style="color:#f92672">;</span>
         a <span style="color:#f92672">=</span> b<span style="color:#f92672">;</span>
         b <span style="color:#f92672">=</span> sum<span style="color:#f92672">;</span>
@@ -436,14 +436,14 @@
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
         List<span style="color:#f92672">&lt;</span>Person<span style="color:#f92672">&gt;</span> persons <span style="color:#f92672">=</span> Arrays
-                        <span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小明&#34;</span><span style="color:#f92672">,</span> 88<span style="color:#f92672">),</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小黑&#34;</span><span style="color:#f92672">,</span> 62<span style="color:#f92672">),</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小白&#34;</span><span style="color:#f92672">,</span> 45<span style="color:#f92672">),</span>
-                                <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小黄&#34;</span><span style="color:#f92672">,</span> 78<span style="color:#f92672">),</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小红&#34;</span><span style="color:#f92672">,</span> 99<span style="color:#f92672">),</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小林&#34;</span><span style="color:#f92672">,</span> 58<span style="color:#f92672">));</span>
+                        <span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小明&#34;</span><span style="color:#f92672">,</span> 88<span style="color:#f92672">)</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小黑&#34;</span><span style="color:#f92672">,</span> 62<span style="color:#f92672">)</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小白&#34;</span><span style="color:#f92672">,</span> 45<span style="color:#f92672">)</span><span style="color:#f92672">,</span>
+                                <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小黄&#34;</span><span style="color:#f92672">,</span> 78<span style="color:#f92672">)</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小红&#34;</span><span style="color:#f92672">,</span> 99<span style="color:#f92672">)</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小林&#34;</span><span style="color:#f92672">,</span> 58<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#75715e">// 请使用filter过滤出及格的同学，然后打印名字:
-</span><span style="color:#75715e"></span>        persons<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>score <span style="color:#f92672">-&gt;</span> score<span style="color:#f92672">.</span><span style="color:#a6e22e">getScore</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;=</span> 60<span style="color:#f92672">).</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>Person<span style="color:#f92672">::</span>getName<span style="color:#f92672">)</span>
-                <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>        persons<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>score <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> score<span style="color:#f92672">.</span><span style="color:#a6e22e">getScore</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> 60<span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>Person<span style="color:#f92672">:</span><span style="color:#f92672">:</span>getName<span style="color:#f92672">)</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">:</span><span style="color:#f92672">:</span>println<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 
@@ -550,7 +550,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

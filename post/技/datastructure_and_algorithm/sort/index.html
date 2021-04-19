@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E6%8A%80/datastructure_and_algorithm/sort/" />
@@ -369,13 +369,13 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#冒泡排序">冒泡排序</a></li>
-    <li><a href="#选择排序">选择排序</a></li>
-    <li><a href="#插入排序">插入排序</a></li>
-    <li><a href="#希尔排序">希尔排序</a></li>
-    <li><a href="#快速排序">快速排序</a></li>
-    <li><a href="#归并排序">归并排序</a></li>
-    <li><a href="#基数排序">基数排序</a></li>
+    <li><a href="#heading1">冒泡排序</a></li>
+    <li><a href="#heading2">选择排序</a></li>
+    <li><a href="#heading3">插入排序</a></li>
+    <li><a href="#heading4">希尔排序</a></li>
+    <li><a href="#heading5">快速排序</a></li>
+    <li><a href="#heading6">归并排序</a></li>
+    <li><a href="#heading7">基数排序</a></li>
   </ul>
 </nav>
   </div>
@@ -383,77 +383,77 @@
 
     
     <div class="post-content">
-      <h1 id="冒泡排序选择排序插入排序希尔排序快速排序归并排序基数排序">冒泡排序/选择排序/插入排序/希尔排序/快速排序/归并排序/基数排序</h1>
-<h2 id="冒泡排序">冒泡排序</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">bubbleSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <h1 id="heading">冒泡排序/选择排序/插入排序/希尔排序/快速排序/归并排序/基数排序</h1>
+<h2 id="heading1">冒泡排序</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">bubbleSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">boolean</span> flag<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       flag <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
-      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1 <span style="color:#f92672">-</span> i<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1 <span style="color:#f92672">-</span> i<span style="color:#f92672">;</span> j<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
           flag <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
-          <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
-          nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">];</span>
+          <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+          nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
           nums<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp<span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
       <span style="color:#f92672">}</span>
 
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>flag<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span>flag<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> nums<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="选择排序">选择排序</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">selectSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</code></pre></div><h2 id="heading2">选择排序</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">selectSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       <span style="color:#66d9ef">int</span> index <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
-      <span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
-      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> j<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> min<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-          min <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+          min <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
           index <span style="color:#f92672">=</span> j<span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
       <span style="color:#f92672">}</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>index <span style="color:#f92672">!=</span> i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        nums<span style="color:#f92672">[</span>index<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>index <span style="color:#f92672">!</span><span style="color:#f92672">=</span> i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        nums<span style="color:#f92672">[</span>index<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
         nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> min<span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> nums<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="插入排序">插入排序</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">insertSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</code></pre></div><h2 id="heading3">插入排序</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">insertSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       <span style="color:#75715e">// 待插入数据
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">int</span> insertNum <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">int</span> insertNum <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
       <span style="color:#75715e">// 已排序的数组的最大值
 </span><span style="color:#75715e"></span>      <span style="color:#66d9ef">int</span> insertIndex <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
 
       <span style="color:#75715e">// 给insertNum找到插入位置
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>insertIndex <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> insertNum <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">[</span>insertIndex<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-        nums<span style="color:#f92672">[</span>insertIndex <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>insertIndex<span style="color:#f92672">];</span>
-        insertIndex<span style="color:#f92672">--;</span>
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>insertIndex <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> 0 <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> insertNum <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">[</span>insertIndex<span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        nums<span style="color:#f92672">[</span>insertIndex <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>insertIndex<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        insertIndex<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>insertIndex <span style="color:#f92672">+</span> 1 <span style="color:#f92672">!=</span> i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>insertIndex <span style="color:#f92672">+</span> 1 <span style="color:#f92672">!</span><span style="color:#f92672">=</span> i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         nums<span style="color:#f92672">[</span>insertIndex <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> insertNum<span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> nums<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="希尔排序">希尔排序</h2>
+</code></pre></div><h2 id="heading4">希尔排序</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#75715e">/**
 </span><span style="color:#75715e">   * 交换法
 </span><span style="color:#75715e">   */</span>
-  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">shellSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">shellSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
     <span style="color:#66d9ef">int</span> temp<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> gap <span style="color:#f92672">=</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span> gap <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">;</span> gap <span style="color:#f92672">/=</span> 2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> gap<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> gap<span style="color:#f92672">;</span> j <span style="color:#f92672">&gt;=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">-=</span> gap<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-          <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> gap<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-            temp <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
-            nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> gap<span style="color:#f92672">];</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> gap <span style="color:#f92672">=</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span> gap <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">;</span> gap <span style="color:#f92672">/</span><span style="color:#f92672">=</span> 2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> gap<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> gap<span style="color:#f92672">;</span> j <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">-</span><span style="color:#f92672">=</span> gap<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+          <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> gap<span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            temp <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+            nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> gap<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
             nums<span style="color:#f92672">[</span>j <span style="color:#f92672">+</span> gap<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp<span style="color:#f92672">;</span>
           <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
@@ -465,16 +465,16 @@
   <span style="color:#75715e">/**
 </span><span style="color:#75715e">   * 移位法
 </span><span style="color:#75715e">   */</span>
-  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">shellSort2</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">shellSort2</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> gap <span style="color:#f92672">=</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span> gap <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">;</span> gap <span style="color:#f92672">/=</span> 2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> gap<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> gap <span style="color:#f92672">=</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span> gap <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">;</span> gap <span style="color:#f92672">/</span><span style="color:#f92672">=</span> 2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> gap<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">-</span> gap<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-          <span style="color:#66d9ef">while</span> <span style="color:#f92672">((</span>j <span style="color:#f92672">-</span> gap<span style="color:#f92672">)</span> <span style="color:#f92672">&gt;=</span> 0 <span style="color:#f92672">&amp;&amp;</span> temp <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">-</span> gap<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-            nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">-</span> gap<span style="color:#f92672">];</span>
-            j <span style="color:#f92672">-=</span> gap<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">-</span> gap<span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+          <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#f92672">(</span>j <span style="color:#f92672">-</span> gap<span style="color:#f92672">)</span> <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> 0 <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> temp <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">-</span> gap<span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j <span style="color:#f92672">-</span> gap<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+            j <span style="color:#f92672">-</span><span style="color:#f92672">=</span> gap<span style="color:#f92672">;</span>
           <span style="color:#f92672">}</span>
           nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp<span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
@@ -482,109 +482,109 @@
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> nums<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="快速排序">快速排序</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">quickSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> start<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> end<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</code></pre></div><h2 id="heading5">快速排序</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">quickSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> start<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> end<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> start<span style="color:#f92672">,</span> j <span style="color:#f92672">=</span> end<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">int</span> pivot <span style="color:#f92672">=</span> nums<span style="color:#f92672">[(</span>i <span style="color:#f92672">+</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">];</span>
+    <span style="color:#66d9ef">int</span> pivot <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span><span style="color:#f92672">(</span>i <span style="color:#f92672">+</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
 
     <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> pivot<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        j<span style="color:#f92672">--;</span>
+        j<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
       <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> pivot<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        i<span style="color:#f92672">++;</span>
+        i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&gt;=</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> j<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
-      nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+      <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+      nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
       nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp<span style="color:#f92672">;</span>
 
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> pivot<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        j<span style="color:#f92672">--;</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> pivot<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        j<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> pivot<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        i<span style="color:#f92672">++;</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> pivot<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&gt;</span> start<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      sort<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> start<span style="color:#f92672">,</span> i <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+      sort<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> start<span style="color:#f92672">,</span> i <span style="color:#f92672">-</span> 1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">+</span> 1 <span style="color:#f92672">&lt;</span> end<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      sort<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> j <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> end<span style="color:#f92672">);</span>
+      sort<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> j <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> end<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#66d9ef">return</span> nums<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="归并排序">归并排序</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">mergeSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> start<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> end<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> temp<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</code></pre></div><h2 id="heading6">归并排序</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">mergeSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> start<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> end<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> temp<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
     <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>start <span style="color:#f92672">&lt;</span> end<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>start <span style="color:#f92672">+</span> end<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span>
 
-      sort<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> start<span style="color:#f92672">,</span> mid<span style="color:#f92672">,</span> temp<span style="color:#f92672">);</span>
-      sort<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> mid <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> end<span style="color:#f92672">,</span> temp<span style="color:#f92672">);</span>
+      sort<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> start<span style="color:#f92672">,</span> mid<span style="color:#f92672">,</span> temp<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      sort<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> mid <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> end<span style="color:#f92672">,</span> temp<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-      merge<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> start<span style="color:#f92672">,</span> mid<span style="color:#f92672">,</span> end<span style="color:#f92672">,</span> temp<span style="color:#f92672">);</span>
+      merge<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> start<span style="color:#f92672">,</span> mid<span style="color:#f92672">,</span> end<span style="color:#f92672">,</span> temp<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#66d9ef">return</span> nums<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
-  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">merge</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> start<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> mid<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> end<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> temp<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">merge</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> start<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> mid<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> end<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> temp<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> start<span style="color:#f92672">,</span> j <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> t <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
-    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;=</span> mid <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;=</span> end<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-        temp<span style="color:#f92672">[</span>t<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
-        i<span style="color:#f92672">++;</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> mid <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> j <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> end<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        temp<span style="color:#f92672">[</span>t<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-        temp<span style="color:#f92672">[</span>t<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
-        j<span style="color:#f92672">++;</span>
+        temp<span style="color:#f92672">[</span>t<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        j<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      t<span style="color:#f92672">++;</span>
+      t<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;=</span> mid<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      temp<span style="color:#f92672">[</span>t<span style="color:#f92672">++]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">++];</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> mid<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      temp<span style="color:#f92672">[</span>t<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">]</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">&lt;=</span> mid<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      temp<span style="color:#f92672">[</span>t<span style="color:#f92672">++]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">++];</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> mid<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      temp<span style="color:#f92672">[</span>t<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>j<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">]</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> k <span style="color:#f92672">&lt;</span> t<span style="color:#f92672">;</span> k<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-      arr<span style="color:#f92672">[</span>start<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp<span style="color:#f92672">[</span>k<span style="color:#f92672">];</span>
-      start<span style="color:#f92672">++;</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> k <span style="color:#f92672">&lt;</span> t<span style="color:#f92672">;</span> k<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      arr<span style="color:#f92672">[</span>start<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+      start<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
   <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="基数排序">基数排序</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">radixSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</code></pre></div><h2 id="heading7">基数排序</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">radixSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-    <span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>0<span style="color:#f92672">];</span>
+    <span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> num <span style="color:#f92672">:</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>num <span style="color:#f92672">&gt;</span> max<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         max <span style="color:#f92672">=</span> num<span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">int</span> length <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>max <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">int</span> length <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>max <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-    <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> bucket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>10<span style="color:#f92672">][</span>nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">];</span>
-    <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> index<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> bucket <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>10<span style="color:#f92672">]</span><span style="color:#f92672">[</span>nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> index<span style="color:#f92672">;</span>
     <span style="color:#66d9ef">int</span> temp<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> length<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-      index <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>10<span style="color:#f92672">];</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> length<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      index <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>10<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
       temp <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
       <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> value <span style="color:#f92672">:</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">int</span> times <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span>10<span style="color:#f92672">,</span> i<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">int</span> num <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>value <span style="color:#f92672">/</span> times <span style="color:#f92672">%</span> 10<span style="color:#f92672">);</span>
-        bucket<span style="color:#f92672">[</span>num<span style="color:#f92672">][</span>index<span style="color:#f92672">[</span>num<span style="color:#f92672">]]</span> <span style="color:#f92672">=</span> value<span style="color:#f92672">;</span>
-        index<span style="color:#f92672">[</span>num<span style="color:#f92672">]++;</span>
+        <span style="color:#66d9ef">int</span> times <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">pow</span><span style="color:#f92672">(</span>10<span style="color:#f92672">,</span> i<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> num <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>value <span style="color:#f92672">/</span> times <span style="color:#f92672">%</span> 10<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        bucket<span style="color:#f92672">[</span>num<span style="color:#f92672">]</span><span style="color:#f92672">[</span>index<span style="color:#f92672">[</span>num<span style="color:#f92672">]</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> value<span style="color:#f92672">;</span>
+        index<span style="color:#f92672">[</span>num<span style="color:#f92672">]</span><span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> bucket<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> index<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>k <span style="color:#f92672">!=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-          <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> n <span style="color:#f92672">&lt;</span> k<span style="color:#f92672">;</span> n<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-            nums<span style="color:#f92672">[</span>temp<span style="color:#f92672">++]</span> <span style="color:#f92672">=</span> bucket<span style="color:#f92672">[</span>j<span style="color:#f92672">][</span>n<span style="color:#f92672">];</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> bucket<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> j<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> index<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>k <span style="color:#f92672">!</span><span style="color:#f92672">=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+          <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> n <span style="color:#f92672">&lt;</span> k<span style="color:#f92672">;</span> n<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            nums<span style="color:#f92672">[</span>temp<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> bucket<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span><span style="color:#f92672">[</span>n<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
           <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
       <span style="color:#f92672">}</span>
@@ -687,7 +687,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

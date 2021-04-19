@@ -35,7 +35,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E4%BA%AB/%E4%BD%A0%E7%9A%84%E5%BC%80%E5%A7%8B%E8%8F%9C%E5%8D%95%E5%87%BA%E7%8E%B0%E4%BA%86%E9%97%AE%E9%A2%98%E6%88%91%E4%BB%AC%E5%B0%86%E5%B0%9D%E8%AF%95%E5%9C%A8%E4%B8%8B%E4%B8%80%E6%AC%A1%E7%99%BB%E5%BD%95%E6%97%B6%E4%BF%AE%E5%A4%8D%E5%AE%83/" />
@@ -411,7 +411,7 @@
 </li>
 <li>
 <p>如果还没有解决输入</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-AppXPackage -AllUsers | <span style="color:#66d9ef">Foreach</span> {Add-AppxPackage -DisableDevelopmentMode -Register <span style="color:#e6db74">&#34;</span>$($_.InstallLocation)<span style="color:#e6db74">\AppXManifest.xml&#34;</span>}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-AppXPackage -AllUsers | <span style="color:#66d9ef">Foreach</span> {Add-AppxPackage -DisableDevelopmentMode -Register <span style="color:#e6db74">&#34;</span>$($_.InstallLocation)<span style="color:#e6db74">\AppXManifest.xml</span><span style="color:#e6db74">&#34;</span>}
 </code></pre></div><p><img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2020/06/6bb95172a0824539aff5d89324956452.png" alt=""></p>
 </li>
 <li>
@@ -518,7 +518,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

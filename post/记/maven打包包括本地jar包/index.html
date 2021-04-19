@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E8%AE%B0/maven%E6%89%93%E5%8C%85%E5%8C%85%E6%8B%AC%E6%9C%AC%E5%9C%B0jar%E5%8C%85/" />
@@ -374,14 +374,14 @@
     
     <div class="post-content">
       <p>在<strong>pom.xml</strong>中添加</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;build&gt;</span>
-  <span style="color:#f92672">&lt;plugins&gt;</span>
-    <span style="color:#f92672">&lt;plugin&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#75715e">&lt;!--作用:项目打成jar的同时将本地jar包也引入进去--&gt;</span>
-      <span style="color:#f92672">&lt;configuration&gt;</span>
-        <span style="color:#f92672">&lt;includeSystemScope&gt;</span>true<span style="color:#f92672">&lt;/includeSystemScope&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;build</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;plugins</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;plugin</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#75715e">&lt;!--</span><span style="color:#75715e">作用:项目打成jar的同时将本地jar包也引入进去</span><span style="color:#75715e">--&gt;</span>
+      <span style="color:#f92672">&lt;configuration</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;includeSystemScope</span><span style="color:#f92672">&gt;</span>true<span style="color:#f92672">&lt;/includeSystemScope&gt;</span>
       <span style="color:#f92672">&lt;/configuration&gt;</span>
     <span style="color:#f92672">&lt;/plugin&gt;</span>
   <span style="color:#f92672">&lt;/plugins&gt;</span>
@@ -481,7 +481,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

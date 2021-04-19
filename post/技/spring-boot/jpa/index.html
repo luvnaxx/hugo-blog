@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E6%8A%80/spring-boot/jpa/" />
@@ -370,15 +370,15 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#数据库准备">数据库准备</a></li>
-    <li><a href="#新建spring-boot项目">新建Spring Boot项目</a></li>
-    <li><a href="#创建配置文件">创建配置文件</a></li>
-    <li><a href="#代码编写">代码编写</a>
+    <li><a href="#heading">数据库准备</a></li>
+    <li><a href="#spring-boot">新建Spring Boot项目</a></li>
+    <li><a href="#heading1">创建配置文件</a></li>
+    <li><a href="#heading2">代码编写</a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#运行测试">运行测试</a></li>
+    <li><a href="#heading3">运行测试</a></li>
   </ul>
 </nav>
   </div>
@@ -386,7 +386,7 @@
 
     
     <div class="post-content">
-      <h2 id="数据库准备">数据库准备</h2>
+      <h2 id="heading">数据库准备</h2>
 <p>新建数据库springboot，数据库表tb_user，添加id、username、password、age、address字段。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#a6e22e">tb_user</span>
 (
@@ -396,83 +396,83 @@
   age <span style="color:#66d9ef">int</span>,
   address <span style="color:#66d9ef">varchar</span>(<span style="color:#ae81ff">100</span>)
 );
-<span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> tb_user COMMENT <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;用户信息表&#39;</span>;
+<span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> tb_user COMMENT <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">用户信息表</span><span style="color:#e6db74">&#39;</span>;
 </code></pre></div><p><em>关于数据库的命名规范，虽说没有一个强制的规定说数据库要如何命名、数据表要如何命名、字段值要如何命名，但是似乎很多都是有一个潜规则。我又是一个有些强迫症的人，很多时候我为了一个命名，可以想个半天，有时甚至删项目重搞。可怕</em>
 <em>对于MySQL数据库的各种命名，在我翻过各种高山，拜访过各位民间大神之后，现在的习惯是数据库名和表名采用 &ldquo;_&ldquo;连接的形式，据说这是为了方面在Windows与类Unix机器上的兼容。而对于数据表中的字段，我现在使用Java变量名命名的规范，即驼峰原则，这样可能比较有利于与Java的配合。</em></p>
-<h2 id="新建spring-boot项目">新建Spring Boot项目</h2>
+<h2 id="spring-boot">新建Spring Boot项目</h2>
 <p>进入<a href="https://start.spring.io/">SPRING INITIALIZR</a> 或者使用JetBrains IDEA/Eclipse构建一个Spring Boot项目(这里使用2.0.3.RELEASE版本)。选择添加Web、JPA、MySQL依赖，或者稍后手动在pom.xml中添加。
 最终的pom.xml文件中应该包含有如下依赖：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies</span><span style="color:#f92672">&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
 
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
 
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-data-jpa<span style="color:#f92672">&lt;/artifactId&gt;</span>
-
-    <span style="color:#f92672">&lt;/dependency&gt;</span>
-
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-data-jpa<span style="color:#f92672">&lt;/artifactId&gt;</span>
 
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
 
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-
-      <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
-
-      <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
-
-      <span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
 
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
 
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
 
-      <span style="color:#f92672">&lt;artifactId&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
 
-      <span style="color:#f92672">&lt;optional&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
+
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
 
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-    <span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
 
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
 
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
 
-      <span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
+      <span style="color:#f92672">&lt;optional</span><span style="color:#f92672">&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
+
+    <span style="color:#f92672">&lt;/dependency&gt;</span>
+
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
+
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
 
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 
   <span style="color:#f92672">&lt;/dependencies&gt;</span>
 </code></pre></div><p><em>可以看到，这里多添加了一个lombok依赖。lombok是一个简化Java代码的工具，通过添加注解，在实体类中就可以不再手动编写getter/setter方法，虽说现在各种IDE已经可以自动帮助我们生成getter/setter方法，但是简化文件的内容还是很不错的。</em></p>
-<h2 id="创建配置文件">创建配置文件</h2>
+<h2 id="heading1">创建配置文件</h2>
 <p>在resources文件夹下，新建application.yml配置文件。个人感觉YAML相较于properties，在一些方面更好用、更方便一些。
 打开配置文件，在里面配置数据库连接相关信息。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#66d9ef">spring</span>:
-  <span style="color:#66d9ef">datasource</span>:
-  <span style="color:#66d9ef">driver-class-name</span>: com.mysql.jdbc.Driver
-  <span style="color:#66d9ef">url</span>: jdbc:mysql://localhost:<span style="color:#ae81ff">3306</span>/springboot?useSSL=<span style="color:#66d9ef">false</span>
-  <span style="color:#66d9ef">username</span>: root
-  <span style="color:#66d9ef">password</span>: mysql
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">spring:
+  datasource:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:<span style="color:#ae81ff">3306</span>/springboot?useSSL=<span style="color:#66d9ef">false</span>
+  username: root
+  password: mysql
 
-<span style="color:#66d9ef">jpa</span>:
-  <span style="color:#66d9ef">database</span>: mysql
-  <span style="color:#66d9ef">show-sql</span>: <span style="color:#66d9ef">true</span>
+jpa:
+  database: mysql
+  show-sql: <span style="color:#66d9ef">true</span>
 </code></pre></div><p><em>此处使用的密码为明文密码，不是很安全，可以使用md5 + salt加密</em></p>
-<h2 id="代码编写">代码编写</h2>
+<h2 id="heading2">代码编写</h2>
 <blockquote>
 <p>文件的创建应该是自下而上的，而代码的编写应该是自上而下的。这让文章写起来很不舒服。现在把文件的创建和代码的编写一次性粘贴出来，所以在编写完全部的代码之前，出现内容找不到报错的问题属于正常现象。以后文章也按照此原则进行。</p>
 </blockquote>
-<h4 id="controller层">controller层</h4>
+<h4 id="controller">controller层</h4>
 <p>新建controller包，即使是一个简单的demo，规范还是要有的。
 在controller下新建 <em>UserRestController.java</em>，至于为什么要加一个Rest呢？可能是我为以后考虑吧。嘻嘻
 代码如下</p>
@@ -481,7 +481,7 @@
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserRestController</span> <span style="color:#f92672">{</span>
 
 <span style="color:#f92672">}</span>
-</code></pre></div><h4 id="entity层">entity层</h4>
+</code></pre></div><h4 id="entity">entity层</h4>
 <p>新建entity包，用来存放与数据库字段相对应的内容。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Data</span>
 <span style="color:#a6e22e">@Entity</span>
@@ -506,23 +506,23 @@
   <span style="color:#66d9ef">private</span> String address<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>可以看到此处使用了<code>@Data</code>注解，在类中就可以省略掉getter/setter，还是很方面的说。当然这只是lombok的皮毛，暂时够用即可。</p>
-<h4 id="service层">service层</h4>
+<h4 id="service">service层</h4>
 <p>service层一般放置具体的业务逻辑，在此处新建 <em>UserService.java</em> 接口
 里面的抽象方法有</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserService</span> <span style="color:#f92672">{</span>
 
-  List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAll</span><span style="color:#f92672">();</span>
+  List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-  User <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>User entity<span style="color:#f92672">);</span>
+  User <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>User entity<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">);</span>
+  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
   <span style="color:#75715e">/**
 </span><span style="color:#75715e">   * 通过id查询用户
 </span><span style="color:#75715e">   *
 </span><span style="color:#75715e">   * @param id 用户id（数据库自增）
 </span><span style="color:#75715e">   */</span>
-  Optional<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">);</span>
+  Optional<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>在service包下新建impl包，用来实现接口的方法 <em>UserServiceImpl.java</em></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Service</span>
@@ -532,35 +532,35 @@
   <span style="color:#66d9ef">private</span> UserJPA userJPA<span style="color:#f92672">;</span>
 
   <span style="color:#a6e22e">@Override</span>
-  <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAll</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> userJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">findAll</span><span style="color:#f92672">();</span>
+  <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> userJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">findAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#a6e22e">@Override</span>
   <span style="color:#66d9ef">public</span> User <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>User entity<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> userJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>entity<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> userJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>entity<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#a6e22e">@Override</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    userJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
+    userJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#a6e22e">@Override</span>
   <span style="color:#66d9ef">public</span> Optional<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> userJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> userJPA<span style="color:#f92672">.</span><span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h4 id="dao层">dao层</h4>
+</code></pre></div><h4 id="dao">dao层</h4>
 <p>dao层即程序与数据库的交互层，在这里编写各种查询语句来满足业务需求。新建 <em>UserJPA.java</em></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserJPA</span> <span style="color:#66d9ef">extends</span> JpaRepository<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">,</span> Long<span style="color:#f92672">&gt;,</span>
-	JpaSpecificationExecutor<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;,</span> Serializable <span style="color:#f92672">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserJPA</span> <span style="color:#66d9ef">extends</span> JpaRepository<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">,</span> Long<span style="color:#f92672">&gt;</span><span style="color:#f92672">,</span>
+	JpaSpecificationExecutor<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span><span style="color:#f92672">,</span> Serializable <span style="color:#f92672">{</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>代码已经写完了。这就是SpringDataJPA的神奇之处。</p>
 <blockquote>
 <p>我们UserJPA继承了JpaRepository接口（SpringDataJPA提供的简单数据操作接口）、JpaSpecificationExecutor（SpringDataJPA提供的复杂查询接口）、Serializable（序列化接口）。我们并不需要做其他的任何操作了，因为SpringBoot以及SpringDataJPA会为我们全部搞定，SpringDataJPA内部使用了类代理的方式让继承了它接口的子接口都以spring管理的Bean的形式存在，也就是说我们可以直接使用@Autowired注解在spring管理bean使用</p>
 </blockquote>
-<h4 id="controller层-1">controller层</h4>
+<h4 id="controller1">controller层</h4>
 <p>再次回到 <em>UserRestController.java</em>，在里面编写具体的增删改查(CRUD)操作。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
 <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/user&#34;</span><span style="color:#f92672">)</span>
@@ -573,8 +573,8 @@
 </span><span style="color:#75715e">   * 显示全部用户方法
 </span><span style="color:#75715e">   */</span>
   <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/list&#34;</span><span style="color:#f92672">)</span>
-  <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findAll</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">();</span>
+  <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -582,7 +582,7 @@
 </span><span style="color:#75715e">   */</span>
   <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/save&#34;</span><span style="color:#f92672">)</span>
   <span style="color:#66d9ef">public</span> User <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>User entity<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>entity<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>entity<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -592,8 +592,8 @@
 </span><span style="color:#75715e">   */</span>
   <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/delete&#34;</span><span style="color:#f92672">)</span>
   <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    userService<span style="color:#f92672">.</span><span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">();</span>
+    userService<span style="color:#f92672">.</span><span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">getAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -603,15 +603,15 @@
 </span><span style="color:#75715e">   */</span>
   <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;{id}&#34;</span><span style="color:#f92672">)</span>
   <span style="color:#66d9ef">public</span> Optional<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@PathVariable</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">)</span> Long id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 
 </code></pre></div><p>简单的数据库增删改查操作</p>
-<h2 id="运行测试">运行测试</h2>
+<h2 id="heading3">运行测试</h2>
 <p>启动项目，程序默认端口号为8080，如若想修改，打开 <em>application.yml</em>，编写</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#66d9ef">server</span>:
-  <span style="color:#66d9ef">port</span>: <span style="color:#ae81ff">7777</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">server:
+  port: <span style="color:#ae81ff">7777</span>
 
 
 </code></pre></div><p>即修改程序端口号为7777.在浏览器地址栏输入<a href="http://localhost:7777/user/list">http://localhost:7777/user/list</a>
@@ -635,8 +635,8 @@
 在工程中新建base包，新建BaseDAO接口。</p>
 </blockquote>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@NoRepositoryBean</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">BaseDAO</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">extends</span> JpaRepository<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> Long<span style="color:#f92672">&gt;,</span>
-        JpaSpecificationExecutor<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;,</span> Serializable <span style="color:#f92672">{</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">BaseDAO</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">extends</span> JpaRepository<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span> Long<span style="color:#f92672">&gt;</span><span style="color:#f92672">,</span>
+        JpaSpecificationExecutor<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span><span style="color:#f92672">,</span> Serializable <span style="color:#f92672">{</span>
 <span style="color:#f92672">}</span>
 
 
@@ -738,7 +738,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

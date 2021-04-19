@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E6%8A%80/spring-boot/swagger2/" />
@@ -72,7 +72,7 @@
 <meta itemprop="description" content="给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档，不然会造成说明与实际不符的情况。所以我们需要一个能配合程序产生API文档的小伙伴。Swagger2就是一款RESTful接口的文档在线自动生成&#43;功能测试功能软件。">
 <meta itemprop="datePublished" content="2019-12-22T16:02:23&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-22T16:02:23&#43;08:00" />
-<meta itemprop="wordCount" content="686">
+<meta itemprop="wordCount" content="684">
 
 
 
@@ -371,13 +371,13 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#添加依赖">添加依赖</a></li>
-    <li><a href="#编写代码">编写代码</a>
+    <li><a href="#heading">添加依赖</a></li>
+    <li><a href="#heading1">编写代码</a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#运行测试">运行测试</a></li>
+    <li><a href="#heading3">运行测试</a></li>
   </ul>
 </nav>
   </div>
@@ -387,49 +387,49 @@
     <div class="post-content">
       <p>给项目的接口添加接口说明是一个很好的习惯。对于越来越大，越来越多的接口，维护说明是一个比较麻烦的工作；如果接口内容发生变化，还要及时更新文档，不然会造成说明与实际不符的情况。所以我们需要一个能配合程序产生API文档的小伙伴。Swagger2就是一款RESTful接口的文档在线自动生成+功能测试功能软件。</p>
 <hr>
-<h2 id="添加依赖">添加依赖</h2>
+<h2 id="heading">添加依赖</h2>
 <p>在<code>pom.xml</code>中添加如下依赖</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#75715e">&lt;!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 --&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>io.springfox<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>springfox-swagger2<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version&gt;</span>2.8.0<span style="color:#f92672">&lt;/version&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> https://mvnrepository.com/artifact/io.springfox/springfox</span><span style="color:#75715e">-</span><span style="color:#75715e">swagger2 </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>io.springfox<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>springfox-swagger2<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>2.8.0<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#75715e">&lt;!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui --&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>io.springfox<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>springfox-swagger-ui<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version&gt;</span>2.8.0<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> https://mvnrepository.com/artifact/io.springfox/springfox</span><span style="color:#75715e">-</span><span style="color:#75715e">swagger</span><span style="color:#75715e">-</span><span style="color:#75715e">ui </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>io.springfox<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>springfox-swagger-ui<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>2.8.0<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><h2 id="编写代码">编写代码</h2>
-<h4 id="创建swagger2配置类">创建Swagger2配置类</h4>
+</code></pre></div><h2 id="heading1">编写代码</h2>
+<h4 id="swagger2">创建Swagger2配置类</h4>
 <p>在<code>configuration</code>包下新建<code>Swagger2Configuration.java</code>。内容如下</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#a6e22e">@EnableSwagger2</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Swagger2Configuration</span> <span style="color:#f92672">{</span>
 
   <span style="color:#a6e22e">@Bean</span>
-  <span style="color:#66d9ef">public</span> Docket <span style="color:#a6e22e">createRestApi</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> Docket <span style="color:#a6e22e">createRestApi</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Docket<span style="color:#f92672">(</span>DocumentationType<span style="color:#f92672">.</span><span style="color:#a6e22e">SWAGGER_2</span><span style="color:#f92672">)</span>
-        <span style="color:#f92672">.</span><span style="color:#a6e22e">apiInfo</span><span style="color:#f92672">(</span>apiInfo<span style="color:#f92672">())</span>
-        <span style="color:#f92672">.</span><span style="color:#a6e22e">select</span><span style="color:#f92672">()</span>
-        <span style="color:#f92672">.</span><span style="color:#a6e22e">apis</span><span style="color:#f92672">(</span>RequestHandlerSelectors<span style="color:#f92672">.</span><span style="color:#a6e22e">basePackage</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.luvnaxx.web.springboot.rookie&#34;</span><span style="color:#f92672">))</span>
-        <span style="color:#f92672">.</span><span style="color:#a6e22e">paths</span><span style="color:#f92672">(</span>PathSelectors<span style="color:#f92672">.</span><span style="color:#a6e22e">any</span><span style="color:#f92672">())</span>
-        <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">.</span><span style="color:#a6e22e">apiInfo</span><span style="color:#f92672">(</span>apiInfo<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">.</span><span style="color:#a6e22e">select</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">.</span><span style="color:#a6e22e">apis</span><span style="color:#f92672">(</span>RequestHandlerSelectors<span style="color:#f92672">.</span><span style="color:#a6e22e">basePackage</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.luvnaxx.web.springboot.rookie&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">.</span><span style="color:#a6e22e">paths</span><span style="color:#f92672">(</span>PathSelectors<span style="color:#f92672">.</span><span style="color:#a6e22e">any</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
-  <span style="color:#66d9ef">private</span> ApiInfo <span style="color:#a6e22e">apiInfo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    Contact contact <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Contact<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;luvnaxx&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;https://www.luvnaxx.com&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;luvnaxx@gmail.com&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ApiInfoBuilder<span style="color:#f92672">()</span>
+  <span style="color:#66d9ef">private</span> ApiInfo <span style="color:#a6e22e">apiInfo</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Contact contact <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Contact<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;luvnaxx&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;https://www.luvnaxx.com&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;luvnaxx@gmail.com&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ApiInfoBuilder<span style="color:#f92672">(</span><span style="color:#f92672">)</span>
         <span style="color:#f92672">.</span><span style="color:#a6e22e">title</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Spring Boot中使用Swagger2构建RESTful APIs&#34;</span><span style="color:#f92672">)</span>
         <span style="color:#f92672">.</span><span style="color:#a6e22e">description</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;学习Spring Boot的简单小项目&#34;</span><span style="color:#f92672">)</span>
         <span style="color:#f92672">.</span><span style="color:#a6e22e">contact</span><span style="color:#f92672">(</span>contact<span style="color:#f92672">)</span>
         <span style="color:#f92672">.</span><span style="color:#a6e22e">version</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1.0&#34;</span><span style="color:#f92672">)</span>
-        <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>通过<code>@Configuration</code>注解，让Spring来加载该类配置。再通过<code>@EnableSwagger2</code>注解来启用Swagger2</p>
-<h4 id="添加文档内容">添加文档内容</h4>
+<h4 id="heading2">添加文档内容</h4>
 <p>在我们需要的方法上添加注解内容来丰富文档的内容。仅仅以一个方法作为示例：在<code>UserRestController.java</code>中添加如下内容</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#75715e">/**
 </span><span style="color:#75715e">   * 返回指定id用户
@@ -440,10 +440,10 @@
   <span style="color:#a6e22e">@ApiOperation</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;获取指定用户&#34;</span><span style="color:#f92672">,</span> notes <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;根据id返回指定用户&#34;</span><span style="color:#f92672">)</span>
   <span style="color:#a6e22e">@ApiImplicitParam</span><span style="color:#f92672">(</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">,</span> value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;用户id&#34;</span><span style="color:#f92672">,</span> required <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">,</span> dataType <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Long&#34;</span><span style="color:#f92672">,</span> paramType <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;path&#34;</span><span style="color:#f92672">)</span>
   <span style="color:#66d9ef">public</span> Optional<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@PathVariable</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">)</span> Long id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> userService<span style="color:#f92672">.</span><span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 </code></pre></div><p>通过<code>@ApiOperation</code>注解来给API增加说明、通过<code>@ApiImplicitParams</code>、<code>@ApiImplicitParam</code>注解来给参数增加说明。</p>
-<h2 id="运行测试">运行测试</h2>
+<h2 id="heading3">运行测试</h2>
 <p>启动项目，访问 <a href="http://localhost:7777/swagger-ui.html"><a href="http://localhost:7777/swagger-ui.html">http://localhost:7777/swagger-ui.html</a></a></p>
     </div>
 
@@ -540,7 +540,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

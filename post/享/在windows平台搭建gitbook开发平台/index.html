@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E4%BA%AB/%E5%9C%A8windows%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BAgitbook%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0/" />
@@ -371,11 +371,11 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#安装gitbook">安装Gitbook</a></li>
+        <li><a href="#gitbook">安装Gitbook</a></li>
       </ul>
     </li>
-    <li><a href="#发布过程中遇到的问题">发布过程中遇到的问题</a></li>
-    <li><a href="#自定义域名">自定义域名</a></li>
+    <li><a href="#heading1">发布过程中遇到的问题</a></li>
+    <li><a href="#heading2">自定义域名</a></li>
   </ul>
 </nav>
   </div>
@@ -383,8 +383,8 @@
 
     
     <div class="post-content">
-      <h3 id="安装gitbook">安装Gitbook</h3>
-<h4 id="一本地安装gitbook">一：本地安装Gitbook</h4>
+      <h3 id="gitbook">安装Gitbook</h3>
+<h4 id="gitbook1">一：本地安装Gitbook</h4>
 <ol>
 <li>在本地安装Nodejs，完成之后在命令行输入<code>npm install gitbook-cli -g</code>。</li>
 <li>在GitHub中创建新的仓库，设置为public并且勾选README.md</li>
@@ -393,23 +393,23 @@
 <li>命令行输入<code>gitbook serve</code>启动本地服务，浏览器输入<a href="%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80">localhost:4000</a>即可实时预览</li>
 <li>命令行中键入<code>gitbook build . docs</code>，将文件都编译到 <em>docs</em> 目录下</li>
 </ol>
-<h4 id="二发布到github的page中">二：发布到GitHub的page中</h4>
+<h4 id="githubpage">二：发布到GitHub的page中</h4>
 <ol>
 <li>将修改后的文件<strong>PUSH</strong>到远程仓库</li>
 <li>进入仓库的设置界面，在<strong>GitHub Pages</strong> → <strong>Source</strong>中选择<em>master branch/docs folder</em></li>
 <li>访问生成的地址即可</li>
 </ol>
-<h4 id="三安装插件">三：安装插件</h4>
+<h4 id="heading">三：安装插件</h4>
 <ol>
 <li>在项目根目录下添加<code>book.json</code>文件，添加插件</li>
 <li>执行<code>gitbook install</code>，或者使用<code>npm install</code> 插件名称进行安装</li>
 </ol>
-<h2 id="发布过程中遇到的问题">发布过程中遇到的问题</h2>
+<h2 id="heading1">发布过程中遇到的问题</h2>
 <p>1.遇到如此提示：</p>
 <p><img src="https://blog-1252667810.cos.ap-shanghai.myqcloud.com/image/2019/10/8dfb512b09ea46d59b87c998a9bf2fbb.png" alt="error"></p>
 <p>解决方法：用户目录下找到以下文件。
 <em>${USER_HOME}.gitbook\versions\3.2.3\lib\output\website\copyPluginAssets.js</em>，将里面的<code>confirm: true</code>改为<code>confirm: false</code>，应该是有两个</p>
-<h2 id="自定义域名">自定义域名</h2>
+<h2 id="heading2">自定义域名</h2>
 <p>生成的gitbook默认访问地址是<code>{username}.github.io</code>，可以自定义域名。</p>
 
     </div>
@@ -508,7 +508,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

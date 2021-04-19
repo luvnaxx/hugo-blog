@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E6%8A%80/spring-boot/druid/" />
@@ -72,7 +72,7 @@
 <meta itemprop="description" content="Druid是一个JDBC组件库，包括数据库连接池、SQL Parser等组件。DruidDataSource是最好的数据库连接池。具体参见 alibaba/druid">
 <meta itemprop="datePublished" content="2019-12-22T14:57:18&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-22T14:57:18&#43;08:00" />
-<meta itemprop="wordCount" content="1264">
+<meta itemprop="wordCount" content="1263">
 
 
 
@@ -371,10 +371,10 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#添加druid依赖">添加druid依赖</a></li>
-    <li><a href="#配置druid">配置druid</a></li>
-    <li><a href="#运行项目">运行项目</a></li>
-    <li><a href="#启动druid监控功能">启动druid监控功能</a></li>
+    <li><a href="#druid">添加druid依赖</a></li>
+    <li><a href="#druid1">配置druid</a></li>
+    <li><a href="#heading">运行项目</a></li>
+    <li><a href="#druid2">启动druid监控功能</a></li>
   </ul>
 </nav>
   </div>
@@ -384,142 +384,142 @@
     <div class="post-content">
       <p>Druid是一个JDBC组件库，包括数据库连接池、SQL Parser等组件。DruidDataSource是最好的数据库连接池。具体参见 <a href="https://github.com/alibaba/druid/wiki/%E9%A6%96%E9%A1%B5">alibaba/druid</a></p>
 <hr>
-<h2 id="添加druid依赖">添加druid依赖</h2>
+<h2 id="druid">添加druid依赖</h2>
 <p>在pom.xml文件<code>&lt;dependencies&gt;&lt;/dependencies&gt;</code>中添加</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>druid-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version&gt;</span>1.1.10<span style="color:#f92672">&lt;/version&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>druid-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>1.1.10<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><p>此时的完整依赖组件应有</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">  <span style="color:#f92672">&lt;dependencies</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;optional&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;optional</span><span style="color:#f92672">&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-tomcat<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;scope&gt;</span>provided<span style="color:#f92672">&lt;/scope&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-tomcat<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>provided<span style="color:#f92672">&lt;/scope&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;scope</span><span style="color:#f92672">&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-data-jpa<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-data-jpa<span style="color:#f92672">&lt;/artifactId&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-jdbc<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>spring-boot-starter-jdbc<span style="color:#f92672">&lt;/artifactId&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#75715e">&lt;!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter --&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version&gt;</span>1.3.2<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis</span><span style="color:#75715e">-</span><span style="color:#75715e">spring</span><span style="color:#75715e">-</span><span style="color:#75715e">boot</span><span style="color:#75715e">-</span><span style="color:#75715e">starter </span><span style="color:#75715e">--&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>1.3.2<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>druid-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version&gt;</span>1.1.10<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#f92672">&lt;dependency</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
+      <span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>druid-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+      <span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>1.1.10<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;/dependency&gt;</span>
   <span style="color:#f92672">&lt;/dependencies&gt;</span>
-</code></pre></div><h2 id="配置druid">配置druid</h2>
+</code></pre></div><h2 id="druid1">配置druid</h2>
 <p>此时修改application.yml，内容如下</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">server</span>:
-  <span style="color:#66d9ef">port</span>: <span style="color:#ae81ff">7777</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">server:
+  port: <span style="color:#ae81ff">7777</span>
 
-<span style="color:#66d9ef">spring</span>:
-  <span style="color:#66d9ef">datasource</span>:
-    <span style="color:#66d9ef">driver-class-name</span>: com.mysql.jdbc.Driver
-    <span style="color:#66d9ef">url</span>: jdbc:mysql://localhost:<span style="color:#ae81ff">3306</span>/springboot?useSSL=<span style="color:#66d9ef">false</span>
-    <span style="color:#66d9ef">username</span>: root
-    <span style="color:#66d9ef">password</span>: mysql
-    <span style="color:#66d9ef">type</span>: com.alibaba.druid.pool.DruidDataSource
-    <span style="color:#66d9ef">druid</span>:
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:<span style="color:#ae81ff">3306</span>/springboot?useSSL=<span style="color:#66d9ef">false</span>
+    username: root
+    password: mysql
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
       <span style="color:#75715e"># 配置监控统计拦截的filters，去掉后监控界面sql将无法统计，&#39;wall&#39;用于防火墙</span>
-      <span style="color:#66d9ef">filters</span>: stat, wall
+      filters: stat, wall
       <span style="color:#75715e"># 最大活跃数</span>
-      <span style="color:#66d9ef">max-active</span>: <span style="color:#ae81ff">20</span>
+      max-active: <span style="color:#ae81ff">20</span>
       <span style="color:#75715e"># 初始化数量</span>
-      <span style="color:#66d9ef">initial-size</span>: <span style="color:#ae81ff">1</span>
+      initial-size: <span style="color:#ae81ff">1</span>
       <span style="color:#75715e"># 最大连接等待超时时间</span>
-      <span style="color:#66d9ef">max-wait</span>: <span style="color:#ae81ff">60000</span>
+      max-wait: <span style="color:#ae81ff">60000</span>
       <span style="color:#75715e"># 通过connectionProperties属性来打开mergeSql功能；慢SQL记录</span>
-      <span style="color:#66d9ef">connection-properties</span>: druid.stat.mergeSql=<span style="color:#66d9ef">true</span>;ddruid.stat.slowSqlMillis=<span style="color:#ae81ff">5000</span>
+      connection-properties: druid.stat.mergeSql=<span style="color:#66d9ef">true</span>;ddruid.stat.slowSqlMillis=<span style="color:#ae81ff">5000</span>
 
       <span style="color:#75715e"># 打开PSCache，并且指定每个连接PSCache的大小</span>
-      <span style="color:#66d9ef">pool-prepared-statements</span>: <span style="color:#66d9ef">true</span>
-      <span style="color:#66d9ef">maxPoolPreparedStatementPerConnectionSize</span>: <span style="color:#ae81ff">20</span>
-      <span style="color:#66d9ef">minIdle</span>: <span style="color:#ae81ff">1</span>
-      <span style="color:#66d9ef">timeBetweenEvictionRunsMillis</span>: <span style="color:#ae81ff">60000</span>
-      <span style="color:#66d9ef">minEvictableIdleTimeMillis</span>: <span style="color:#ae81ff">300000</span>
-      <span style="color:#66d9ef">validationQuery</span>: select <span style="color:#ae81ff">1</span> from dual
-      <span style="color:#66d9ef">testWhileIdle</span>: <span style="color:#66d9ef">true</span>
-      <span style="color:#66d9ef">testOnBorrow</span>: <span style="color:#66d9ef">false</span>
-      <span style="color:#66d9ef">testOnReturn</span>: <span style="color:#66d9ef">false</span>
+      pool-prepared-statements: <span style="color:#66d9ef">true</span>
+      maxPoolPreparedStatementPerConnectionSize: <span style="color:#ae81ff">20</span>
+      minIdle: <span style="color:#ae81ff">1</span>
+      timeBetweenEvictionRunsMillis: <span style="color:#ae81ff">60000</span>
+      minEvictableIdleTimeMillis: <span style="color:#ae81ff">300000</span>
+      validationQuery: select <span style="color:#ae81ff">1</span> from dual
+      testWhileIdle: <span style="color:#66d9ef">true</span>
+      testOnBorrow: <span style="color:#66d9ef">false</span>
+      testOnReturn: <span style="color:#66d9ef">false</span>
 
-  <span style="color:#66d9ef">jpa</span>:
-    <span style="color:#66d9ef">database</span>: mysql
-    <span style="color:#66d9ef">show-sql</span>: <span style="color:#66d9ef">true</span>
+  jpa:
+    database: mysql
+    show-sql: <span style="color:#66d9ef">true</span>
     <span style="color:#75715e"># spring.jpa.properties.hibernate.hbm2ddl.auto是hibernate的配置属性，其主要作用是：自动创建、更新、验证数据库表结构。该参数的几种配置如下：</span>
     <span style="color:#75715e"># create：每次加载hibernate时都会删除上一次的生成的表，然后根据你的model类再重新来生成新表，哪怕两次没有任何改变也要这样执行，这就是导致数据库表数据丢失的一个重要原因。</span>
     <span style="color:#75715e"># create-drop：每次加载hibernate时根据model类生成表，但是sessionFactory一关闭,表就自动删除。</span>
     <span style="color:#75715e"># update：最常用的属性，第一次加载hibernate时根据model类会自动建立起表的结构（前提是先建立好数据库），以后加载hibernate时根据model类自动更新表结构，即使表结构改变了但表中的行仍然存在不会删除以前的行。要注意的是当部署到服务器后，表结构是不会被马上建立起来的，是要等应用第一次运行起来后才会。</span>
     <span style="color:#75715e"># validate：每次加载hibernate时，验证创建数据库表结构，只会和数据库中的表进行比较，不会创建新表，但是会插入新值。</span>
-    <span style="color:#66d9ef">properties</span>:
-      <span style="color:#66d9ef">hibernate</span>:
-        <span style="color:#66d9ef">hbm2ddl</span>:
-          <span style="color:#66d9ef">auto</span>: update
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
 
 <span style="color:#75715e"># Mybatis 配置</span>
-<span style="color:#66d9ef">mybatis</span>:
-  <span style="color:#66d9ef">typeAliasesPackage</span>: com.luvnaxx.web.springboot.rookie.entity
-  <span style="color:#66d9ef">mapperLocations</span>: classpath:mapper/<span style="color:#75715e">*.xml</span>
-</code></pre></div><h2 id="运行项目">运行项目</h2>
+mybatis:
+  typeAliasesPackage: com.luvnaxx.web.springboot.rookie.entity
+  mapperLocations: classpath:mapper/<span style="color:#75715e">*.xml</span>
+</code></pre></div><h2 id="heading">运行项目</h2>
 <p>此时，Spring Boot已经将druid作为dataSource加载到了项目中。在浏览器进行数据库的CRUD是没有问题的。</p>
-<h2 id="启动druid监控功能">启动druid监控功能</h2>
+<h2 id="druid2">启动druid监控功能</h2>
 <p>在controller同级目录添加configuration包，新增<code>DruidConfiguration.java</code>，内容如下</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DruidConfiguration</span> <span style="color:#f92672">{</span>
 
   <span style="color:#a6e22e">@Bean</span>
-  <span style="color:#66d9ef">public</span> ServletRegistrationBean<span style="color:#f92672">&lt;</span>StatViewServlet<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">statViewServlet</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> ServletRegistrationBean<span style="color:#f92672">&lt;</span>StatViewServlet<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">statViewServlet</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">// 创建servlet注册尸体
-</span><span style="color:#75715e"></span>    ServletRegistrationBean<span style="color:#f92672">&lt;</span>StatViewServlet<span style="color:#f92672">&gt;</span> servletRegistrationBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ServletRegistrationBean<span style="color:#f92672">&lt;&gt;(</span><span style="color:#66d9ef">new</span> StatViewServlet<span style="color:#f92672">(),</span> <span style="color:#e6db74">&#34;/druid/*&#34;</span><span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>    ServletRegistrationBean<span style="color:#f92672">&lt;</span>StatViewServlet<span style="color:#f92672">&gt;</span> servletRegistrationBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ServletRegistrationBean<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> StatViewServlet<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;/druid/*&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#75715e">// 设置ip白名单
-</span><span style="color:#75715e"></span>    servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;allow&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;127.0.0.1&#34;</span><span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>    servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;allow&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;127.0.0.1&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#75715e">// 设置ip黑名单，如果allow与deny共同存在时，deny优先于allow
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// servletRegistrationBean.addInitParameter(&#34;deny&#34;, &#34;xxx.xx.xxx.xxx&#34;);
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// 设置控制台管理用户
-</span><span style="color:#75715e"></span>    servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;loginUsername&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;druid&#34;</span><span style="color:#f92672">);</span>
-    servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;loginPassword&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;druid&#34;</span><span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>    servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;loginUsername&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;druid&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;loginPassword&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;druid&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#75715e">// 是否可以重置数据
-</span><span style="color:#75715e"></span>    servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;resetEnable&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;false&#34;</span><span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>    servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;resetEnable&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;false&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">return</span> servletRegistrationBean<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#a6e22e">@Bean</span>
-  <span style="color:#66d9ef">public</span> FilterRegistrationBean<span style="color:#f92672">&lt;</span>WebStatFilter<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">statFilter</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> FilterRegistrationBean<span style="color:#f92672">&lt;</span>WebStatFilter<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">statFilter</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">// 创建过滤器
-</span><span style="color:#75715e"></span>    FilterRegistrationBean<span style="color:#f92672">&lt;</span>WebStatFilter<span style="color:#f92672">&gt;</span> filterRegistrationBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FilterRegistrationBean<span style="color:#f92672">&lt;&gt;(</span><span style="color:#66d9ef">new</span> WebStatFilter<span style="color:#f92672">());</span>
+</span><span style="color:#75715e"></span>    FilterRegistrationBean<span style="color:#f92672">&lt;</span>WebStatFilter<span style="color:#f92672">&gt;</span> filterRegistrationBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FilterRegistrationBean<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> WebStatFilter<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#75715e">// 设置过滤器过滤路径
-</span><span style="color:#75715e"></span>    filterRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addUrlPatterns</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/*&#34;</span><span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>    filterRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addUrlPatterns</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/*&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#75715e">// 忽略过滤的形式
-</span><span style="color:#75715e"></span>    filterRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;exclusions&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;*.js,*.gif,*.jpg,*.png,*.ico,/druid/*&#34;</span><span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>    filterRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;exclusions&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;*.js,*.gif,*.jpg,*.png,*.ico,/druid/*&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">return</span> filterRegistrationBean<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
@@ -619,7 +619,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E8%AE%B0/base64%E4%B8%8E%E6%96%87%E4%BB%B6%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" />
@@ -373,7 +373,7 @@
 
     
     <div class="post-content">
-      <h1 id="base64与文件的相关操作">Base64与文件的相关操作</h1>
+      <h1 id="base64">Base64与文件的相关操作</h1>
 <blockquote>
 <p>使用java.util.Base64.Decoder和java.util.Base64.Encoder，替换sun.misc.BASE64Decoder和sun.misc.BASE64Encoder</p>
 </blockquote>
@@ -383,12 +383,12 @@
 </span><span style="color:#75715e">     * @param data 要加密的数据
 </span><span style="color:#75715e">     * @return 加密后的字符串
 </span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">encryptBASE64</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> data<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">encryptBASE64</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> data<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#75715e">// BASE64Encoder encoder = new BASE64Encoder();
 </span><span style="color:#75715e"></span>        <span style="color:#75715e">// String encode = encoder.encode(data);
 </span><span style="color:#75715e"></span>        <span style="color:#75715e">// 从JKD 9开始rt.jar包已废除，从JDK 1.8开始使用java.util.Base64.Encoder
-</span><span style="color:#75715e"></span>        Encoder encoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getEncoder</span><span style="color:#f92672">();</span>
-        String encode <span style="color:#f92672">=</span> encoder<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeToString</span><span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>        Encoder encoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getEncoder</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        String encode <span style="color:#f92672">=</span> encoder<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeToString</span><span style="color:#f92672">(</span>data<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#66d9ef">return</span> encode<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
@@ -398,12 +398,12 @@
 </span><span style="color:#75715e">     * @param data 要解密的字符串
 </span><span style="color:#75715e">     * @return 解密后的byte[]
 </span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">decryptBASE64</span><span style="color:#f92672">(</span>String data<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">decryptBASE64</span><span style="color:#f92672">(</span>String data<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
         <span style="color:#75715e">// BASE64Decoder decoder = new BASE64Decoder();
 </span><span style="color:#75715e"></span>        <span style="color:#75715e">// byte[] buffer = decoder.decodeBuffer(data);
 </span><span style="color:#75715e"></span>        <span style="color:#75715e">// 从JKD 9开始rt.jar包已废除，从JDK 1.8开始使用java.util.Base64.Decoder
-</span><span style="color:#75715e"></span>        Decoder decoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getDecoder</span><span style="color:#f92672">();</span>
-        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> buffer <span style="color:#f92672">=</span> decoder<span style="color:#f92672">.</span><span style="color:#a6e22e">decode</span><span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>        Decoder decoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getDecoder</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> buffer <span style="color:#f92672">=</span> decoder<span style="color:#f92672">.</span><span style="color:#a6e22e">decode</span><span style="color:#f92672">(</span>data<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#66d9ef">return</span> buffer<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 </code></pre></div><hr>
@@ -416,25 +416,25 @@
 </span><span style="color:#75715e">     * @return base64结果
 </span><span style="color:#75715e">     */</span>
     <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">fileToBase64</span><span style="color:#f92672">(</span>String path<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> data <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
         InputStream in <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
         <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-            in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span>path<span style="color:#f92672">);</span>
-            data <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>in<span style="color:#f92672">.</span><span style="color:#a6e22e">available</span><span style="color:#f92672">()];</span>
-            in<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+            in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span>path<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            data <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>in<span style="color:#f92672">.</span><span style="color:#a6e22e">available</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+            in<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>data<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span> <span style="color:#66d9ef">finally</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>in <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                    in<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>in <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    in<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
                 <span style="color:#f92672">}</span>
             <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
             <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
-        Encoder encoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getEncoder</span><span style="color:#f92672">();</span>
-        <span style="color:#66d9ef">return</span> encoder<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeToString</span><span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+        Encoder encoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getEncoder</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> encoder<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeToString</span><span style="color:#f92672">(</span>data<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#75715e">/**
@@ -444,25 +444,25 @@
 </span><span style="color:#75715e">     * @return base64码
 </span><span style="color:#75715e">     */</span>
     <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">fileToBase64</span><span style="color:#f92672">(</span>File file<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> data <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
         InputStream in <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
         <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-            in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span>file<span style="color:#f92672">);</span>
-            data <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>in<span style="color:#f92672">.</span><span style="color:#a6e22e">available</span><span style="color:#f92672">()];</span>
-            in<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+            in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span>file<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            data <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>in<span style="color:#f92672">.</span><span style="color:#a6e22e">available</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+            in<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>data<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span> <span style="color:#66d9ef">finally</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>in <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                    in<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>in <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    in<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
                 <span style="color:#f92672">}</span>
             <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
             <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
-        Encoder encoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getEncoder</span><span style="color:#f92672">();</span>
-        <span style="color:#66d9ef">return</span> encoder<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeToString</span><span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+        Encoder encoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getEncoder</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> encoder<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeToString</span><span style="color:#f92672">(</span>data<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#75715e">/**
@@ -471,9 +471,9 @@
 </span><span style="color:#75715e">     * @param bytes 数组字节
 </span><span style="color:#75715e">     * @return base64码
 </span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">byteToBase64</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> bytes<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        Encoder encoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getEncoder</span><span style="color:#f92672">();</span>
-        <span style="color:#66d9ef">return</span> encoder<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeToString</span><span style="color:#f92672">(</span>bytes<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">byteToBase64</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> bytes<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Encoder encoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getEncoder</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> encoder<span style="color:#f92672">.</span><span style="color:#a6e22e">encodeToString</span><span style="color:#f92672">(</span>bytes<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#75715e">/**
@@ -482,22 +482,22 @@
 </span><span style="color:#75715e">     * @param file 文件
 </span><span style="color:#75715e">     * @return byte[]
 </span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">fileToByte</span><span style="color:#f92672">(</span>File file<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">fileToByte</span><span style="color:#f92672">(</span>File file<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> data <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
         InputStream in <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
         <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-            in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span>file<span style="color:#f92672">);</span>
-            data <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>in<span style="color:#f92672">.</span><span style="color:#a6e22e">available</span><span style="color:#f92672">()];</span>
-            in<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+            in <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span>file<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            data <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>in<span style="color:#f92672">.</span><span style="color:#a6e22e">available</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+            in<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>data<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span> <span style="color:#66d9ef">finally</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>in <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                    in<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>in <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    in<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
                 <span style="color:#f92672">}</span>
             <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
             <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
         <span style="color:#66d9ef">return</span> data<span style="color:#f92672">;</span>
@@ -509,19 +509,19 @@
 </span><span style="color:#75715e">     * @param imgStr base64字符串
 </span><span style="color:#75715e">     * @return byte[]
 </span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">changeBase64</span><span style="color:#f92672">(</span>String imgStr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        Decoder decoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getDecoder</span><span style="color:#f92672">();</span>
-        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> bytes <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">changeBase64</span><span style="color:#f92672">(</span>String imgStr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Decoder decoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getDecoder</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> bytes <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
         <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-            bytes <span style="color:#f92672">=</span> decoder<span style="color:#f92672">.</span><span style="color:#a6e22e">decode</span><span style="color:#f92672">(</span>imgStr<span style="color:#f92672">);</span>
-            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> bytes<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> <span style="color:#f92672">++</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            bytes <span style="color:#f92672">=</span> decoder<span style="color:#f92672">.</span><span style="color:#a6e22e">decode</span><span style="color:#f92672">(</span>imgStr<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> bytes<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> <span style="color:#f92672">+</span><span style="color:#f92672">+</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
                 <span style="color:#75715e">// 调整异常数据
 </span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>bytes<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                    bytes<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">+=</span> 256<span style="color:#f92672">;</span>
+                    bytes<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">+</span><span style="color:#f92672">=</span> 256<span style="color:#f92672">;</span>
                 <span style="color:#f92672">}</span>
             <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
         <span style="color:#66d9ef">return</span> bytes<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
@@ -534,32 +534,32 @@
 </span><span style="color:#75715e">     * @return 布尔值
 </span><span style="color:#75715e">     */</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">GenerateImage</span><span style="color:#f92672">(</span>String fileBase64<span style="color:#f92672">,</span> String imgFilePath<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>fileBase64 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>fileBase64 <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
         OutputStream out <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-        Decoder decoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getDecoder</span><span style="color:#f92672">();</span>
+        Decoder decoder <span style="color:#f92672">=</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getDecoder</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
             <span style="color:#75715e">// Base64解码
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> bytes <span style="color:#f92672">=</span> decoder<span style="color:#f92672">.</span><span style="color:#a6e22e">decode</span><span style="color:#f92672">(</span>fileBase64<span style="color:#f92672">);</span>
-            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> bytes<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> <span style="color:#f92672">++</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> bytes <span style="color:#f92672">=</span> decoder<span style="color:#f92672">.</span><span style="color:#a6e22e">decode</span><span style="color:#f92672">(</span>fileBase64<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> bytes<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> <span style="color:#f92672">+</span><span style="color:#f92672">+</span>i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
                 <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>bytes<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#75715e">// 调整异常数据
-</span><span style="color:#75715e"></span>                    bytes<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">+=</span> 256<span style="color:#f92672">;</span>
+</span><span style="color:#75715e"></span>                    bytes<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">+</span><span style="color:#f92672">=</span> 256<span style="color:#f92672">;</span>
                 <span style="color:#f92672">}</span>
             <span style="color:#f92672">}</span>
-            out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span>imgFilePath<span style="color:#f92672">);</span>
-            out<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>bytes<span style="color:#f92672">);</span>
-            out<span style="color:#f92672">.</span><span style="color:#a6e22e">flush</span><span style="color:#f92672">();</span>
+            out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileOutputStream<span style="color:#f92672">(</span>imgFilePath<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            out<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>bytes<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            out<span style="color:#f92672">.</span><span style="color:#a6e22e">flush</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
             <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span> <span style="color:#66d9ef">finally</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>out <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                    out<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>out <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    out<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
                 <span style="color:#f92672">}</span>
             <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+                e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
             <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
@@ -659,7 +659,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

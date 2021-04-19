@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E6%8A%80/%E6%97%A5%E6%9C%9F%E5%B7%A5%E5%85%B7%E7%B1%BB/" />
@@ -405,13 +405,13 @@
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Date <span style="color:#a6e22e">str2Date</span><span style="color:#f92672">(</span>String strDate<span style="color:#f92672">,</span> String pattern<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     Date date <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>pattern <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>pattern <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         pattern <span style="color:#f92672">=</span> YYYYMMDD<span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      SimpleDateFormat format <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span>pattern<span style="color:#f92672">);</span>
-      date <span style="color:#f92672">=</span> format<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>strDate<span style="color:#f92672">);</span>
+      SimpleDateFormat format <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span>pattern<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      date <span style="color:#f92672">=</span> format<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>strDate<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;str2Date error:&#34;</span> <span style="color:#f92672">+</span> e<span style="color:#f92672">);</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;str2Date error:&#34;</span> <span style="color:#f92672">+</span> e<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> date<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
@@ -426,13 +426,13 @@
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">date2String</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">,</span> String pattern<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     String strDate <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>pattern <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>pattern <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         pattern <span style="color:#f92672">=</span> YYYYMMDD<span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      SimpleDateFormat format <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span>pattern<span style="color:#f92672">);</span>
-      strDate <span style="color:#f92672">=</span> format<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
+      SimpleDateFormat format <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span>pattern<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      strDate <span style="color:#f92672">=</span> format<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;date2String error:&#34;</span> <span style="color:#f92672">+</span> e<span style="color:#f92672">);</span>
+      System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;date2String error:&#34;</span> <span style="color:#f92672">+</span> e<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> strDate<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
@@ -444,9 +444,9 @@
 </span><span style="color:#75715e">   * @return 年份
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getYear</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">YEAR</span><span style="color:#f92672">);</span>
+    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">YEAR</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -456,9 +456,9 @@
 </span><span style="color:#75715e">   * @return 月份
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getMonth</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">int</span> month <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">);</span>
+    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> month <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">return</span> month <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
@@ -469,9 +469,9 @@
 </span><span style="color:#75715e">   * @return 日
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getDay</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">);</span>
+    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -481,9 +481,9 @@
 </span><span style="color:#75715e">   * @return 星期
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getDayOfWeek</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">int</span> dayOfWeek <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_WEEK</span><span style="color:#f92672">);</span>
+    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> dayOfWeek <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_WEEK</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">return</span> dayOfWeek <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
@@ -494,9 +494,9 @@
 </span><span style="color:#75715e">   * @return 该时间是第多少周
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getWeekOfYear</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">WEEK_OF_YEAR</span><span style="color:#f92672">);</span>
+    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">WEEK_OF_YEAR</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -507,10 +507,10 @@
 </span><span style="color:#75715e">   * @return 以&#34; - &#34; 连接的字符串
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">getBeginAndEndDateOfWeek</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">,</span> String pattern<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Date monday <span style="color:#f92672">=</span> getMondayOfWeek<span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    Date sunday <span style="color:#f92672">=</span> getSundayOfWeek<span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
+    Date monday <span style="color:#f92672">=</span> getMondayOfWeek<span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    Date sunday <span style="color:#f92672">=</span> getSundayOfWeek<span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">return</span> date2String<span style="color:#f92672">(</span>monday<span style="color:#f92672">,</span> pattern<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; - &#34;</span>
-        <span style="color:#f92672">+</span> date2String<span style="color:#f92672">(</span>sunday<span style="color:#f92672">,</span> pattern<span style="color:#f92672">);</span>
+        <span style="color:#f92672">+</span> date2String<span style="color:#f92672">(</span>sunday<span style="color:#f92672">,</span> pattern<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -520,11 +520,11 @@
 </span><span style="color:#75715e">   * @return 周一的日期
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Date <span style="color:#a6e22e">getMondayOfWeek</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Calendar monday <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    monday<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    monday<span style="color:#f92672">.</span><span style="color:#a6e22e">setFirstDayOfWeek</span><span style="color:#f92672">(</span>FIRST_DAY_OF_WEEK<span style="color:#f92672">);</span>
-    monday<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_WEEK</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONDAY</span><span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> monday<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
+    Calendar monday <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    monday<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    monday<span style="color:#f92672">.</span><span style="color:#a6e22e">setFirstDayOfWeek</span><span style="color:#f92672">(</span>FIRST_DAY_OF_WEEK<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    monday<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_WEEK</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONDAY</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> monday<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -534,11 +534,11 @@
 </span><span style="color:#75715e">   * @return 周日的日期
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Date <span style="color:#a6e22e">getSundayOfWeek</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Calendar sunday <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    sunday<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    sunday<span style="color:#f92672">.</span><span style="color:#a6e22e">setFirstDayOfWeek</span><span style="color:#f92672">(</span>FIRST_DAY_OF_WEEK<span style="color:#f92672">);</span>
-    sunday<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_WEEK</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">SUNDAY</span><span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> sunday<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
+    Calendar sunday <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    sunday<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    sunday<span style="color:#f92672">.</span><span style="color:#a6e22e">setFirstDayOfWeek</span><span style="color:#f92672">(</span>FIRST_DAY_OF_WEEK<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    sunday<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_WEEK</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">SUNDAY</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> sunday<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -548,8 +548,8 @@
 </span><span style="color:#75715e">   * @return 本月剩余的天数
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getRemainDayOfMonth</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">int</span> dayOfMonth <span style="color:#f92672">=</span> getDayOfMonth<span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">int</span> passDayOfMonth <span style="color:#f92672">=</span> getPassDayOfMonth<span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">int</span> dayOfMonth <span style="color:#f92672">=</span> getDayOfMonth<span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> passDayOfMonth <span style="color:#f92672">=</span> getPassDayOfMonth<span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">return</span> dayOfMonth <span style="color:#f92672">-</span> passDayOfMonth<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
@@ -560,9 +560,9 @@
 </span><span style="color:#75715e">   * @return 本月已经过的天数
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getPassDayOfMonth</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">);</span>
+    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -572,9 +572,9 @@
 </span><span style="color:#75715e">   * @return 本月的第多少天
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getDayOfMonth</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getActualMaximum</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">);</span>
+    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getActualMaximum</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -584,10 +584,10 @@
 </span><span style="color:#75715e">   * @return 本月的第一天的日期
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Date <span style="color:#a6e22e">getFirstDateOfMonth</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">,</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getActualMinimum</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">));</span>
-    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
+    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">,</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getActualMinimum</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -597,10 +597,10 @@
 </span><span style="color:#75715e">   * @return 本月的最后一天的日期
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Date <span style="color:#a6e22e">getLastDateOfMonth</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">,</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getActualMaximum</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">));</span>
-    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
+    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">,</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getActualMaximum</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DAY_OF_MONTH</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -610,7 +610,7 @@
 </span><span style="color:#75715e">   * @return 本季度的第一天的日期
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Date <span style="color:#a6e22e">getFirstDateOfQuarter</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> getFirstDateOfMonth<span style="color:#f92672">(</span>getSeasonQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">)[</span>0<span style="color:#f92672">]);</span>
+    <span style="color:#66d9ef">return</span> getFirstDateOfMonth<span style="color:#f92672">(</span>getSeasonQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -620,7 +620,7 @@
 </span><span style="color:#75715e">   * @return 本季度的最后一天的日期
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Date <span style="color:#a6e22e">getLastDateOfQuarter</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> getLastDateOfMonth<span style="color:#f92672">(</span>getSeasonQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">)[</span>2<span style="color:#f92672">]);</span>
+    <span style="color:#66d9ef">return</span> getLastDateOfMonth<span style="color:#f92672">(</span>getSeasonQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">[</span>2<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -631,9 +631,9 @@
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getDayOfQuarter</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">int</span> day <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-    Date<span style="color:#f92672">[]</span> seasonDates <span style="color:#f92672">=</span> getSeasonQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
+    Date<span style="color:#f92672">[</span><span style="color:#f92672">]</span> seasonDates <span style="color:#f92672">=</span> getSeasonQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Date date2 <span style="color:#f92672">:</span> seasonDates<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      day <span style="color:#f92672">+=</span> getDayOfMonth<span style="color:#f92672">(</span>date2<span style="color:#f92672">);</span>
+      day <span style="color:#f92672">+</span><span style="color:#f92672">=</span> getDayOfMonth<span style="color:#f92672">(</span>date2<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> day<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
@@ -645,7 +645,7 @@
 </span><span style="color:#75715e">   * @return 本季度剩余的天数
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getRemainDayOfQuarter</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> getDayOfQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">)</span> <span style="color:#f92672">-</span> getPassDayOfQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> getDayOfQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">)</span> <span style="color:#f92672">-</span> getPassDayOfQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -657,23 +657,23 @@
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getPassDayOfQuarter</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">int</span> day <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
-    Date<span style="color:#f92672">[]</span> seasonDates <span style="color:#f92672">=</span> getSeasonQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
+    Date<span style="color:#f92672">[</span><span style="color:#f92672">]</span> seasonDates <span style="color:#f92672">=</span> getSeasonQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">int</span> month <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">);</span>
+    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> month <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">==</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JANUARY</span> <span style="color:#f92672">||</span> month <span style="color:#f92672">==</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">APRIL</span>
-        <span style="color:#f92672">||</span> month <span style="color:#f92672">==</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JULY</span> <span style="color:#f92672">||</span> month <span style="color:#f92672">==</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">OCTOBER</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 季度第一个月
-</span><span style="color:#75715e"></span>      day <span style="color:#f92672">=</span> getPassDayOfMonth<span style="color:#f92672">(</span>seasonDates<span style="color:#f92672">[</span>0<span style="color:#f92672">]);</span>
-    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">==</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">FEBRUARY</span> <span style="color:#f92672">||</span> month <span style="color:#f92672">==</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MAY</span>
-        <span style="color:#f92672">||</span> month <span style="color:#f92672">==</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">AUGUST</span> <span style="color:#f92672">||</span> month <span style="color:#f92672">==</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">NOVEMBER</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 季度第二个月
-</span><span style="color:#75715e"></span>      day <span style="color:#f92672">=</span> getDayOfMonth<span style="color:#f92672">(</span>seasonDates<span style="color:#f92672">[</span>0<span style="color:#f92672">])</span>
-          <span style="color:#f92672">+</span> getPassDayOfMonth<span style="color:#f92672">(</span>seasonDates<span style="color:#f92672">[</span>1<span style="color:#f92672">]);</span>
-    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">==</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MARCH</span> <span style="color:#f92672">||</span> month <span style="color:#f92672">==</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JUNE</span>
-        <span style="color:#f92672">||</span> month <span style="color:#f92672">==</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">SEPTEMBER</span> <span style="color:#f92672">||</span> month <span style="color:#f92672">==</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DECEMBER</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 季度第三个月
-</span><span style="color:#75715e"></span>      day <span style="color:#f92672">=</span> getDayOfMonth<span style="color:#f92672">(</span>seasonDates<span style="color:#f92672">[</span>0<span style="color:#f92672">])</span> <span style="color:#f92672">+</span> getDayOfMonth<span style="color:#f92672">(</span>seasonDates<span style="color:#f92672">[</span>1<span style="color:#f92672">])</span>
-          <span style="color:#f92672">+</span> getPassDayOfMonth<span style="color:#f92672">(</span>seasonDates<span style="color:#f92672">[</span>2<span style="color:#f92672">]);</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">=</span><span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JANUARY</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> month <span style="color:#f92672">=</span><span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">APRIL</span>
+        <span style="color:#f92672">|</span><span style="color:#f92672">|</span> month <span style="color:#f92672">=</span><span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JULY</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> month <span style="color:#f92672">=</span><span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">OCTOBER</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 季度第一个月
+</span><span style="color:#75715e"></span>      day <span style="color:#f92672">=</span> getPassDayOfMonth<span style="color:#f92672">(</span>seasonDates<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">=</span><span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">FEBRUARY</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> month <span style="color:#f92672">=</span><span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MAY</span>
+        <span style="color:#f92672">|</span><span style="color:#f92672">|</span> month <span style="color:#f92672">=</span><span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">AUGUST</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> month <span style="color:#f92672">=</span><span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">NOVEMBER</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 季度第二个月
+</span><span style="color:#75715e"></span>      day <span style="color:#f92672">=</span> getDayOfMonth<span style="color:#f92672">(</span>seasonDates<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">)</span>
+          <span style="color:#f92672">+</span> getPassDayOfMonth<span style="color:#f92672">(</span>seasonDates<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">=</span><span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MARCH</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> month <span style="color:#f92672">=</span><span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JUNE</span>
+        <span style="color:#f92672">|</span><span style="color:#f92672">|</span> month <span style="color:#f92672">=</span><span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">SEPTEMBER</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> month <span style="color:#f92672">=</span><span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DECEMBER</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 季度第三个月
+</span><span style="color:#75715e"></span>      day <span style="color:#f92672">=</span> getDayOfMonth<span style="color:#f92672">(</span>seasonDates<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> getDayOfMonth<span style="color:#f92672">(</span>seasonDates<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span><span style="color:#f92672">)</span>
+          <span style="color:#f92672">+</span> getPassDayOfMonth<span style="color:#f92672">(</span>seasonDates<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> day<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
@@ -685,41 +685,41 @@
 </span><span style="color:#75715e">   * @param date 时间
 </span><span style="color:#75715e">   * @return 取季度月
 </span><span style="color:#75715e">   */</span>
-  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Date<span style="color:#f92672">[]</span> <span style="color:#a6e22e">getSeasonQuarter</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    Date<span style="color:#f92672">[]</span> quarter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date<span style="color:#f92672">[</span>3<span style="color:#f92672">];</span>
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Date<span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">getSeasonQuarter</span><span style="color:#f92672">(</span>Date date<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Date<span style="color:#f92672">[</span><span style="color:#f92672">]</span> quarter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
 
-    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
+    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-    <span style="color:#66d9ef">int</span> nSeason <span style="color:#f92672">=</span> getQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nSeason <span style="color:#f92672">==</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 第一季度
-</span><span style="color:#75715e"></span>      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JANUARY</span><span style="color:#f92672">);</span>
-      quarter<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
-      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">FEBRUARY</span><span style="color:#f92672">);</span>
-      quarter<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
-      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MARCH</span><span style="color:#f92672">);</span>
-      quarter<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nSeason <span style="color:#f92672">==</span> 2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 第二季度
-</span><span style="color:#75715e"></span>      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">APRIL</span><span style="color:#f92672">);</span>
-      quarter<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
-      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MAY</span><span style="color:#f92672">);</span>
-      quarter<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
-      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JUNE</span><span style="color:#f92672">);</span>
-      quarter<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nSeason <span style="color:#f92672">==</span> 3<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 第三季度
-</span><span style="color:#75715e"></span>      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JULY</span><span style="color:#f92672">);</span>
-      quarter<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
-      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">AUGUST</span><span style="color:#f92672">);</span>
-      quarter<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
-      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">SEPTEMBER</span><span style="color:#f92672">);</span>
-      quarter<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nSeason <span style="color:#f92672">==</span> 4<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 第四季度
-</span><span style="color:#75715e"></span>      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">OCTOBER</span><span style="color:#f92672">);</span>
-      quarter<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
-      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">NOVEMBER</span><span style="color:#f92672">);</span>
-      quarter<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
-      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DECEMBER</span><span style="color:#f92672">);</span>
-      quarter<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">int</span> nSeason <span style="color:#f92672">=</span> getQuarter<span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nSeason <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 第一季度
+</span><span style="color:#75715e"></span>      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JANUARY</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      quarter<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">FEBRUARY</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      quarter<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MARCH</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      quarter<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nSeason <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 第二季度
+</span><span style="color:#75715e"></span>      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">APRIL</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      quarter<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MAY</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      quarter<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JUNE</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      quarter<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nSeason <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 3<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 第三季度
+</span><span style="color:#75715e"></span>      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JULY</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      quarter<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">AUGUST</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      quarter<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">SEPTEMBER</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      quarter<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nSeason <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 4<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// 第四季度
+</span><span style="color:#75715e"></span>      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">OCTOBER</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      quarter<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">NOVEMBER</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      quarter<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      c<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">,</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DECEMBER</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      quarter<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> quarter<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
@@ -734,9 +734,9 @@
 
     <span style="color:#66d9ef">int</span> quarter <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
 
-    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">int</span> month <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">);</span>
+    Calendar c <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    c<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>date<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> month <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>month<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       <span style="color:#66d9ef">case</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">JANUARY</span><span style="color:#f92672">:</span>
       <span style="color:#66d9ef">case</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">FEBRUARY</span><span style="color:#f92672">:</span>
@@ -771,15 +771,15 @@
 </span><span style="color:#75715e">   * @return true：以前或者现在  false：未来
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isExistTime</span><span style="color:#f92672">(</span>String time<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    SimpleDateFormat sdf <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;yyyy-MM-dd HH:mm:ss&#34;</span><span style="color:#f92672">);</span>
+    SimpleDateFormat sdf <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SimpleDateFormat<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;yyyy-MM-dd HH:mm:ss&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     Date date <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-      date <span style="color:#f92672">=</span> sdf<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>time<span style="color:#f92672">);</span>
+      date <span style="color:#f92672">=</span> sdf<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>time<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>ParseException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+      e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>date <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">return</span> <span style="color:#f92672">!</span>date<span style="color:#f92672">.</span><span style="color:#a6e22e">after</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Date<span style="color:#f92672">());</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>date <span style="color:#f92672">!</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">!</span>date<span style="color:#f92672">.</span><span style="color:#a6e22e">after</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Date<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
@@ -792,10 +792,10 @@
 </span><span style="color:#75715e">   * @return 新的日期
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Date <span style="color:#a6e22e">addDay</span><span style="color:#f92672">(</span>Date oldDate<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> dayNum<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">long</span> oldTime <span style="color:#f92672">=</span> oldDate<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">long</span> oldTime <span style="color:#f92672">=</span> oldDate<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">long</span> addTime <span style="color:#f92672">=</span> oneDayTime <span style="color:#f92672">*</span> dayNum<span style="color:#f92672">;</span>
     <span style="color:#66d9ef">long</span> newTime <span style="color:#f92672">=</span> oldTime <span style="color:#f92672">+</span> addTime<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Date<span style="color:#f92672">(</span>newTime<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Date<span style="color:#f92672">(</span>newTime<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#75715e">/**
@@ -805,28 +805,28 @@
 </span><span style="color:#75715e">   * @return 每天组成的字符串集合
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getDayByMonth</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> yearParam<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> monthParam<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
-    Calendar aCalendar <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span>Locale<span style="color:#f92672">.</span><span style="color:#a6e22e">CHINA</span><span style="color:#f92672">);</span>
-    aCalendar<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>yearParam<span style="color:#f92672">,</span> monthParam <span style="color:#f92672">-</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">int</span> year <span style="color:#f92672">=</span> aCalendar<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">YEAR</span><span style="color:#f92672">);</span><span style="color:#75715e">//年份
+    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    Calendar aCalendar <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span>Locale<span style="color:#f92672">.</span><span style="color:#a6e22e">CHINA</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    aCalendar<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>yearParam<span style="color:#f92672">,</span> monthParam <span style="color:#f92672">-</span> 1<span style="color:#f92672">,</span> 1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> year <span style="color:#f92672">=</span> aCalendar<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">YEAR</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span><span style="color:#75715e">//年份
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> month <span style="color:#f92672">=</span> aCalendar<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MONTH</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span><span style="color:#75715e">//月份
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> day <span style="color:#f92672">=</span> aCalendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getActualMaximum</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DATE</span><span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> day<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> day <span style="color:#f92672">=</span> aCalendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getActualMaximum</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">DATE</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> day<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       String aDate <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">&lt;</span> 10 <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">&lt;</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">&lt;</span> 10 <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> i <span style="color:#f92672">&lt;</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         aDate <span style="color:#f92672">=</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>year<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-0&#34;</span> <span style="color:#f92672">+</span> month <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-0&#34;</span> <span style="color:#f92672">+</span> i<span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">&lt;</span> 10 <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">&gt;=</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">&lt;</span> 10 <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> i <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         aDate <span style="color:#f92672">=</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>year<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-0&#34;</span> <span style="color:#f92672">+</span> month <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> i<span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">&gt;=</span> 10 <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">&lt;</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> 10 <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> i <span style="color:#f92672">&lt;</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         aDate <span style="color:#f92672">=</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>year<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> month <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-0&#34;</span> <span style="color:#f92672">+</span> i<span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">&gt;=</span> 10 <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">&gt;=</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>month <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> 10 <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> i <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         aDate <span style="color:#f92672">=</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span>year<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> month <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> i<span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
 
-      list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>aDate<span style="color:#f92672">);</span>
+      list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>aDate<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> list<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
@@ -841,50 +841,50 @@
 </span><span style="color:#75715e">   */</span>
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">splitTime</span><span style="color:#f92672">(</span>String startTime<span style="color:#f92672">,</span> String endTime<span style="color:#f92672">,</span> String type<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">int</span> interval<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>type<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;day&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">||</span> type<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Day&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>type<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;day&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> type<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Day&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       interval <span style="color:#f92672">=</span> 60 <span style="color:#f92672">*</span> 24<span style="color:#f92672">;</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startTime<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startTime<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">!</span><span style="color:#f92672">=</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         startTime <span style="color:#f92672">=</span> startTime<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; 00:00:00&#34;</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
       interval <span style="color:#f92672">=</span> 60<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startTime<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>startTime<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       startTime <span style="color:#f92672">=</span> startTime <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; 00:00:00&#34;</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>endTime<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>endTime<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 10<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       endTime <span style="color:#f92672">=</span> endTime <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; 23:59:59&#34;</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     Date startDate <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-      startDate <span style="color:#f92672">=</span> sdf<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>startTime<span style="color:#f92672">);</span>
+      startDate <span style="color:#f92672">=</span> sdf<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>startTime<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>ParseException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+      e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
     Date endDate <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
     <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-      endDate <span style="color:#f92672">=</span> sdf<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>endTime<span style="color:#f92672">);</span>
+      endDate <span style="color:#f92672">=</span> sdf<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>endTime<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>ParseException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+      e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
-    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
-    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>startDate<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">()</span> <span style="color:#f92672">&lt;=</span> endDate<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-      list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>ds<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span>startDate<span style="color:#f92672">));</span>
-      Calendar calendar <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
-      calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>startDate<span style="color:#f92672">);</span>
-      calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MINUTE</span><span style="color:#f92672">,</span> interval<span style="color:#f92672">);</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> endDate<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>startDate<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>endDate<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-          list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>ds<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span>endDate<span style="color:#f92672">));</span>
+    List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>startDate<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> endDate<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>ds<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span>startDate<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      Calendar calendar <span style="color:#f92672">=</span> Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">setTime</span><span style="color:#f92672">(</span>startDate<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>Calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">MINUTE</span><span style="color:#f92672">,</span> interval<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">&gt;</span> endDate<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span>startDate<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>endDate<span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+          list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>ds<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span>endDate<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
-        startDate <span style="color:#f92672">=</span> calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
+        startDate <span style="color:#f92672">=</span> calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-        startDate <span style="color:#f92672">=</span> calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">();</span>
+        startDate <span style="color:#f92672">=</span> calendar<span style="color:#f92672">.</span><span style="color:#a6e22e">getTime</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">&gt;</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">).</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 2<span style="color:#f92672">)))</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">subList</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">&gt;</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">-</span> 2<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">subList</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
     <span style="color:#66d9ef">return</span> list<span style="color:#f92672">;</span>
@@ -985,7 +985,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

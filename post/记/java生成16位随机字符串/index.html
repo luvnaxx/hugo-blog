@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.67.0" />
+<meta name="generator" content="Hugo 0.60.1" />
 
 
 <link rel="canonical" href="/post/%E8%AE%B0/java%E7%94%9F%E6%88%9016%E4%BD%8D%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2/" />
@@ -378,31 +378,31 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">/**
 </span><span style="color:#75715e">     * 产生16位随机值
 </span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">generateRandomString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        StringBuilder uid <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">generateRandomString</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        StringBuilder uid <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
         <span style="color:#75715e">// 产生16位的强随机数
-</span><span style="color:#75715e"></span>        Random rd <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SecureRandom<span style="color:#f92672">();</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> 16<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span><span style="color:#75715e"></span>        Random rd <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SecureRandom<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> 16<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#75715e">// 产生0-2的3位随机数
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">int</span> type <span style="color:#f92672">=</span> rd<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">int</span> type <span style="color:#f92672">=</span> rd<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>3<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
             <span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>type<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
                 <span style="color:#66d9ef">case</span> 0<span style="color:#f92672">:</span>
                     <span style="color:#75715e">// 0-9的随机数
-</span><span style="color:#75715e"></span>                    uid<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>rd<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>10<span style="color:#f92672">));</span>
+</span><span style="color:#75715e"></span>                    uid<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>rd<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>10<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
                     <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
                 <span style="color:#66d9ef">case</span> 1<span style="color:#f92672">:</span>
                     <span style="color:#75715e">// ASCII在65-90之间为大写,获取大写随机
-</span><span style="color:#75715e"></span>                    uid<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">((</span><span style="color:#66d9ef">char</span><span style="color:#f92672">)</span> <span style="color:#f92672">(</span>rd<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>25<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 65<span style="color:#f92672">));</span>
+</span><span style="color:#75715e"></span>                    uid<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span><span style="color:#f92672">)</span> <span style="color:#f92672">(</span>rd<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>25<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 65<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
                     <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
                 <span style="color:#66d9ef">case</span> 2<span style="color:#f92672">:</span>
                     <span style="color:#75715e">// ASCII在97-122之间为小写，获取小写随机
-</span><span style="color:#75715e"></span>                    uid<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">((</span><span style="color:#66d9ef">char</span><span style="color:#f92672">)</span> <span style="color:#f92672">(</span>rd<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>25<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 97<span style="color:#f92672">));</span>
+</span><span style="color:#75715e"></span>                    uid<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span><span style="color:#f92672">)</span> <span style="color:#f92672">(</span>rd<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>25<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 97<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
                     <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
                 <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
                     <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
             <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
-        <span style="color:#66d9ef">return</span> uid<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">return</span> uid<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 </code></pre></div><blockquote>
 <p>20200506</p>
@@ -502,7 +502,7 @@
     &copy;
     
       2019 -
-    2020
+    2021
     <span class="heart">
       
       <i class="iconfont">

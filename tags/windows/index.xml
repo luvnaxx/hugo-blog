@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>blog.luvnaxx.com</copyright>
-    <lastBuildDate>Sat, 20 Jun 2020 16:38:14 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2020 13:13:40 +0800</lastBuildDate>
     
 	<atom:link href="/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
@@ -45,7 +45,7 @@
       <pubDate>Tue, 03 Sep 2019 14:21:38 +0800</pubDate>
       
       <guid>/post/%E8%AE%B0/windows%E4%B8%8B%E4%BD%BF%E7%94%A8%E8%87%AA%E5%B8%A6certutil%E5%B7%A5%E5%85%B7%E6%A0%A1%E9%AA%8C%E6%96%87%E4%BB%B6/</guid>
-      <description>&lt;h2 id=&#34;命令&#34;&gt;命令&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;heading&#34;&gt;命令&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;certutil -hashfile xxx MD5&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA1&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;certutil -hashfile xxx SHA256&lt;/strong&gt;&lt;/p&gt;</description>
